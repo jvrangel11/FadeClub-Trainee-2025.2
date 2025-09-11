@@ -21,7 +21,7 @@
 
 #### Scrum Master:
 
-* [João Victor Rangel Cardoso](coloque o link do github).
+* [João Victor Rangel Cardoso](https://github.com/jvrangel11).
 
 #### Links Úteis:
 
