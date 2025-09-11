@@ -1,8 +1,8 @@
-# **Trainee 2025.1**
+# **Trainee 2025.2**
 
-# **Nome do seu blog**
+# **FadeClub**
 
-## **Projeto Trainee, Code Jr, 2025.1**
+## **Projeto Trainee, Code Jr, 2025.2**
 
 | **Sumário** |
 |-------------|
@@ -21,11 +21,11 @@
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github).
+* [João Victor Rangel Cardoso](coloque o link do github).
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/invite/b/68c1a9137279eac42408dbeb/ATTIe8ab42f03bf399044a7ed8c30b7a781fDD3FD679/252-fadeclub)
 
 
 
