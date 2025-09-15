@@ -14,7 +14,7 @@
 #### Desenvolvedores:
 
 * [Breno Reis Machado](https://github.com/BrenoRMachado)
-* [Trainee 2](coloque o link do github)
+* [Lipe Nunes Cordeiro de Morais](https://github.com/lipeccjf)
 * [Trainee 3](coloque o link do github)
 * [Trainee 4](coloque o link do github)
 
