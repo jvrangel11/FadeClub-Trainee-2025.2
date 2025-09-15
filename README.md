@@ -13,7 +13,7 @@
 
 #### Desenvolvedores:
 
-* [Trainee 1](coloque o link do github)
+* [Breno Reis Machado](https://github.com/BrenoRMachado)
 * [Trainee 2](coloque o link do github)
 * [Trainee 3](coloque o link do github)
 * [Trainee 4](coloque o link do github)
