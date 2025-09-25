@@ -15,8 +15,8 @@
 
 * [Breno Reis Machado](https://github.com/BrenoRMachado)
 * [Lipe Nunes Cordeiro de Morais](https://github.com/lipeccjf)
-* [Trainee 3](coloque o link do github)
-* [Trainee 4](coloque o link do github)
+* [Carlos Eduardo Viana Uba](https://github.com/carloseduv)
+* [Renan Venzi de Moura](https://github.com/rvenzi)
 
 
 #### Scrum Master:
