@@ -1,13 +1,23 @@
+/*Remover CSS Básico do navegador*/
 * {
     margin: 0;
     padding: 0;
 }
 
-#cover {
-    background-image: url(../assets/cover.png);
+/*CSS da cover que contem Navbar e Hero Section*/
+#coverMain {
+    background-image: url(../assets/coverMain.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     
     height: 75vh;
+}
+/*CSS da cover que contem as publicações*/
+#cover2 {
+    background-image: url(../assets/cover2.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    height: 100vh;
 }
