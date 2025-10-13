@@ -12,6 +12,7 @@
     background-repeat: no-repeat;
     
     height: 75vh;
+
 }
 /*CSS da cover que contem as publicações*/
 #cover2 {
@@ -20,4 +21,16 @@
     background-position: center;
 
     height: 100vh;
+}
+
+#navbar {
+    border: 1px solid orange;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+}
+
+#heroSection {
+    border: 2px solid green;
+    height: 74.8vh;
 }
