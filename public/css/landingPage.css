@@ -36,3 +36,14 @@
     border: 2px solid green;
     height: 74.8vh;
 }
+
+/*CSS da logo*/
+#logo{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    padding-top: 140px;
+}
+#logo img {
+    width: 460px;
+}
