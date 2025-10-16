@@ -1,15 +1,19 @@
-/* *? Remoção de margin e padding padrões */
+/* *! Remoção de margin e padding padrões */
 body {
     margin: 0;
     padding: 0;
 }
 
 /* *? ------ NavBar e Hero Section ------ */
+
+/* * fundo -------------------------- */
 #box1 {
     background-color: #0A3A55;
     height: 80vh;
     width: 100%;
 }
+
+/* *navbar -------------------------- */
 
 #navbar {
     background-color: #3E3E3E;
@@ -25,6 +29,8 @@ body {
     width: 450px;   
 }
 
+/* *hero section --------------------- */
+
 #logo {
     display: flex;
     align-items: center;
@@ -37,6 +43,7 @@ body {
 }
 
 #slogan {
+    padding-top: 20px;
     color: white;
     display: flex;
     justify-content: center;
@@ -44,12 +51,57 @@ body {
     flex-direction: column;
 }
 
+#slogan h1 {
+    margin: 0;
+}
+
 /* *? --------------- Posts --------------- */
+
+/* * fundo -------------------------- */
 
 #box2 {
     background-color: #1B2A41;
     height: 100vh;
     width: 100%;
+    padding-top:  25px;
+    display: flex;
+    justify-content: center;
+    
 }
 
+/* *post destaques -------------------- */
 
+#destaques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#destaquesbox {
+    background-color: #6B231E;
+    height: 40px;
+    width: 214px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+#destaquesbox p {
+
+    color: #EDDFB2;
+    font-size: 20px;
+}
+
+#destaquescards {
+    display: flex;
+    gap: 60px;
+}
+
+.card {
+    background-color: #EDDFB2;
+    border-radius: 30px;
+    height: 321px;
+    width: 474px;
+}
