@@ -19,7 +19,6 @@
     background-image: url(../assets/cover2.jpeg);
     background-size: cover;
     background-position: center;
-
     height: 100vh;
 }
 
@@ -31,6 +30,8 @@
     position: fixed;
     width: 100vw;
     height: 10vh;
+
+    gap: 220px;
 }
 
 /*CSS da hero Section*/
@@ -56,10 +57,19 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 10vh;
-    width: 360px;
+    width: 483px;
 }
 
 #secoes {
     border: 2px solid greenyellow;
+    background-color: #1B2A41;
+    border-radius: 30px;
     height: 10vh;
+    width: 483px;
+}
+
+#botoes {
+    border: 2px solid purple;
+    height: 10vh;
+    width: 483px;
 }
