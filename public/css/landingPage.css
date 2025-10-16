@@ -1,0 +1,55 @@
+/* *? Remoção de margin e padding padrões */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* *? ------ NavBar e Hero Section ------ */
+#box1 {
+    background-color: #0A3A55;
+    height: 80vh;
+    width: 100%;
+}
+
+#navbar {
+    background-color: #3E3E3E;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#secoes {
+    background-color: #EDDFB2;
+    height: 8vh;
+    width: 450px;   
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+#logo img {
+    width: 500px;
+}
+
+#slogan {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* *? --------------- Posts --------------- */
+
+#box2 {
+    background-color: #1B2A41;
+    height: 100vh;
+    width: 100%;
+}
+
+
