@@ -8,7 +8,9 @@ body {
 
 /* * fundo -------------------------- */
 .box1 {
-    background-color: #0A3A55;
+    background-image: url(../assets/cover1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 80vh; /* necessita um tamanho fíxo para aparecer*/ /* TODO: precisa verificar responsividade */
     width: 100%;
 }
@@ -18,10 +20,14 @@ body {
 .navbar {
     /* background-color: #3E3E3E; */
     height: 10vh;
+ 
     display: flex;
-    justify-content: center;
+    
+    justify-content: space-between;
     align-items: center;
-    gap: 300px;
+    width: 100%;
+    position: fixed;
+    
 }
 
 .navbar img {
@@ -31,8 +37,9 @@ body {
 .secoes {
     background-color: #EDDFB2;
     height: 8vh;
-    width: 450px;   
+    width: 234px;   
 }
+
 
 /* *hero section --------------------- */
 
@@ -45,6 +52,7 @@ body {
 
 .logo img {
     width: 500px;
+    padding-top: 6%;
 }
 
 .slogan {
@@ -65,7 +73,10 @@ body {
 /* * fundo -------------------------- */
 
 .box2 {
-    background-color: #1B2A41;
+    background-image: url(../assets/cover2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     width: 100%;
     padding-top:  25px;
@@ -84,7 +95,7 @@ body {
 
 .destaquesbox {
     background-color: #6B231E;
-    height: 60px;
+    height: 45px;
     width: 244px ;
     display: flex;
     justify-content: center;
@@ -99,7 +110,7 @@ body {
     font-size: 30px;
 }
 
-.estaquescards {
+.destaquescards {
     display: flex;
     gap: 60px;
     margin-bottom: 45px;
