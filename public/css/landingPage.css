@@ -7,7 +7,7 @@ body {
 /* *? ------ NavBar e Hero Section ------ */
 
 /* * fundo -------------------------- */
-#box1 {
+.box1 {
     background-color: #0A3A55;
     height: 80vh; /* necessita um tamanho fíxo para aparecer*/ /* TODO: precisa verificar responsividade */
     width: 100%;
@@ -15,7 +15,7 @@ body {
 
 /* *navbar -------------------------- */
 
-#navbar {
+.navbar {
     /* background-color: #3E3E3E; */
     height: 10vh;
     display: flex;
@@ -24,11 +24,11 @@ body {
     gap: 300px;
 }
 
-#navbar img {
+.navbar img {
     height: 7vh;
 }
 
-#secoes {
+.secoes {
     background-color: #EDDFB2;
     height: 8vh;
     width: 450px;   
@@ -36,18 +36,18 @@ body {
 
 /* *hero section --------------------- */
 
-#logo {
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 40px;
 }
 
-#logo img {
+.logo img {
     width: 500px;
 }
 
-#slogan {
+.slogan {
     padding-top: 20px;
     color: white;
     display: flex;
@@ -56,7 +56,7 @@ body {
     flex-direction: column;
 }
 
-#slogan h1 {
+.slogan h1 {
     margin: 0;
 }
 
@@ -64,7 +64,7 @@ body {
 
 /* * fundo -------------------------- */
 
-#box2 {
+.box2 {
     background-color: #1B2A41;
     height: 100vh;
     width: 100%;
@@ -76,13 +76,13 @@ body {
 
 /* *post destaques -------------------- */
 
-#destaques {
+.destaques {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#destaquesbox {
+.destaquesbox {
     background-color: #6B231E;
     height: 60px;
     width: 244px ;
@@ -93,13 +93,13 @@ body {
     margin-bottom: 40px;
 }
 
-#destaquesbox p {
+.destaquesbox p {
 
     color: #EDDFB2;
     font-size: 30px;
 }
 
-#destaquescards {
+.estaquescards {
     display: flex;
     gap: 60px;
     margin-bottom: 45px;
