@@ -9,18 +9,23 @@ body {
 /* * fundo -------------------------- */
 #box1 {
     background-color: #0A3A55;
-    height: 80vh;
+    height: 80vh; /* necessita um tamanho fíxo para aparecer*/ /* TODO: precisa verificar responsividade */
     width: 100%;
 }
 
 /* *navbar -------------------------- */
 
 #navbar {
-    background-color: #3E3E3E;
+    /* background-color: #3E3E3E; */
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 300px;
+}
+
+#navbar img {
+    height: 7vh;
 }
 
 #secoes {
@@ -105,4 +110,11 @@ body {
     border-radius: 30px;
     height: 341px;
     width: 494px;
+}
+
+/* *? Footer -------------------------------------- */
+
+footer {
+    background-color: #6B231E;
+    height: 20vh;
 }
