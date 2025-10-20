@@ -1,0 +1,184 @@
+
+body {
+   
+
+    
+ 
+    display: flex;
+    flex-direction: column-reverse;
+    
+    font-family: "Anton", sans-serif;
+    background-color: #1B2A41;
+
+    background-image: url(./backgroundFade.jpg);
+    background-size: cover;
+    
+   
+}
+
+
+
+footer {
+    padding: 2em;
+    
+
+    font-family: "Anton", sans-serif;
+    background-color: #6B231E;
+    color: #FAFAFA;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+  
+
+}
+
+.conteiner{
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+  
+}
+
+.motivacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+
+.motivacao span{
+
+    margin: 0.5em;
+    font-size: 1.2em;
+    
+    gap: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #FAFAFA;
+
+}
+
+#redes {
+    display: flex;
+    color: white;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#redes i {
+    color: #FAFAFA;
+}
+
+.motivacao h5{
+    margin: 3em;
+    transition: transform .3s ease-in-out;
+   
+}
+
+.motivacao h5:hover{
+    transform: scale(1.5);
+   
+}
+
+
+.footerLogo p{
+    transition: transform .3s ease-in-out;
+    font-size: 0.8rem;
+    display:none;
+
+}
+
+
+.footerLogo img{
+  
+    width: 20vw;   
+    height: 20vh;
+    object-fit: cover;
+    object-position: center;
+
+
+
+}
+
+#redes i{
+    font-size: 2em;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+       
+        flex-direction: column; 
+    }
+
+    .conteiner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 0.3em;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .footerLogo img {
+        width: 0.5em;
+        height: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    .motivacao {
+        gap: 0.5rem;
+    }
+
+    .motivacao h5 {
+        font-size: 1em;
+    }
+
+    .contatos {
+        gap: 1em;
+        font-size: 0.9em;
+    }
+
+    #redes {
+        flex-wrap: wrap;
+        gap: 0.1em;
+    }
+
+    #redes i {
+        font-size: 1.5em;
+    }
+
+    footer {
+        position: relative;
+        text-align: center;
+        padding: 1.5em 0;
+    }
+
+
+
+
+
+}
+
+
