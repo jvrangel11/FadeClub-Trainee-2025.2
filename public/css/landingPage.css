@@ -24,6 +24,7 @@
 
 /* todo: CSS da parte 02  -------------------------------------- */
 
+/* BACKGROUND -------------------------------------------------- */
 .parte02 {
     /* adiciona imagem de fundo e configura sua disposição: */
     background-image: url(../assets/cover2.jpeg);
@@ -31,10 +32,19 @@
     background-size: cover;
 
     background-position: center; /*centraliza imagem*/
-    /* Dimensiona imagem : -------------------------------- */
+    /* Dimensiona imagem */
     height: 100vh;
     width: 99.2vw;
 }
+
+/* NAVBAR ------------------------------------------------------- */
+.navbar {
+    border: 1px solid greenyellow; /*referência visual*/
+    /* dimensionamento da navbar */
+    height: 10vh;
+    width: 100%;
+}
+
 
 /* todo: -------------------------------------------------------- */
 
