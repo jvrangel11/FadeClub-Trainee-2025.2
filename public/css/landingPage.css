@@ -99,7 +99,7 @@
     border-radius: 5px;
 
     /* dimensões */
-    width: 12rem; 
+    width: 13rem; 
     height: 3rem;
 
     /* posição do texto */
@@ -151,6 +151,34 @@
     height: 320px;
 }
 
+
+.caixaUltimos {
+    /* altera estilo do texto */
+    color: #EDDFB2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    /* estilo da caixa */
+    background-color: #6B231E;
+    border-radius: 5px;
+
+    /* dimensões */
+    width: 13rem; 
+    height: 3rem;
+
+    /* posição do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* posição caixa */
+    position: absolute;
+    top: 45.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
 
 
 
