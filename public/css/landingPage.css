@@ -88,23 +88,28 @@
 
 /* ETIQUETA DESTAQUES */
 .caixaDestaques {
-    /* altera estilo do testo */
+    /* altera estilo do texto */
     color: #EDDFB2;
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
 
     /* estilo da caixa */
     background-color: #6B231E;
-    width: 11rem;
+    border-radius: 5px;
+
+    /* dimensões */
+    width: 12rem; 
+    height: 3rem;
+
+    /* posição do texto */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2rem;
-    border-radius: 5px;
-    
+
+    /* posição caixa */
     position: absolute;
-    top: -1.8%;
+    top: -2.7%;
     left: 50%;
     transform: translateX(-50%);
 
