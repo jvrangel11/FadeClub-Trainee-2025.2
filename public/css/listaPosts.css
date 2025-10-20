@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("./assets/bg-oficial.png");
+}
+
+body *{
+    font-family: "Montserrat";
+    color: white;
+}
