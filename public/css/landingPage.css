@@ -10,6 +10,7 @@
 
 /* ? CSS da parte 01  ------------------------------------------ */
 
+/* BACKGROUND -------------------------------------------------- */
 .parte01 {
     /* adiciona imagem de fundo e configura sua disposição: */
     background-image: url(../assets/cover1.png);
@@ -17,7 +18,36 @@
     background-size: cover;
     /* Dimensiona imagem : -------------------------------- */
     height: 80vh;
-    width: 99.2vw;
+    width: 100%;
+}
+
+/* NAVBAR -------------------------------------------------------*/
+.navbar {
+    border: 1px solid greenyellow; /*referência visual*/
+    /* dimensionamento da navbar */
+    height: 10vh;
+    width: 100%;
+}
+
+/* HERO SECTION ------------------------------------------------ */
+
+/* GERAL */
+
+.heroSection {
+    border: 1px solid orangered;
+    /* dimensionamento da hero section */
+    height: 70vh;
+    /* arrumando onde está a logo */
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center
+}
+
+/* IMAGEM */
+
+.heroSection img {
+    width: 500px;
+    height: 500px;
 }
 
 /* ? ----------------------------------------------------------- */
@@ -34,17 +64,8 @@
     background-position: center; /*centraliza imagem*/
     /* Dimensiona imagem */
     height: 100vh;
-    width: 99.2vw;
-}
-
-/* NAVBAR ------------------------------------------------------- */
-.navbar {
-    border: 1px solid greenyellow; /*referência visual*/
-    /* dimensionamento da navbar */
-    height: 10vh;
     width: 100%;
 }
-
 
 /* todo: -------------------------------------------------------- */
 
