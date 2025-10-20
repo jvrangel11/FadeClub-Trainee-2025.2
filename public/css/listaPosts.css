@@ -187,13 +187,21 @@ body *{
 
 .post-item p{
     color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 5px;
 }
 
 .post-item h2{
     color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
 }
 
 .post-item span{
     color: black;
+    display: inline-block;
+    padding-top: 80px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
 }
 
