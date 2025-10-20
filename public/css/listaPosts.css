@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url("./assets/bg-oficial.png");
+    background: url("../assets/bg-oficial.png");
 }
 
 body *{
@@ -13,18 +13,23 @@ body *{
     color: white;
 }
 
-
-#title p {
+.title {
+    background-color: #1B2A41;
+}
+.title p {
     font-size: 25px;
     line-height: 24px;
-    margin-top: 8px;
-    margin: 20px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 10px;
     font-weight: bold;
 
 }
 
-#button-search {
-    margin: auto;
+#searching-camp {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     width: 835px;
     height: 40px;
     background-color: white;
@@ -33,23 +38,34 @@ body *{
     display: flex;
     padding-left: 20px;
     align-items: center;
-
     position: relative;
 
 }
 
-#button-search p{
+.button-search p{
     color: #061326;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 17px;
     font-weight: 400px;
 }
 
-#button-search img{
+.button-search img{
     background: #061326;
     width: 28px;
     padding: 5px;
     border-radius: 50%;
     position: absolute;
-    right: 20px;
+    right: 50px;
+    top: 6px;
 }
+
+.button-setting img{
+    background: #061326;
+    width: 28px;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 6px;
+}
+
