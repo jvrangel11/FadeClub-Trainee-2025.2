@@ -91,7 +91,41 @@ body *{
     width: 330px;
     height: 30px;
 
-    font-family: 
-};
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+    font-size: 16px;
+}
+
+.filter-button2{
+    background-color: #116797;
+    border-radius: 50px;
+    width: 330px;
+    height: 30px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+    font-size: 16px;
+}
+.filter-button3{
+    background-color: #2C8E23;
+    border-radius: 50px;
+    width: 330px;
+    height: 30px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+    font-size: 16px;
+}
+.filter-button4{
+    background-color: #A4161A;
+    border-radius: 50px;
+    width: 330px;
+    height: 30px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+    font-size: 16px;
+}
+
 
 
