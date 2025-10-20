@@ -23,10 +23,89 @@
 
 /* NAVBAR ------------------------------------------------------ */
 .navbar {
-    border: 1px solid greenyellow; /*referência visual*/
+    /* border: 1px solid greenyellow; /*referência visual*/
     /* dimensionamento da navbar */
     height: 10vh;
     width: 100%;
+
+    /*ajuste para o conteúdo*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.letreiro {
+    width: 30rem;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letreiro img {
+    width: 18rem;
+}
+
+.secoes {
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;    
+    background-color: #1B2A41; 
+    height: 5rem;
+    border-radius: 30px;
+    gap: 3rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.home {
+    color: #3E3E3E; 
+    width: 6rem;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    border-radius: 20px;
+}
+
+
+.botoes {
+    width: 30rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    padding-right: 6rem;
+}
+
+.pesquisa {
+    background-color: #1B2A41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 40px;
+}   
+
+.pesquisa img {
+    width: 2.3rem;
+}
+
+.login {
+    background-color: #4E4E4E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 40px;
+}
+
+.login img {
+    width: 2.3rem;
 }
 
 /* HERO SECTION ------------------------------------------------ */
