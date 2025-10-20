@@ -1,0 +1,131 @@
+/* *! Remoção de margin e padding padrões */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* *? ------ NavBar e Hero Section ------ */
+
+/* * fundo -------------------------- */
+.box1 {
+    background-image: url(../assets/cover1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh; /* necessita um tamanho fíxo para aparecer*/ /* TODO: precisa verificar responsividade */
+    width: 100%;
+}
+
+/* *navbar -------------------------- */
+
+.navbar {
+    /* background-color: #3E3E3E; */
+    height: 10vh;
+ 
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    
+}
+
+.navbar img {
+    height: 7vh;
+}
+
+.secoes {
+    background-color: #EDDFB2;
+    height: 8vh;
+    width: 234px;   
+}
+
+
+/* *hero section --------------------- */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.logo img {
+    width: 500px;
+    padding-top: 6%;
+}
+
+.slogan {
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slogan h1 {
+    margin: 0;
+}
+
+/* *? --------------- Posts --------------- */
+
+/* * fundo -------------------------- */
+
+.box2 {
+    background-image: url(../assets/cover2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding-top:  25px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* *post destaques -------------------- */
+
+.destaques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destaquesbox {
+    background-color: #6B231E;
+    height: 45px;
+    width: 244px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.destaquesbox p {
+
+    color: #EDDFB2;
+    font-size: 30px;
+}
+
+.destaquescards {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 45px;
+}
+
+.card {
+    background-color: #E5E5E5;
+    border-radius: 30px;
+    height: 341px;
+    width: 494px;
+}
+
+/* *? Footer -------------------------------------- */
+
+footer {
+    background-color: #6B231E;
+    height: 20vh;
+}
