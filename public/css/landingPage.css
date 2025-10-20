@@ -30,7 +30,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    background-position: center;
+    background-position: center; /*centraliza imagem*/
     /* Dimensiona imagem : -------------------------------- */
     height: 100vh;
     width: 99.2vw;
@@ -38,5 +38,11 @@
 
 /* todo: -------------------------------------------------------- */
 
+/* *  Footer ---------------------------------------------------- */
 
+footer {
+    background-color: #6B231E;
+    height: 20vh;
+}
 
+/* * ------------------------------------------------------------ */
