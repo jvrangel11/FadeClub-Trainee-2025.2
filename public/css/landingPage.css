@@ -38,7 +38,7 @@
     /* dimensionamento da hero section */
     height: 70vh;
     /* arrumando onde está a logo */
-    padding-top: 3rem;
+    padding-top: 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -48,8 +48,8 @@
 
 .heroSection img {
     /* dimensionamento da imagem */
-    width: 500px;
-    height: 500px;
+    width: 470px;
+    height: 470px;
 }
 
 /* SLOGAN */
@@ -65,7 +65,7 @@
     font-size: 40px;
     
     /* posicionando o slogan em relação a logo */
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 /* ? ----------------------------------------------------------- */
@@ -83,7 +83,34 @@
     /* Dimensiona imagem */
     height: 100vh;
     width: 100%;
+    position: relative;
 }
+
+/* ETIQUETA DESTAQUES */
+.caixaDestaques {
+    /* altera estilo do testo */
+    color: #EDDFB2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    /* estilo da caixa */
+    background-color: #6B231E;
+    width: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    border-radius: 5px;
+    
+    position: absolute;
+    top: -1.8%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
 
 /* todo: -------------------------------------------------------- */
 
