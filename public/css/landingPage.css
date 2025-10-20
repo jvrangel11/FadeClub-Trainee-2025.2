@@ -21,7 +21,7 @@
     width: 100%;
 }
 
-/* NAVBAR -------------------------------------------------------*/
+/* NAVBAR ------------------------------------------------------ */
 .navbar {
     border: 1px solid greenyellow; /*referência visual*/
     /* dimensionamento da navbar */
@@ -44,11 +44,28 @@
     flex-direction: column;
 }
 
-/* IMAGEM */
+/* LOGO */
 
 .heroSection img {
+    /* dimensionamento da imagem */
     width: 500px;
     height: 500px;
+}
+
+/* SLOGAN */
+
+.slogan {
+    /* configurando o texto do slogan */
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    
+    /* posicionando o slogan em relação a logo */
+    padding-top: 1rem;
 }
 
 /* ? ----------------------------------------------------------- */
