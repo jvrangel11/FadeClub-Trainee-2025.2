@@ -1,64 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Individual    </title>
-    
+    <title>Pagina Individual </title>
 
-     
+
+
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-   <script src="https://kit.fontawesome.com/a6a94f2c3d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a6a94f2c3d.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../../../public/css/individualStyles.css">
-  
+
 </head>
+
 <body>
-    
-   
-    
-    <div class = "post"> 
 
-        
 
-         
-         <div id="top"> 
-            <span><img src="../../../public/assets/wp2126169.jpg" alt="imagem perfil"> 
-            <h3>Markos</h3>
+
+    <div class="post">
+
+
+
+
+        <div id="top">
+            <span><img src="../../../public/assets/wp2126169.jpg" alt="imagem perfil">
+                <h3>Markos</h3>
             </span>
-            <h1>A Ascensão do Pompadoue</h1>  
-           
+            <h1>A Ascensão do Pompadoue</h1>
+
         </div>
 
         <div id="down">
 
 
-  
 
 
-             <div id="left">
-              <img src="../../../public/assets/img1.jpg" alt="imagem">
-             </div>
+
+            <div id="left">
+                <img src="../../../public/assets/img1.jpg" alt="imagem">
+            </div>
 
 
-            <div id="right">
-                
-           
-               <span> Origem <img src="../../../public/assets/pngwing.com.png"  alt="descer" > </span>
-               <span> História <img src="../../../public/assets/pngwing.com.png"> </span>
-               <span> Curiosidades  <img src="../../../public/assets/pngwing.com.png"> </span>
-               <span > Dicas do Barbeiro  <img src="../../../public/assets/pngwing.com.png"> </span>
-               <span> Produtos Recomendados  <img src="../../../public/assets/pngwing.com.png" > </span>
-              
-            
-                </div>  
+            <div class="right">
+
+                <div class="item">
+                    <span> Origem <img src="../../../public/assets/pngwing.com.png" class="botao" data-texto="texto1"
+                            alt="imagem 1"> </span>
+                    <div id="texto1" class="texto">
+                        França, Seculo XVIII / Rock and Roll, Anos 50.
+                    </div>
+                </div>
 
 
-          </div>
-    </div>
+                <div class="item">
+                    <span> História <img src="../../../public/assets/pngwing.com.png" class="botao" data-texto="texto2">
+                    </span>
+                    <div id="texto2" class="texto">
+                        Apesar de ser um ícone da rebeldia masculina, o Pompadour nasceu na realeza francesa do século
+                        XVIII, popularizado pela Madame de Pompadour, amante do Rei Luís XV. Originalmente um penteado
+                        feminino, ele foi resgatado e reinventado nos anos 50, tornando-se o símbolo da cultura Rock and
+                        Roll. Ícones como Elvis Presley e James Dean adotaram o visual, com seu topo volumoso e laterais
+                        baixas, transformando-o em um estandarte de atitude. Hoje, ele é frequentemente combinado com um
+                        fade (degradê) afiado nas laterais, unindo o clássico e o moderno em um só corte.
 
-    
-    
+
+                    </div>
+
+                    <div class="item">
+                        <span> Curiosidades <img src="../../../public/assets/pngwing.com.png" class="botao"
+                                data-texto="texto3"> </span>
+                        <div id="texto3" class="texto">
+                            O nome é uma homenagem direta a Jeanne-Antoinette Poisson, a Madame de Pompadour.
+
+                            Nos anos 50, o penteado era associado à subcultura dos "Greasers", que usavam
+                            brilhantina (pomade) para modelar o cabelo.
+
+                            Existem dezenas de variações, como o "undercut pompadour", onde as laterais são raspadas
+                            em vez de apenas aparadas.
+
+                            Artistas modernos como Bruno Mars e David Beckham já foram grandes adeptos do estilo,
+                            provando sua atemporalidade.
+
+
+                        </div>
+
+                        <div class="item">
+                            <span> Dicas do Barbeiro <img src="../../../public/assets/pngwing.com.png" class="botao"
+                                    data-texto="texto4"> </span>
+                            <div id="texto4" class="texto">
+                                O produto certo é tudo: Para um Pompadour clássico com brilho, use uma pomada à base de
+                                óleo. Para um visual mais moderno e fosco (matte), opte por uma à base de água ou uma
+                                cera de alta fixação.
+
+                                A importância do secador: O volume no topo é o segredo do corte. Use um secador de
+                                cabelo e uma escova redonda para levantar a raiz antes de aplicar o produto finalizador.
+
+                                Converse com seu barbeiro: A proporção do Pompadour deve se adequar ao formato do seu
+                                rosto. Um profissional saberá equilibrar a altura do topete com o degradê das laterais.
+
+
+
+
+                            </div>
+
+
+                            <div class="item">
+                                <span> Produtos Recomendados <img src="../../../public/assets/pngwing.com.png"
+                                        class="botao" data-texto="texto5"> </span>
+                                <div id="texto5" class="texto">
+
+                                    Pomada de Fixação Forte (Matte ou Brilho)
+
+                                    Spray Fixador (para finalizar)
+
+                                    Escova Redonda de Cerdas Mistas
+
+                                    Pente Fino (para detalhes)
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <script>
+
+                        const imagens = document.querySelectorAll(".item span img");
+
+                        imagens.forEach(img => {
+                            img.addEventListener("click", () => {
+                                const idTexto = img.getAttribute("data-texto");
+                                const texto = document.getElementById(idTexto);
+
+                                texto.classList.toggle("visivel");
+
+                                if(texto.classList.contains("visivel")){
+                                img.classList.add("rotacionar");
+                            }else {
+                                img.classList.remove("rotacionar");
+                            }
+
+                            
+
+                            });
+
+
+                          
+                          
+                        
+                        });
+
+
+
+
+                    </script>
+
+
 </body>
+
 </html>
