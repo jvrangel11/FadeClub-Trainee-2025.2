@@ -49,14 +49,18 @@ body *{
     font-weight: 400px;
 }
 
-.button-search img{
-    background: #061326;
+.search-button button{
+    background-color: #061326;
+    border: 2px solid #3b619b;
     width: 28px;
-    padding: 5px;
-    border-radius: 50%;
-    position: absolute;
-    right: 50px;
-    top: 6px;
+    height: 28px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.search-button img{
+    width: 16px;
+    height: 16px;
 }
 
 .button-setting img{
@@ -202,6 +206,7 @@ body *{
     color: black;
     display: inline-block;
     padding-top: 80px;
+    padding-left: 5px;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
 }
