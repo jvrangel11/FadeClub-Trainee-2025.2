@@ -237,7 +237,7 @@ body *{
     border-radius: 10px;;
 }
 
-.post-item{
+.post-item1{
     background-color: rgba(255, 255, 255, 0.589);
     border-radius: 10px;
     width: 800px;
@@ -252,7 +252,7 @@ body *{
 
 }
 
-.post-item button{
+.post-item1 button{
     background-color: transparent;
     border: none;
     border-radius: 5px;
@@ -264,19 +264,19 @@ body *{
     cursor: pointer;
 }
 
-.post-item p{
+.post-item1 p{
     color: rgb(0, 0, 0);
     font-family: "Montserrat", sans-serif;
     padding-top: 5px;
 }
 
-.post-item h2{
+.post-item1 h2{
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
 }
 
-.post-item span{
+.post-item1 span{
     color: black;
     display: inline-block;
     padding-top: 80px;
@@ -285,7 +285,7 @@ body *{
     font-weight: 300;
 }
 
-.post-item img{
+.post-item1 img{
     width: 24px;
     height: 24px;
     border-radius: 10px;
@@ -294,7 +294,271 @@ body *{
     margin-left: 220px;
 }
 
-.post-image img {
+.post-image1 img {
+    width: 400px;
+    height: 180px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: -163px;
+    margin-right: -10px;;
+}
+
+.post-item2{
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 10px;
+    width: 800px;
+    height: 180px;
+    padding: 10px;
+    gap: 20px; 
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.post-item2 button{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    height: 30px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.post-item2 p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 5px;
+}
+
+.post-item2 h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.post-item2 span{
+    color: black;
+    display: inline-block;
+    padding-top: 80px;
+    padding-left: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.post-item2 img{
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    float:inline-end;
+    margin-top: 12px;;
+    margin-left: 220px;
+}
+
+.post-image2 img {
+    width: 400px;
+    height: 180px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: -163px;
+    margin-right: -10px;;
+}
+
+.post-item3{
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 10px;
+    width: 800px;
+    height: 180px;
+    padding: 10px;
+    gap: 20px; 
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.post-item3 button{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    height: 30px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.post-item3 p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 5px;
+}
+
+.post-item3 h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.post-item3 span{
+    color: black;
+    display: inline-block;
+    padding-top: 80px;
+    padding-left: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.post-item3 img{
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    float:inline-end;
+    margin-top: 12px;;
+    margin-left: 220px;
+}
+
+.post-image3 img {
+    width: 400px;
+    height: 180px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: -163px;
+    margin-right: -10px;;
+}
+
+.post-item4{
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 10px;
+    width: 800px;
+    height: 180px;
+    padding: 10px;
+    gap: 20px; 
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.post-item4 button{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    height: 30px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.post-item4 p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 5px;
+}
+
+.post-item4 h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.post-item4 span{
+    color: black;
+    display: inline-block;
+    padding-top: 80px;
+    padding-left: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.post-item4 img{
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    float:inline-end;
+    margin-top: 12px;;
+    margin-left: 220px;
+}
+
+.post-image4 img {
+    width: 400px;
+    height: 180px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: -163px;
+    margin-right: -10px;;
+}
+
+.post-item5{
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 10px;
+    width: 800px;
+    height: 180px;
+    padding: 10px;
+    gap: 20px; 
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.post-item5 button{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    height: 30px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.post-item5 p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 5px;
+}
+
+.post-item5 h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.post-item5 span{
+    color: black;
+    display: inline-block;
+    padding-top: 80px;
+    padding-left: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.post-item5 img{
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    float:inline-end;
+    margin-top: 12px;;
+    margin-left: 220px;
+}
+
+.post-image5 img {
     width: 400px;
     height: 180px;
     border-top-left-radius: 0;
@@ -316,9 +580,45 @@ body *{
     gap: 10px;
 }
 
-.pagination button {
+.pagination-button {
     background-color: transparent;
     border: 2px solid white;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+
+    margin-bottom: 20px;;
+}
+
+.pagination button:hover {
+    background-color: white;
+    color: #061326;
+    transition: 0.2s;
+}
+
+.pagination-button-left {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+
+    margin-bottom: 20px;;
+}
+
+.pagination-button-right {
+    background-color: transparent;
+    border: none;
     border-radius: 5px;
     width: 35px;
     height: 35px;
