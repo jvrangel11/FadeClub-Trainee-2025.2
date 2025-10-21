@@ -131,44 +131,79 @@ body *{
 
 .filter-button1{
     background-color: #8B26C5;
+    border: 1px solid #4D0E72;
     border-radius: 50px;
     width: 330px;
     height: 30px;
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+.filter-button1:hover{
+    background-color: #9d36da;
+    transition: 0.3s;
 }
 
 .filter-button2{
     background-color: #116797;
+    border: 1px solid #0b3d55;
     border-radius: 50px;
     width: 330px;
     height: 30px;
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-size: 16px;
+
+    cursor: pointer;
 }
+
+.filter-button2:hover{
+    background-color: #1784b1;
+    transition: 0.3s;
+}
+
 .filter-button3{
     background-color: #2C8E23;
+    border: 1px solid #134b13;
     border-radius: 50px;
     width: 330px;
     height: 30px;
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-size: 16px;
+
+    cursor: pointer;
 }
+
+.filter-button3:hover{
+    background-color: #39a832;
+    transition: 0.3s;
+}
+
 .filter-button4{
     background-color: #A4161A;
+    border: 1px solid #5e080a;
     border-radius: 50px;
     width: 330px;
     height: 30px;
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-size: 16px;
+
+    cursor: pointer;
+}
+
+.filter-button4:hover{
+    background-color: #c01b1f;
+    transition: 0.3s;
 }
 
 .direction1{
