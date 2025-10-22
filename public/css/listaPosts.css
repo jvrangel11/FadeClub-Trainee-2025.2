@@ -380,15 +380,37 @@ body *{
     font-weight: 300;
 }
 
-.see-more{
-    background-color: yellow;
-
-    border: 1px solid blue;
+.see-more {
+    background-color: #E4A11B;
+    border: none;
+    border-radius: 50px;
+    width: 1.3rem;
+    height: 1.3rem;
     cursor: pointer;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.see-more ion-icon{
+    color: black;
+    transform: scaleY(-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.see-more button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.see-more button:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
 }
 
 
