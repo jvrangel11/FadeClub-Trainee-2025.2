@@ -52,7 +52,7 @@ body *{
 
 .search-button{
     position: absolute;
-    right: 50px;
+    right: 70px;
     top: 7px;
 }
 .search-button button{
@@ -74,12 +74,33 @@ body *{
     font-size: 1.1rem;
 }
 
-.filter-button{
-    position: absolute;
-    right: 20px;
-    top: 7px;
+.search-button button:hover{
+    background-color: #243754;
+    scale: calc(1.1);
+    transition: 0.2s;
 }
-.filter-button button{
+
+.button-setting img{
+    background: #061326;
+    width: 28px;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 6px;
+}
+
+.filter-close-buttons{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    border-radius: 50px;
+
+    display: flex;
+    background-color: #061326;
+
+}
+.filter-close-buttons button{
     background-color: #061326;
     border: 2.5px solid #243754;
     width: 28px;
@@ -96,43 +117,31 @@ body *{
     cursor: pointer;
 }
 
-.filter-button ion-icon{
+.filter-close-buttons ion-icon{
     color: white;
     font-size: 1.1rem;
 } 
 
-.search-button button:hover{
-    background-color: #243754;
-    scale: calc(1.1);
-    transition: 0.2s;
-}
-.filter-button button:hover{
+.filter-close-buttons button:hover{
     background-color: #243754;
     scale: calc(1.1);
     transition: 0.2s;
 }
 
-.button-setting img{
-    background: #061326;
-    width: 28px;
-    padding: 5px;
-    border-radius: 50%;
-    position: absolute;
-    right: 15px;
-    top: 6px;
-}
+
 
 .filter-options{
     background-color: rgba(0, 0, 0, 0.404);
-    border-radius: 10px;
-    margin-top: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: -12px;
     margin-left: auto;
     margin-right: auto;
     width: 835px;
-    height: 90px;
+    height: 110px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 10px;
+    padding-top: 23px;
     padding-bottom: 10px;
 
     display: flex;
