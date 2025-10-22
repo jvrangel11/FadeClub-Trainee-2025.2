@@ -61,14 +61,17 @@ body *{
     width: 28px;
     height: 28px;
     border-radius: 50px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
 
 
     cursor: pointer;
 }
 
-.search-button img{
-    width: 16px;
-    height: 16px;
+.search-button ion-icon{
+    color: white;
+    font-size: 1.1rem;
 }
 
 .filter-button{
@@ -85,21 +88,27 @@ body *{
     padding: auto;
     margin: auto;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
     cursor: pointer;
 }
 
-.filter-button img{
-    width: 16px;
-    height: 16px;
+.filter-button ion-icon{
+    color: white;
+    font-size: 1.1rem;
 } 
 
 .search-button button:hover{
     background-color: #243754;
+    scale: calc(1.1);
     transition: 0.2s;
 }
 .filter-button button:hover{
     background-color: #243754;
+    scale: calc(1.1);
     transition: 0.2s;
 }
 
