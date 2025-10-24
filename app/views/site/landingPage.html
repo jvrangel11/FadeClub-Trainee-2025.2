@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <link rel="stylesheet" href="../../../public/css/landingPage.css">
+    <title>Home</title>
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,73 +14,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="parte01">
-        <div class="navbar">
-            <div class="letreiro">
-                <img src="../../../public/assets/letreiro.png " alt="">
-            </div>
-            <div class="secoes">
-                <div class="home"><p>HOME</p></div>
-                <div class="publicacoes"><P>PUBLICACOES</P></div>
-                <div class="comunidade"><P>COMUNIDADE</P></div>
-            </div>
-            <div class="botoes">
-                <div class="pesquisa">
-                    <img src="../../../public/assets/pesquisa.png" alt="">
-                </div>
-                <div class="login">
-                    <img src="../../../public/assets/login.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="heroSection">
-            <img src="../../../public/assets/FadeClub-logo3.png" alt="FadeClub logo" class="logo">
-            <div class="slogan">
-                <p>Cortes que inspiram,</p>
-                <p>estilo que conecta.</p>
-            </div>
-        </div>
-    </div>
-    <div class="parte02">
-        <div class="caixaDestaques">
-            <p>Nossos Destaques</p>
-        </div>
-        <div class="carrossel">
-            <div class="destaquescards">
-                <div class="card2">
-                    <img src="../../../public/assets/card04.png" alt="">
-                </div>
-                <div class="card1">
-                    <img src="../../../public/assets/card01.png" alt="">
-                </div>
-                <div class="card1">
-                    <img src="../../../public/assets/card02.png" alt="">
-                </div>
-                <div class="card2">
-                    <img src="../../../public/assets/card03.png" alt="">
-                </div>
-            </div>
-                <div class="destaquescards">
-                <div class="card2">
-                    <img src="../../../public/assets/04.png" alt="">
-                </div>
-                <div class="card1">
-                    <img src="../../../public/assets/01.png" alt="">
-                </div>
-                <div class="card1">
-                    <img src="../../../public/assets/02.png" alt="">
-                </div>
-                <div class="card2">
-                    <img src="../../../public/assets/03.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="caixaUltimos">
-            <p>Últimas Postagens</p>
-        </div>
 
+    <div class="background1">
+        <header>
+            <div class="navbar">
+                <div class="letreiro">
+                    <img src="../../../public/assets/letreiro.png" alt="letreiro">
+                </div>
+                <div class="secoes">
+                    <div class="secao">PUBLICACOES</div>
+                    <div class="secao">HOME</div>
+                    <div class="secao">COMUNIDADE</div>
+                </div>
+                <div class="botoes">
+                    <div class="search">
+                        <img src="../../../public/assets/search.png" alt="search">
+                    </div>
+                    <div class="login">
+                        <img src="../../../public/assets/login.png" alt="login">
+                    </div>
+                </div>
+            </div>
+            <div class="heroSection">
+                <img src="../../../public/assets/FadeClub-logo3.png" alt="FadeClub logo" class="logo">
+                <div class="slogan">
+                    <p>Cortes que inspiram,</p>
+                    <p>estilo que conecta.</p>
+                </div>
+            </div>
+        </header>
     </div>
+
+    <div class="background2">
+        <main>
+            <div class="genero" id="destaques">Nossos Destaques</div>
+            <div class="genero" id="ultimasPublicacoes">Ultimas Publicacões</div>
+            <div class="carrosseis">
+                <div class="cardsDestaques">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+                <div class="cardsUltimasPublicacoes">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+            </div>
+        </main> 
+    </div>
+
     <footer></footer>
 
 </body>

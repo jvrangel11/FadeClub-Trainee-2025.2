@@ -1,129 +1,163 @@
-/* ! Zerando o CSS --------------------------------------------- */
 
+/* ! Reset do CSS ------------------------------------------- */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+/* ! -------------------------------------------------------- */
 
-/* ! ----------------------------------------------------------- */
-
-/* ? CSS da parte 01  ------------------------------------------ */
-
-/* BACKGROUND -------------------------------------------------- */
-.parte01 {
-    /* adiciona imagem de fundo e configura sua disposição: */
+/* ! BackGround --------------------------------------------- */
+.background1 {
+    /* lida com a imagem */
     background-image: url(../assets/cover1.png);
-    background-repeat: no-repeat;
     background-size: cover;
-    /* Dimensiona imagem : -------------------------------- */
-    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* lida com as dimensões */
     width: 100%;
+    height: 73vh;
 }
 
-/* NAVBAR ------------------------------------------------------ */
-.navbar {
-    /* border: 1px solid greenyellow; /*referência visual*/
-    /* dimensionamento da navbar */
-    height: 10vh;
-    width: 100%;
+.background2 {
+    /*lida com a imagem */
+    background-image: url(../assets/cover2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* lida com as dimensões */
+    height: 100vh;
+}
+/* ! -------------------------------------------------------- */
 
-    /*ajuste para o conteúdo*/
+
+/* ! -- Header ---------------------------------------------- */
+/* ? -- Navbar ---------------------------------------------- */
+.navbar {
+    /* dimensões da caixa */
+    height: 8vh;
+    padding: 0 4vh 0 4vh;
+    /* alinhamento dos elementos internos */
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 }
+
+/* * -- Elementos ------------------------------------------- */
 
 .letreiro {
-    width: 30rem;   
+    /* dimensões da caixa */
+    width: 22vw;
+    height: 6vh;
+    /*alinhamento dos elementos internos */
     display: flex;
+    justify-content: left;
     align-items: center;
-    justify-content: center;
-}
 
-.letreiro img {
-    width: 18rem;
+    img {
+        height: 6vh;
+    }
 }
 
 .secoes {
-    width: 30rem;
+    /* dimensões da caixa */
+    width: 22vw;
+    height: 6vh;
+    border-radius: 18px; 
+    /*alinhamento dos elementos internos */
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #FFFFFF;    
-    background-color: #1B2A41; 
-    height: 5rem;
-    border-radius: 30px;
-    gap: 3rem;
+    align-items: center; 
+    gap: 10px;
+    /* estilo da caixa */
+    background-color: #1B2A41;
+    /* estilo dos elementos internos */
+    color: #E5E5E5;
+
+    .secao {
+    /*disposição do texto em sua caixa*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* dimensões da caixa do texto */
+    width: 7rem;
+    /* estilo do texto */
     font-family: "Anton", sans-serif;
     font-weight: 400;
-    font-size: 22px;
-}
-
-.home {
-    color: #3E3E3E; 
-    width: 6rem;
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    border-radius: 20px;
+    font-size: 20px;
+    }
 }
 
 
 .botoes {
-    width: 30rem;
+    /* dimensões da caixa */
+    width: 22vw;
+    height: 6vh;
+    /*alinhamento dos elementos internos */
     display: flex;
-    gap: 1rem;
     justify-content: right;
-    padding-right: 5rem;
+    align-items: center;
+    /* entre botões */
+    gap: 15px;
 }
 
-.pesquisa {
-    background-color: #1B2A41;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 40px;
-}   
+/* * -- Elementos de botoes ---- */
 
-.pesquisa img {
-    width: 2.3rem;
+.search {
+    /* dimensões da caixa */
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    /* estilo */
+    background-color: #1B2A41;
+    /* dimensionar imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search img {
+    /* dimensionar imagem */
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 .login {
-    background-color: #4E4E4E;
+    /* dimensões da caixa */
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    /* estilo */
+    background-color: #838383;
+    /* dimensionar imagem */
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 40px;
+    align-items: center;
 }
 
 .login img {
-    width: 2.3rem;
+    /* dimensionar imagem */
+    width: 2rem;
+    height: 2rem;
 }
 
-/* HERO SECTION ------------------------------------------------ */
+/* * -------------------------- */
+/* * -------------------------------------------------------- */
+/* ? -------------------------------------------------------- */
 
-/* GERAL */
+/* ? -- Hero Section ---------------------------------------- */
 
 .heroSection {
-    /* border: 1px solid orangered; */
     /* dimensionamento da hero section */
-    height: 70vh;
+    height: 73vh;
     /* arrumando onde está a logo */
-    padding-top: 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: 2rem;
 }
 
-/* LOGO */
+/* * -- Elementos ------------------------------------------- */
 
 .heroSection img {
     /* dimensionamento da imagem */
@@ -131,144 +165,128 @@
     height: 470px;
 }
 
-/* SLOGAN */
-
 .slogan {
-    /* configurando o texto do slogan */
-    color: #FFFFFF;
+    /* posicionando os elementos */
     display: flex;
     align-items: center;
     flex-direction: column;
+    /* posicionando o slogan em relação a logo */
+    padding-top: 0.5rem;
+    /* estilo do texto */
+    color: #FFFFFF;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-size: 40px;
-    
-    /* posicionando o slogan em relação a logo */
-    padding-top: 0.5rem;
 }
 
-/* ? ----------------------------------------------------------- */
+/* * -------------------------------------------------------- */
+/* ? -------------------------------------------------------- */
+/* ! -------------------------------------------------------- */
 
-/* todo: CSS da parte 02  -------------------------------------- */
+/* ! -- Main ------------------------------------------------ */
 
-/* BACKGROUND -------------------------------------------------- */
-.parte02 {
-    /* adiciona imagem de fundo e configura sua disposição: */
-    background-image: url(../assets/cover2.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-position: center; /*centraliza imagem*/
-    /* Dimensiona imagem */
+main {
+    /*border: 4px solid rgb(25, 185, 52);*/
+    /* dimensionando a main*/
     height: 100vh;
-    width: 100%;
+    /* estilo dos filhos */
+    color: white;
+    /* auxilio para posicionar caixas de gênero */
     position: relative;
 }
 
-/* ETIQUETA DESTAQUES */
-.caixaDestaques {
+
+/* * -- Títulos --------------------------------------------- */
+
+.genero {
+    /* dimensões da caixa*/
+    width: 13rem; 
+    height: 3rem;
+    /* estilo da caixa */
+    background-color: #6B231E;
+    border-radius: 5px;
     /* altera estilo do texto */
     color: #EDDFB2;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 700;
-
-    /* estilo da caixa */
-    background-color: #6B231E;
-    border-radius: 5px;
-
-    /* dimensões */
-    width: 13rem; 
-    height: 3rem;
-
     /* posição do texto */
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* posição caixa */
-    position: absolute;
-    top: -2.7%;
-    left: 50%;
-    transform: translateX(-50%);
-
 }
 
-/* POSTAGENS -------------------------------------------------- */
+#destaques {
+    /*posicionamento da caixa*/
+    position: absolute;
+    top: -1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-/* CARDS */
+#ultimasPublicacoes {
+    /*posicionamento da caixa*/
+    position: absolute;
+    top: 47.58vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-.carrossel {
-    color: #FFFFFF;
 
-    /* posicionamento na caixa */
+/* * -------------------------------------------------------- */
+
+/* * -- Cards ----------------------------------------------- */
+
+.carrosseis {   
+    /* tamanho da caixa pai de todos os cards*/
+    height: 100%;
+    width: 100%;
+    /* disposição dos elementos */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 5rem;
-
-
-    /* posicionamento entre elementos */
-    gap: 8rem;
 }
 
-.destaquescards{
-
-    /*posicionamento dos cards*/
-    display: flex;
-    
-    gap: 3rem;
-}
-
-.card1 img {
-    width: 500px;
-    height: 370px;
-}
-
-.card2 img {
-    width: 380px;
-    height: 370px;
-}
-
-
-.caixaUltimos {
-    /* altera estilo do texto */
-    color: #EDDFB2;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-
-    /* estilo da caixa */
-    background-color: #6B231E;
-    border-radius: 5px;
-
-    /* dimensões */
-    width: 13rem; 
-    height: 3rem;
-
-    /* posição do texto */
+.cardsDestaques {
+    /* tamanho da caixa pai dos cards de destaque */
+    height: 50%;
+    /* disposição dos elementos */
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+    
+}
 
-    /* posição caixa */
-    position: absolute;
-    top: 45.5%;
-    left: 50%;
-    transform: translateX(-50%);
+.cardsUltimasPublicacoes {
+    /* tamanho da caixa pai dos cards de ulimas publicaçõe */
+    height: 50%;
+    /* disposição dos elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
 
+.cards {
+    /* dimensões dos cards */
+    height: 38vh;
+    width: 35rem;
+    border-radius: 40px;
+    /* estilo */
+    background-color: #E5E5E5;
+    /* pra deixar furar o flex*/
+    flex-shrink: 0;
 }
 
 
+/* * -------------------------------------------------------- */
+/* ! -------------------------------------------------------- */
 
-
-/* todo: -------------------------------------------------------- */
-
-/* *  Footer ---------------------------------------------------- */
+/* ! -- Footer ---------------------------------------------- */
 
 footer {
     background-color: #6B231E;
     height: 20vh;
 }
 
-/* * ------------------------------------------------------------ */
+/* ! -------------------------------------------------------- */
