@@ -37,9 +37,54 @@
 }
 
 /* * Elementos ---------------------------------- */
+/* * -- Imagem ---------- */
 .conteudo img {
     width: 20vw;
 }
+/* * ------------------- */
+
+/* * -- Links ---------- */
+.links {
+    border: 2px solid greenyellow;
+}
+
+.postagens{
+    border: 2px solid purple;
+    /* dimensões da caixa */
+    height: 5vh;
+    width: 20vw;
+}
+
+.usuarios{
+    border: 2px solid orange;
+    /* dimensões da caixa */
+    height: 5vh;
+    width: 20vw;
+}
+
+/* * ------------------- */
+
+/* * -- Botões --------- */
+.botoes {
+    border: 2px solid white;
+    /* disposição dos filhos */
+    display: flex;
+}
+
+.home {
+    border: 2px solid orange;
+    /* dimensões */
+    height: 3vh;
+    width: 3vh;
+}
+
+.logout {
+    border: 2px solid red;
+    /* dimensões */
+    height: 3vh;
+    width: 3vh;
+}
+/* * ------------------- */
 /* * -------------------------------------------- */
 
 /* ! -------------------------------------------- */
