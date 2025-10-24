@@ -1,3 +1,57 @@
-.oi p{
-    color: rgb(12, 12, 20);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("./../assets/Fundo.png");
+    background-size: 100%;
+    background-attachment: fixed;
+
+    height: 1000px;
+}
+
+main{
+/*    background-color: #6B231E;*/
+    background-color: #44110D;
+    border: none;
+    height: 635px;
+    width: 288px;
+    position: fixed;
+    box-shadow: 0.01rem 0.01rem 0.3rem 0.1rem #290e0c;
+
+    padding: 50px 35px 50px 35px;
+}
+
+#container {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.profile {
+    display:block;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid white;
+    
+}
+
+.picture img{
+    width: 45%;
+    border: 2px solid white;
+    border-radius: 20px;
+
+}
+
+.username h2{
+    color: white;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
 }
