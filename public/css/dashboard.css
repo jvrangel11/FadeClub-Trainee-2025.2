@@ -28,10 +28,10 @@
     border: 3px solid orangered;
     /* configurando dimensões da caixa */
     width: 40%;
-    height: 80%;
-    /* configurando disposição dos filhos*/
+    height: 75%;
+    /* disposição dos filhos*/
     display: flex;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     flex-direction: column;
 }
@@ -46,20 +46,29 @@
 /* * -- Links ---------- */
 .links {
     border: 2px solid greenyellow;
+    /* dimensões da caixa */
+    width: 30vw;
+    /* disposição dos filhos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
 }
 
 .postagens{
     border: 2px solid purple;
     /* dimensões da caixa */
-    height: 5vh;
-    width: 20vw;
+    height: 10vh;
+    width: 30vw;
 }
 
 .usuarios{
     border: 2px solid orange;
     /* dimensões da caixa */
-    height: 5vh;
-    width: 20vw;
+    height: 10vh;
+    width: 30vw;
 }
 
 /* * ------------------- */
