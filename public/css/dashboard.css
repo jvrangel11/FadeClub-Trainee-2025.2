@@ -48,27 +48,30 @@
     border: 2px solid greenyellow;
     /* dimensões da caixa */
     width: 30vw;
+    /* posiciona em relação a imagem */
+    margin-top: 2rem;
     /* disposição dos filhos*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    
 }
 
 .postagens{
-    border: 2px solid purple;
     /* dimensões da caixa */
     height: 10vh;
     width: 30vw;
+    /* estilo */
+    background-color: #8C8C8C;
 }
 
 .usuarios{
-    border: 2px solid orange;
     /* dimensões da caixa */
     height: 10vh;
     width: 30vw;
+     /* estilo */
+    background-color: #8C8C8C;
 }
 
 /* * ------------------- */
@@ -76,8 +79,8 @@
 /* * -- Botões --------- */
 .botoes {
     border: 2px solid white;
+    /* posiciona em relação aos links*/
     margin-top: 2rem;
-
     /* disposição dos filhos */
     display: flex;
     gap: 2rem;
