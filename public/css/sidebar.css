@@ -39,14 +39,12 @@ main{
     padding-bottom: 4px;
 
     border-bottom: 1px solid white;
-    
 }
 
 .picture img{
     width: 45%;
     border: 2px solid white;
     border-radius: 20px;
-
 }
 
 .username h2{
@@ -54,4 +52,23 @@ main{
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 600;
+}
+
+.buttons {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.button {
+    display: flex;
+    
+}
+
+.button button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 50%;
 }
