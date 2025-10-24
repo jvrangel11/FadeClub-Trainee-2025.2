@@ -76,22 +76,25 @@
 /* * -- Botões --------- */
 .botoes {
     border: 2px solid white;
+    margin-top: 2rem;
+
     /* disposição dos filhos */
     display: flex;
+    gap: 2rem;
 }
 
 .home {
     border: 2px solid orange;
     /* dimensões */
-    height: 3vh;
-    width: 3vh;
+    height: 7vh;
+    width: 7vh;
 }
 
 .logout {
     border: 2px solid red;
     /* dimensões */
-    height: 3vh;
-    width: 3vh;
+    height: 7vh;
+    width: 7vh;
 }
 /* * ------------------- */
 /* * -------------------------------------------- */
