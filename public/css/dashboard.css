@@ -24,5 +24,15 @@
 /* ! -------------------------------------------- */
 
 /* ! Conteúdo ----------------------------------- */
-
+.conteudo {
+    border: 3px solid orangered;
+    /* configurando dimensões da caixa */
+    width: 40%;
+    height: 80%;
+    /* configurando disposição dos filhos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 /* ! -------------------------------------------- */
