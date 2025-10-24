@@ -25,7 +25,6 @@
 
 /* ! Conteúdo ----------------------------------- */
 .conteudo {
-    border: 3px solid orangered;
     /* configurando dimensões da caixa */
     width: 40%;
     height: 75%;
@@ -45,7 +44,6 @@
 
 /* * -- Links ---------- */
 .links {
-    border: 2px solid greenyellow;
     /* dimensões da caixa */
     width: 30vw;
     /* posiciona em relação a imagem */
@@ -56,22 +54,80 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    /* estilo dos filhos */
+    color: #E5E5E5;
 }
 
 .postagens{
     /* dimensões da caixa */
     height: 10vh;
-    width: 30vw;
+    width: 28vw;
+    border-radius: 25px;
     /* estilo */
     background-color: #8C8C8C;
+    /* disposição dos filhos */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 1rem;
+    /* texto */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    .icone {
+        /*disposição de conteúdo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* formato de caixa */
+        height: 5rem;
+        width: 5rem; 
+        border-radius: 20px;
+        /* estilo da caixa */
+        background-color: #0A3A55;
+        img{
+            width: 3rem;
+        }
+    }
+    p{
+        margin-left: 20%;
+    }
 }
 
 .usuarios{
     /* dimensões da caixa */
     height: 10vh;
-    width: 30vw;
-     /* estilo */
+    width: 28vw;
+    border-radius: 25px;
+    /* estilo */
     background-color: #8C8C8C;
+    /* disposição dos filhos */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 1rem;
+    /* texto */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    .icone {
+        /*disposição de conteúdo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* formato de caixa */
+        height: 5rem;
+        width: 5rem; 
+        border-radius: 20px;
+        /* estilo da caixa */
+        background-color: #0A3A55;
+        img{
+            width: 3rem;
+        }
+    }
+    p{
+        margin-left: 20%;
+    }
 }
 
 /* * ------------------- */
