@@ -25,7 +25,6 @@ main{
 }
 
 #container {
-    border: 1px solid black;
     height: 100%;
     width: 100%;
 }
@@ -55,20 +54,61 @@ main{
 }
 
 .buttons {
-    border: 1px solid black;
-    height: 100%;
-    width: 100%;
-    margin-top: 2px;
+    height: auto;
+    width: auto;
+    margin-top: 20px;
 }
 
 .button {
     display: flex;
+    justify-content: left;
+    padding: 30px;
+    padding-bottom: 10px ;
+    padding-top: 10px;
     
 }
 
 .button button{
-    background-color: transparent;
+
+    background-color:#44110D;
     color: white;
     border: none;
-    width: 50%;
+    border-radius: 50px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.button p{
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.icon ion-icon{
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+}
+
+.text {
+    align-items: center;
+}
+
+.text p{
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.button button:hover {
+    background-color: #832f29;
+    transition: 0.4s;
 }
