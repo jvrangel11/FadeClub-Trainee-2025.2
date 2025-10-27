@@ -255,7 +255,7 @@ main {
 }
 
 
-.slider {
+.slider1 , .slider2 {
     /* dimensionamento */
     height: 50vh;
     width: 100%;
@@ -266,7 +266,7 @@ main {
 }
 
 
-.conteudo {
+.conteudo1 , .conteudo2 {
     /*posicionamento entre os cards */
     display: flex;
     justify-content: center;
