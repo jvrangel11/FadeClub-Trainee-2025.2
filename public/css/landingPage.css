@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 /* ! -------------------------------------------------------- */
 
@@ -17,17 +18,16 @@
     /* lida com as dimensões */
     width: 100%;
     height: 70vh;
+    
 }
 
 .background2 {
     /*lida com a imagem */
-    /*
     background-image: url(../assets/cover2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    */
-    background-color: #111d2b;
+    /*background-color: #111d2b;*/
     /* lida com as dimensões */
     height: 100vh;
 }
@@ -272,17 +272,19 @@ main {
     display: flex;
     /*escondendo overflow*/
     overflow: hidden;
-    gap:58px;
+    gap: 65px;
     /*pro js*/
     scroll-behavior: smooth;
+
+    margin-left: 20px;
 }
 
 
 
 .card{
     background-color: #FFFFFF;
-    height: 34vh;
-    width: 27vw;
+    height: 33vh;
+    width: 30vw;
     flex-shrink: 0;
     border-radius: 30px;
 
