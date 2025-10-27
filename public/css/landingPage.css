@@ -272,7 +272,7 @@ main {
     display: flex;
     /*escondendo overflow*/
     overflow: hidden;
-    gap: 65px;
+    gap: 55px;
     /*pro js*/
     scroll-behavior: smooth;
 
