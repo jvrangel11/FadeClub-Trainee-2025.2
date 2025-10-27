@@ -1,6 +1,14 @@
 body {
-    background-image: url(../assets/fadeclub-bg1.png);
+    background-image: url(../assets/fundonovo.png);
     background-size:cover ;
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 95%;
+        flex-direction: column;
+        padding: 10px;
+    }
 }
 
 .login-container {
@@ -72,6 +80,6 @@ button {
 }
 
 button:hover {
-    background-color: #1B2A41;
+    background-color: #0d192b;
     color: white;
 }

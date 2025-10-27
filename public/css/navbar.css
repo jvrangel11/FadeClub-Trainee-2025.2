@@ -1,0 +1,68 @@
+body {
+    background-image: url(../assets/fundonavbar2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    background: #1e2d44;
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a.active {
+    background-color: #f0f0f0;
+    padding: 0px 10px;
+    color: #000000;
+    border-radius: 25px;
+}
+
+.menu a:hover {
+    color: #334d74;
+}
+
+.icones-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone {
+    width: 40px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.icone:hover {
+    opacity: 1;
+}
+
+.perfil {
+    width: 40px;
+}
