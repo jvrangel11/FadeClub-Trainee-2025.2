@@ -206,6 +206,28 @@
 
 /* ! -------------------------------------------- */
 
+/* ! Hover -------------------------------------- */
+
+.usuarios:hover {
+    background-color: rgba(140, 140, 140, 0.651);
+    cursor: pointer;
+}
+.postagens:hover {
+    background-color: rgba(140, 140, 140, 0.651);
+    cursor: pointer;
+}
+.caixaHome:hover {
+    background-color: #f8b734;
+    cursor: pointer;
+}
+.caixaLogout:hover {
+    background-color: #ca1f24;
+    cursor: pointer;
+}
+
+/* ! -------------------------------------------- */
+
+
 /* ! Responsividade ----------------------------- */
 
 @Media (min-width: 344px) and ( max-width: 1070px) {
@@ -265,3 +287,5 @@
     }
 
 }
+
+/* ! -------------------------------------------- */
