@@ -167,8 +167,8 @@
 
 .heroSection img {
     /* dimensionamento da imagem */
-    width: 470px;
-    height: 470px;
+    width: 23vw;
+    height: 40vh;
 }
 
 .slogan {
@@ -247,7 +247,25 @@ main {
 /* * -- Carroseis ----------------------------------------------- */
 
 
+.carrosseis {
+    border: 3px solid orangered;
+}
 
+.slider {
+    border: 3px solid greenyellow;
+}
+
+.nav-arrow{
+    border: 3px solid purple;
+}
+
+.conteudo{
+    border: 3px solid red;
+}
+
+.card{
+    border:3px solid brown;
+}
 
 
 
