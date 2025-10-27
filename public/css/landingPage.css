@@ -368,7 +368,7 @@ main {
 
 /* ! Estilo individual de cada card ------------------------- */
 
-.card03 {
+.card {
     display: flex;
     overflow: hidden;
     color: black;
