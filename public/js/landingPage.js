@@ -27,7 +27,7 @@ function updateCarrossel()
 function scrollToPage(slider , sliderContent) //passa o slider1 ou o slider2 | slider1Content ou 2
 {
     const newPosition = slider.offsetWidth * currentPage; //calcula quanto a gnt vai arrastar pro lado
-    sliderContent.scrollTo({ left:newPosition, behavior: 'smooth'});
+    sliderContent.scrollTo({ left: newPosition, behavior: 'smooth'});
 }
 
 function moveLeft(slider , sliderContent)
