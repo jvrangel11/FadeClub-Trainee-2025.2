@@ -209,8 +209,39 @@
 /* ! Responsividade ----------------------------- */
 
 @Media (max-width: 390px) {
+    .links{
+        width: 40vh;
+    }
+    .postagens{
+        width: 40vh;
+        font-size: 20px;
+        .icone{
+            height: 4rem;
+            width: 4rem; 
+            img {
+                width: 1.8rem;;
+            }
+        }
+        p {
+            margin-left: 13%;
+        }
+    }
+    .usuarios{
+        width: 40vh;
+        font-size: 20px;
+        .icone{
+            height: 4rem;
+            width: 4rem; 
+            img {
+                width: 1.8rem;;
+            }
+        }
+        p {
+            margin-left: 15%;
+        }
+    }
     .conteudo img {
-        width: 30vh;
+        width: 35vh;
     }
     .home{
         font-size: 12px;
