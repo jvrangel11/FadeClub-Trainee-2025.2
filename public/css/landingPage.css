@@ -247,7 +247,6 @@ main {
 /* * -- Carroseis ----------------------------------------------- */
 
 .carrosseis {
-    border: 3px solid orangered;
     /* Dimensionamento */
     height: 100vh;
     /* Escondendo overflow */
@@ -257,7 +256,6 @@ main {
 
 
 .slider {
-    border: 3px solid greenyellow;
     /* dimensionamento */
     height: 50vh;
     width: 100%;
@@ -275,7 +273,7 @@ main {
     align-items: center;
     gap: 50px;
     /*escondendo overflow*/
-    /*overflow: hidden;*/
+    overflow: hidden;
 
     /*pro js*/
     scroll-behavior: smooth;
@@ -285,7 +283,7 @@ main {
 
 .card{
     background-color: #FFFFFF;
-    height: 38vh;
+    height: 34vh;
     width: 27vw;
     flex-shrink: 0;
     border-radius: 30px;
