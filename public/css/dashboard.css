@@ -219,10 +219,23 @@
 .caixaHome:hover {
     background-color: #f8b734;
     cursor: pointer;
+    img {
+        width: 3.3rem;
+    }
 }
 .caixaLogout:hover {
     background-color: #ca1f24;
     cursor: pointer;
+    img {
+        width: 2.5rem;
+    }
+}
+
+.icone:hover {
+    background-color: #084a70;
+    img{
+        width: 3.3rem;
+    }
 }
 
 /* ! -------------------------------------------- */
