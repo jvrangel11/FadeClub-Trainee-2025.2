@@ -246,30 +246,69 @@ main {
 
 /* * -- Carroseis ----------------------------------------------- */
 
-
 .carrosseis {
     border: 3px solid orangered;
+    /* Dimensionamento */
+    height: 100vh;
+    /* Escondendo overflow */
+    overflow: hidden;
+    /* position relative */
+
 }
+
 
 .slider {
     border: 3px solid greenyellow;
+    /* dimensionamento */
+    height: 50vh;
+    width: 100%;
+    /* posicionamento dos elementos em relação a seta*/
+    display: flex;
+    /* justifcy contewnt center */
+    align-items: center;
 }
 
-.nav-arrow{
-    border: 3px solid purple;
+
+.conteudo {
+    /*posicionamento entre os cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /*escondendo overflow*/
+    overflow: hidden;
+
+    /*pro js*/
+    scroll-behavior: smooth;
 }
 
-.conteudo{
-    border: 3px solid red;
-}
+
 
 .card{
-    border:3px solid brown;
+    background-color: #FFFFFF;
+    height: 38vh;
+    width: 27vw;
+    flex-shrink: 0;
+    border-radius: 30px;
 }
 
 
-
-
+.nav-arrow {
+    /*estilos*/
+    background-color: #E6E7EB;
+    color: #3B4F66;
+    /*dimensionamento da caixa */
+    height: 5vh;
+    width: 3vw;
+    flex-shrink: 0;
+    border-radius: 50%;
+    /* posicionamento do elemento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* dimensionamento do elemento */
+    font-size: 30px;
+}
 
 
 
