@@ -208,7 +208,7 @@
 
 /* ! Responsividade ----------------------------- */
 
-@Media (max-width: 390px) {
+@Media (min-width: 344px) and ( max-width: 1070px) {
     .links{
         width: 40vh;
     }
