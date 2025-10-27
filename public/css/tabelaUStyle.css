@@ -1,0 +1,63 @@
+body{
+    background-image:url(../assets/backgroundFade.jpg);
+    color: #FAFAFA;
+   
+    background-size: cover;
+      background-repeat: no-repeat;
+   
+    
+}
+
+
+.conteiner{
+    display: grid;
+    place-items: center;
+   
+    gap:1em;
+
+
+
+}
+
+
+.conteiner .titulo{
+    font-size: 2em;
+    font-family: "Anton", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.conteiner .cabeca{
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    gap: 6em;
+
+    background-color: #1B2A41;
+    padding: 1em 2em 1em 5em;
+    opacity: 90%;
+    
+
+}
+
+.conteiner .corpo{
+ font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 6em;
+
+
+     background-color: #1B2A41;
+    padding: 2em 2em 1em 4em;
+    opacity: 90%;
+    
+}
+
+.conteiner .corpo img{
+    width: 2em;
+    height: 2em;
+    border-radius: 16px;
+
+}
