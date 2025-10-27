@@ -366,6 +366,86 @@ main {
 /* * -------------------------------------------------------- */
 /* ! -------------------------------------------------------- */
 
+/* ! Estilo individual de cada card ------------------------- */
+
+.card03 {
+    display: flex;
+    overflow: hidden;
+    color: black;
+    img{
+        height: 110%;
+        width: 45%;
+    }
+}
+
+.conteudoCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.textoCard {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    gap:1rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    h1{
+        font-size: 18px;
+    }
+    .autor{
+        padding-top: 6rem;
+    }
+}
+
+.tagEBotao {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    gap: 5rem;
+    
+    height: 7.5vh;
+
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    .verMais{
+        background-color: #E4A11B;
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+        height: 4.9vh;
+        width: 3vw;
+        border-radius: 50%;
+    }
+    .verMais:hover {
+        background-color: #fcb322;
+        cursor: pointer;
+    }
+    img{
+        height: 1.5vh;
+    }
+    .tag{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #8B26C5;
+        color: #EDDFB2;
+        border-radius: 8px;
+        height: 4vh;
+        width: 6vw;
+    }
+}
+
+/* ! -------------------------------------------------------- */
+
+
 /* ! -- Footer ---------------------------------------------- */
 
 footer {
