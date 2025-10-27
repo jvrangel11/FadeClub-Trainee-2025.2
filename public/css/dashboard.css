@@ -205,3 +205,32 @@
 /* * -------------------------------------------- */
 
 /* ! -------------------------------------------- */
+
+/* ! Responsividade ----------------------------- */
+
+@Media (max-width: 390px) {
+    .conteudo img {
+        width: 30vh;
+    }
+    .home{
+        font-size: 12px;
+
+        .caixaHome{
+            img{
+            width: 2.2rem;
+            }
+        }
+    }
+
+    .logout{
+    
+        font-size: 12px;
+    
+        .caixaLogout{
+            img{
+                width: 1.6rem;
+            }
+        }
+    }
+
+}
