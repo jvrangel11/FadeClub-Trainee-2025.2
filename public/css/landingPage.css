@@ -244,21 +244,22 @@ main {
 
 /* * -------------------------------------------------------- */
 
-/* * -- Carroseis ----------------------------------------------- */
+/* * -- Carrosseis ----------------------------------------------- */
 
 .carrosseis {
     /* Dimensionamento */
     height: 100vh;
+    width: 100%;
     /* Escondendo overflow */
-    /*overflow: hidden;*/
+    overflow: hidden;
     position: relative;
+
 }
 
 
 .slider1 , .slider2 {
     /* dimensionamento */
     height: 50vh;
-    width: 100%;
     /* posicionamento dos elementos em relação a seta*/
     display: flex;
     /* justifcy contewnt center */
@@ -269,12 +270,9 @@ main {
 .conteudo1 , .conteudo2 {
     /*posicionamento entre os cards */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
     /*escondendo overflow*/
     overflow: hidden;
-
+    gap:58px;
     /*pro js*/
     scroll-behavior: smooth;
 }
@@ -287,6 +285,8 @@ main {
     width: 27vw;
     flex-shrink: 0;
     border-radius: 30px;
+
+
 }
 
 .nav-arrow {
