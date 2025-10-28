@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/landingPage.css">
-    <title>Home</title>
+    <title>Landing Page</title>
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,244 +13,88 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--Parte do primeiro background | navbar | Hero Section --------------------------------------->
-    <div class="background1">
-        <header>
-            <!-- Navbar ---------------------------------------------------------------------------->
-            <div class="navbar">
-                <div class="letreiro">
-                    <img src="../../../public/assets/letreiro.png" alt="letreiro">
-                </div>
-                <div class="secoes">
-                    <div class="secao">PUBLICACOES</div>
-                    <div class="secao">HOME</div>
-                    <div class="secao">COMUNIDADE</div>
-                </div>
+    <!-- Cover1 ------------------------------------------------------------------------------------------------------------->
+    <div class="cover1">
+        <nav>
+            <div class="letreiro"><img src="../../../public/assets/Imagens/letreiro.png" alt="letreiro"></div>
+            <div class="secoes">
+                <div class="secao">PUBLICACOES</div>
+                <div class="secao">HOME</div>
+                <div class="secao">COMUNIDADE</div>                
+            </div>
                 <div class="botoes">
                     <div class="search">
-                        <img src="../../../public/assets/search.png" alt="search">
+                        <img src="../../../public/assets/SVG/search.svg" alt="search">
                     </div>
                     <div class="login">
-                        <img src="../../../public/assets/login.png" alt="login">
+                        <img src="../../../public/assets/SVG/login.svg" alt="login">
                     </div>
                 </div>
-                <!----------------------------------------------------------------------------------->
-            </div>
-            <!-- Hero Section ----------------------------------------------------------------------->
-            <div class="heroSection">
-                <img src="../../../public/assets/FadeClub-logo3.png" alt="FadeClub logo" class="logo">
-                <div class="slogan">
-                    <p>Cortes que inspiram,</p>
-                    <p>estilo que conecta.</p>
-                </div>
-            </div>
-            <!---------------------------------------------------------------------------------------->
-        </header>
+        </nav>
+        <section class="heroSection">
+            <img src="../../../public/assets/Imagens/logo.png" alt="FadeClub logo" class="logo">
+            <div class="slogan">
+                <p>Cortes que inspiram,</p>
+                <p>estilo que conecta.</p>
+            </div>            
+        </section>
     </div>
+    <!----------------------------------------------------------------------------------------------------------------------->
 
-    <div class="background2">
+    <!-- Cover2 ------------------------------------------------------------------------------------------------------------->
+    <div class="cover2">
         <main>
-            <!-- Textos que dividem os carrosseis ----------------------------------------------------->
-            <div class="genero" id="destaques">Nossos Destaques</div>
-            <div class="genero" id="ultimasPublicacoes">Ultimas Publicacões</div>
-            <!----------------------------------------------------------------------------------------->
-            <div class="carrosseis">
-                <div class="slider1">
-                    <!-- Seta esquerda ---------------------------------------------------------------->
-                    <div class="nav-arrow arrow-left1" id="seta-esquerda1">&#10094</div>
-                        <div class="conteudo1">
-                            <div class="card"></div>
-                            <div class="card card01">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
+        <!-- Textos que dividem os carrosseis ----------------------------------------------------------------------------------->
+        <div class="genero destaques">Nossos Destaques</div>
+        <div class="genero ultimasPublicacoes">Ultimas Publicacões</div>
+        <!----------------------------------------------------------------------------------------------------------------------->
+        <div class="carrosseis">
+            <div class="slider1">
+                <div class="nav-arrow arrow-left1" id="seta-esquerda1">&#10094</div>
+                <div class="conteudo1">
+                    <div class="card card01">
+                        <div class="imagem i01"></div>
+                        <div class="informacoes">
+                            <div class="texto">
+                                <h1>O retorno do corte te...</h1>
+                                <p class="legenda">A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
+                                <p class="autor">De: Mestre Ivan</p>
                             </div>
-                            <div class="card card02">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
+                            <div class="especiais">
+                                <div class="tag"><p>Tendências</p></div>
+                                <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
                             </div>
-                            <div class="card card03">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card04">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card05">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>                                
-                            </div>
-                            <div class="card card06">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card"></div>
-
                         </div>
-                    <!-- Seta Direita ---------------------------------------------------------------->
-                    <div class="nav-arrow arrow-right1" id="seta-direita1">&#10095</div>
+                    </div>
+                    <div class="card card02"></div>
+                    <div class="card card03"></div>
+                    <div class="card card04"></div>
+                    <div class="card card05"></div>
+                    <div class="card card06"></div>
                 </div>
-                <div class="slider2">
-                    <!-- Seta esquerda ---------------------------------------------------------------->
-                    <div class="nav-arrow arrow-left2" id="seta-esquerda2">&#10094</div>
-                        <div class="conteudo2">
-                            <div class="card"></div>
-                            <div class="card card07">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card08">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card09">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card10">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card11">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card12">
-                                <img src="../../../public/assets/Cards/card03.png" alt="">
-                                <div class="conteudocard">
-                                    <div class="textoCard">
-                                        <h1>O retorno do corte textu...</h1>
-                                        <p>A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                        <p class="autor">De: Mestre Ivan</p>
-                                    </div>
-                                    <div class="tagEBotao">
-                                        <div class="tag">Tendências</div>
-                                        <div class="verMais"><img src="../../../public/assets/verMais.svg" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card"></div>
-                        </div>
-                    <!-- Seta Direita ---------------------------------------------------------------->
-                    <div class="nav-arrow arrow-right2" id="seta-direita2">&#10095</div>
-                </div>
+                <div class="nav-arrow arrow-right1" id="seta-direita1">&#10095</div>
             </div>
-        </main> 
+            <div class="slider2">
+                <div class="nav-arrow arrow-left2" id="seta-esquerda2">&#10094</div>
+                <div class="conteudo2">
+                    <div class="card card07"></div>
+                    <div class="card card08"></div>
+                    <div class="card card09"></div>
+                    <div class="card card10"></div>
+                    <div class="card card11"></div>
+                    <div class="card card12"></div>
+                </div>
+                <div class="nav-arrow arrow-right2" id="seta-direita2">&#10095</div>
+            </div>
+        </div>
+        </main>
     </div>
-
+    <!----------------------------------------------------------------------------------------------------------------------->
+    <!-- Footer ------------------------------------------------------------------------------------------------------------->
     <footer></footer>
+    <!----------------------------------------------------------------------------------------------------------------------->
 
-    
     <script src="../../../public/js/landingPage.js"></script>
+
 </body>
 </html>
