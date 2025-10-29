@@ -1,0 +1,229 @@
+body{
+    background-image:url(../assets/backgrounds/backgroundFade.jpg);
+    color: #FAFAFA;
+   
+    background-size: cover;
+      background-repeat: no-repeat;
+   
+    
+}
+
+
+.conteiner{
+    display: grid;
+    place-items: center;
+   
+    gap:1em;
+
+
+
+}
+
+
+
+.conteiner{ 
+padding-top: 3%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+gap: 1.5em;
+
+    .titulo{
+    font-size: 1em;
+    font-family: "Anton", sans-serif;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40vw;
+    margin-left: 1em;
+    
+
+    
+   
+
+   
+}
+
+
+}
+
+h2{
+    font-size: 1.5em;
+    transform: scale(2);
+    font-weight: lighter;
+    
+}
+
+.conteiner .titulo i{
+            
+        padding: 25px;
+        border-radius: 64px;
+        background-color: #1B2A41 ;
+        font-size: 1.2em;
+        transform: scale(1.2);
+        
+    }
+
+.conteiner .titulo i:hover{
+    transform: scale(1.1);
+
+    
+}
+
+
+
+.conteiner .corpo{
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    width: 55vw;
+    
+
+    background-color: #1B2A41;
+    padding: 1em;
+    opacity: 90%;
+
+    font-family:"Montserrat";
+  
+    
+
+}
+
+
+
+
+
+.c00{
+    display: flex;
+    justify-content: space-evenly;
+   
+    span{
+ padding-left: 2.5em;
+
+    }
+   
+
+  
+   
+}
+
+
+  
+
+
+
+.c01{
+     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+
+  
+   
+   
+}
+
+
+
+.c02{
+     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
+   
+}
+
+.c03{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
+   
+}
+
+.c04{
+   display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
+
+   
+}
+
+.c05{
+     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
+
+   
+}
+
+#avatar{
+    display: block;
+
+
+   
+}
+
+
+#nome{
+    display: block;
+ transform: scale(0.5);
+
+  
+}
+
+#email{
+     transform: scale(0.5);
+
+ 
+}
+
+#ident{
+     transform: scale(0.5);
+     
+
+}
+
+#vis:hover{
+ 
+        color: green;
+        transform: scale(1.1);
+    
+}
+
+#edit:hover{
+    color:yellow;
+    transform: scale(1.1);
+
+}
+
+#exc:hover{
+    color:red;
+    transform: scale(1.1);
+}
+
+
+.conteiner .corpo img{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 16px;
+    transform: scale(5.5);
+
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+
+

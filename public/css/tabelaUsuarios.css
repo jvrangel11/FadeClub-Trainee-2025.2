@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-image: url(../assets/backgrounds/cover4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.blocoPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.topo{
+
+    height: 10rem;
+    width: 85rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        color: #ffff;
+        font-family: "Anton", sans-serif;
+        font-weight: 100;
+        font-size: 80px;
+    }
+    .criar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        background-color: #1B2A41;
+        img{
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+}
+.tabela{
+    height: 40rem;
+    width: 85rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 0;
+    column-gap: 0;
+    gap:0;
+}
+.filho{
+    height: 6rem;
+    width: 17rem;
+    background-color: #1B2A41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #ffff;
+}
+.imagemTabela {
+    height: 4rem;;
+    width: 4rem;
+    border-radius: 50%;
+}
+.acoes{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+#vis:hover{
+ 
+    color: #5AC931;
+    transform: scale(1.1);
+    
+}
+
+#edit:hover{
+    color: #FF7F00;
+    transform: scale(1.1);
+
+}
+
+#exc:hover{
+    color: #A90D0D;
+    transform: scale(1.1);
+}
