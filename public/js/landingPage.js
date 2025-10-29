@@ -16,17 +16,17 @@ let itemsPerView = 1;
 //! Criação/Organização do carrossel
 function updateCarrossel()
 {
-    const sliderWidth = slider1.offsetWidth; //guarda o tamanho do slider (só a largura da div, não conta elementos em overflow)
-    const itemWidth = slider1Content.children[0].getBoundingClientRect().width; //guarda o tamanho dos cards com base no primeiro filho
+    const sliderWidth = slider1.offsetWidth;
+    const itemWidth = slider1Content.children[0].getBoundingClientRect().width;
 
     itemsPerView = (sliderWidth / itemWidth);
     totalPages = Math.ceil( (slider1Content.children.length / itemsPerView) - 2*((sliderWidth / itemWidth)/100));
 }
 
 //! Movimentação
-function scrollToPage(slider , sliderContent) //passa o slider1 ou o slider2 | slider1Content ou 2
+function scrollToPage(slider , sliderContent)
 {
-    const newPosition = slider.offsetWidth * currentPage; //calcula quanto a gnt vai arrastar pro lado
+    const newPosition = slider.offsetWidth * currentPage;
     sliderContent.scrollTo({ left: newPosition, behavior: 'smooth'});
 }
 
