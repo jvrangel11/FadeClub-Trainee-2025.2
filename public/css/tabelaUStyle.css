@@ -26,7 +26,7 @@ padding-top: 3%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-gap: 2em;
+gap: 1.5em;
 
     .titulo{
     font-size: 1em;
@@ -36,6 +36,12 @@ gap: 2em;
     flex-direction: row;
     justify-content: space-between;
     gap: 40vw;
+    margin-left: 1em;
+
+    i{
+
+        
+    }
 
    
 }
@@ -51,10 +57,12 @@ h2{
 }
 
 .conteiner .titulo i{
+            
         padding: 25px;
         border-radius: 64px;
         background-color: #1B2A41 ;
-        font-size: 1.5em;
+        font-size: 1.2em;
+        transform: scale(1.2);
         
     }
 
@@ -70,14 +78,14 @@ h2{
     font-size: 2em;
     display: flex;
     flex-direction: row;
-    width: 60vw;
+    width: 55vw;
     
 
     background-color: #1B2A41;
-    padding: 1em 1em 1em 1em;
+    padding: 1em;
     opacity: 90%;
 
-    font-family: "Montserrat";
+    font-family:"Montserrat";
   
     
 
@@ -89,15 +97,30 @@ h2{
 
 .c00{
     display: flex;
-    justify-content: space-between;
-  
+    justify-content: space-evenly;
+   
+    span{
+ padding-left: 2.5em;
 
+    }
+   
+
+  
+   
 }
 
-.c01{
-    display: flex;
-    justify-content: space-between;
 
+  
+
+
+
+.c01{
+     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+
+  
    
    
 }
@@ -105,46 +128,68 @@ h2{
 
 
 .c02{
-    display: flex;
-    justify-content: space-between;
-
+     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
    
 }
 
 .c03{
     display: flex;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
    
 }
 
 .c04{
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
 
    
 }
 
 .c05{
-    display: flex;
-    justify-content: space-between;
+     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  
+  
+
+   
+}
+
+#avatar{
+    display: block;
+
 
    
 }
 
 
-
 #nome{
-  margin-left: 3em;
-    
+    display: block;
+ transform: scale(0.5);
+
+  
 }
 
 #email{
-    
+     transform: scale(0.5);
+
+ 
 }
 
 #ident{
-    
+     transform: scale(0.5);
+     
+
 }
 
 #vis:hover{
@@ -170,7 +215,7 @@ h2{
     width: 0.5em;
     height: 0.5em;
     border-radius: 16px;
-    transform: scale(2.5);
+    transform: scale(5.5);
 
 }
 
