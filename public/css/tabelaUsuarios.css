@@ -1,9 +1,12 @@
+/*Tira o CSS padrão do navegador*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+/*Container onde fica o background*/
 .container{
+    /*Adiciona background, centraliza e define tamanho*/
     background-image: url(../assets/backgrounds/cover4.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,6 +14,7 @@
     width: 100%;
 }
 .blocoPrincipal{
+    /*Cria uma div para "segurar" a tabela*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,18 +23,21 @@
     width: 100%;
 }
 .topo{
-
+    /*Aqui é a parte do titulo da tabala*/
+    /*Dimensiona e organiza como os elementos ficam alinhados*/
     height: 10rem;
     width: 85rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /*Estiliza o titulo*/
     h1{
         color: #ffff;
         font-family: "Anton", sans-serif;
         font-weight: 100;
         font-size: 80px;
     }
+    /*Dimensiona e organiza o botão de adicionar*/
     .criar{
         display: flex;
         align-items: center;
@@ -39,23 +46,25 @@
         width: 6rem;
         border-radius: 50%;
         background-color: #1B2A41;
+        /*Dimensiona a imagem dentro*/
         img{
             height: 3rem;
             width: 3rem;
         }
     }
 }
+/*Css da caixa da tabela*/
 .tabela{
+    /*Dimensiona*/
     height: 40rem;
     width: 85rem;
+    /*Organiza os itens*/
     display: grid;
     grid-template-columns: repeat(5,1fr);
     align-items: center;
     justify-items: center;
-    row-gap: 0;
-    column-gap: 0;
-    gap:0;
 }
+/*Css para todos os "Quadrados" do grid*/
 .filho{
     height: 6rem;
     width: 17rem;
@@ -68,30 +77,58 @@
     font-size: 30px;
     color: #ffff;
 }
+/*Css da imagem do primeiro quadrado de cada linha*/
 .imagemTabela {
     height: 4rem;;
     width: 4rem;
     border-radius: 50%;
 }
+/*Organiza disposição dos elementos nessa div onde ficam os botões*/
 .acoes{
     display: flex;
     align-items: center;
     gap:1rem;
 }
-#vis:hover{
- 
-    color: #5AC931;
-    transform: scale(1.1);
-    
+/*Dimensiona icone de ver*/
+.iver{
+    height: 2.3rem;
+    width: 2.3rem;
 }
-
-#edit:hover{
-    color: #FF7F00;
-    transform: scale(1.1);
-
+/*Dimensiona icone de editar e excluir*/
+.ieditar, .iexcluir{
+    height: 2rem;
+    width: 2rem;
 }
-
-#exc:hover{
-    color: #A90D0D;
+/*Aparencia do icone de ver e hover*/
+.bot.ver .iver {
+    fill: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.bot.ver:hover .iver {
+    fill: #00ff66; 
+    filter: drop-shadow(0 0 6px #66ffb2);
+    transform: scale(1.1);
+}
+/*Aparencia do icone de editar e hover*/
+.bot.editar .ieditar {
+    fill: #ffffff; 
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.bot.editar:hover .ieditar {
+    fill: #FF7F00;
+    filter: drop-shadow(0 0 6px #FF7F00);
+    transform: scale(1.1);
+}
+/*Aparencia do icone de excluir e hover*/
+.bot.excluir .iexcluir {
+    fill: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.bot.excluir:hover .iexcluir {
+    fill: #A90D0D;
+    filter: drop-shadow(0 0 6px #d41616);
     transform: scale(1.1);
 }
