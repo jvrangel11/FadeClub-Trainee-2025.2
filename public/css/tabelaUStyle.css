@@ -22,7 +22,7 @@ body{
 
 
 .conteiner{ 
-padding-top: 10%;
+padding-top: 3%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -46,6 +46,7 @@ gap: 2em;
 h2{
     font-size: 1.5em;
     transform: scale(2);
+    font-weight: lighter;
     
 }
 
@@ -65,40 +66,85 @@ h2{
 
 
 
-.conteiner .cabeca{
+.conteiner .corpo{
     font-size: 2em;
     display: flex;
-    justify-content: space-between;
-    gap: 6em;
+    flex-direction: row;
+    width: 60vw;
+    
 
     background-color: #1B2A41;
-    padding: 1em 2em 1em 5em;
+    padding: 1em 1em 1em 1em;
     opacity: 90%;
 
     font-family: "Montserrat";
-    margin-right: 5%;
+  
     
 
 }
 
-.conteiner .corpo{
-   font-size: 1.5em;
+
+
+
+
+.c00{
     display: flex;
     justify-content: space-between;
-    gap: 6em;
+  
 
+}
 
-     background-color: #1B2A41;
-     padding: 1.5em 1.5em 1.5em 1.5em;
-    opacity: 90%;
-    margin-right: 3.5em;
-    
+.c01{
+    display: flex;
+    justify-content: space-between;
+
    
+   
+}
+
+
+
+.c02{
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+.c03{
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+.c04{
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+.c05{
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+
+
+#nome{
+  margin-left: 3em;
     
 }
 
-#nome{
-    margin-right: 1em;
+#email{
+    
+}
+
+#ident{
+    
 }
 
 #vis:hover{
@@ -121,8 +167,8 @@ h2{
 
 
 .conteiner .corpo img{
-    width: 1em;
-    height: 1em;
+    width: 0.5em;
+    height: 0.5em;
     border-radius: 16px;
     transform: scale(2.5);
 
