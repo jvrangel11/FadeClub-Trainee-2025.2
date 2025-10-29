@@ -85,20 +85,27 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 
 .inputs{
     display: flex;
     flex-direction: column;
-    gap: 25px
+    gap: 25px;
+    margin-top: 4vh;
 }
 
-
+.inputTitulo{
+    display: flex;
+}
+.asterisco{
+    color: #A4161A;
+}
 .nome, .email, .senha{
-    border: 1px solid orangered;
-    width: 20vw;
-    height: 8vh;
+
+    width: 22vw;
+    height: 9vh;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -110,12 +117,52 @@ body{
     input{
         border: 3px solid #D9D9D9;
         border-radius: 10px;
-        height: 5vh;
-        width: 20vw;
+        height: 6vh;
+        width: 22vw;
+        font-size: 20px;
+        padding-left: 1rem;
+    }
+    input[type="password"]{
+        font-size: 35px;
     }
 }
-
+.caixaBarraHorizontal{
+    display: flex;
+    align-items: center;
+    height: 3vh;
+    margin-top: 4vh;
+}
 .barraHorizontal {
     border: 1px solid #DBDBDB;
     width: 42vh;
+}
+
+.caixaBotoes{
+    height: 7vh;
+    width: 23.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+    font-family: "anton", sans-serif; 
+    font-weight: 100;
+    font-size: 23px;
+    .cancel, .save{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5.5vh;
+        width: 6vw;
+        border-radius: 13px;
+
+    }
+
+    .cancel {
+        background-color: #E6E7EB;
+        color: #3B4F66;
+    }
+    .save{
+        background-color: #E4A11B;
+        color: #895000;
+    }
 }
