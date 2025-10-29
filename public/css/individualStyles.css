@@ -21,6 +21,9 @@ body {
     width: 100rem;
     height: 100rem;
 
+
+ 
+
 }
 
 .post {
@@ -49,13 +52,11 @@ body {
 #top {
 
     color: #FAFAFA;
-
-    font-size: auto 20px;
     justify-content: space-between;
-    display: inline-flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+    display:flex;
+        
+   
+  
 
 }
 
@@ -63,58 +64,56 @@ body {
 #top img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    display: inline;
-
+    border-radius: 100%;
     transform: rotate(0deg);
+    cursor:default;
+
 
 
 }
+
+
 
 
 .rotacionar {
     transform: rotate(90deg);
 }
 
-#top span {
-
-    background-color: rgba(255, 255, 255, 0.0);
-    margin-left: 10px;
-
-
-
-}
-
 
 #top h3 {
 
-    display: inline;
-    margin-left: 20px;
-    margin-top: 15px;
-    font-size: 20px;
+    display:inline-block;
+    margin-right: 1050px;
+    
+    
+ 
+    font-size: 100%;
+    font-weight:lighter;
     color: #FAFAFA;
+    
+}
+
+
+
+#top h1{
+     font-weight:lighter;
+     margin-top: 10px;
 }
 
 #down {
 
     display: flex;
     flex-direction: row;
-
-
-
-    align-items: center;
+      align-items: center;
     justify-content: center;
-
-
-
     padding-left: 10px;
 
 
-    width: 100%;
-    height: 100%;
+    width: auto;
+    max-height: 100vh;
     gap: 20px;
-
-    border: 1px solid #EDDFB2;
+    padding: 20px;
+    background-color: #FAFAFA;
     border-radius: 16px;
 
 
@@ -157,6 +156,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  
 
 
 
@@ -164,43 +164,45 @@ body {
     color: #FAFAFA;
     font-size: 20px;
     border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px;
+  
+    padding: 5rem;
 
     margin: 10px;
 
     width: 100vw;
-    height: 50vh;
+    max-height: 100%;
 
+}
 
-
-
-
-
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+      gap: 0.5em;
 }
 
 
 
-
-span {
+.right span {
 
 
     display: flex;
-    flex-direction: row;
+ 
     justify-content: space-between;
     margin: 10px;
     font-family: "Anton", sans-serif;
 
 
+
     background-color: #FAFAFA;
     color: black;
-    border-radius: 16px;
-    width: auto 90%;
-    height: auto;
-    padding: 20px;
+   
+     border-bottom: 1px  solid black;
+ 
 
 
 }
+
 
 span img {
     width: 25px;
@@ -223,10 +225,11 @@ span img {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    font-size: 0.9em;
+    font-size: 0.7em;
+    font-family: "Montserrat",sans-serif;
     margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.308);
-    padding: 0 10px;
+    color: black;
+    padding-right:10px;
     border-radius: 8px;
     transition: all 0.5s ease;
 
