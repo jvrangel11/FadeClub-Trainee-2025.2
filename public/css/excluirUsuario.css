@@ -86,9 +86,20 @@ border-radius: 16px;
     flex-direction: row;
     justify-content: space-between;
     gap: 10%;
+   
 
 }
 
+.botoes .excluir:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+
+.botoes .cancelar:hover{
+    background-color: rgb(67, 135, 94);
+    cursor: pointer;
+}
 
 .botoes .excluir{
     background-color: red;
