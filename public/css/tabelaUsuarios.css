@@ -148,7 +148,7 @@
     position: absolute;
     z-index: 9;
     backdrop-filter: blur(10px);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
