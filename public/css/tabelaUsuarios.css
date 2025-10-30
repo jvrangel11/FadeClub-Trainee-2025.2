@@ -158,6 +158,9 @@
 {
     z-index: 11;
 }
+.modalvizualizar{
+    z-index: 13;
+}
 /*! Modal criar usuário ------------------------------------------------------------------------------ */
 .modalc{
     position: absolute;
@@ -172,6 +175,16 @@
 .modaled{
     position: absolute;
     z-index: 12;
+    height: 40rem;
+    width: 60rem;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+}
+
+.modalvi{
+    position: absolute;
+    z-index: 14;
     height: 40rem;
     width: 60rem;
     border-radius: 30px;

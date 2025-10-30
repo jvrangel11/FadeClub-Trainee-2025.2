@@ -11,7 +11,7 @@
     justify-content: center;
     gap: 15px
 }
-.imgPerfil{
+.imgPerfilB{
     height: 20vh;
     width: 11.3vw;
     img{
@@ -72,7 +72,7 @@
 .inputTitulo{
     display: flex;
 }
-.nome, .email, .senha{
+.nomeB, .emailB, .senhaB{
     width: 22vw;
     height: 9vh;
     display: flex;
