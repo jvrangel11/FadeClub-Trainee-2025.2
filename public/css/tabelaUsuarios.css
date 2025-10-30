@@ -132,3 +132,9 @@
     filter: drop-shadow(0 0 6px #d41616);
     transform: scale(1.1);
 }
+.criar:hover 
+{
+    transform: scale(1.1);
+    background-color: #1f314d;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.192);
+}
