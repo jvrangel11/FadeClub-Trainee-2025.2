@@ -1,0 +1,15 @@
+.containerVizu{
+    height: 40rem;
+    width: 60rem;
+    background-color: rgb(153, 110, 110);
+}
+.coverVizu{
+    background-image: url(../assets/backgrounds/cover5.png);
+    height: 25rem;
+    width: 100%;
+}
+.conteudoVizu{
+    background-color: rgb(255, 255, 255);
+    height: 25rem;
+    width: 100%;
+}

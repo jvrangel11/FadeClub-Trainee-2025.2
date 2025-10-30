@@ -161,7 +161,7 @@
 .modalvizualizar{
     z-index: 13;
 }
-/*! Modal criar usuário ------------------------------------------------------------------------------ */
+/*! Posicionamento e dimensão dos modais ------------------------------------------------------------- */
 .modalc{
     position: absolute;
     z-index: 10;
@@ -182,12 +182,24 @@
     display: flex;
 }
 
-.modalvi{
+/*! Modais vizualizar e excluir ------------------------------------------------------------------------ */
+.modaisP{
+    background-color: rgba(255, 255, 255, 0);
+    height: 100vh;
+    width: 100%;
     position: absolute;
-    z-index: 14;
-    height: 40rem;
-    width: 60rem;
-    border-radius: 30px;
-    overflow: hidden;
+    backdrop-filter: blur(10px);
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modalvi{
+    height: 50rem;
+    width: 40rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 14;
 }
