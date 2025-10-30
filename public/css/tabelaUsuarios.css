@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 /*Container onde fica o background*/
-.container{
+.containerGeral{
     /*Adiciona background, centraliza e define tamanho*/
     background-image: url(../assets/backgrounds/cover4.png);
     background-repeat: no-repeat;
@@ -21,6 +21,7 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 .topo{
     /*Aqui é a parte do titulo da tabala*/
@@ -138,4 +139,28 @@
     background-color: #1f314d;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.192);
     cursor: pointer;
+}
+/*! Modais ------------------------------------------------------------------------------------------- */
+.modais{
+    background-color: rgba(255, 255, 255, 0);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*! Modal criar usuário ------------------------------------------------------------------------------ */
+.modalc{
+    position: absolute;
+    z-index: 10;
+    height: 40rem;
+    width: 60rem;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+
 }
