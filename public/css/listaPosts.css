@@ -38,9 +38,14 @@ body *{
 
     display: flex;
     padding-left: 20px;
-    align-items: center;
+    align-items: right;
     position: relative;
 
+}
+
+#busca {
+    border: none;
+    color: black;
 }
 
 .button-search p{
@@ -282,13 +287,14 @@ body *{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 835px;
+    width: 870px;
     height: auto;
     padding-bottom: 20px;;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding-top: 1.5rem;
+    padding: 1.5rem;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -300,6 +306,12 @@ body *{
     width: 95%;
     height: 13rem;
     border-radius: 18px;
+}
+
+.post-item:hover{
+    transform: scale(1.04);
+    background-color: rgba(255, 255, 255, 0.925);
+    transition: 0.3s;
 }
 
 .post-info{
@@ -397,6 +409,11 @@ body *{
     height: 13rem;
     border-radius: 18px;
     flex-direction: row-reverse;
+}
+.post-item-reverse:hover{
+    transform: scale(1.04);
+    background-color: rgba(255, 255, 255, 0.925);
+    transition: 0.3s;
 }
 
 

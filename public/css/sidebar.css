@@ -6,17 +6,16 @@
 
 body{
     background-image: url("./../assets/Fundo.png");
-    background-size: 100%;
     background-attachment: fixed;
 
-    height: 1000px;
+    height: max-content;
 }
 
 main{
 /*    background-color: #6B231E;*/
     background-color: #44110D;
     border: none;
-    height: 635px;
+    height: 100%;
     width: 288px;
     position: fixed;
     box-shadow: 0.01rem 0.01rem 0.3rem 0.1rem #290e0c;
