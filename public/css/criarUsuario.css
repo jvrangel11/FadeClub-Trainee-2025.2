@@ -120,24 +120,23 @@
     font-family: "anton", sans-serif; 
     font-weight: 100;
     font-size: 23px;
-    .cancel, .save{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 5.5vh;
-        width: 6vw;
-        border-radius: 13px;
+}
+.cancel, .save{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5.5vh;
+    width: 6vw;
+    border-radius: 13px;
 
-    }
-
-    .cancel {
-        background-color: #E6E7EB;
-        color: #3B4F66;
-    }
-    .save{
-        background-color: #E4A11B;
-        color: #895000;
-    }
+}
+.cancel {
+    background-color: #E6E7EB;
+    color: #3B4F66;
+}
+.save{
+    background-color: #E4A11B;
+    color: #895000;
 }
 /*! Hovers --------------------------------------------------------------------------- */
 .cancel:hover , .save:hover{

@@ -42,3 +42,10 @@
     border-radius: 10px;
 
 }
+.botoesVizu{
+    display: flex;
+    gap: 10px;  
+    font-family: "anton", sans-serif; 
+    font-weight: 100;
+    font-size: 23px;
+}
