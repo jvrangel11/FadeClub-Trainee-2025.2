@@ -1,15 +1,29 @@
-.containerVizu{
-    height: 40rem;
-    width: 60rem;
-    background-color: rgb(153, 110, 110);
+.modalvi{
+    background-color: rgb(255, 255, 255);
 }
 .coverVizu{
-    background-image: url(../assets/backgrounds/cover5.png);
     height: 25rem;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sombravizu{
+        height: 16rem;
+        width: 16rem;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgb(5, 5, 5);
+    }
+    img{
+        height: 16rem;
+        width: 16rem;
+        border-radius: 50%;
+    }
 }
 .conteudoVizu{
     background-color: rgb(255, 255, 255);
     height: 25rem;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
