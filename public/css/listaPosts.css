@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url("../assets/bg-1.png") no-repeat center center fixed;
+    background: url("../assets/fundo-madeira-brilho-medio.png") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -37,15 +37,29 @@ body *{
     border-radius:  50px;
 
     display: flex;
-    padding-left: 20px;
     align-items: right;
     position: relative;
 
 }
 
+.search{
+    left: 0;
+}
+
 #busca {
     border: none;
     color: black;
+    width: 700px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+input {
+    font-size: 17px;
+    padding: 12px;
+}
+input:focus{
+    outline: none;
 }
 
 .button-search p{
@@ -308,6 +322,14 @@ body *{
     border-radius: 18px;
 }
 
+.post-item p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
 .post-item:hover{
     transform: scale(1.04);
     background-color: rgba(255, 255, 255, 0.925);
@@ -449,6 +471,14 @@ body *{
     display: inline-block;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
+}
+
+.post-item-reverse p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .see-more {
