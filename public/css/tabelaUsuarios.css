@@ -158,9 +158,13 @@
 {
     z-index: 11;
 }
-.modalvizualizar{
+.modalVisualizar{
     z-index: 13;
 }
+.modalExcluir{
+    z-index: 15;
+}
+
 /*! Posicionamento e dimensão dos modais ------------------------------------------------------------- */
 .modalc{
     position: absolute;
@@ -202,4 +206,14 @@
     overflow: hidden;
     position: relative;
     z-index: 14;
+}
+.modalex{
+    height: 50rem;
+    width: 55rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 16; 
 }
