@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    min-width: 100vh;
+    background-image: url("./../assets/Fundo.png");
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+main{
+    padding: 20px;
+
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #44110D;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: relative;
+}
+
+#sidebar_content {
+    padding: 12px;
+}
+
+#user {
+    display: block;
+    margin: 20px 0 15px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+#avatar {
+    width: 45%;
+    border: 2px solid white;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#user_infos{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#side_items{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side_item {
+    border-radius: 15px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.side_item.active {
+    background-color: #832f29;
+}
+
+.side_item:hover:not(.active),
+#logout_btn:hover {
+    background-color: #5d1811;
+}
+
+.side_item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 14px;
+}
+
+.side_item a ion-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+#logout {
+    margin: 10px;
+    border-top: 1px solid white;
+    padding: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#logout_btn {
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+
+}
+
+#logout_btn ion-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+#open_btn {
+    position: absolute;
+
+}
