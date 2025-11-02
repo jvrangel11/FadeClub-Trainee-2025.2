@@ -2,183 +2,218 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:"Montserrat", sans-serif;
 }
 
-body{
+body {
+    display: flex;
+    min-width: 100vh;
     background-image: url("./../assets/Fundo.png");
     background-attachment: fixed;
     background-size:cover;
 }
 
 main{
-/*    background-color: #6B231E;*/
-    background-color: #44110D;
-    border: none;
-    height: 100%;
-    width: 20vw;
+    padding: 20px;
     position: fixed;
-    box-shadow: 0.01rem 0.01rem 0.3rem 0.1rem #290e0c;
-
-    padding: 3% 2% 3% 2%;
+    z-index: 1;
+    padding-left: calc(106px + 20px);
 }
 
-#container {
-    height: 100%;
-    width: 100%;
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #44110D;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: relative;
+    border-right:3px solid #832f29;
+    box-shadow: 0.01rem 0.01rem 0.3rem 0.1rem #000000;
+    transition: all 0.6s ease;
+    min-width: 82px;
+    z-index: 2;
 }
 
-.profile {
-    display:block;
+#sidebar_content {
+    padding: 12px;
+}
+
+#user {
+    display: block;
+    margin: 20px 0 15px 0;
     align-items: center;
-    justify-items: center;
-    margin: auto;
+    justify-content: center;
+    gap: 8px;
+    justify-content: center;
     text-align: center;
-    padding-bottom: 8%;
-
-    border-bottom: 0.1vh solid white;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
 }
 
-.picture img{
-    width: 45%;
-    border: 0.4vh solid white;
-    border-radius: 3vh;
+#avatar {
+    width: 50px;
+    height: 50px;;
+    border: 2px solid white;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.3s ease;
 }
 
-.username{
-    padding-top: 0.6vh;
-}
-.username h2{
-    color: white;
-    font-family: "Montserrat";
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.buttons {
-    height: auto;
-    width: auto;
-    margin-top: 5%;
-}
-
-.main-buttons{
-    height: 58vh;
-    border-bottom: 0.1vh solid white;
-}
-
-.button {
+#user_infos{
+    padding-top: 6px;
     display: flex;
-    justify-content: left;
-    padding-left: 15%;
-    padding-bottom: 3% ;
-    padding-top: 3%;
-    padding-right: 12%;
-    
+    flex-direction: column;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    align-items: center;
 }
 
-.button button{
+#side_items{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    list-style: none;
+}
 
-    background-color:#44110D;
+.side_item {
+    border-radius: 15px;
+    width: 80%;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.side_item.active {
+    background-color: #832f29;
+}
+
+.side_item:hover:not(.active),
+#logout_btn:hover {
+    background-color: #5d1811;
+}
+
+.side_item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+}
+
+.side_item a ion-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+#logout {
+    margin: 10px;
+    border-top: 1px solid white;
+    padding: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#logout_btn {
     border: none;
-    border-radius: 3vh;
-    width: 18vw;
+    padding: 12px;
+    font-size: 16px;
     display: flex;
-    flex-direction: row;
-    gap: 1.5vh;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+
+}
+
+#logout_btn ion-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+#open_btn {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    background-color: #832f29;
+    border: none;
+    border-radius: 20px;
+    width: 18px;
+    height: 23px;
+    color: white;
+    justify-content: center;
     align-items: center;
 
     cursor: pointer;
 }
 
-.button p{
-    font-family: "Montserrat";
-    font-size: 18px;
-    font-weight: 500;
+#open_btn_icon {
+    transition: transform 0.5s ease;
 }
 
-.icon ion-icon{
-    width: 1.8rem;
-    height: 1.8rem;
-    margin: auto;
-    padding-top: 30%;
-    padding-left: 20%;
-    padding-bottom: 30%;
+#open_btn:hover {
+    transform: scale(1.2);
 }
 
-.text {
-    align-items: center;
+.item_description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    transition: width 0.5s;
 }
 
-.text p{
-    margin: auto;
-    text-align: center;
-    align-items: center;
+.user_description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight:600;
+    transition: width 0.5s;
 }
 
-.button button:hover {
-    background-color: #832f29;
-    transition: 0.4s;
+
+#sidebar.open-sidebar {
+    min-width: 15%;
 }
 
-.button-logout {
-    display: flex;
-    justify-content: left;
-    padding-left: 15%;
-    padding-bottom: 3% ;
-    padding-top: 3%;
-    padding-right: 12%;
-    
+#sidebar.open-sidebar .item_description{
+    width: 150px;
+
 }
 
-.button-logout button{
+#sidebar.open-sidebar .user_description{
+    width: 150px;
 
-    background-color:#44110D;
-    color: white;
-    border: none;
-    border-radius: 3vh;
-    width: 18vw;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5vh;
-    align-items: center;
-
-    cursor: pointer;
 }
 
-.button-logout p{
-    font-family: "Montserrat";
-    font-size: 18px;
-    font-weight: 500;
+#sidebar.open-sidebar .side_item a{
+    justify-content: flex-start;
+    gap: 14px;
 }
 
-.icon-logout ion-icon{
-    width: 1.8rem;
-    height: 1.8rem;
-    margin: auto;
-    padding-top: 30%;
-    padding-left: 20%;
-    padding-bottom: 30%;
+.open-sidebar #open_btn_icon{
+    transform: rotate(180deg);
 }
 
-.text-logout {
-    align-items: center;
+
+#sidebar.open-sidebar #avatar{
+    transform: scale(2.3);
+    border-radius: 14px;
+    margin: 35px 0px 35px 0px;
 }
-
-.text-logout p{
-    margin: auto;
-    text-align: center;
-    align-items: center;
-}
-
-.button-logout button:hover {
-    background-color: #832f29;
-    transition: 0.4s;
-}
-
-@media only screen and (max-width: 767px ){
-
-    h2{
-        font-size: 10px;
-    }
-}
-
