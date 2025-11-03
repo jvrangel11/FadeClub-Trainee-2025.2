@@ -12,10 +12,11 @@ body {
 
 
 
-    background-image: url('../assets/backgrounds/cover2.jpeg');
+    background-image: url('../assets/backgrounds/backgroundFade.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+     background-attachment: fixed;
 
 
     width: 100rem;
@@ -33,6 +34,7 @@ body {
   font-weight: <weight>;
   font-style: normal;
 }
+
 
 .post {
 
@@ -93,7 +95,7 @@ body {
 #top h3 {
 
     display:inline-block;
-    margin-right: 75em;
+    margin-right: 72em;
     
     
  

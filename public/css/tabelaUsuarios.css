@@ -10,6 +10,10 @@
     background-image: url(../assets/backgrounds/cover4.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+
+     overflow-x: hidden;
+
     height: 100vh;
     width: 100%;
 }
@@ -19,6 +23,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+
     height: 100vh;
     width: 100%;
     position: relative;
@@ -216,4 +222,30 @@
     overflow: hidden;
     position: relative;
     z-index: 16; 
+}
+
+@media only screen and (max-width: 500px) {
+    .modalc, .modaled {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+    .modalvi, .modalex {
+        width: 90%;
+        height: auto;
+    }
+
+    .containerGeral
+    {
+     
+
+        .topo
+        {
+            width: 30%;
+        }
+    }
+
+    
+
+    
 }
