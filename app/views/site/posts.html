@@ -39,7 +39,7 @@
                         </i>
                         <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
-                        <i class="bi bi-trash">
+                        <i class="bi bi-trash" onclick="abrirModal('excluir')">
                         </i>
                     </td>
                 </tr>
@@ -52,7 +52,7 @@
                         </i>
                         <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
-                        <i class="bi bi-trash">
+                        <i class="bi bi-trash" onclick="abrirModal('excluir')">
                         </i>
                     </td>
                 </tr>
@@ -65,7 +65,7 @@
                         </i>
                         <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
-                        <i class="bi bi-trash">
+                        <i class="bi bi-trash" onclick="abrirModal('excluir')">
                         </i>
                     </td>
                 </tr>
@@ -78,7 +78,7 @@
                         </i>
                         <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
-                        <i class="bi bi-trash">
+                        <i class="bi bi-trash" onclick="abrirModal('excluir')"></i>
                         </i>
                     </td>
                 </tr>
@@ -90,7 +90,7 @@
                         </i>
                         <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
-                        <i class="bi bi-trash">
+                        <i class="bi bi-trash" onclick="abrirModal('excluir')">
                         </i>
                     </td>
                 </tr>
@@ -162,6 +162,29 @@
                     <button class="image-btn">Alterar imagem</button>
                 </div>
                 <div class="close-btn" onclick="fecharModal('editar')">&times;</div>
+            </div>
+            <div class="form-right">
+                <label>Conteúdo:</label>
+                <textarea></textarea>
+            </div>
+            <button class="submit-btn">Editar</button>
+        </div>
+    </div>
+            <div class="excluir-container" id="excluir">
+        <div class="form-box">
+            <h2>Excluir Publicação</h2>
+            <div class="form-left">
+                <label>Título:</label>
+                <input type="text">
+                <label>Autor:</label>
+                <input type="text">
+                <label>Data:</label>
+                <input type="text">
+                <div class="image-section">
+                    <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
+                    <button class="image-btn">Alterar imagem</button>
+                </div>
+                <div class="close-btn" onclick="fecharModal('excluir')">&times;</div>
             </div>
             <div class="form-right">
                 <label>Conteúdo:</label>
