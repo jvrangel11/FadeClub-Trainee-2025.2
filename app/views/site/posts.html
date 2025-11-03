@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../../public/css/posts.css">
     <link rel="stylesheet" href="../../../public/css/adicionar.css">
     <link rel="stylesheet" href="../../../public/css/visualizar.css" />
+    <link rel="stylesheet" href="../../../public/css/editar.css" />
 </head>
 <body>
     <div class="tabela-container">
@@ -36,7 +37,7 @@
                     <td class="acoes">
                         <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
-                        <i class="bi bi-pencil">
+                        <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
                         <i class="bi bi-trash">
                         </i>
@@ -49,7 +50,7 @@
                     <td class="acoes">
                         <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
-                        <i class="bi bi-pencil">
+                        <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
                         <i class="bi bi-trash">
                         </i>
@@ -62,7 +63,7 @@
                     <td class="acoes">
                         <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
-                        <i class="bi bi-pencil">
+                        <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
                         <i class="bi bi-trash">
                         </i>
@@ -75,7 +76,7 @@
                     <td class="acoes">
                         <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
-                        <i class="bi bi-pencil">
+                        <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
                         <i class="bi bi-trash">
                         </i>
@@ -87,7 +88,7 @@
                     <td class="acoes">
                         <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
-                        <i class="bi bi-pencil">
+                        <i class="bi bi-pencil" onclick="abrirModal('editar')">
                         </i>
                         <i class="bi bi-trash">
                         </i>
@@ -145,6 +146,31 @@
             <button class="submit-btn">Sair</button>
             <div class="close-btn" onclick="fecharModal('Visualizar')">&times;</div>
         </div>
+    </div>
+        <div class="editar-container" id="editar">
+        <div class="form-box">
+            <h2>Editar Publicação</h2>
+            <div class="form-left">
+                <label>Título:</label>
+                <input type="text">
+                <label>Autor:</label>
+                <input type="text">
+                <label>Data:</label>
+                <input type="text">
+                <div class="image-section">
+                    <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
+                    <button class="image-btn">Alterar imagem</button>
+                </div>
+                <div class="close-btn" onclick="fecharModal('editar')">&times;</div>
+            </div>
+            <div class="form-right">
+                <label>Conteúdo:</label>
+                <textarea></textarea>
+            </div>
+            <button class="submit-btn">Editar</button>
+        </div>
+    </div>
+
     </div>
     <script src="../../../public/js/adicionar.js"></script>
 </body>
