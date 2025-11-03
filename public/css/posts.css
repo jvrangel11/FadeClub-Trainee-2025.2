@@ -2,6 +2,7 @@ body {
     background-image: url(../assets/Gemini_Generated_Image_1mpasb1mpasb1mpa.png);
     background-size:cover ;
     color: white;
+    overflow: hidden;
 }
 
 .tabela, 
@@ -14,9 +15,9 @@ body {
 }
 
 
-.container {
+.tabela-container {
     width: 80%;
-    margin: 50px auto;
+    margin: 30px auto;
     text-align: center;
 }
 
@@ -24,9 +25,10 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: left;
-     font-family: "Anton", sans-serif;
+    font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin-left: 50px;
 }
 
 .btn-add {
@@ -38,39 +40,42 @@ body {
     border-radius: 50%;
     cursor: pointer;
     float: right;
-    margin-top: -50px;
+    margin-top: -75px;
     font-size: 20px;
     opacity: 0.9;
+    margin-right: 63px;
 }
 
 .tabela {
-    width: 100%;
-    margin-top: 30px;
+    width: 90%;
+    margin-top: 0px;
     border-collapse: collapse;
     background-color: #1B2A41;
-    border-radius: 10px;
+    border-radius: 0px;
     overflow: hidden;
     opacity: 0.9;
+    position: center;
+    margin-left: 50px;
 }
 
 .tabela thead th {
     padding: 15px;
     color: #fff;
     font-weight: 600;
-    border-bottom: 1px solid #3b4a6b;
+    border-bottom: 20px solid #1B2A41;
 }
 
 .tabela tbody td {
     padding: 15px;
-    border-bottom: 1px solid #3b4a6b;
+    border-bottom: 20px solid #1B2A41;
     cursor:pointer;
 }
 
 .img-cell {
-    width: 80px;
+    width: 30px;
     height: 50px;
     background-image: url(../assets/Header\ Nome.png);
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .acoes i {
@@ -78,26 +83,24 @@ body {
     cursor: pointer;
     transition: 0.3s;
     padding: 2px;
+    font-size: 2rem;
 }
 
-.acoes i:hover {
+.acoes .bi-eye:hover {
     transform: scale(1.1);
     color: #0099ff;
 }
 
+.acoes .bi-pencil:hover {
+    transform: scale(1.1);
+    color: #eeff00;
+}
+
+.acoes .bi-trash:hover {
+    transform: scale(1.1);
+    color: #e90707;
+}
+
 .paginacao {
     margin-top: 20px;
-}
-
-.paginacao span {
-    margin: 0 5px;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 4px;
-    background-color: rgba(255,255,255,0.1);
-}
-
-.paginacao .ativo {
-    background-color: #fff;
-    color: #000000;
 }

@@ -5,16 +5,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Posts</title>
     <link rel="stylesheet" href="../../../public/css/posts.css">
+    <link rel="stylesheet" href="../../../public/css/adicionar.css">
 </head>
 <body>
-    <div class="container">
+    <div class="tabela-container">
         <h1 class="titulo">Tabela de Posts</h1>
         
-        <button class="btn-add">+<i class="fa-solid fa-plus"></i></button>
+        <button class="btn-add" onclick="abrirModal('Criar')">+<i class="fa-solid fa-plus"></i></button>
 
         <table class="tabela">
             <thead>
@@ -31,14 +33,11 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="fa-regular fa-eye">
-                            <img src="../../../public/assets/Eye.png" alt="Ver">
+                        <i class="bi bi-eye">
                         </i>
-                        <i class="fa-solid fa-pencil">
-                            <img src="../../../public/assets/Edit.png" alt="Editar">
+                        <i class="bi bi-pencil">
                         </i>
-                        <i class="fa-solid fa-trash">
-                            <img src="../../../public/assets/Delete.png" alt="Deletar">
+                        <i class="bi bi-trash">
                         </i>
                     </td>
                 </tr>
@@ -47,14 +46,11 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="fa-regular fa-eye">
-                            <img src="../../../public/assets/Eye.png" alt="Ver">
+                        <i class="bi bi-eye">
                         </i>
-                        <i class="fa-solid fa-pencil">
-                            <img src="../../../public/assets/Edit.png" alt="Editar">
+                        <i class="bi bi-pencil">
                         </i>
-                        <i class="fa-solid fa-trash">
-                            <img src="../../../public/assets/Delete.png" alt="Deletar">
+                        <i class="bi bi-trash">
                         </i>
                     </td>
                 </tr>
@@ -63,14 +59,11 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="fa-regular fa-eye">
-                            <img src="../../../public/assets/Eye.png" alt="Ver">
+                        <i class="bi bi-eye">
                         </i>
-                        <i class="fa-solid fa-pencil">
-                            <img src="../../../public/assets/Edit.png" alt="Editar">
+                        <i class="bi bi-pencil">
                         </i>
-                        <i class="fa-solid fa-trash">
-                            <img src="../../../public/assets/Delete.png" alt="Deletar">
+                        <i class="bi bi-trash">
                         </i>
                     </td>
                 </tr>
@@ -79,14 +72,11 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="fa-regular fa-eye">
-                            <img src="../../../public/assets/Eye.png" alt="Ver">
+                        <i class="bi bi-eye">
                         </i>
-                        <i class="fa-solid fa-pencil">
-                            <img src="../../../public/assets/Edit.png" alt="Editar">
+                        <i class="bi bi-pencil">
                         </i>
-                        <i class="fa-solid fa-trash">
-                            <img src="../../../public/assets/Delete.png" alt="Deletar">
+                        <i class="bi bi-trash">
                         </i>
                     </td>
                 </tr>
@@ -94,14 +84,11 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="fa-regular fa-eye">
-                            <img src="../../../public/assets/Eye.png" alt="Ver">
+                        <i class="bi bi-eye">
                         </i>
-                        <i class="fa-solid fa-pencil">
-                            <img src="../../../public/assets/Edit.png" alt="Editar">
+                        <i class="bi bi-pencil">
                         </i>
-                        <i class="fa-solid fa-trash">
-                            <img src="../../../public/assets/Delete.png" alt="Deletar">
+                        <i class="bi bi-trash">
                         </i>
                     </td>
                 </tr>
@@ -116,5 +103,28 @@
             <span>&gt;</span>
         </div>
     </div>
+    <div class="modal-container" id="Criar">
+        <div class="form-box">
+            <h2>Criar Publicação</h2>
+            <div class="form-left">
+                <label>Título:</label>
+                <input type="text">
+                <label>Autor:</label>
+                <input type="text">
+                <label>Data:</label>
+                <input type="text">
+                <div class="image-section">
+                    <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
+                    <button class="image-btn">Selecionar imagem</button>
+                </div>
+            </div>
+            <div class="form-right">
+                <label>Conteúdo:</label>
+                <textarea></textarea>
+            </div>
+            <button class="submit-btn">Criar</button>
+        </div>
+    </div>
+    <script src="../../../public/js/adicionar.js"></script>
 </body>
-</html
+</html>

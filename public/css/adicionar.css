@@ -1,7 +1,7 @@
 body {
     margin: 0;
+    display: hidden;
     padding: 0;
-    background-image: url(../assets/Gemini_Generated_Image_1mpasb1mpasb1mpa.png);
     background-repeat: no-repeat;           
     background-size: cover;                  
     background-position: center;            
@@ -23,8 +23,8 @@ body {
     z-index: -1;        
 }
 
-.container {
-    display: flex;
+.modal-container {
+    display: none;
     justify-content: center;
     align-items: center;
     height: 100vh;
