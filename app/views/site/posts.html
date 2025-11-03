@@ -11,13 +11,14 @@
     <title>Tabela de Posts</title>
     <link rel="stylesheet" href="../../../public/css/posts.css">
     <link rel="stylesheet" href="../../../public/css/adicionar.css">
+    <link rel="stylesheet" href="../../../public/css/visualizar.css" />
 </head>
 <body>
     <div class="tabela-container">
         <h1 class="titulo">Tabela de Posts</h1>
         
         <button class="btn-add" onclick="abrirModal('Criar')">+<i class="fa-solid fa-plus"></i></button>
-
+        
         <table class="tabela">
             <thead>
                 <tr>
@@ -33,7 +34,7 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="bi bi-eye">
+                        <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
                         <i class="bi bi-pencil">
                         </i>
@@ -46,7 +47,7 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="bi bi-eye">
+                        <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
                         <i class="bi bi-pencil">
                         </i>
@@ -59,7 +60,7 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="bi bi-eye">
+                        <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
                         <i class="bi bi-pencil">
                         </i>
@@ -72,7 +73,7 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="bi bi-eye">
+                        <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
                         <i class="bi bi-pencil">
                         </i>
@@ -84,7 +85,7 @@
                     <td>Lorem Ipsum</td>
                     <td class="img-cell"></td>
                     <td class="acoes">
-                        <i class="bi bi-eye">
+                        <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
                         </i>
                         <i class="bi bi-pencil">
                         </i>
@@ -117,12 +118,32 @@
                     <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
                     <button class="image-btn">Selecionar imagem</button>
                 </div>
+                <div class="close-btn" onclick="fecharModal('Criar')">&times;</div>
             </div>
             <div class="form-right">
                 <label>Conteúdo:</label>
                 <textarea></textarea>
             </div>
             <button class="submit-btn">Criar</button>
+        </div>
+    </div>
+    <div class="ver-container" id="Visualizar">
+        <div class="form-box">
+            <h2>Visualizar Publicação</h2>
+            <div class="form-left">
+                <label>Título:</label>
+                <input type="text">
+                <label>Autor:</label>
+                <input type="text">
+                <label>Data:</label>
+                <input type="text">
+            </div>
+            <div class="form-right">
+                <label>Conteúdo:</label>
+                <textarea></textarea>
+            </div>
+            <button class="submit-btn">Sair</button>
+            <div class="close-btn" onclick="fecharModal('Visualizar')">&times;</div>
         </div>
     </div>
     <script src="../../../public/js/adicionar.js"></script>

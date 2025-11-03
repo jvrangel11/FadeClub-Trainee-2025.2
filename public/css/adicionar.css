@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    display: hidden;
     padding: 0;
+    display: flex;
     background-repeat: no-repeat;           
     background-size: cover;                  
     background-position: center;            
@@ -18,7 +18,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../assets/Gemini_Generated_Image_1mpasb1mpasb1mpa.png);
     filter: blur(6px);  
     z-index: -1;        
 }
@@ -28,6 +27,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
+    position: absolute;
 }
 
 .form-box {
@@ -117,4 +118,14 @@ textarea {
 
 .submit-btn:hover {
     opacity: 0.9;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
 }

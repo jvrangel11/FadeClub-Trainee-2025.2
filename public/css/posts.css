@@ -1,7 +1,6 @@
 body {
     background-image: url(../assets/Gemini_Generated_Image_1mpasb1mpasb1mpa.png);
     background-size:cover ;
-    color: white;
     overflow: hidden;
 }
 
@@ -14,11 +13,12 @@ body {
   font-style: normal;
 }
 
-
 .tabela-container {
     width: 80%;
     margin: 30px auto;
     text-align: center;
+    position: relative;
+    color: white;
 }
 
 .titulo {
