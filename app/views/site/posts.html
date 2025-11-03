@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../../public/css/adicionar.css">
     <link rel="stylesheet" href="../../../public/css/visualizar.css" />
     <link rel="stylesheet" href="../../../public/css/editar.css" />
+        <link rel="stylesheet" href="../../../public/css/excluir.css" />
 </head>
 <body>
     <div class="tabela-container">
@@ -105,6 +106,7 @@
             <span>&gt;</span>
         </div>
     </div>
+
     <div class="modal-container" id="Criar">
         <div class="form-box">
             <h2>Criar Publicação</h2>
@@ -171,26 +173,18 @@
         </div>
     </div>
             <div class="excluir-container" id="excluir">
-        <div class="form-box">
-            <h2>Excluir Publicação</h2>
-            <div class="form-left">
-                <label>Título:</label>
-                <input type="text">
-                <label>Autor:</label>
-                <input type="text">
-                <label>Data:</label>
-                <input type="text">
-                <div class="image-section">
+        <div class="form-box-excluir">
+            <h2>Deseja excluir a publicação?</h2>
+            <div class="form-excluir">
+                <h3>Você tem certeza que deseja excluir essa publicação?</h3>
+                <div class="image-section-excluir">
+                    <h4>Título da publicação</h4>
                     <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
-                    <button class="image-btn">Alterar imagem</button>
                 </div>
-                <div class="close-btn" onclick="fecharModal('excluir')">&times;</div>
+                <p>Essa ação não poderá ser desfeita</p>
+                <div class="close-btn-excluir" onclick="fecharModal('excluir')">&times;</div>
             </div>
-            <div class="form-right">
-                <label>Conteúdo:</label>
-                <textarea></textarea>
-            </div>
-            <button class="submit-btn">Editar</button>
+            <button class="submit-btn-excluir">Excluir</button>
         </div>
     </div>
 
