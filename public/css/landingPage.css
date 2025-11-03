@@ -164,6 +164,16 @@ footer {
         text-shadow: 0 0 40px rgb(0, 0, 0) ;
     }
 }
+
+.logo:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.slogan:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
 /* ! Divisao de carrosseis -------------------------------------------------------------------------------------------- */
 main {
     /*Dimensioanndo caixa*/
@@ -215,16 +225,20 @@ main {
 .slider1 , .slider2 {
     /*Dimensionando caixa*/
     height: 50vh;
+    width: 120vw;
     /*Posicionando elementos*/
     display: flex;
     align-items: center;
 }
 .conteudo1 , .conteudo2 {
+    height: 38vh;
+    width: 125vw;
     /*Posicionando os cards*/
     display: flex;
     gap: 50px;
     margin-left: 2rem;
     margin-right: 2.8rem;
+    align-items: center;
     /*Escondendo overflow*/
     overflow: hidden;
     /*Ajustando transição*/
@@ -322,7 +336,7 @@ main {
         height: 35vh;
         width: 15vw;
         /*Estilizando conteúdo*/
-        background-color: #FFFFFF;
+        background-color: #c9c9c9;
         font-family: "Montserrat", sans-serif;
 
         .texto{
@@ -392,6 +406,18 @@ main {
             }
         }
     }
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    .informacoes{
+        background-color: #ffffff;
+    }
+}
+.verMais:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
 }
 
 .i01{
