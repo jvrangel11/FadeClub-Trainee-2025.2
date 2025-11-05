@@ -9,20 +9,20 @@ body {
 .tabela td {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: bold;
   font-style: normal;
 }
 
 .tabela-container {
     width: 80%;
-    margin: 10px auto;
+    margin: 30px auto;
     text-align: center;
     position: relative;
     color: white;
 }
 
 .titulo {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: left;
     font-family: "Anton", sans-serif;
@@ -35,20 +35,20 @@ body {
     background-color: #1B2A41;
     color: white;
     border: none;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     cursor: pointer;
     float: right;
-    margin-top: -75px;
-    font-size: 20px;
+    margin-top: -110px;
+    font-size: 40px;
     opacity: 0.9;
     margin-right: 63px;
 }
 
 .tabela {
     width: 90%;
-    margin-top: 0px;
+    margin-top:0px;
     border-collapse: collapse;
     background-color: #1B2A41;
     border-radius: 0px;
@@ -59,14 +59,19 @@ body {
 }
 
 .tabela thead th {
-    padding: 15px;
+    padding-top: 20px;
+    font-size: 22px;
     color: #fff;
-    font-weight: 600;
+    font-weight: bold;
     border-bottom: 20px solid #1B2A41;
 }
 
 .tabela tbody td {
-    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
     border-bottom: 20px solid #1B2A41;
     cursor:pointer;
 }
