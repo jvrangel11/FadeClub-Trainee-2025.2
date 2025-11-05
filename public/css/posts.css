@@ -72,8 +72,8 @@ body {
 }
 
 .img-cell {
-    width: 30px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     background-image: url(../assets/Header\ Nome.png);
     border-radius: 0px;
 }
