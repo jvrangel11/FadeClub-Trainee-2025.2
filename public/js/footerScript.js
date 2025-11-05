@@ -3,14 +3,15 @@
 
 function mostrarTexto(idTexto) {
 
-    document.getElementById('FadeLogo').style.display = 'none';
+   
+    document.getElementById('fadeLogo').classList.remove('ativo');
 
-    document.getElementById('texto-missao').style.display = 'none';
-    document.getElementById('texto-visao').style.display = 'none';
-    document.getElementById('texto-valores').style.display = 'none';
+    document.getElementById('texto-missao').classList.remove('ativo');
+    document.getElementById('texto-visao').classList.remove('ativo');
+    document.getElementById('texto-valores').classList.remove('ativo');
 
 
-    document.getElementById(idTexto).style.display = 'block';
+    document.getElementById(idTexto).classList.add('ativo');
 
 
 
@@ -19,11 +20,12 @@ function mostrarTexto(idTexto) {
 
 function mostrarLogo() {
 
-    document.getElementById('FadeLogo').style.display = 'block';
+    document.getElementById('fadeLogo').classList.add('ativo');
+     
 
-    document.getElementById('texto-missao').style.display = 'none';
-    document.getElementById('texto-visao').style.display = 'none';
-    document.getElementById('texto-valores').style.display = 'none';
+    document.getElementById('texto-missao').classList.remove('ativo');
+    document.getElementById('texto-visao').classList.remove('ativo');
+    document.getElementById('texto-valores').classList.remove('ativo');
 }
 
 

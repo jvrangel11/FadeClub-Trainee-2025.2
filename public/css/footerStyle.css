@@ -9,13 +9,13 @@ body {
     
     font-family: "Anton", sans-serif;
     background-color: #1B2A41;
+    font-weight: lighter;
 
     background-image: url(./backgroundFade.jpg);
     background-size: cover;
     
    
 }
-
 
 
 footer {
@@ -30,8 +30,6 @@ footer {
     left: 0;
     width: 100%;
 
-  
-
 }
 
 .conteiner{
@@ -44,25 +42,17 @@ footer {
   
 }
 
-.motivacao{
+.motivacao span h5{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
 }
 
 
-.motivacao span{
 
-    margin: 0.5em;
-    font-size: 1.2em;
-    
-    gap: 20%;
-    align-items: center;
-    justify-content: center;
-}
 
 
 
@@ -107,9 +97,10 @@ footer {
 
 
 .footerLogo p{
-    transition: transform .3s ease-in-out;
-    font-size: 0.8rem;
-    display:none;
+  
+    padding: 0;
+    margin: 0 auto;
+
 
 }
 
@@ -125,10 +116,54 @@ footer {
 
 }
 
+#fadeLogo,
+#texto-missao,
+#texto-visao,
+#texto-valores {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+
+
+#fadeLogo.ativo,
+#texto-missao.ativo,
+#texto-visao.ativo,     
+#texto-valores.ativo {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+}
+
+
+
+.footerLogo{
+    position: relative;
+}
+
+.footerLogo:hover{
+    transform: scale(1.05);
+    transition: transform .3s ease-in-out;
+}
+
+
 #redes i{
     font-size: 2em;
 
+
 }
+
+#redes :hover{
+    transform: scale(1.1);
+    transition: transform .3s ease-in-out;
+}
+
+
 
 
 @media only screen and (max-width: 768px) {

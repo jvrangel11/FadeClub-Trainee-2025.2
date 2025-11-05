@@ -113,7 +113,7 @@
     cursor: pointer;
 }
 .bot.ver:hover .iver {
-    fill: #00ff66; 
+    fill: #0011ff; 
     filter: drop-shadow(0 0 6px #66ffb2);
     transform: scale(1.1);
 }
