@@ -44,6 +44,7 @@ body {
     gap: 20px;
 }
 
+
 .form-box h2 {
     grid-column: span 2;
     font-size: 24px;
@@ -94,7 +95,7 @@ textarea {
 }
 
 .image-btn {
-    background-color: #6b2b1d;
+    background-color: #cacaca;
     color: white;
     border: none;
     padding: 5px 15px;
@@ -110,7 +111,7 @@ textarea {
 
 .submit-btn {
     grid-column: span 2;
-    background-color: #6b2b1d;
+    background-color: #cacaca;
     color: white;
     border: none;
     padding: 10px 25px;

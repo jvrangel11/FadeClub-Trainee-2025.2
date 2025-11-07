@@ -31,9 +31,9 @@ body {
     backdrop-filter: blur(6px); 
 }
 
-.form-box {
+.form-box-add {
     background: #ffffff;
-    width: 65%;
+    width: 50%;
     max-width: 850px;
     padding: 30px;
     border-radius: 15px;
@@ -48,6 +48,16 @@ body {
     grid-column: span 2;
     font-size: 24px;
     margin-bottom: 10px;
+    padding-left: 45px;
+}
+
+.form-right {
+    background-image: url('../assets/cover5.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 label {
@@ -86,10 +96,11 @@ textarea {
     object-fit: cover;
     border-radius: 8px;
     border: 2px solid #ccc;
+    padding: 20px;
 }
 
 .image-btn {
-    background-color: #6b2b1d;
+    background-color: #cacaca;
     color: white;
     border: none;
     padding: 5px 15px;
@@ -105,7 +116,7 @@ textarea {
 
 .submit-btn {
     grid-column: span 2;
-    background-color: #6b2b1d;
+    background-color: #cacaca;
     color: white;
     border: none;
     padding: 10px 25px;

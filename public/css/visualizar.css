@@ -89,7 +89,7 @@ textarea {
 }
 
 .image-btn {
-    background-color: #6b2b1d;
+    background-color: #cacaca;
     color: white;
     border: none;
     padding: 5px 15px;
@@ -105,7 +105,7 @@ textarea {
 
 .submit-btn {
     grid-column: span 2;
-    background-color: #6b2b1d;
+    background-color: #cacaca;
     color: white;
     border: none;
     padding: 10px 25px;
