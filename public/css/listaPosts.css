@@ -28,16 +28,15 @@ body *{
 }
 
 #searching-camp {
-    margin-top: 1.5%;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
     height: 5.5vh;
     background-color: white;
     border-radius:  50vw;
-
     display: flex;
-    align-items: right;
+    align-items: center;
 
     position: relative;
 
@@ -335,7 +334,7 @@ input:focus{
 
 .post-image{
     width:45%;
-    height: 100%;
+
 }
 
 .post-image img{
@@ -553,3 +552,16 @@ input:focus{
     transition: 0.2s;
 }
 
+@media only screen and (max-width:768px){
+    .searching-camp{
+        padding-bottom: 10px;
+    }
+
+    .posts-list{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:420px){
+    
+}
