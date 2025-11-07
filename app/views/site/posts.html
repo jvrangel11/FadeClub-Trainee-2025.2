@@ -10,10 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Posts</title>
     <link rel="stylesheet" href="../../../public/css/posts.css">
-    <link rel="stylesheet" href="../../../public/css/adicionar.css">
-    <link rel="stylesheet" href="../../../public/css/visualizar.css" />
     <link rel="stylesheet" href="../../../public/css/editar.css" />
-        <link rel="stylesheet" href="../../../public/css/excluir.css" />
 </head>
 <body>
     <div class="tabela-container">
@@ -108,6 +105,7 @@
     </div>
 
     <div class="modal-container" id="Criar">
+<<<<<<< HEAD
         <div class="form-box">
             <h2>Criar Publicação</h2>
             <div class="form-right">
@@ -132,47 +130,107 @@
                 <div class="close-btn" onclick="fecharModal('Criar')">&times;</div>
             </div>
             <button class="submit-btn">Criar</button>
+=======
+        <div class="container-all">
+            <div class="head">
+                <h2>Criar Publicação</h2>
+            </div>
+            <div class="form-box">
+                
+                <div class="form-left">
+                    <label>Título:</label>
+                    <input type="text">
+                    <label>Autor:</label>
+                    <input type="text">
+                    <label>Data:</label>
+                    <input type="text">
+                    <div class="image-section">
+                        <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
+                        <button class="image-btn">Selecionar imagem</button>
+                    </div>
+                    <div class="close-btn" onclick="fecharModal('Criar')">&times;</div>
+                </div>
+                <div class="form-right">
+                    <label>Conteúdo:</label>
+                    <textarea></textarea>
+                </div>
+                <div class="save-cancel-btn">
+                    <button class="cancel-btn">Cancelar</button>
+                    <button class="submit-btn">Criar</button>
+                </div>
+            </div>
+>>>>>>> 4c8dfa01c6b89e3ad7fac00c4bd2525c6be4cf07
         </div>
     </div>
     <div class="ver-container" id="Visualizar">
-        <div class="form-box">
-            <h2>Visualizar Publicação</h2>
-            <div class="form-left">
-                <label>Título:</label>
-                <input type="text">
-                <label>Autor:</label>
-                <input type="text">
-                <label>Data:</label>
-                <input type="text">
+        <div class="container-all">
+            <div class="head">
+                <h2>Visualizar Publicação</h2>
             </div>
+<<<<<<< HEAD
             <div class="form-right">
+=======
+            <div class="form-box">
+                
+                <div class="form-left">
+                    <label>Título:</label>
+                    <input type="text">
+                    <label>Autor:</label>
+                    <input type="text">
+                    <label>Data:</label>
+                    <input type="text">
+                    <div class="close-btn" onclick="fecharModal('Visualizar')">&times;</div>
+                </div>
+                <div class="form-right">
+                    <label>Conteúdo:</label>
+                    <textarea></textarea>
+                </div>
+                <div class="save-cancel-btn">
+
+                    <button class="submit-btn">Fechar</button>
+                </div>
+>>>>>>> 4c8dfa01c6b89e3ad7fac00c4bd2525c6be4cf07
             </div>
-            <button class="submit-btn">Sair</button>
-            <div class="close-btn" onclick="fecharModal('Visualizar')">&times;</div>
         </div>
     </div>
         <div class="editar-container" id="editar">
-        <div class="form-box">
-            <h2>Editar Publicação</h2>
-            <div class="form-left">
-                <label>Título:</label>
-                <input type="text">
-                <label>Autor:</label>
-                <input type="text">
-                <label>Data:</label>
-                <input type="text">
-                <div class="image-section">
-                    <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
-                    <button class="image-btn">Alterar imagem</button>
-                </div>
-                <div class="close-btn" onclick="fecharModal('editar')">&times;</div>
+        <div class="container-all">
+            <div class="head">
+                <h2>Editar Publicação</h2>
             </div>
+            <div class="form-box">
+                
+                <div class="form-left">
+                    <label>Título:</label>
+                    <input type="text">
+                    <label>Autor:</label>
+                    <input type="text">
+                    <label>Data:</label>
+                    <input type="text">
+                    <div class="image-section">
+                        <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
+                        <button class="image-btn">Alterar imagem</button>
+                    </div>
+                    <div class="close-btn" onclick="fecharModal('editar')">&times;</div>
+                </div>
+                <div class="form-right">
+                    <label>Conteúdo:</label>
+                    <textarea></textarea>
+                </div>
+                <div class="save-cancel-btn">
+                    <button class="cancel-btn">Cancelar</button>
+                    <button class="submit-btn">Salvar</button>
+                </div>
+            </div>
+<<<<<<< HEAD
             <div class="form-right">
             </div>
             <button class="submit-btn">Editar</button>
+=======
+>>>>>>> 4c8dfa01c6b89e3ad7fac00c4bd2525c6be4cf07
         </div>
     </div>
-            <div class="excluir-container" id="excluir">
+    <div class="excluir-container" id="excluir">
         <div class="form-box-excluir">
             <h2>Deseja excluir a publicação?</h2>
             <div class="form-excluir">
@@ -184,10 +242,12 @@
                 <p>Essa ação não poderá ser desfeita</p>
                 <div class="close-btn-excluir" onclick="fecharModal('excluir')">&times;</div>
             </div>
-            <button class="submit-btn-excluir">Excluir</button>
+            <div class="save-cancel-btn">
+                <button class="cancel-btn">Cancelar</button>
+                <button class="submit-btn">Excluir</button>
+            </div>
         </div>
     </div>
-
     </div>
     <script src="../../../public/js/adicionar.js"></script>
 </body>
