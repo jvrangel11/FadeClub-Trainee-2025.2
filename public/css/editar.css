@@ -45,6 +45,9 @@ body {
     width: 100%;
     position: absolute;
     backdrop-filter: blur(6px); 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 /*Configuração do container de "Visualizar"*/
@@ -56,6 +59,9 @@ body {
     width: 100%;
     position: absolute;
     backdrop-filter: blur(6px); 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 
@@ -135,8 +141,8 @@ textarea {
 }
 
 .image-section img {
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 75%;
     object-fit: cover;
     border: none;
     padding: 10px 20px;
@@ -144,14 +150,17 @@ textarea {
 }
 
 .image-btn {
-    background-color: #606188;
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    margin-top: 8px;
-    border-radius: 20px;
+    height: 5vh;
+    width: 11vW;
+    background-color: #E6E7EB;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Anton", sans-serif;
+    font-size: 18px;
+    color: #3B4F66;
     cursor: pointer;
-    font-size: 12px;
 }
 
 .image-btn:hover {
@@ -166,43 +175,58 @@ textarea {
     color: white;
     border: none;
     padding: 10px 25px;
-    border-radius: 20px;
+    border-radius: 13px;
     cursor: pointer;
     font-size: 15px;
     display: flex;
     position: center;
     margin: 0 auto;
-
     gap: 2%;
-
+    height: 5.5vh;
+    width: 6vw;
 }
+
 .submit-btn {
     grid-column: span 2;
-    background-color: #cacaca;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E4A11B;
+    color: #895000;
     border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
+    padding: 0px 5px;
     cursor: pointer;
     font-size: 15px;
     display: block;
     margin: 0 auto;
-
+    height: 5.5vh;
+    width: 6vw;
+    border-radius: 13px;
     transition: all 0.4s ease ;
+    font-family: "anton", sans-serif; 
+    font-weight: 100;
+    font-size: 23px;
 }
 .cancel-btn {
     grid-column: span 2;
-    background-color: #515151;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6E7EB;
+    color: #3B4F66;
     border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
+    padding: 0px 0px;
     cursor: pointer;
     font-size: 15px;
     display: block;
     margin: 0 auto;
-
+    height: 5.5vh;
+    width: 6vw;
+    border-radius: 13px;
     transition: all 0.4s ease ;
+    font-family: "anton", sans-serif; 
+    font-weight: 100;
+    font-size: 23px;
 }
 
 .submit-btn:hover {
