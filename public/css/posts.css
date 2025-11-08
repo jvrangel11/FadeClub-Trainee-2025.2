@@ -1,0 +1,110 @@
+body {
+    background-image: url(../assets/Gemini_Generated_Image_1mpasb1mpasb1mpa.png);
+    background-size:cover ;
+}
+
+.tabela, 
+.tabela th, 
+.tabela td {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.tabela-container {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.titulo {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 50px;
+}
+
+.btn-add {
+    background-color: #1B2A41;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+    margin-top: -110px;
+    font-size: 40px;
+    opacity: 0.9;
+    margin-right: 63px;
+}
+
+.tabela {
+    width: 90%;
+    margin-top:0px;
+    border-collapse: collapse;
+    background-color: #1B2A41;
+    border-radius: 0px;
+    overflow: hidden;
+    opacity: 0.9;
+    position: center;
+    margin-left: 50px;
+}
+
+.tabela thead th {
+    padding-top: 20px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 20px solid #1B2A41;
+}
+
+.tabela tbody td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    border-bottom: 20px solid #1B2A41;
+    cursor:pointer;
+}
+
+.img-cell {
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/Header\ Nome.png);
+    border-radius: 0px;
+}
+
+.acoes i {
+    margin: 0 0px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 2px;
+    font-size: 2rem;
+}
+
+.acoes .bi-eye:hover {
+    transform: scale(1.1);
+    color: #0099ff;
+}
+
+.acoes .bi-pencil:hover {
+    transform: scale(1.1);
+    color: #eeff00;
+}
+
+.acoes .bi-trash:hover {
+    transform: scale(1.1);
+    color: #e90707;
+}
+
+.paginacao {
+    margin-top: 20px;
+}
