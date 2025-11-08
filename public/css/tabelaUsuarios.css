@@ -66,11 +66,31 @@
     height: 40rem;
     width: 85rem;
     /*Organiza os itens*/
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+   
     align-items: center;
     justify-items: center;
 }
+
+
+
+
+.tabela, 
+.tabela th, 
+.tabela td {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+.tabela tr{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 /*Css para todos os "Quadrados" do grid*/
 .filho{
     height: 6rem;
