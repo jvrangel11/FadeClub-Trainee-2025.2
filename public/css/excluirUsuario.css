@@ -1,0 +1,64 @@
+.containerExcluir{
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/backgrounds/cover5.png);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 17rem;
+        border-radius: 50%;
+    }
+}
+.conteudoExcluir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 2rem;
+    .parte02{
+        display: flex;
+        gap: 2px;
+        p{
+            color: #EDDFB2;
+        }
+    }
+    .parte01, .parte02{
+        font-size: 30px;
+    }
+    .parte03{
+        margin-top: 1rem;
+    }
+}
+.botoesExcluir{
+    height: 7vh;
+    width: 23.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: "anton", sans-serif; 
+    font-weight: 100;
+    font-size: 23px;
+    margin-top: 2rem;
+    .cancel, .excluirM {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5.5vh;
+        width: 6vw;
+        border-radius: 13px;
+    }
+}
+.excluirM{
+    background-color: #A4161A;
+    color: #ffffff;
+}
+.excluirM:hover{
+    cursor: pointer;
+}

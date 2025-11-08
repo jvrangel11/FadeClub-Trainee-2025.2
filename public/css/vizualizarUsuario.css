@@ -1,0 +1,66 @@
+.coverVizu{
+    height: 22rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../public/assets/backgrounds/cover5.png);
+    .sombravizu{
+        height: 16rem;
+        width: 16rem;
+        border-radius: 50%;
+        box-shadow: 0 0 40px rgb(5, 5, 5);
+    }
+    img{
+        height: 16rem;
+        width: 16rem;
+        border-radius: 50%;
+    }
+}
+.conteudoVizu{
+    background-color: rgb(255, 255, 255);
+    height: 28rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    p{
+       font-family: "Montserrat", sans-serif; 
+       font-weight: 600;
+       font-size: 16px;
+    }
+}
+.dadosVizu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+.caixaUsuario, .caixaNome, .caixaEmail, .caixaSenha{
+    border: 2px solid #D9D9D9;
+    width: 26rem;
+    height: 3rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    color: rgb(75, 75, 75);
+}
+.caixaSenha{
+    p{
+        font-size: 30px;
+    }
+}
+.botoesVizu{
+    display: flex;
+    gap: 10px;  
+    font-family: "anton", sans-serif; 
+    font-weight: 100;
+    font-size: 23px;
+}
+.idUsuario, .nomeVizu, .emailVizu, .senhaVizu{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+}

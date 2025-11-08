@@ -9,6 +9,9 @@
 
 
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+   <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
 
     <script src="https://kit.fontawesome.com/a6a94f2c3d.js" crossorigin="anonymous"></script>
 
@@ -27,7 +30,7 @@
 
         <div id="top">
             <span><img src="../../../public/assets/wp2126169.jpg" alt="imagem perfil"></span>
-            <h3>Markos</h3>
+            <h3>Markos Barbearia</h3>
             <h1>A Ascensão do Pompadoue</h1>
 
         </div>
@@ -104,64 +107,65 @@
 
 
                             </div>
+                        </div>
 
 
-                            <div class="item">
-                                <span> Produtos Recomendados <img src="../../../public/assets/pngwing.com.png"
-                                        class="botao" data-texto="texto5"> </span>
-                                <div id="texto5" class="texto">
+                        <div class="item">
+                            <span> Produtos Recomendados <img src="../../../public/assets/pngwing.com.png" class="botao"
+                                    data-texto="texto5"> </span>
+                            <div id="texto5" class="texto">
 
-                                    Pomada de Fixação Forte (Matte ou Brilho)
+                                Pomada de Fixação Forte (Matte ou Brilho)
 
-                                    Spray Fixador (para finalizar)
+                                Spray Fixador (para finalizar)
 
-                                    Escova Redonda de Cerdas Mistas
+                                Escova Redonda de Cerdas Mistas
 
-                                    Pente Fino (para detalhes)
-
-
+                                Pente Fino (para detalhes)
 
 
-                                </div>
 
 
                             </div>
 
 
                         </div>
+
+
                     </div>
+                </div>
 
-                    <script>
+                <script>
 
-                        const imagens = document.querySelectorAll(".item span img");
+                    const imagens = document.querySelectorAll(".item span img");
 
-                        imagens.forEach(img => {
-                            img.addEventListener("click", () => {
-                                const idTexto = img.getAttribute("data-texto");
-                                const texto = document.getElementById(idTexto);
+                    imagens.forEach(img => {
+                        img.addEventListener("click", () => {
+                            const idTexto = img.getAttribute("data-texto");
+                            const texto = document.getElementById(idTexto);
 
-                                texto.classList.toggle("visivel");
+                            texto.classList.toggle("visivel");
 
-                                if(texto.classList.contains("visivel")){
+                            if (texto.classList.contains("visivel")) {
                                 img.classList.add("rotacionar");
-                            }else {
+                            } else {
                                 img.classList.remove("rotacionar");
                             }
 
-                            
-
-                            });
 
 
-                          
-                          
-                        
                         });
 
 
 
 
-                    </script>
+
+                    });
+
+
+
+
+                </script>
 
 
 </body>
