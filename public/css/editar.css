@@ -31,7 +31,9 @@ body {
     width: 100%;
     position: absolute;
     backdrop-filter: blur(6px);
-    
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 /*Configuração do container de "Editar"*/
@@ -62,7 +64,7 @@ body {
 .container-all{
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 50%;
     max-width: 70vw;
     position: absolute;
 }
@@ -129,17 +131,20 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px; ;
 }
 
 .image-section img {
-    width: 80%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .image-btn {
-    background-color: #cacaca;
+    background-color: #606188;
     color: white;
     border: none;
     padding: 5px 15px;
