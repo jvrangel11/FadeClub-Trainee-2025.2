@@ -22,6 +22,10 @@ body {
     height: 40px;
 }
 
+.logo-area{
+    width: 2rem;
+}
+
 .menu {
     display: flex;
     gap: 40px;
@@ -51,6 +55,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 2rem;
 }
 
 .icone {
