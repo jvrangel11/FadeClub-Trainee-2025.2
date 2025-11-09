@@ -18,7 +18,7 @@ body *{
     backdrop-filter:  blur(5px);
 }
 .title p {
-    font-size: 1.5rem;
+    font-size: 150%;
     line-height: 2vw;
     padding-top: 2.5%;
     padding-left: 2%;
@@ -33,23 +33,24 @@ body *{
     margin-right: auto;
     width: 60%;
     height: 5.5vh;
-    background-color: white;
     border-radius:  50vw;
     display: flex;
     align-items: center;
 
-    position: relative;
 
 }
 
 .search{
-    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    width: 100%;
 }
 
 #busca {
     border: none;
     color: black;
-    width: 48vw;
+    width: 65vw;
     height: 5.5vh;
     border-radius: 50vw;
 }
@@ -57,24 +58,22 @@ body *{
 input {
     font-size: 1rem;
     padding: 0.8rem;
+    width: 100vw;
 }
 input:focus{
     outline: none;
 }
 
 #search-button{
-    position: absolute;
-    right: 2.5rem;
-    top: 13%;
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
 }
 
 .movido {
-    transform: translateX(-1.7rem);
+    transform: translateX(-1%);
 }
 
 
-#search-button button{
+#search-button {
     background-color: #061326;
     border: 0.15rem solid #243754;
     width: 1.7rem;
@@ -90,10 +89,10 @@ input:focus{
 
 #search-button ion-icon{
     color: white;
-    font-size: 1.1rem;
+    font-size: 110%;
 }
 
-#search-button button:hover{
+#search-button:hover{
     background-color: #243754;
     scale: calc(1.1);
     transition: 0.2s;
@@ -101,13 +100,14 @@ input:focus{
 
 .filter-close-buttons{
     position: absolute;
-    right: 0.65rem;
-    top: 13%;
     border-radius: 40rem;
 
-    display: flex;
-    background-color: #061326;
+    display:flex;
+    padding: 1%;
+    gap: 2%;
 
+    transition: all 0.5s ease;
+    
 }
 .filter-close-buttons button{
     background-color: #061326;
@@ -117,12 +117,13 @@ input:focus{
     border-radius: 40rem;
     padding: auto;
     margin: auto;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .filter-close-buttons ion-icon{
@@ -142,7 +143,7 @@ input:focus{
 }
 
 #filter-button.move{
-    transform: translateX(1.9rem);
+    transform: translateX(1rem);
     transition: transform 0.3s ease;
 }
 
@@ -334,7 +335,6 @@ input:focus{
 
 .post-image{
     width:45%;
-
 }
 
 .post-image img{
@@ -382,6 +382,12 @@ input:focus{
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .post-item span{
@@ -417,6 +423,12 @@ input:focus{
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .post-item-reverse span{
@@ -552,16 +564,292 @@ input:focus{
     transition: 0.2s;
 }
 
-@media only screen and (max-width:768px){
-    .searching-camp{
-        padding-bottom: 10px;
+
+ /*Responsividade do Mobile L*/
+@media screen and (max-width:426px){
+    .title p{
+    font-size: 110%;
+    padding-top: 3.5vh;
+    padding-left: 2vh;
+    padding-bottom: 1.5vh;
     }
 
-    .posts-list{
-        width: 90%;
-    }
+#searching-camp {
+    height: 1.4rem;
 }
 
-@media only screen and (max-width:420px){
+#busca {
+    align-items: center;
+    border: none;
+    color: black;
+    width: 66vw;
+    height: 0;
+    border-radius: 50vw;
+}
+
+ .search{
+    width: 65vw;
+    height: 0;
+ }
+
+input {
+    font-size: 0.7rem;
+    padding: 0.7rem;
+}
+
+
+.movido {
+    transform: translateX(-1%);
+}
+
+
+#search-button {
+    border: 0.05rem solid #243754;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 40rem;
+}
+
+#search-button ion-icon{
+    font-size: 85%;
+}
+
+.filter-close-buttons button{
+    background-color: #061326;
+    border: 0.05rem solid #243754;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 40rem;
+}
+
+.filter-close-buttons ion-icon{
+    color: white;
+    font-size: 85%;
+}
+
+#filter-options{
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 0.7rem;
+
+    width: 65vw;
+    height: 10vh;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem ;
+}
+
+.filter-button1{
+    border: 0.01vw solid #4D0E72;
+    width: 25vw;
+    height: 2.5vh;
+
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 25vw;
+    height: 2.5vh;
+
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 25vw;
+    height: 2.5vh;
+
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 25vw;
+    height: 2.5vh;
+
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+
+.direction1{
+    align-items: center;
+    margin-left: 5%;
+    display: grid;
+    gap: 0;
+    height: 90%;
     
+}
+.direction2{
+    align-items: center;
+    margin-right: 5%;
+    display: grid;
+    gap: 0;
+    height: 90%;
+}
+
+.posts-list{
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-top: 4%;
+    width: 90%;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.post-item{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.8rem;
+}
+
+.post-info{
+    width: 55%;
+    padding: 3%;
+}
+
+.post-image{
+    width:45%;
+}
+
+.post-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.post-info h5{
+    border: 0.005rem solid #4D0E72;
+    width: 3rem;
+    height: 0.8rem;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.4rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-footer span{
+    font-size: 0.5rem;
+}
+
+.post-footer{
+    align-items:end ;
+}
+
+
+.post-info p{
+    padding-top: 0.4rem;
+    font-size: 0.7rem;
+}
+
+.post-item h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.post-item span{
+    color: black;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.post-title h2{
+    font-size: 1rem;
+}
+
+.post-item-reverse{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.8rem;
+}
+
+.post-image-reverse {
+    width:45%;
+}
+
+.post-image-reverse img{
+        width: 100%;
+    height: 100%;
+    border-radius: 0.8rem 0 0 0.8rem ;
+}
+
+
+.post-item-reverse p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 0.4rem;
+}
+
+.post-item-reverse h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.see-more {
+    width: 0.8rem;
+    height: 0.8rem;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-more ion-icon{
+    color: black;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pagination-button button{
+    border: 0.12rem solid white;
+    border-radius: 0.5rem;
+    width: 1.5rem;
+    height: 1.6rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.pagination-button-left {
+    font-size: 1.6rem;
+    margin-right: -0.8rem;
+    margin-bottom: 1.4rem;
+}
+
+.pagination-button-right {
+    font-size: 1.6rem;
+    margin-left: -0.8rem;
+    margin-bottom: 1.4rem;
+}
 }
