@@ -38,7 +38,14 @@
 /* * Elementos ---------------------------------- */
 /* * -- Imagem ---------- */
 .conteudo img {
+    transition: transform 0.4s ease-in-out;
+    transition-timing-function: ease-in-out;
     width: 24vw;
+}
+.conteudo{
+    .logo:hover{
+        transform: scale(1.1);
+    }
 }
 /* * ------------------- */
 
@@ -211,10 +218,22 @@
 .usuarios:hover {
     background-color: rgba(140, 140, 140, 0.651);
     cursor: pointer;
+    .icone{
+        background-color: #084a70;
+        img{
+            width: 3.3rem;
+        }
+    }
 }
 .postagens:hover {
     background-color: rgba(140, 140, 140, 0.651);
     cursor: pointer;
+    .icone{
+        background-color: #084a70;
+        img{
+            width: 3.3rem;
+        }
+    }
 }
 .caixaHome:hover {
     background-color: #f8b734;
@@ -231,12 +250,6 @@
     }
 }
 
-.icone:hover {
-    background-color: #084a70;
-    img{
-        width: 3.3rem;
-    }
-}
 
 /* ! -------------------------------------------- */
 
