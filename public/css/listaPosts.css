@@ -495,6 +495,7 @@ input:focus{
 
 .pagination-button{
     display: flex;
+    height: 1rem;
     justify-content: center;
     align-items: center;
     margin: 0.17rem;
@@ -562,6 +563,244 @@ input:focus{
 .pagination-button-right:hover {
     scale: calc(1.2);
     transition: 0.2s;
+}
+
+ /*Responsividade do Mobile L*/
+@media screen and (max-width:768px){
+    .title p{
+    font-size: 150%;
+    padding-top: 3.5vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;
+    }
+
+#searching-camp {
+    height: 2rem;
+}
+
+#busca {
+    align-items: center;
+    width: 70vw;
+    height: 1.8rem;
+}
+
+ .search{
+    width: 75vw;
+    height: 2rem;
+ }
+
+input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+}
+
+
+.movido {
+    transform: translateX(-1%);
+}
+
+
+#search-button {
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+#search-button ion-icon{
+    font-size: 100%;
+}
+
+.filter-close-buttons button{
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.filter-close-buttons ion-icon{
+    font-size: 100%;
+}
+
+#filter-options{
+    border-radius: 0.5rem;
+    width: 70vw;
+    height: 13vh;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem ;
+}
+
+.filter-button1{
+    border: 0.1vw solid #4D0E72;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+
+.direction1{
+    gap: 0.8rem;
+    height: 100%;
+    
+}
+.direction2{
+    gap: 0.8rem;
+    height: 100%;
+}
+
+.posts-list{
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-top: 3%;
+    width: 90%;
+    gap: 1.4rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.post-item{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.8rem;
+}
+
+.post-info{
+    width: 55%;
+    padding: 3%;
+}
+
+.post-image{
+    width:45%;
+}
+
+.post-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.post-info h5{
+    border: 0.05rem solid #4D0E72;
+    width: 6rem;
+    height: 1.3rem;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.post-footer span{
+    font-size: 0.85rem;
+}
+
+.post-footer{
+    align-items:end;
+}
+
+
+.post-info p{
+    padding-top: 0.6rem;
+    font-size: 1rem;
+}
+
+.post-item span{
+    font-weight: 300;
+}
+
+.post-title h2{
+    font-size: 1.5rem;
+}
+
+.post-item-reverse{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.8rem;
+}
+
+.post-image-reverse {
+    width:45%;
+}
+
+.post-image-reverse img{
+        width: 100%;
+    height: 100%;
+    border-radius: 0.8rem 0 0 0.8rem ;
+}
+
+
+.post-item-reverse p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 0.4rem;
+}
+
+.see-more {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.see-more ion-icon{
+    color: black;
+    height: 0.9rem;
+    width: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pagination-button button{
+    border: 0.15rem solid white;
+    border-radius: 0.5rem;
+    width: 1.9rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pagination-button-left {
+    font-size: 1.9rem;
+    margin-right: -0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.pagination-button-right {
+    font-size: 1.9rem;
+    margin-left: -0.7rem;
+    margin-bottom: 1.4rem;
+}
 }
 
 
@@ -757,18 +996,9 @@ input {
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display:-webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
 }
 
 .post-item span{
-    color: black;
-    display: inline-block;
-    font-family: "Montserrat", sans-serif;
     font-weight: 300;
 }
 
@@ -853,3 +1083,171 @@ input {
     margin-bottom: 1.4rem;
 }
 }
+
+ /*Responsividade do Mobile M*/
+@media screen and (max-width:376px){
+.post-item{
+    height: 7.5rem;
+}
+
+.post-info{
+    width: 50%;
+    padding: 3%;
+}
+
+.post-image{
+    width:50%;
+}
+
+.post-info h5{
+    width: 2.5rem;
+    height: 0.7rem;
+    font-size: 0.35rem;
+}
+
+.post-footer span{
+    font-size: 0.4rem;
+}
+
+.post-info p{
+    padding-top: 0.35rem;
+    font-size: 0.6rem;
+}
+
+.post-title h2{
+    font-size: 0.8rem;
+}
+
+.post-item-reverse{
+    height: 7.5rem;
+}
+
+.post-image-reverse {
+    width:50%;
+}
+
+.see-more {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.see-more ion-icon{
+    height: 0.5rem;
+    width: 0.5rem;
+}
+}
+ /*Responsividade do Mobile M*/
+@media screen and (max-width:321px){
+.post-item{
+    height: 7rem;
+}
+
+.post-info{
+    width: 50%;
+    padding: 2.8%;
+}
+
+.post-image{
+    width:50%;
+}
+
+.post-info h5{
+    width: 2.3rem;
+    height: 0.55rem;
+    font-size: 0.35rem;
+}
+
+.post-footer span{
+    font-size: 0.3rem;
+    font-weight: 400;
+}
+
+.post-info p{
+    padding-top: 0.35rem;
+    font-size: 0.5rem;
+}
+
+.post-title h2{
+    font-size: 0.7rem;
+}
+
+.post-item-reverse{
+    height: 7rem;
+}
+
+.post-image-reverse {
+    width:50%;
+}
+
+.see-more {
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 0.1rem;
+}
+
+.see-more ion-icon{
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+#searching-camp {
+    margin-top: 3%;
+}
+
+.posts-list{
+    padding: 0.6rem;
+}
+
+#filter-options{
+    border-radius: 0.6rem;
+
+    width: 65vw;
+    height: 6vh;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem ;
+}
+
+.filter-button1{
+    border: 0.01vw solid #4D0E72;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.55rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.55rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.55rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.55rem;
+}
+
+.direction1{
+    height: 100%;
+    
+}
+.direction2{
+    height: 100%;
+}
+
+.pagination {
+    margin-top: 0.3rem;
+}
+
+}
+
