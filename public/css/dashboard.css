@@ -38,7 +38,7 @@
 /* * Elementos ---------------------------------- */
 /* * -- Imagem ---------- */
 .conteudo img {
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     transition-timing-function: ease-in-out;
     width: 24vw;
 }
@@ -215,9 +215,14 @@
 
 /* ! Hover -------------------------------------- */
 
-.usuarios:hover {
+.usuarios, .postagens{
+    transition: transform 0.2s ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.usuarios:hover , .postagens:hover {
     background-color: rgba(140, 140, 140, 0.651);
     cursor: pointer;
+    transform: scale(1.03);
     .icone{
         background-color: #084a70;
         img{
@@ -225,19 +230,16 @@
         }
     }
 }
-.postagens:hover {
-    background-color: rgba(140, 140, 140, 0.651);
-    cursor: pointer;
-    .icone{
-        background-color: #084a70;
-        img{
-            width: 3.3rem;
-        }
-    }
+
+.caixaHome , .caixaLogout{
+    transition: transform 0.2s ease-in-out;
+    transition-timing-function: ease-in-out;
 }
+
 .caixaHome:hover {
     background-color: #f8b734;
     cursor: pointer;
+    transform: scale(1.05);
     img {
         width: 3.3rem;
     }
@@ -245,6 +247,7 @@
 .caixaLogout:hover {
     background-color: #ca1f24;
     cursor: pointer;
+    transform: scale(1.05);
     img {
         width: 2.5rem;
     }
