@@ -236,9 +236,6 @@
     transform: scale(1.03);
     .icone{
         background-color: #084a70;
-        img{
-            width: 3.3rem;
-        }
     }
 }
 
