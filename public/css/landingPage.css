@@ -139,8 +139,9 @@ footer {
     height: 30rem;
     align-items: center;
     padding-left: 2.7rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 /*! Estiliza os conteúdos dos carrosseis de forma geral --------------------------------- */
 .card{
@@ -174,8 +175,6 @@ footer {
     font-weight: 800;  
     /*posicionando*/
     position: absolute; 
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 10;
 }
 /*! Posiciona cada nav-arrow ------------------------------------------------------------ */
@@ -189,12 +188,9 @@ footer {
     transition-timing-function: ease-in-out;
     right: 1%;
 }
-.arrow-left2, .arrow-right2{
-    top:50%
-}
 /*! Hover dos nav-arrows ---------------------------------------------------------------- */
 .arrow-left1:hover , .arrow-left2:hover , .arrow-right1:hover , .arrow-right2:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.623);
 }
 /*! Estilo geral dos cards -------------------------------------------------------------- */
@@ -300,3 +296,4 @@ footer {
         background-color: #fdba34;
     }
 }
+
