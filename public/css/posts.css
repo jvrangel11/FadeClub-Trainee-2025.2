@@ -1,6 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(../assets/Gemini_Generated_Image_1mpasb1mpasb1mpa.png);
     background-size:cover ;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    width: 90%;;
+}
+
+.scroll-lateral {
+    width: fit-content;
+
 }
 
 .tabela, 
@@ -13,11 +32,15 @@ body {
 }
 
 .tabela-container {
-    width: 80%;
-    margin: 30px auto;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
     text-align: center;
-    position: relative;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulo {
@@ -27,7 +50,8 @@ body {
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-left: 50px;
+    margin-left: 0px;
+    width: fit-content;
 }
 
 .btn-add {
@@ -39,14 +63,12 @@ body {
     border-radius: 50%;
     cursor: pointer;
     float: right;
-    margin-top: -110px;
     font-size: 40px;
     opacity: 0.9;
-    margin-right: 63px;
 }
 
 .tabela {
-    width: 90%;
+    width: 90vw;
     margin-top:0px;
     border-collapse: collapse;
     background-color: #1B2A41;
@@ -54,8 +76,10 @@ body {
     overflow: hidden;
     opacity: 0.9;
     position: center;
-    margin-left: 50px;
+    margin-left: 0px;
 }
+
+
 
 .tabela thead th {
     padding-top: 20px;
@@ -107,4 +131,20 @@ body {
 
 .paginacao {
     margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .scroll-lateral {
+        overflow-x: auto;
+        width: 98%;
+    }
+    .titulo {
+        font-size: 2.5rem;
+    }
+    .tabela {
+        min-width: 600px;
+    }
+    .tabela-container {
+        overflow: hidden;
+    }
 }
