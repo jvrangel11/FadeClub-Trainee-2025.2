@@ -147,7 +147,7 @@ footer {
 .card{
     height: 33vh;
     width: 30vw;
-    border-radius: 30px;
+    border-radius: 1.5vw;
     display: flex;
     transition: transform 0.3s;
     flex-shrink: 0;
