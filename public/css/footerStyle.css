@@ -177,53 +177,137 @@ footer {
 
 
 
+@media only screen and (max-width: 374px) {
+  body {
+    flex-direction: column;
+    background-attachment: scroll;
+  }
 
-@media only screen and (max-width: 768px) {
-    body {
-       
-        flex-direction: column; 
-    }
+  .conteiner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+  }
 
-    .conteiner {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 0.3em;
-        padding: 1em;
-        text-align: center;
-    }
+  .footerLogo img {
+    width: 50vw;
+    height: auto;
+    margin-bottom: 1rem;
+  }
 
-    .footerLogo img {
-        width: 0.5em;
-        height: 0.5em;
-        margin-bottom: 1em;
-    }
+  .motivacao h5 {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
 
-    .motivacao {
-        gap: 0.5rem;
-    }
+  .contatos {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
 
-    .motivacao h5 {
-        font-size: 1em;
-    }
+  #redes {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
-    .contatos {
-        gap: 1em;
-        font-size: 0.9em;
-    }
+  #redes i {
+    font-size: 1.3rem;
+  }
 
-    #redes {
-        flex-wrap: wrap;
-        gap: 0.1em;
-    }
+  footer {
+    position: relative;
+    text-align: center;
+    padding: 1.2em 0;
+  }
+}
 
-    #redes i {
-        font-size: 1.5em;
-    }
 
-    footer {
-        position: relative;
-        text-align: center;
-        padding: 1.5em 0;
-    }
-}    
+
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  body {
+    
+    flex-direction: column;
+    background-attachment: scroll;
+  }
+
+  .conteiner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    padding: 1.5em;
+    text-align: center;
+    gap: 1.5em;
+  }
+
+  .footerLogo img {
+    width: 40vw;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .motivacao h5 {
+    font-size: 1rem;
+    margin: 1.2em 0;
+  }
+
+  .contatos {
+    gap: 1em;
+    font-size: 0.9rem;
+  }
+
+  #redes {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6em;
+  }
+
+  #redes i {
+    font-size: 1.6em;
+  }
+
+  footer {
+    position: relative;
+    text-align: center;
+    padding: 1.5em 0;
+  }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .conteiner {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 95vw;
+    padding: 2em;
+    gap: 2em;
+  }
+
+  .footerLogo img {
+    width: 25vw;
+    height: auto;
+  }
+
+  .motivacao h5 {
+    font-size: 1.1rem;
+  }
+
+  .contatos {
+    gap: 1.5em;
+    font-size: 1rem;
+  }
+
+  #redes i {
+    font-size: 1.8em;
+  }
+
+  footer {
+    padding: 2em 0;
+  }
+}
