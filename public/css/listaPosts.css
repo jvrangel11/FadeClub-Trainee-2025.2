@@ -565,6 +565,243 @@ input:focus{
     transition: 0.2s;
 }
 
+@media screen and (max-width:2560px) and (min-width:14441px){
+    .title p{
+    font-size: 150%;
+    padding-top: 3.5vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;
+    }
+
+#searching-camp {
+    height: 2rem;
+}
+
+#busca {
+    align-items: center;
+    width: 70vw;
+    height: 1.8rem;
+}
+
+ .search{
+    width: 75vw;
+    height: 2rem;
+ }
+
+input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+}
+
+
+.movido {
+    transform: translateX(-1%);
+}
+
+
+#search-button {
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+#search-button ion-icon{
+    font-size: 100%;
+}
+
+.filter-close-buttons button{
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.filter-close-buttons ion-icon{
+    font-size: 100%;
+}
+
+#filter-options{
+    border-radius: 0.5rem;
+    width: 70vw;
+    height: 13vh;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem ;
+}
+
+.filter-button1{
+    border: 0.1vw solid #4D0E72;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+
+.direction1{
+    gap: 0.8rem;
+    height: 100%;
+    
+}
+.direction2{
+    gap: 0.8rem;
+    height: 100%;
+}
+
+.posts-list{
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-top: 3%;
+    width: 90%;
+    gap: 1.4rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.post-item{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.8rem;
+}
+
+.post-info{
+    width: 55%;
+    padding: 3%;
+}
+
+.post-image{
+    width:45%;
+}
+
+.post-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.post-info h5{
+    border: 0.05rem solid #4D0E72;
+    width: 6rem;
+    height: 1.3rem;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.post-footer span{
+    font-size: 0.85rem;
+}
+
+.post-footer{
+    align-items:end;
+}
+
+
+.post-info p{
+    padding-top: 0.6rem;
+    font-size: 1rem;
+}
+
+.post-item span{
+    font-weight: 300;
+}
+
+.post-title h2{
+    font-size: 1.5rem;
+}
+
+.post-item-reverse{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.8rem;
+}
+
+.post-image-reverse {
+    width:45%;
+}
+
+.post-image-reverse img{
+        width: 100%;
+    height: 100%;
+    border-radius: 0.8rem 0 0 0.8rem ;
+}
+
+
+.post-item-reverse p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 0.4rem;
+}
+
+.see-more {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.see-more ion-icon{
+    color: black;
+    height: 0.9rem;
+    width: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pagination-button button{
+    border: 0.15rem solid white;
+    border-radius: 0.5rem;
+    width: 1.9rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pagination-button-left {
+    font-size: 1.9rem;
+    margin-right: -0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.pagination-button-right {
+    font-size: 1.9rem;
+    margin-left: -0.7rem;
+    margin-bottom: 1.4rem;
+}
+}
+
  /*Responsividade do Mobile L*/
 @media screen and (max-width:768px){
     .title p{
