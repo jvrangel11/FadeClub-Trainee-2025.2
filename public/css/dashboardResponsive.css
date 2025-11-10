@@ -1,6 +1,76 @@
 /*! Mobile L -------------------------------------------------------------------------------- */
 @media (max-width: 425px) {
-    .links {
-        border: 1px solid orangered;
+    .background {
+        height: 103vh;
+        width: 100%;
+    }
+    .postagens{
+        height: 10vh;
+        width: 80vw;
+    }
+    .usuarios{
+        height: 10vh;
+        width: 80vw;
+    }
+} 
+/*! Mobile M ---------------------------------------------------------------------------------- */
+@media (max-width: 375px) {
+    .background {
+        height: 103vh;
+        width: 100%;
+    }
+    .postagens{
+        height: 10vh;
+        width: 80vw;
+    }
+    .usuarios{
+        height: 10vh;
+        width: 80vw;
+    }
+} 
+/*! Mobile S  ----------------------------------------------------------------------------------- */
+@media (max-width: 320px) {
+    .conteudo {
+        width: 90%;
+        height: 70%;
+    }
+    .conteudo{
+        .logo{
+            width: 90vw;
+        }
+    }
+    .background {
+        height: 103vh;
+        width: 100%;
+    }
+    .postagens{
+        height: 10vh;
+        width: 80vw;
+        .icone {
+            height: 4rem;
+            width: 4rem; 
+            border-radius: 20px;
+            img{
+                width: 2rem;
+            }
+        }
+        p{
+            margin-left: 8%;
+        }
+    }
+    .usuarios{
+        height: 10vh;
+        width: 80vw;
+        .icone {
+            height: 4rem;
+            width: 4rem; 
+            border-radius: 20px;
+            img{
+                width: 2rem;
+            }
+        }
+        p{
+            margin-left: 8%;
+        }
     }
 } 
