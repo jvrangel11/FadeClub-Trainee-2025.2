@@ -49,7 +49,7 @@
 /* * Elementos ---------------------------------- */
 /* * -- Imagem ---------- */
 .conteudo img {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.05s ease-in-out;
     transition-timing-function: ease-in-out;
     width: 24vw;
 }
@@ -227,7 +227,7 @@
 /* ! Hover -------------------------------------- */
 
 .usuarios, .postagens{
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.05s ease-in-out;
     transition-timing-function: ease-in-out;
 }
 .usuarios:hover , .postagens:hover {
