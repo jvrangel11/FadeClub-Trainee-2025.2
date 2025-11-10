@@ -1,0 +1,221 @@
+/*! Smartphones ------------------------------------------------------------------------------ */
+@Media ( max-width: 430px) {
+/** Ajusta navbar **/
+header {
+    height: 65vh;
+    nav{
+        height: 12vh;
+    }
+    section {
+        height: 53vh;
+    }
+}
+/** Ajusta hero section **/
+.heroSection {
+    gap: 1rem;
+    img{
+        max-width: 100%; 
+        max-height: 100%;
+
+        width: 18rem;
+        height: 18rem;
+    }
+    .slogan{
+        font-weight: 400;
+        font-size: 23px;
+    }
+}
+/** Ajusta divisórias **/
+.genero{
+    font-size: 14px;
+    font-weight: 700;
+    width: 10rem; 
+    height: 2rem;
+    border-radius: 5px;
+}
+.destaques{
+    top: -1rem;
+}
+.ultimasPublicacoes{
+    top: 24rem;
+}
+
+/** Ajusta cards **/
+.conteudo01, .conteudo02{
+    padding-left: 2rem;
+}
+.card{
+    height: 30vh;
+    width: 85vw;
+    border-radius: 9vw;
+    margin-right: 2.7rem;
+    .imagem{
+        height: 35vh;
+        width: 45%;
+    }
+    .informacoes{
+        height: 31.5vh;
+        width: 65%;
+        .especiais{
+            height: 14%;
+        }
+        .tag{
+            height: 2.2rem;
+            width: 6rem;
+        }
+        .verMais{
+            height: 2.5rem;
+            width: 2.5rem;
+            img {
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+}
+}
+main{
+    height: 86vh;
+}
+.carrossel-container{
+    height: 43vh;
+}
+.conteudo01, .conteudo02{
+    height: 20rem;
+}
+/** Ajusta o footer **/
+footer{
+    height: 12rem;
+}
+/** Ajusta as navarrows **/
+.nav-arrow{
+    height: 3vh;
+    width: 5vw;
+    flex-shrink: 0; 
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 800;  
+}
+}
+/*!  Mobile L ----------------------------------------------------------------------------------- */
+@media (max-width: 425px) {
+    .ultimasPublicacoes{
+        top: 25.5rem;
+    }
+}
+/*! Mobile M ------------------------------------------------------------------------------------ */
+@media (max-width: 375px) {
+    .conteudo01, .conteudo02{
+        padding-left: 1.8rem;
+    }
+}
+/*! Mobile S ------------------------------------------------------------------------------------ */
+@media (max-width: 320px) {
+    .conteudo01, .conteudo02{
+        padding-left: 1.5rem;
+    }
+}
+
+
+/*! Tablet --------------------------------------------------------------------------------------- */
+@media (min-width: 426px) and (max-width: 768px) {
+    /** Ajusta navbar **/
+header {
+    height: 90vh;
+    section {
+        height: 80vh;
+    }
+}
+/** Ajusta hero section **/
+.heroSection {
+    gap: 1rem;
+    img{
+        max-width: 100%; 
+        max-height: 100%;
+
+        width: 30rem;
+        height: 30rem;
+    }
+    .slogan{
+        font-weight: 400;
+        font-size: 30px;
+    }
+}
+/** Ajusta divisórias **/
+.genero{
+    font-size: 18px;
+    font-weight: 700;
+    width: 13rem; 
+    height: 3rem;
+    border-radius: 5px;
+}
+/** Ajustando os cards **/
+.card{
+    width: 50vw;
+    border-radius: 1.5rem;
+    .imagem{
+        height: 35vh;
+        width: 25vw;
+    }
+    .informacoes{
+        height: 35vh;
+        width: 25vw;
+        .texto{
+            height: 75%;
+        }
+        .especiais{
+            height: 22%;
+        }
+    }
+}
+
+
+/** ajustando as setas **/
+.nav-arrow{
+    height: 5vh;
+    width: 6vw;
+    border-radius: 50%;
+
+    font-size: 30px;
+    font-weight: 800;  
+}
+}
+
+/*! Laptop --------------------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px)
+{
+/** Ajusta hero section **/
+.heroSection {
+    gap: 1rem;
+}
+/** Ajustando os cards **/
+.conteudo01, .conteudo02{
+    padding-left: 2.3rem;
+}
+.card{
+    width: 50vw;
+    border-radius: 1.5rem;
+    .imagem{
+        height: 35vh;
+        width: 25vw;
+    }
+    .informacoes{
+        height: 35vh;
+        width: 25vw;
+        .texto{
+            height: 75%;
+        }
+        .especiais{
+            height: 22%;
+        }
+    }
+}
+/** ajustando as setas **/
+.nav-arrow{
+    height: 5vh;
+    width: 5vw;
+    border-radius: 50%;
+
+    font-size: 30px;
+    font-weight: 800;  
+}
+}
