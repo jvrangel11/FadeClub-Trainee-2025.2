@@ -83,7 +83,7 @@ body {
     border-bottom-right-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr;
     gap: 20px;
 }
 
@@ -367,6 +367,97 @@ textarea {
     .close-btn-excluir:hover {
         transform: scale(1.2);
     }
+
+    .pagination {
+    margin-top: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 12%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pagination-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.17rem;
+}
+
+.pagination-button button{
+    
+    background-color: transparent;
+    border: 0.13rem solid white;
+    border-radius: 0.5rem;
+    width: 2.18rem;
+    height: 2.18rem;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1.3rem;
+}
+
+.pagination-button button:hover {
+    background-color: white;
+    color: #061326;
+    transition: 0.2s;
+}
+
+
+.pagination-button-left {
+    color: white;
+}
+.pagination-button-left {
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    rotate: 180deg;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    margin-right: -0.5rem;
+
+    margin-bottom: 1.3rem;
+}
+
+.pagination-button-left:hover {
+    scale: calc(1.2);
+    transition: 0.2s;
+}
+
+.pagination-button-right ion-icon {
+    color: white;
+}
+.pagination-button-right {
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    margin-left: -0.5rem;
+
+    margin-bottom: 1.3rem;
+}
+
+.pagination-button-right:hover {
+    scale: calc(1.2);
+    transition: 0.2s;
+}
+
     
     
 @media (max-width: 800px) {
