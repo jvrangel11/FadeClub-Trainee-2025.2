@@ -138,14 +138,13 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px; 
     width: 100%;
-    height: 100%;
+    height: 60vh;
 }
 
 .image-section img {
     width: 100%;
-    height: 71%;
+    height: 60%;
     object-fit: cover;
     border: none;
     padding: 10px 20px;
@@ -352,6 +351,19 @@ textarea {
     .close-btn-excluir:hover {
         transform: scale(1.2);
     }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: #E6E7EB;
+    padding: 20px 10px;
+}
 
 @media (max-width: 800px) {
     .form-box {
