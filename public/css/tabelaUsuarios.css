@@ -133,8 +133,8 @@
     cursor: pointer;
 }
 .bot.ver:hover .iver {
-    fill: #0011ff; 
-    filter: drop-shadow(0 0 6px #66ffb2);
+    fill: #77d6f3; 
+    filter: drop-shadow(0 0 6px #0156d4);   
     transform: scale(1.1);
 }
 /*Aparencia do icone de editar e hover*/
