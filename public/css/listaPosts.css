@@ -158,21 +158,23 @@ input:focus{
 
 #filter-options{
     background-color: rgba(0, 0, 0, 0.404);
-    border-radius: 0.7rem;
-
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    margin-top: -1rem;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    height: 6.8rem;
+    height: 4rem;
     padding-left: 0.65rem;
     padding-right: 0.65rem;
-    padding-top: 1rem;
-    padding-bottom: 0.65rem ;
+    padding-top: 1.5rem;
+    gap: 1%;
 
     justify-content:space-between;
     display: flex;
     max-height: 0;
     opacity: 0;
+    z-index: -1;
 
     transition: max-height 0.3s ease, opacity 0.3s ease;
 }
@@ -188,7 +190,7 @@ input:focus{
     border: 0.1vw solid #4D0E72;
     border-radius: 50rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -209,7 +211,7 @@ input:focus{
     border: 0.1vw solid #0b3d55;
     border-radius: 50rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -229,7 +231,7 @@ input:focus{
     border: 0.1vw solid #134b13;
     border-radius: 50rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -249,7 +251,7 @@ input:focus{
     border: 0.1vw solid #5e080a;
     border-radius: 50rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -264,19 +266,6 @@ input:focus{
     transition: 0.3s;
 }
 
-.direction1{
-    align-items: center;
-    margin-left: 5%;
-    display: grid;
-    gap: 10%;
-
-}
-.direction2{
-    align-items: center;
-    margin-right: 5%;
-    display: grid;
-    gap: 10%;
-}
 
 .posts-list{
     background-color: rgba(0, 0, 0, 0.459);
@@ -293,6 +282,7 @@ input:focus{
     justify-content: center;
     border-radius: 1.5%;
     padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .post-item{
