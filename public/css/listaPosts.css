@@ -34,7 +34,7 @@ body *{
     width: 60%;
     height: 5.5vh;
     border-radius:  50vw;
-    display: flex;
+    display: absolute;
     flex-direction: column;
     align-items: center;
 
@@ -163,15 +163,16 @@ input:focus{
     border-bottom-right-radius: 0.7rem;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 100%;
     height: 4rem;
     padding-left: 0.65rem;
     padding-right: 0.65rem;
     padding-top: 1.5rem;
     gap: 1%;
+    display: none;
+    margin-top: -3vh;
 
     justify-content:space-between;
-    display: flex;
     max-height: 0;
     opacity: 0;
     z-index: -1;
@@ -182,6 +183,7 @@ input:focus{
 #filter-options.show{
     max-height: 6.8rem;
     align-items: center;
+    display: flex;
     opacity: 1;
     transition: all 0.3s ease;
 }
@@ -274,7 +276,7 @@ input:focus{
 
 .posts-list{
     background-color: rgba(0, 0, 0, 0.459);
-    margin-top: 3%;
+    margin-top: 4%;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
