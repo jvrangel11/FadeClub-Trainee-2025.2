@@ -124,92 +124,107 @@
 
     <div class="modal-container" id="Criar">
         <div class="container-all">
-            <div class="head">
-                <h2>Criar Publicação</h2>
-            </div>
             <div class="form-box">
-                
-                <div class="form-left">
-                    <label>Origem:</label>
-                    <input type="text">
-                    <label>História:</label>
-                    <input type="text">
-                    <label>Curiosidades:</label>
-                    <input type="text">
-                    <label>Dicas do Barbeiro:</label>
-                    <input type="text">
-                    <label>Produtos recomendados:</label>
-                    <input type="text">
-                </div>
-                <div class="image-section">
-                    <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
-                    <button class="image-btn">Selecionar imagem</button>
-                </div>
-                <div class="save-cancel-btn">
-                    <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
-                    <button class="submit-btn">Salvar</button>
+                <div class="form-view">
+                    <div class="form-left">
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                <button class="image-btn">Selecionar imagem</button>
+                            </div>
+                        </div>
+                        <div class="info-text">
+                            <p1>Vamos adicionar um novo post!</p1>
+                            <p2>Preencha as informações do post nos campos a seguir</p2>
+                        </div>
+                    </div>
+                    <div class="form-right">
+                        <label>Origem*</label>
+                        <input type="text">
+                        <label>História*</label>
+                        <input type="text">
+                        <label>Curiosidades*</label>
+                        <input type="text">
+                        <label>Dicas do Barbeiro*</label>
+                        <input type="text">
+                        <label>Produtos recomendados*</label>
+                        <input type="text">
+                        <div class="save-cancel-btn">
+                            <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
+                            <button class="submit-btn">Salvar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="ver-container" id="Visualizar">
         <div class="container-all">
-            <div class="head">
-                <h2>Visualizar Publicação</h2>
-            </div>
             <div class="form-box">
-                
-                <div class="form-left">
-                    <label>Origem:</label>
-                    <input type="text">
-                    <label>História:</label>
-                    <input type="text">
-                    <label>Curiosidades:</label>
-                    <input type="text">
-                    <label>Dicas do Barbeiro:</label>
-                    <input type="text">
-                    <label>Produtos recomendados:</label>
-                    <input type="text">
-                </div>
-                <div class="card">
-                    <div class="image-section">
-                        <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
-                        <button class="image-btn">Visualizar imagem</button>
+                <div class="form-view">
+                    <div class="form-left">
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                <button class="image-btn">Visualizar imagem</button>
+                            </div>
+                        </div>
+                        <div class="info-text">
+                            <p1>Ver informações deste post</p1>
+                            <p2>Apenas visualize quais são as informações sobre este post</p2>
+                        </div>
                     </div>
-                </div>
-                <div class="save-cancel-btn">
-
-                    <button class="cancel-btn" onclick="fecharModal('Visualizar')">Cancelar</button>
+                    <div class="form-right">
+                        <label>Origem</label>
+                        <input type="text">
+                        <label>História</label>
+                        <input type="text">
+                        <label>Curiosidades</label>
+                        <input type="text">
+                        <label>Dicas do Barbeiro</label>
+                        <input type="text">
+                        <label>Produtos recomendados</label>
+                        <input type="text">
+                        <div class="save-cancel-btn">
+                            <button class="cancel-btn" onclick="fecharModal('Visualizar')">Cancelar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
         <div class="editar-container" id="editar">
         <div class="container-all">
-            <div class="head">
-                <h2>Editar Publicação</h2>
-            </div>
             <div class="form-box">
-                
-                <div class="form-left">
-                    <label>Origem:</label>
-                    <input type="text">
-                    <label>História:</label>
-                    <input type="text">
-                    <label>Curiosidades:</label>
-                    <input type="text">
-                    <label>Dicas do Barbeiro:</label>
-                    <input type="text">
-                    <label>Produtos recomendados:</label>
-                    <input type="text">
-                </div>
-                <div class="image-section">
-                    <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
-                    <button class="image-btn">Alterar imagem</button>
-                </div>
-                <div class="save-cancel-btn">
-                    <button class="cancel-btn" onclick="fecharModal('editar')">Cancelar</button>
-                    <button class="submit-btn">Salvar</button>
+                <div class="form-view">
+                    <div class="form-left">
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                <button class="image-btn">Alterar imagem</button>
+                            </div>
+                        </div>
+                        <div class="info-text">
+                            <p1>Faça uma edição neste post</p1>
+                            <p2>Apague ou altere as informações sobre este post</p2>
+                        </div>
+                    </div>
+                    <div class="form-right">
+                        <label>Origem</label>
+                        <input type="text">
+                        <label>História</label>
+                        <input type="text">
+                        <label>Curiosidades</label>
+                        <input type="text">
+                        <label>Dicas do Barbeiro</label>
+                        <input type="text">
+                        <label>Produtos recomendados</label>
+                        <input type="text">
+                        <div class="save-cancel-btn">
+                            <button class="cancel-btn" onclick="fecharModal('editar')">Cancelar</button>
+                            <button class="submit-btn">Salvar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,7 +237,7 @@
                 <div class="image-section-excluir">
                     <h4>Título da publicação</h4>
                     <img src="../../../public/assets/previaimg.png" alt="Prévia imagem">
-                </div>
+                </div class="comentario-excluir">
                 <p>Essa ação não poderá ser desfeita</p>
             </div>
             <div class="save-cancel-btn">
