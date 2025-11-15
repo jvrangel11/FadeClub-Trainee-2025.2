@@ -65,6 +65,12 @@ body {
     float: right;
     font-size: 40px;
     opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.btn-add:hover{
+    transform: scale(1.15);
+    background-color: #283d5e;
 }
 
 .tabela {
