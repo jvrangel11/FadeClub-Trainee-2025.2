@@ -33,3 +33,38 @@
         width: 8vh;
     }
 }
+/*! Tablet ------------------------------------------------------------------------------- */
+@media (min-width: 426px) and (max-width: 768px){
+    .conteudo{
+        width: 80%;
+    }
+    .blur{
+        width:100%;
+    }
+    .logo{
+        height: 50%;
+    }
+    .links{
+        height: 28%;
+        width: 60vw;
+    }
+    a{
+        font-size: 23px;
+    }
+    .postagens, .usuarios{
+        padding-left: 1.4rem;
+        gap: 4.3rem;
+    }
+    .usuarios{
+        gap: 5rem;
+    }
+    .linkIcone{
+        height: 70%;
+        width: 18%;
+        border-radius: 20px;
+    }
+    .iconeHome, .iconeLogout{
+        height: 8vh;
+        width: 8vh;
+    }
+}
