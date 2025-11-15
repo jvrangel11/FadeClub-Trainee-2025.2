@@ -18,7 +18,7 @@ body *{
     backdrop-filter:  blur(5px);
 }
 .title p {
-    font-size: 150%;
+    font-size: 2.2rem;
     line-height: 2vw;
     padding-top: 2.5%;
     padding-left: 2%;
@@ -553,7 +553,8 @@ width: 1rem;
     transition: 0.2s;
 }
 
-@media screen and (max-width:2560px) and (min-width:14441px){
+@media screen and (max-width:1025px){
+    
     .title p{
     font-size: 150%;
     padding-top: 3.5vh;
@@ -567,12 +568,12 @@ width: 1rem;
 
 #busca {
     align-items: center;
-    width: 70vw;
+    width: 100vw;
     height: 1.8rem;
 }
 
  .search{
-    width: 75vw;
+    width: 60vw;
     height: 2rem;
  }
 
@@ -609,11 +610,11 @@ input {
 
 #filter-options{
     border-radius: 0.5rem;
-    width: 70vw;
-    height: 13vh;
+    width: 60vw;
+    height: 9vh;
     padding-left: 0.65rem;
     padding-right: 0.65rem;
-    padding-top: 0.65rem;
+    padding-top: 2rem;
     padding-bottom: 0.65rem ;
 }
 
@@ -653,20 +654,9 @@ input {
     font-size: 0.9rem;
 }
 
-
-.direction1{
-    gap: 0.8rem;
-    height: 100%;
-    
-}
-.direction2{
-    gap: 0.8rem;
-    height: 100%;
-}
-
 .posts-list{
     background-color: rgba(0, 0, 0, 0.301);
-    margin-top: 3%;
+    margin-top: 6%;
     width: 90%;
     gap: 1.4rem;
     padding: 1.5rem;
@@ -695,16 +685,6 @@ input {
     width: 100%;
     height: 100%;
     border-radius: 0 0.8rem 0.8rem 0;
-}
-
-.post-info h5{
-    border: 0.05rem solid #4D0E72;
-    width: 6rem;
-    height: 1.3rem;
-    
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
 }
 
 .post-footer span{
@@ -753,12 +733,12 @@ input {
     padding-top: 0.4rem;
 }
 
-.see-more {
+.verMais {
     width: 1.2rem;
     height: 1.2rem;
 }
 
-.see-more ion-icon{
+.verMais img{
     color: black;
     height: 0.9rem;
     width: 0.9rem;
@@ -810,7 +790,7 @@ input {
 }
 
  .search{
-    width: 75vw;
+    width: 65vw;
     height: 2rem;
  }
 
@@ -847,11 +827,11 @@ input {
 
 #filter-options{
     border-radius: 0.5rem;
-    width: 70vw;
-    height: 13vh;
+    width: 65vw;
+    height: 9vh;
     padding-left: 0.65rem;
     padding-right: 0.65rem;
-    padding-top: 0.65rem;
+    padding-top: 1.6rem;
     padding-bottom: 0.65rem ;
 }
 
@@ -861,7 +841,7 @@ input {
     height: 3.5vh;
 
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .filter-button2{
@@ -870,7 +850,7 @@ input {
     height: 3.5vh;
 
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .filter-button3{
@@ -879,7 +859,7 @@ input {
     height: 3.5vh;
 
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .filter-button4{
@@ -888,23 +868,12 @@ input {
     height: 3.5vh;
 
     font-weight: 400;
-    font-size: 0.9rem;
-}
-
-
-.direction1{
-    gap: 0.8rem;
-    height: 100%;
-    
-}
-.direction2{
-    gap: 0.8rem;
-    height: 100%;
+    font-size: 0.8rem;
 }
 
 .posts-list{
     background-color: rgba(0, 0, 0, 0.301);
-    margin-top: 3%;
+    margin-top: 7%;
     width: 90%;
     gap: 1.4rem;
     padding: 1.5rem;
@@ -916,7 +885,7 @@ input {
 .post-item{
     background-color: rgba(255, 255, 255, 0.729);
     width: 100%;
-    height: 12rem;
+    height: 10rem;
     border-radius: 0.8rem;
 }
 
@@ -936,13 +905,9 @@ input {
 }
 
 .post-info h5{
-    border: 0.05rem solid #4D0E72;
-    width: 6rem;
-    height: 1.3rem;
-    
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
+    width: 4.2rem;
+    height: 1.15rem;
+    font-size: 0.65rem;
 }
 
 .post-footer span{
@@ -956,7 +921,7 @@ input {
 
 .post-info p{
     padding-top: 0.6rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .post-item span{
@@ -964,13 +929,13 @@ input {
 }
 
 .post-title h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .post-item-reverse{
     background-color: rgba(255, 255, 255, 0.729);
     width: 100%;
-    height: 12rem;
+    height: 10rem;
     border-radius: 0.8rem;
 }
 
@@ -991,12 +956,12 @@ input {
     padding-top: 0.4rem;
 }
 
-.see-more {
+.verMais {
     width: 1.2rem;
     height: 1.2rem;
 }
 
-.see-more ion-icon{
+.verMais img{
     color: black;
     height: 0.9rem;
     width: 0.9rem;
@@ -1102,14 +1067,12 @@ input {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     width: 65vw;
-    height: 2rem;
+    height: 2.2rem;
     padding-left: 0.65rem;
     padding-right: 0.65rem;
-    padding-top: 0.8rem;
+    padding-top: 0.9rem;
     padding-bottom: 0.5rem ;
-    margin-top: 1vh;
-    align-items: center;
-    justify-content: center;
+    margin-top: 0.2rem;
     text-align: center;
 }
 
@@ -1167,7 +1130,7 @@ input {
 .post-item{
     background-color: rgba(255, 255, 255, 0.729);
     width: 100%;
-    height: 8rem;
+    height: 7rem;
     border-radius: 0.8rem;
 }
 
@@ -1187,14 +1150,10 @@ input {
 }
 
 .post-info h5{
-    border: 0.005rem solid #4D0E72;
     width: 3rem;
     height: 0.8rem;
-    
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
     font-size: 0.4rem;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1211,7 +1170,7 @@ input {
 
 .post-info p{
     padding-top: 0.4rem;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 
 .post-item h2{
@@ -1225,13 +1184,13 @@ input {
 }
 
 .post-title h2{
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 .post-item-reverse{
     background-color: rgba(255, 255, 255, 0.729);
     width: 100%;
-    height: 8rem;
+    height: 7rem;
     border-radius: 0.8rem;
 }
 
@@ -1276,8 +1235,8 @@ input {
 
 .verMais img{
     color: black;
-    height: 0.6rem;
-    width: 0.6rem;
+    height: 0.5rem;
+    width: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1308,8 +1267,12 @@ input {
 
  /*Responsividade do Mobile M*/
 @media screen and (max-width:376px){
+
+    .filter-close-buttons{
+        gap: 0.15rem;
+    }
 .post-item{
-    height: 7.5rem;
+    height: 6.5rem;
 }
 
 .post-info{
@@ -1325,6 +1288,7 @@ input {
     width: 2.5rem;
     height: 0.7rem;
     font-size: 0.35rem;
+    border-radius: 0.2rem;
 }
 
 .post-footer span{
@@ -1333,15 +1297,15 @@ input {
 
 .post-info p{
     padding-top: 0.35rem;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
 }
 
 .post-title h2{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .post-item-reverse{
-    height: 7.5rem;
+    height: 6.5rem;
 }
 
 .post-image-reverse {
@@ -1360,8 +1324,64 @@ input {
 }
  /*Responsividade do Mobile M*/
 @media screen and (max-width:321px){
+
+    .title p{
+        font-size: 0.8rem;
+    }
+
+#searching-camp {
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
+    height: 0.5rem;
+
+}
+
+#busca {
+    align-items: center;
+    border: none;
+    color: black;
+    width: 66vw;
+    height: 0.1rem;
+    border-radius: 50vw;
+    font-size: 0.5rem;
+    padding-left: 0.4rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+}
+
+ .search{
+    width: 65vw;
+    height: 0.1rem;
+ }
+
+  #search-button {
+     height: 0.8rem;
+     width: 0.8rem;
+    }
+    #search-button ion-icon{
+        width: 0.55rem;
+    }
+
+ .filter-close-buttons button{
+     height: 0.8rem;
+     width: 0.8rem;
+    }
+    .filter-close-buttons ion-icon{
+        width: 0.55rem;
+    }
+
+ .filter-close-buttons{
+    gap: 0.1rem;
+ }
+
+.posts-list{
+    margin-top: 1.5rem;
+}
+
 .post-item{
-    height: 7rem;
+    height: 5rem;
 }
 
 .post-info{
@@ -1386,34 +1406,30 @@ input {
 
 .post-info p{
     padding-top: 0.35rem;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
 }
 
 .post-title h2{
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 
 .post-item-reverse{
-    height: 7rem;
+    height: 5rem;
 }
 
 .post-image-reverse {
     width:50%;
 }
 
-.see-more {
+.verMais {
     width: 0.7rem;
     height: 0.7rem;
     margin-right: 0.1rem;
 }
 
-.see-more ion-icon{
+.verMais img{
     height: 0.5rem;
     width: 0.5rem;
-}
-
-#searching-camp {
-    margin-top: 3%;
 }
 
 .posts-list{
@@ -1421,13 +1437,13 @@ input {
 }
 
 #filter-options{
-    border-radius: 0.6rem;
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
 
     width: 65vw;
-    height: 6vh;
+    height: 3.5vh;
     padding-left: 0.65rem;
     padding-right: 0.65rem;
-    padding-top: 0.2rem;
+    padding-top: 0.5rem;
     padding-bottom: 0.2rem ;
 }
 
@@ -1435,36 +1451,28 @@ input {
     border: 0.01vw solid #4D0E72;
     width: 23vw;
     height: 2vh;
-    font-size: 0.55rem;
+    font-size: 0.4rem;
 }
 
 .filter-button2{
     border: 0.1vw solid #0b3d55;
     width: 23vw;
     height: 2vh;
-    font-size: 0.55rem;
+    font-size: 0.4rem;
 }
 
 .filter-button3{
     border: 0.1vw solid #134b13;
     width: 23vw;
     height: 2vh;
-    font-size: 0.55rem;
+    font-size: 0.4rem;
 }
 
 .filter-button4{
     border: 0.1vw solid #5e080a;
     width: 23vw;
     height: 2vh;
-    font-size: 0.55rem;
-}
-
-.direction1{
-    height: 100%;
-    
-}
-.direction2{
-    height: 100%;
+    font-size: 0.4rem;
 }
 
 .pagination {
