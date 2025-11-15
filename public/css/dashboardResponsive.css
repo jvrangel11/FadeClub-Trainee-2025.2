@@ -68,3 +68,39 @@
         width: 8vh;
     }
 }
+/*! Laptop ------------------------------------------------------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px){
+        .conteudo{
+        width: 80%;
+    }
+    .blur{
+        width:100%;
+    }
+    .logo{
+        height: 50%;
+    }
+    .links{
+        height: 28%;
+        width: 50vw;
+    }
+    a{
+        font-size: 23px;
+    }
+    .postagens, .usuarios{
+        padding-left: 1.4rem;
+        gap: 6rem;
+    }
+    .usuarios{
+        gap: 6.5rem;
+    }
+    .linkIcone{
+        height: 70%;
+        width: 15%;
+        border-radius: 20px;
+    }
+    .iconeHome, .iconeLogout{
+        height: 8vh;
+        width: 8vh;
+    }
+
+}
