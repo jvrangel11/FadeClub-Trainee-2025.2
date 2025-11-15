@@ -79,6 +79,8 @@
     height: 50%;
     width: 100%;
     border-radius: 25px;
+
+    cursor: pointer;
 }
 /*Estilo do texto*/
 a{
@@ -136,6 +138,8 @@ a{
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+
+    cursor: pointer;
 }
 /*estiliza texto*/
 .home , .logout{
@@ -168,7 +172,7 @@ a{
     }
 }
 /*! Hovers ---------------------------------------------------------------------------------- */
-/*logo*/
+/*
 .logoImg{
     transition: transform 0.2s ease-in-out;
     transition-timing-function: ease-in-out;
@@ -176,6 +180,7 @@ a{
 .logoImg:hover{
     transform: scale(1.03);
 }
+*/
 /*links*/
 .postagens, .usuarios, .linkIcone{
     transition: all 0.3s ease-in-out;
