@@ -1,0 +1,35 @@
+/*! Mobile ------------------------------------------------------------------------------- */
+@media (max-width: 425px){
+    .conteudo{
+        width: 80%;
+    }
+    .blur{
+        width:100%;
+    }
+    .logo{
+        height: 36%;
+    }
+    .links{
+        height: 28%;
+        width: 90vw;
+    }
+    a{
+        font-size: 20px;
+    }
+    .postagens, .usuarios{
+        padding-left: 1.4rem;
+        gap: 0.7rem;
+    }
+    .usuarios{
+        gap: 0.9rem;
+    }
+    .linkIcone{
+        height: 65%;
+        width: 25%;
+        border-radius: 20px;
+    }
+    .iconeHome, .iconeLogout{
+        height: 8vh;
+        width: 8vh;
+    }
+}
