@@ -233,29 +233,3 @@ table td {
     position: relative;
     z-index: 16; 
 }
-
-@media only screen and (max-width: 500px) {
-    .modalc, .modaled {
-        width: 90%;
-        height: auto;
-        flex-direction: column;
-    }
-    .modalvi, .modalex {
-        width: 90%;
-        height: auto;
-    }
-
-    .containerGeral
-    {
-     
-
-        .topo
-        {
-            width: 30%;
-        }
-    }
-
-    
-
-    
-}
