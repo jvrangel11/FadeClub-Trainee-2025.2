@@ -129,8 +129,13 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
-                                <button class="image-btn">Selecionar imagem</button>
+                                <img id="previewCriar" src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+
+                                <!-- Input escondido -->
+                                <input type="file" id="inputCriarImg" accept="image/*" style="display: none;">
+
+                                <!-- Botão visível -->
+                                <button class="image-btn" id="btnCriarImg">Selecionar imagem</button>
                             </div>
                         </div>
                         <div class="info-text">
@@ -151,7 +156,7 @@
                         <input type="text">
                         <div class="save-cancel-btn">
                             <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
-                            <button class="submit-btn">Salvar</button>
+                            <button class="submit-btn-all">Salvar</button>
                         </div>
                     </div>
                 </div>
@@ -167,6 +172,10 @@
                             <div class="image-section">
                                 <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
                                 <button class="image-btn">Visualizar imagem</button>
+                            </div>
+                            <div id="modalVerImagem" class="modal-ver-imagem">
+                                <span class="fechar-img" id="fecharVerImg">&times;</span>
+                                <img id="imgVisualizar" class="conteudo-img">
                             </div>
                         </div>
                         <div class="info-text">
@@ -200,8 +209,13 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
-                                <button class="image-btn">Alterar imagem</button>
+                                <img id="previewEditar" src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+
+                                <!-- Input escondido -->
+                                <input type="file" id="inputEditarImg" accept="image/*" style="display: none;">
+
+                                <!-- Botão visível -->
+                                <button class="image-btn" id="btnEditarImg">Alterar imagem</button>
                             </div>
                         </div>
                         <div class="info-text">
@@ -222,7 +236,7 @@
                         <input type="text">
                         <div class="save-cancel-btn">
                             <button class="cancel-btn" onclick="fecharModal('editar')">Cancelar</button>
-                            <button class="submit-btn">Salvar</button>
+                            <button class="submit-btn-all">Salvar</button>
                         </div>
                     </div>
                 </div>

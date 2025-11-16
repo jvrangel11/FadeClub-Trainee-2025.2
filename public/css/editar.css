@@ -214,14 +214,19 @@ textarea {
 .image-btn {
     height: 5vh;
     width: 11vW;
-    background-color: #E6E7EB;
+    /*
+    background-color: #3b4f6636;
+    color: #3B4F66;
+    */
+    background-color: #8a853c41;
+    color: #8a853c;
     border-radius: 30px;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Anton", sans-serif;
     font-size: 18px;
-    color: #3B4F66;
     cursor: pointer;
 }
 
@@ -254,15 +259,19 @@ textarea {
     margin-top: 2rem;
 }
 
-.submit-btn {
+.submit-btn-all {
+    /*
+    background-color: #164d2f;
+    color: #ffffff;
+    */
+    background-color: #164d2f31;
+    color: #164d2f;
     grid-column: span 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #E4A11B;
-    color: #895000;
     border: none;
-    padding: 0px 5px;
+    padding: 0px 10px;
     cursor: pointer;
     font-size: 15px;
     display: block;
@@ -275,11 +284,16 @@ textarea {
     font-weight: 100;
     font-size: 23px;
 }
+
 .cancel-btn {
     grid-column: span 2;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*
+    background-color: #A4161A;
+    color: #ffffff;
+    */
     background-color: #E6E7EB;
     color: #3B4F66;
     border: none;
@@ -385,7 +399,7 @@ textarea {
         height: 12rem;
         object-fit: cover;
         border-radius: 15px;
-        border: 0.2rem solid #5e080a;
+        border: 0.2rem solid #456a8d;
     }
     
     .submit-btn {
@@ -561,4 +575,38 @@ textarea {
     .image-btn {
         font-size: 8px;
     }
+}
+
+/* Modal fundo */
+.modal-ver-imagem {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+}
+
+/* Imagem centralizada */
+.conteudo-img {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Botão fechar */
+.fechar-img {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 }
