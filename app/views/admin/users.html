@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de usuários</title>
+    <!-- Links para os CSS -->
+        <link rel="stylesheet" href="../../../public/css/users.css">
+        <!-- Modais -->
+        <link rel="stylesheet" href="../../../public/css/criarUsuario.css">
+        <link rel="stylesheet" href="../../../public/css/editarUsuario.css">
+        <link rel="stylesheet" href="../../../public/css/vizualizarUsuario.css">
+        <link rel="stylesheet" href="../../../public/css/excluirUsuario.css">
+    <!-- Metadados para as fontes -->
+        <link rel="stylesheet" href="../../../public/css/landingPage.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="containerGeral">
+        <header>
+            <h1>Tabela de Usuários</h1>
+            <button class="criar" onclick="abrirModal('criar')">Criar</button>
+        </header>
+        <div class="scroll-lateral">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0000</td>
+                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="caixaAcoes">
+                                <div class="bot ver" onclick="abrirModal('visualizar')">
+                                    <!--icone-->
+                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao editar-->
+                                <div class="bot editar" onclick="abrirModal('editar')">
+                                    <!--icone-->
+                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao excluir-->
+                                <div class="bot excluir" onclick="abrirModal('excluir')">
+                                    <!--icone-->
+                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
+                                    </svg>
+                                </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>0000</td>
+                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="caixaAcoes">
+                                <div class="bot ver" onclick="abrirModal('visualizar')">
+                                    <!--icone-->
+                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao editar-->
+                                <div class="bot editar" onclick="abrirModal('editar')">
+                                    <!--icone-->
+                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao excluir-->
+                                <div class="bot excluir" onclick="abrirModal('excluir')">
+                                    <!--icone-->
+                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
+                                    </svg>
+                                </div>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>0000</td>
+                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="caixaAcoes">
+                                <div class="bot ver" onclick="abrirModal('visualizar')">
+                                    <!--icone-->
+                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao editar-->
+                                <div class="bot editar" onclick="abrirModal('editar')">
+                                    <!--icone-->
+                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao excluir-->
+                                <div class="bot excluir" onclick="abrirModal('excluir')">
+                                    <!--icone-->
+                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
+                                    </svg>
+                                </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>0000</td>
+                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="caixaAcoes">
+                                <div class="bot ver" onclick="abrirModal('visualizar')">
+                                    <!--icone-->
+                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao editar-->
+                                <div class="bot editar" onclick="abrirModal('editar')">
+                                    <!--icone-->
+                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao excluir-->
+                                <div class="bot excluir" onclick="abrirModal('excluir')">
+                                    <!--icone-->
+                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
+                                    </svg>
+                                </div>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>0000</td>
+                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="caixaAcoes">
+                                <div class="bot ver" onclick="abrirModal('visualizar')">
+                                    <!--icone-->
+                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao editar-->
+                                <div class="bot editar" onclick="abrirModal('editar')">
+                                    <!--icone-->
+                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
+                                    </svg>
+                                </div>
+                                <!--botao excluir-->
+                                <div class="bot excluir" onclick="abrirModal('excluir')">
+                                    <!--icone-->
+                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
+                                    </svg>
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Modais ----------------------------------------------------------------------------------------------------------------------->
+
+            <div class="modais modalCriar" id="criar">
+                <div class="modalc">
+                    <div class="containerRight">
+                        <div class="imgPerfilB"><img src="../../../public/assets/FotosTabelas/usuario.png" alt=""></div>
+                        <div class="botaoAddFoto"><p class="textoBotao">Adicionar foto</p></div>
+                        <div class="tituloA">
+                            <h1 class="tituloAdd">Vamos adicionar um</h1>
+                            <h1 class="tituloAdd">novo usuário!</h1>
+                        </div>
+                        <div class="guiaA">
+                            <p class="guiaAdd">Preencha as informações do usuário</p>
+                            <p class="guiaAdd">nos campos a seguir</p>
+                        </div>
+
+                    </div>
+                    <div class="containerLeft">
+                        <div class="inputs">
+                            <div class="nomeB">
+                                <div class="inputTitulo">
+                                    <p>Nome</p>
+                                    <p class="asterisco">*</p>
+                                </div>
+                                <input type="text" name="nome" required>
+                            </div>
+                            <div class="emailB">
+                                <div class="inputTitulo">
+                                    <p>Email</p>
+                                    <p class="asterisco">*</p>
+                                </div>
+                                <input type="text" name="nome" required>
+                        </div>
+                            <div class="senhaB">
+                                <div class="inputTitulo">
+                                    <p>Senha</p>
+                                    <p class="asterisco">*</p>
+                                </div>
+                                <input type="password" name="nome" required>
+                        </div>
+                        </div>
+                        <div class="caixaBarraHorizontal">
+                            <div class="barraHorizontal"></div>
+                        </div>
+                        <div class="caixaBotoes">
+                            <div class="cancel" onclick="fecharModal('criar')">Cancelar</div>
+                            <div class="save"  onclick="fecharModal('criar')"">Salvar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais modalEditar" id="editar">
+                <div class="modaled">
+                    <div class="containerRight">
+                        <div class="imgPerfilB"><img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt=""></div>
+                        <div class="botaoAddFoto"><p class="textoBotao">Adicionar foto</p></div>
+                        <div class="tituloA">
+                            <h1 class="tituloAdd">Edição de usuário</h1>
+                        </div>
+                        <div class="guiaA">
+                            <p class="guiaAdd">Apague ou altere as informações</p>
+                            <p class="guiaAdd">sobre este usuário</p>
+                        </div>
+                    </div>
+                    <div class="containerLeft">
+                        <div class="inputs">
+                            <div class="nomeB">
+                                <div class="inputTitulo">
+                                    <p>Nome</p>
+                                </div>
+                                <input type="text" name="nome" value="Rangelo" required>
+                                <img src="../../../public/assets/editar.svg" alt="" class="iconeEdit" >
+                            </div>
+                            <div class="emailB">
+                                <div class="inputTitulo">
+                                    <p>Email</p>
+                                </div>
+                                <input type="text" name="nome" value="rangelouco.56@gmail.com" required>
+                                <img class="iconeEdit" src="../../../public/assets/editar.svg" alt="">
+                            </div>
+                            <div class="senhaB">
+                                <div class="inputTitulo">
+                                    <p>Senha</p>
+                                </div>
+                                <input type="password" name="nome" value="••••••••••••" required>
+                                <img class="iconeEdit" src="../../../public/assets/editar.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="caixaBarraHorizontal">
+                            <div class="barraHorizontal"></div>
+                        </div>
+                        <div class="caixaBotoes">
+                            <div class="cancel" onclick="fecharModal('editar')">Cancelar</div>
+                            <div class="save" onclick="fecharModal('editar')">Salvar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modaisP modalVizualizar" id="visualizar">
+                <div class="modalvi">
+                    <div class="coverVizu">
+                        <div class="sombravizu">
+                            <img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="conteudoVizu">
+                        <div class="dadosVizu">
+                            <div class="idUsuario">
+                                <p class="caixaTitulo">ID</p>
+                                <div class="caixaUsuario"><p>5656</p></div> 
+                            </div>
+                            <div class="nomeVizu">
+                                <p class="caixaTitulo">Nome</p>
+                                <div class="caixaNome"><p>Rangelo</p></div>
+                            </div>
+                            <div class="emailVizu">
+                                <p class="caixaTitulo">Email</p>
+                                <div class="caixaEmail"><p>rangelouco.56@gmail.com</p></div>
+                            </div>
+                            <div class="senhaVizu">
+                                <p class="caixaTitulo">Senha</p>
+                                <div class="caixaSenha"><p>••••••••••••</p></div> 
+                            </div>
+                        </div>
+                        <div class="botoesVizu">
+                            <div class="cancel" onclick="fecharModal('visualizar')">Cancelar</div>
+                            <div class="save" onclick="fecharModal('visualizar')">Salvar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modaisP modalExcluir" id="excluir">
+                <div class="modalex">
+                    <div class="containerExcluir">
+                        <img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt="">
+                        <div class="conteudoExcluir">
+                            <div class="parte01">Tem certeza que deseja</div>
+                            <div class="parte02">excluir o usuário <p>Rangelo</p> ?</div>
+                            <div class="parte03">Essa ação não poderá ser desfeita.</div>
+                        </div>
+                        <div class="botoesExcluir">
+                            <div class="cancel" onclick="fecharModal('excluir')">Cancelar</div>
+                            <div class="excluirM" onclick="fecharModal('excluir')">Excluir</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <script src="../../../public/js/tabelaUsuarios.js"></script>
+</body>
+</html>

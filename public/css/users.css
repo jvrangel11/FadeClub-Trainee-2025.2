@@ -1,0 +1,261 @@
+/*! Reset do CSS -------------------------------------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*! Adiciona fundo da página -------------------------------------------------------------- */
+body{
+    background-image: url(../assets/backgrounds/cover4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*! Cria disposição dos elementos --------------------------------------------------------- */
+.containerGeral{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*! Cria header da tabela ----------------------------------------------------------------- */
+/*disposição dos elementos*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*reset do button*/
+button{
+    all:unset;
+}
+/*dimensionamneto da seção*/
+header{
+    height: 10%;
+    width: 64%;
+}
+/*estilo do título*/
+h1{
+    color: #ffff;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+}
+/*estilo do botão*/
+.criar{
+    background-color: #0A3A55;
+    height: 5rem;
+    width: 9rem;
+    border-radius: 20px;
+}
+/*disposição do conteudo interno do botão*/
+.criar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*estilo do texto do botão*/
+.criar{
+    color: #f3f3f3;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+/*! Cria tabela --------------------------------------------------------------------------- */
+/*forma da tabela*/
+.scroll-lateral{
+    width: 64%;
+}
+table{
+    width: 100%;
+}
+thead, tr{
+    height: 6.7rem;
+}
+/*estilo da tabela*/
+table{
+    background-color: #1b2a41e3;
+}
+/*dimensão dos elementos*/
+td{
+    width: 10%;
+}
+/*disposição dos elementos*/
+tr{
+    text-align: center;
+}
+/*estilo do texto*/
+table th{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: #ffffff;
+}
+table td {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #E5E5E5;
+}
+/*! Detalha elementos da tabela ----------------------------------------------------------- */
+.imagemTabela{
+    height: 6vh;
+    border-radius: 50%;
+}
+/*! botoes de acao ------------------------------------------------------------------------------ */
+.caixaAcoes {
+    text-align: center;
+}
+.bot {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.4rem;
+}
+/*Dimensiona icone de ver*/
+.iver{
+    height: 2.3rem;
+    width: 2.3rem;
+}
+/*Dimensiona icone de editar e excluir*/
+.ieditar, .iexcluir{
+    height: 2rem;
+    width: 2rem;
+}
+/*Aparencia do icone de ver e hover*/
+.bot.ver .iver {
+    fill: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.bot.ver:hover .iver {
+    fill: #10d33a; 
+    filter: drop-shadow(0 0 6px #66ffb2);
+    transform: scale(1.1);
+}
+/*Aparencia do icone de editar e hover*/
+.bot.editar .ieditar {
+    fill: #ffffff; 
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.bot.editar:hover .ieditar {
+    fill: #FF7F00;
+    filter: drop-shadow(0 0 6px #FF7F00);
+    transform: scale(1.1);
+}
+/*Aparencia do icone de excluir e hover*/
+.bot.excluir .iexcluir {
+    fill: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.bot.excluir:hover .iexcluir {
+    fill: #A90D0D;
+    filter: drop-shadow(0 0 6px #d41616);
+    transform: scale(1.1);
+}
+/*! Modais ------------------------------------------------------------------------------------------- */
+.modais{
+    background-color: rgba(255, 255, 255, 0);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modalCriar{
+    z-index: 0;
+}
+.modalEditar
+{
+    z-index: 11;
+}
+.modalVisualizar{
+    z-index: 13;
+}
+.modalExcluir{
+    z-index: 15;
+}
+
+/*! Posicionamento e dimensão dos modais ------------------------------------------------------------- */
+.modalc{
+    position: absolute;
+    z-index: 10;
+    height: 40rem;
+    width: 60rem;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+}
+
+.modaled{
+    position: absolute;
+    z-index: 12;
+    height: 40rem;
+    width: 60rem;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+}
+
+/*! Modais vizualizar e excluir ------------------------------------------------------------------------ */
+.modaisP{
+    background-color: rgba(255, 255, 255, 0);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modalvi{
+    height: 50rem;
+    width: 40rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 14;
+}
+.modalex{
+    height: 50rem;
+    width: 55rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 16; 
+}
+
+@media only screen and (max-width: 500px) {
+    .modalc, .modaled {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+    .modalvi, .modalex {
+        width: 90%;
+        height: auto;
+    }
+
+    .containerGeral
+    {
+     
+
+        .topo
+        {
+            width: 30%;
+        }
+    }
+
+    
+
+    
+}
