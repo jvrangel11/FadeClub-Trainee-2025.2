@@ -257,4 +257,24 @@ table td {
     color: #e5e5e5;
     align-items: center;
     justify-content: center;
+    padding-top: 1.5rem;
+}
+.botoesPaginacao{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.botaoPaginacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    height: 2rem;
+    width: 2.3rem;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
 }
