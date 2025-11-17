@@ -251,3 +251,10 @@ table td {
     background-color: #283d5e;
     transform: scale(1.1);
 }
+/*! paginação ------------------------------------------------------------------------------------------ */
+.paginacao{
+    display: flex;
+    color: #e5e5e5;
+    align-items: center;
+    justify-content: center;
+}
