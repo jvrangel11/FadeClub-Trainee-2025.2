@@ -62,3 +62,24 @@
 .excluirM:hover{
     cursor: pointer;
 }
+
+.sombraExcluir{
+    border-radius: 50%;
+    box-shadow: 0 0 20px #0A3A55;
+    height: 17rem;
+}
+.conteudoExcluir{
+    height: 10rem;
+    width: 30rem;
+    border-radius: 30px;
+    color: #e4e4e4;
+    .textoExcluir{
+        font-family: "Anton", sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .parte01, .parte02{
+        font-size: 30px;
+    }
+    
+}
