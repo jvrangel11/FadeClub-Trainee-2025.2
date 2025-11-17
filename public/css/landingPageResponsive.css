@@ -87,6 +87,7 @@ footer{
     height: 12rem;
 }
 /** Ajusta as navarrows **/
+/*
 .nav-arrow{
     height: 3vh;
     width: 5vw;
@@ -94,6 +95,19 @@ footer{
     border-radius: 50%;
     font-size: 13px;
     font-weight: 800;  
+}
+*/
+.nav-arrow{
+    display: none;
+}
+
+.conteudo01, .conteudo02{
+    overflow-x: scroll;
+}
+
+.conteudo01::-webkit-scrollbar,
+.conteudo02::-webkit-scrollbar {
+    display: none;
 }
 }
 /*!  Mobile L ----------------------------------------------------------------------------------- */
