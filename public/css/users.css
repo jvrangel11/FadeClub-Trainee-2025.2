@@ -45,7 +45,7 @@ header h1{
 }
 /*estilo do botão*/
 .criar{
-    background-color: #0A3A55;
+    background-color: #1b2a41;
     height: 5rem;
     width: 9rem;
     border-radius: 20px;
@@ -233,9 +233,21 @@ table td {
 }
 
 /*! SCroll lateral ----------------------------------------------------------------------------------- */
+/*
 @media (max-width: 600px) {
     .scroll-lateral {
         overflow-x: auto;
         width: 98%;
     }
+}
+*/
+/*! hover do botão criar ------------------------------------------------------------------------------ */
+.criar{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.criar:hover{
+    background-color: #283d5e;
+    transform: scale(1.1);
 }
