@@ -222,14 +222,25 @@ table td {
     z-index: 14;
 }
 .modalex{
-    height: 50rem;
-    width: 55rem;
+    height: 45rem;
+    width: 40rem;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     position: relative;
     z-index: 16; 
+}
+.conteudoExcluir{
+    height: 10rem;
+    width: 30rem;
+    border-radius: 30px;
+    color: #e4e4e4;
+    .textoExcluir{
+        font-family: "Anton", sans-serif;
+        font-size: 20px;
+            font-weight: 100;
+    }
 }
 
 /*! SCroll lateral ----------------------------------------------------------------------------------- */
