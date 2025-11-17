@@ -37,7 +37,7 @@ header{
     width: 64%;
 }
 /*estilo do título*/
-h1{
+header h1{
     color: #ffff;
     font-family: "Anton", sans-serif;
     font-weight: 100;
@@ -181,7 +181,6 @@ table td {
     z-index: 15;
 }
 
-/*! Posicionamento e dimensão dos modais ------------------------------------------------------------- */
 .modalc{
     position: absolute;
     z-index: 10;
@@ -202,7 +201,6 @@ table td {
     display: flex;
 }
 
-/*! Modais vizualizar e excluir ------------------------------------------------------------------------ */
 .modaisP{
     background-color: rgba(255, 255, 255, 0);
     height: 100vh;
@@ -232,4 +230,12 @@ table td {
     overflow: hidden;
     position: relative;
     z-index: 16; 
+}
+
+/*! SCroll lateral ----------------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+    .scroll-lateral {
+        overflow-x: auto;
+        width: 98%;
+    }
 }
