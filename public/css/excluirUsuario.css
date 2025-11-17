@@ -26,6 +26,8 @@
         gap: 2px;
         p{
             color: #6fc8fc;
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
         }
     }
     .parte01, .parte02{

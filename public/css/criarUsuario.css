@@ -30,6 +30,7 @@
     font-family: "Anton", sans-serif;
     font-size: 18px;
     color: #3B4F66;
+    cursor: pointer;
 }
 .tituloA{
     display: flex;
