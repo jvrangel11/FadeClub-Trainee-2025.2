@@ -247,6 +247,7 @@ textarea {
     display: flex;
     position: center;
     margin: 0 auto;
+
     gap: 1rem;
     height: 7vh;
     width: 13.5vw;
@@ -560,11 +561,52 @@ textarea {
     .image-btn {
         font-size: 12px;
     }
-    .submit-btn, .cancel-btn {
+    .submit-btn, .cancel-btn, .submit-btn-all {
         font-size: 18px;
     }
     .container-all{
-       width: 60%;
+       width: 70%;
+    }
+    .save-cancel-btn {
+        padding: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .submit-btn-all {
+        width: 8vw;
+    }
+    .image-btn {
+        width: 15vw;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-btn {
+        width: 15vw;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-box{
+       font-size: 14px;
+    }
+    .image-btn {
+        font-size: 10px;
+    }
+    .form-view {
+        flex-direction: column;
+        width: 100%;
+    }
+    .form-right {
+        width: 100%;
+    }
+    .form-left {
+        width: 100%;
+    }
+    .submit-btn-all {
+        width: 10vw;
     }
 }
 
@@ -574,6 +616,38 @@ textarea {
     }
     .image-btn {
         font-size: 8px;
+    }
+    .submit-btn-all {
+        width: 15vw;
+    }
+    .image-btn {
+        width: 25vw;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-box{
+       font-size: 10px;
+    }
+    .image-btn {
+        font-size: 10px;
+    }
+    .submit-btn-all {
+        width: 20vw;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .form-box{
+       font-size: 8px;
+    }
+    .image-btn {
+        font-size: 9px;
+    }
+    .submit-btn-all {
+        width: 25vw;
     }
 }
 
