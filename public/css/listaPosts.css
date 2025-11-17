@@ -329,6 +329,7 @@ input:focus{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .post-image{
@@ -388,11 +389,27 @@ input:focus{
     -webkit-box-orient: vertical;
 }
 
-.post-item span{
+.autor span{
     color: black;
     display: inline-block;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
+    width: 14rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+.tag-btn{
+    display: flex;
+    gap: 15%;
+    width: 30%;
+    align-items: center;
 }
 
 .post-item-reverse{
@@ -434,6 +451,13 @@ input:focus{
     display: inline-block;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
+
+        overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .post-item-reverse p{
@@ -905,19 +929,32 @@ input {
 }
 
 .post-info h5{
-    width: 4.2rem;
-    height: 1.15rem;
-    font-size: 0.65rem;
+    width: 50%;
+    height: 80%;
+    font-size: 0.7rem;
+    border-radius: 0.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .post-footer span{
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    width:100%;
+}
+
+.autor{
+    width: 50%;
 }
 
 .post-footer{
     align-items:end;
 }
 
+.tag-btn{
+    width: 42%;
+}
 
 .post-info p{
     padding-top: 0.6rem;
@@ -957,14 +994,14 @@ input {
 }
 
 .verMais {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.rem;
+    height: 1.1rem;
 }
 
 .verMais img{
     color: black;
-    height: 0.9rem;
-    width: 0.9rem;
+    height: 0.7rem;
+    width: 0.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1150,9 +1187,10 @@ input {
 }
 
 .post-info h5{
-    width: 3rem;
-    height: 0.8rem;
+    width: 3.5rem;
+    height: 0.68rem;
     font-size: 0.4rem;
+    border-radius: 0.2rem;
 
     display: flex;
     justify-content: center;
@@ -1161,10 +1199,20 @@ input {
 
 .post-footer span{
     font-size: 0.5rem;
+    width:100%;
+    gap: 100px;
 }
 
 .post-footer{
     align-items:end ;
+}
+
+.autor {
+    width: 50%;
+}
+
+.tag-btn{
+    width: 35%;
 }
 
 
@@ -1224,8 +1272,8 @@ input {
 }
 
 .verMais{
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 1rem;
+    height: 0.7rem;
     cursor: pointer;
 
     display: flex;
@@ -1235,8 +1283,8 @@ input {
 
 .verMais img{
     color: black;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.4rem;
+    width: 0.45rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1285,9 +1333,7 @@ input {
 }
 
 .post-info h5{
-    width: 2.5rem;
-    height: 0.7rem;
-    font-size: 0.35rem;
+    font-size: 0.3rem;
     border-radius: 0.2rem;
 }
 
@@ -1396,7 +1442,7 @@ input {
 .post-info h5{
     width: 2.3rem;
     height: 0.55rem;
-    font-size: 0.35rem;
+    font-size: 0.3rem;
 }
 
 .post-footer span{
@@ -1423,13 +1469,13 @@ input {
 
 .verMais {
     width: 0.7rem;
-    height: 0.7rem;
+    height: 0.55rem;
     margin-right: 0.1rem;
 }
 
 .verMais img{
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.45rem;
+    width: 0.35rem;
 }
 
 .posts-list{
