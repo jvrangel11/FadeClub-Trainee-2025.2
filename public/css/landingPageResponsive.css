@@ -45,7 +45,7 @@ header {
     padding-left: 2rem;
 }
 .card{
-    height: 30vh;
+    height: 25vh;
     width: 85vw;
     border-radius: 9vw;
     margin-right: 2.7rem;
@@ -54,10 +54,13 @@ header {
         width: 45%;
     }
     .informacoes{
-        height: 31.5vh;
+        height: 26vh;
         width: 65%;
         .especiais{
             height: 14%;
+        }
+        .caixaLegenda{
+            height: 13.5vh;
         }
         .tag{
             height: 2.2rem;
@@ -74,10 +77,10 @@ header {
 }
 }
 main{
-    height: 86vh;
+    height: 72vh;
 }
 .carrossel-container{
-    height: 43vh;
+    height: 35vh;
 }
 .conteudo01, .conteudo02{
     height: 20rem;
@@ -113,7 +116,7 @@ footer{
 /*!  Mobile L ----------------------------------------------------------------------------------- */
 @media (max-width: 425px) {
     .ultimasPublicacoes{
-        top: 25.5rem;
+        top: 20.7rem;
     }
 }
 /*! Mobile M ------------------------------------------------------------------------------------ */
