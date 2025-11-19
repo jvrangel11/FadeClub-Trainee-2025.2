@@ -2,33 +2,27 @@
 body {
    
 
-    
- 
-    display: flex;
-    flex-direction: column-reverse;
-    
-    font-family: "Anton", sans-serif;
-    background-color: #1B2A41;
-    font-weight: lighter;
-
-    background-image: url(./backgroundFade.jpg);
-    background-size: cover;
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #011650;
     
    
 }
 
 
-footer {
-    padding: 2em;
-    
 
+
+.footer {
+    
     font-family: "Anton", sans-serif;
     background-color: #6B231E;
     color: #FAFAFA;
     position: fixed;
     bottom: 0;
-    left: 0;
+  
     width: 100%;
+    height: 30vh;
 
   
 
@@ -36,25 +30,31 @@ footer {
 
 .conteiner{
  
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;  
     align-items: center;
-    width: 90vw;
-    margin: auto;
-      font-weight: lighter;
+    width: 100vw;
+
+    font-weight: lighter;
   
 }
 
 
+.motivacao{
 
+    color: #FAFAFA;
+
+}
 
 .motivacao span h5{
-    display: flex;
+
+     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    
+    font-size: 1rem;
 
 }
 
@@ -68,15 +68,22 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 2rem;
     color: #FAFAFA;
+
+    font-size: 1rem;
+    
 
 }
 
 
 #txt{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+  
+    width: 30vh;
+    font-size: 1.5rem;
+
+  }
 
 #redes {
     display: flex;
@@ -103,10 +110,11 @@ footer {
 }
 
 
-.footerLogo p{
+#txt p{
   
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
+    width: 100%;
     
 
 
@@ -176,138 +184,74 @@ footer {
 }
 
 
+@media screen and (max-width: 1440px) {
 
-@media only screen and (max-width: 374px) {
-  body {
-    flex-direction: column;
-    background-attachment: scroll;
-  }
 
-  .conteiner {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    padding: 1rem;
-    text-align: center;
-    gap: 1rem;
-  }
+    #txt {
+        width: 30vw;
+        font-size: 1.2rem;
+    }
 
-  .footerLogo img {
-    width: 50vw;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .motivacao h5 {
-    font-size: 0.9rem;
-    margin: 1rem 0;
-  }
-
-  .contatos {
-    gap: 0.5rem;
-    font-size: 0.8rem;
-  }
-
-  #redes {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  #redes i {
-    font-size: 1.3rem;
-  }
-
-  footer {
-    position: relative;
-    text-align: center;
-    padding: 1.2em 0;
-  }
 }
 
+@media screen and (max-width: 768px) {
 
-
-
-@media only screen and (min-width: 375px) and (max-width: 768px) {
-  body {
-    
-    flex-direction: column;
-    background-attachment: scroll;
+  .footer{
+    height: 30vh;
   }
 
-  .conteiner {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    padding: 1.5em;
-    text-align: center;
-    gap: 1.5em;
+  .footerLogo{
+    margin: 0;
+    padding-right: 2em;
   }
 
-  .footerLogo img {
-    width: 40vw;
-    height: auto;
-    margin-bottom: 1em;
-  }
 
-  .motivacao h5 {
-    font-size: 1rem;
-    margin: 1.2em 0;
-  }
+  .footerLogo img{
+  
+    width: 40vw;   
+    height: 15vh;
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
 
-  .contatos {
-    gap: 1em;
-    font-size: 0.9rem;
-  }
-
-  #redes {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.6em;
-  }
-
-  #redes i {
-    font-size: 1.6em;
-  }
-
-  footer {
-    position: relative;
-    text-align: center;
-    padding: 1.5em 0;
-  }
+}
 }
 
+@media screen and (max-width: 480px) {
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .conteiner {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  .footer{
+    height: 18vh;
+    width: 100vw;
+  }
+
+  .conteiner{
     width: 95vw;
-    padding: 2em;
-    gap: 2em;
   }
 
-  .footerLogo img {
-    width: 25vw;
-    height: auto;
+
+  .motivacao span h5{
+
+    font-size: 0.6rem;
   }
 
-  .motivacao h5 {
-    font-size: 1.1rem;
-  }
+  .footerLogo img{
+  
+    width: 7rem;   
+    height: 5rem;
+    object-fit: cover;
+    object-position: center;
 
-  .contatos {
-    gap: 1.5em;
-    font-size: 1rem;
-  }
-
-  #redes i {
-    font-size: 1.8em;
-  }
-
-  footer {
-    padding: 2em 0;
-  }
 }
+
+  #txt {
+        width: 30vw;
+        font-size: 0.6rem;
+    }
+
+  .contatos{
+    gap: 1rem;
+    font-size: 0.6rem;  
+  }
+
+}
+

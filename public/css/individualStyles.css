@@ -43,22 +43,23 @@ body {
     align-items: center;
     justify-content: center;
 
-    height: 80vh;
+    height: 90%;
     width: 80vw;
+  
 
-    padding-left: 1rem;
-    padding-bottom: 3rem;
-    padding-right: 0.5rem;
+
     background-color: rgba(255, 255, 255, 0.8);
       border-radius: 16px;
+
+      
 }
 
 
 .titulo h1{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    font-weight: semibold;
+    font-size: 3em;
+    font-weight: bold;
     margin-top: 2rem;
     margin-bottom: 0;
     padding-top: 2rem;
@@ -75,14 +76,14 @@ body {
 
     span img{
         border-radius: 256px;
-        height: 3rem;
-        width: 3rem;
+        height: 5rem;
+        width: 5rem;
     }
 
     .nomePerfil{
         font-family: 'Arial', sans-serif;
-        font-size: 1em;
-        font-weight: semibold;
+        font-size: 2rem;
+        font-weight:bold;
         margin-left: 1em;
     }
 
@@ -92,21 +93,43 @@ body {
 
 .conteudo{
         display: grid;
-        grid-template-columns:repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-template-rows: auto;
-        gap: 2em;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+
+        height:fit-content;
+        width: fit-content; 
+
+        gap: 2rem;
         padding: 2rem;
+
+
+     
       
 }
 
 
 
+h2{
+        
+            text-align: justify;
+            font-weight: lighter;
+            font-size: 2rem;
+        }
+
+
+ .foto{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
 .foto img{
-    height: 100%;
+    height: 80%;
     width: 100%;
 
     border-radius: 16px;
+
+
 
 }
 
@@ -119,36 +142,91 @@ body {
 
     h5{
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
-    p{
-        font-size: 1.3rem;
-    }
 }
 
 
-@media only screen and (min-width: 768px){
+@media only screen and (max-width: 1025px){
+    
+    .foto img{
+    height: 60%;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+
+    border-radius: 16px;
+
+}
+
+
+
+h2{
+    font-size: 1.5rem;
+}
+
+
+}
+
+
+@media screen and (max-width: 900px){
+    .post{
+        width: 90vw;
+    }
+    
+    .cabecalho{
+        width: 90vw;
+    }
+    
+}
+
+
+@media only screen and (max-width: 768px){
+    h2{
+        font-size: 1.2rem;
+    }
+
+
+    .titulo h1{
+        font-size: 2rem;
+    }
+
+    .origem,.historia,.dicasDoBarbeiro,.produtosRecomendados,.curiosidades{
+            h5{
+            margin: 0;
+            padding: 0;
+            font-size: 1.3rem;
+        }
+
+
+}
+}
+
+@media only screen and (max-width: 480px){
     .conteudo{
-     
-        margin: 0;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         gap: 1rem;
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .origem,.historia,.dicasDoBarbeiro,.produtosRecomendados,.curiosidades{
 
+            h5{
+            margin: 0;
+            padding: 0;
+            font-size: 1.2rem;
+        }
 
-         h5{
-        margin: 0;
-        padding: 0;
-    }
-    p{
-        font-size: 1rem;
     }
 
 }
 
-}
