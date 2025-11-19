@@ -24,82 +24,25 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome</th>
-                        <th>Descrição</th>
+                        <th>Título</th>
                         <th>Imagem</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($posts as $post): ?>
+
                     <tr>
-                        <td>0000</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
+                        <td><?= $post->id ?></td>
+                        <td><?= $post->title ?></td>
                         <td class="img-cell"></td>
                         <td class="acoes">
-                            <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
-                            </i>
-                            <i class="bi bi-pencil" onclick="abrirModal('editar')">
-                            </i>
-                            <i class="bi bi-trash" onclick="abrirModal('excluir')">
-                            </i>
+                            <button><i class="bi bi-eye" onclick="abrirModal('Visualizar')"></i></button> 
+                            <button><i class="bi bi-pencil" onclick="abrirModal('editar')"></i></button> 
+                            <button><i class="bi bi-trash" onclick="abrirModal('excluir')"></i></button> 
                         </td>
                     </tr>
-                    <tr>
-                        <td>0000</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="img-cell"></td>
-                        <td class="acoes">
-                            <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
-                            </i>
-                            <i class="bi bi-pencil" onclick="abrirModal('editar')">
-                            </i>
-                            <i class="bi bi-trash" onclick="abrirModal('excluir')">
-                            </i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>0000</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="img-cell"></td>
-                        <td class="acoes">
-                            <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
-                            </i>
-                            <i class="bi bi-pencil" onclick="abrirModal('editar')">
-                            </i>
-                            <i class="bi bi-trash" onclick="abrirModal('excluir')">
-                            </i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>0000</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="img-cell"></td>
-                        <td class="acoes">
-                            <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
-                            </i>
-                            <i class="bi bi-pencil" onclick="abrirModal('editar')">
-                            </i>
-                            <i class="bi bi-trash" onclick="abrirModal('excluir')"></i>
-                            </i>
-                        </td>
-                    </tr>
-                        <td>0000</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="img-cell"></td>
-                        <td class="acoes">
-                            <i class="bi bi-eye" onclick="abrirModal('Visualizar')">
-                            </i>
-                            <i class="bi bi-pencil" onclick="abrirModal('editar')">
-                            </i>
-                            <i class="bi bi-trash" onclick="abrirModal('excluir')">
-                            </i>
-                        </td>
-                    </tr>
+                    <?php endforeach ?>
                 </tbody>
             </table>
         </div>   
@@ -145,9 +88,7 @@
                         </div>
                     </div>
                     <div class="form-right">
-                        <label>Titulo*</label>
-                        <input type="text" name>
-                        <label>Om*</label>
+                        <label>Origem*</label>
                         <input type="text">
                         <label>História*</label>
                         <input type="text">

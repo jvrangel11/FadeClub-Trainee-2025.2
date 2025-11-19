@@ -140,6 +140,12 @@ body {
     color: #e90707;
 }
 
+.acoes button{
+    background: none;
+    border: none;
+    color: white;
+}
+
 .paginacao {
     margin-top: 20px;
 }
