@@ -37,9 +37,9 @@
                         <td><?= $post->title ?></td>
                         <td class="img-cell"></td>
                         <td class="acoes">
-                            <button><i class="bi bi-eye" onclick="abrirModal('Visualizar')"></i></button> 
-                            <button><i class="bi bi-pencil" onclick="abrirModal('editar')"></i></button> 
-                            <button><i class="bi bi-trash" onclick="abrirModal('excluir')"></i></button> 
+                            <button><i class="bi bi-eye" onclick="abrirModal('Visualizar<?= $post->id ?>')"></i></button> 
+                            <button><i class="bi bi-pencil" onclick="abrirModal('editar')" <?= $post->id ?>></i></button> 
+                            <button><i class="bi bi-trash" onclick="abrirModal('excluir')" <?= $post->id ?>></i></button> 
                         </td>
                     </tr>
                     <?php endforeach ?>
@@ -109,7 +109,9 @@
             </div>
         </div>
     </div>
-    <div class="ver-container" id="Visualizar">
+
+    <?php foreach($posts as $post): ?>
+    <div class="ver-container" id="Visualizar<?= $post->id ?>">
         <div class="container-all">
             <div class="form-box">
                 <div class="form-view">
@@ -129,26 +131,29 @@
                             <p2>Apenas visualize quais são as informações sobre este post</p2>
                         </div>
                     </div>
-                    <div class="form-right">
+                    <form class="form-right">                        
+                        <label>Titulo</label>
+                        <input readonly type="text" value="<?= $post->title ?>">
                         <label>Origem</label>
-                        <input readonly type="text">
+                        <input readonly type="text" value="<?= $post->origin ?>">
                         <label>História</label>
-                        <input readonly type="text">
+                        <input readonly type="text" value="<?= $post->story ?>">
                         <label>Curiosidades</label>
-                        <input readonly type="text">
+                        <input readonly type="text" value="<?= $post->curiosity ?>">
                         <label>Dicas do Barbeiro</label>
-                        <input readonly type="text">
+                        <input readonly type="text" value="<?= $post->tips ?>">
                         <label>Produtos recomendados</label>
-                        <input readonly type="text">
+                        <input readonly type="text" value="<?= $post->products ?>">
                         <div class="save-cancel-btn">
                             <button class="cancel-btn" onclick="fecharModal('Visualizar')">Cancelar</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-        <div class="editar-container" id="editar">
+
+    <div class="editar-container" id="editar">
         <div class="container-all">
             <div class="form-box">
                 <div class="form-view">
@@ -189,6 +194,7 @@
             </div>
         </div>
     </div>
+
     <div class="excluir-container" id="excluir">
         <div class="form-box-excluir">
             <h2>Deseja excluir a publicação?</h2>
@@ -206,7 +212,8 @@
             </div>
         </div>
     </div>
-    </div>
+    <?php endforeach ?>
+
           <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../../../public/js/adicionar.js"></script>

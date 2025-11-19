@@ -11,3 +11,5 @@ $router->get('crudPosts', 'PostsController@index');
 
 $router->post('crudPosts/create', 'PostsController@store');
 
+$router->get('crudPosts/view', 'PostsController@store');
+
