@@ -19,27 +19,22 @@
                             <p2>Preencha as informações do post nos campos a seguir</p2>
                         </div>
                     </div>
-                    <div class="form-right">
-                        <form method="POST" action="/crudPosts/create">
-                            <label>Título*</label>
-                            <input type="text" name="title">
-                            <label>Origem*</label>
-                            <input type="text">
-                            <label>História*</label>
-                            <input type="text">
-                            <label>Curiosidades*</label>
-                            <input type="text">
-                            <label>Dicas do Barbeiro*</label>
-                            <input type="text">
-                            <label>Produtos recomendados*</label>
-                            <input type="text">
-                            <div class="save-cancel-btn">
-                                <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
-                                <button class="submit-btn-all">Salvar</button>
-                            </div>
-                        </form>
+                    <form class="form-right">
+                        <label>Origem*</label>
+                        <input type="text">
+                        <label>História*</label>
+                        <input type="text">
+                        <label>Curiosidades*</label>
+                        <input type="text">
+                        <label>Dicas do Barbeiro*</label>
+                        <input type="text">
+                        <label>Produtos recomendados*</label>
+                        <input type="text">
+                        <div class="save-cancel-btn">
+                            <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
+                            <button type="submit" class="submit-btn-all">Salvar</button>
+                    </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>

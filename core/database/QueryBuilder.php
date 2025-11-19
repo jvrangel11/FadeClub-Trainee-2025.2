@@ -32,10 +32,10 @@ class QueryBuilder
 
 //INSERT INTO `posts`(`id`, `title`, `origin`, `story`, `curiosity`, `tips`, `products`, `is_in_carousel`, `img_path`, `user_id`, `created_at`, `updated_at`, `tag`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]')
     public function insert($table, $parameters){
-        $sql = sprintf('INSERT INTO %s (%s) VALUES (:s)',
+        $sql = sprintf('INSERT INTO %s (%s) VALUES (%s)',
         $table,
         implode(',', array_keys($parameters)),
-        implode(',', array_keys($parameters))
+        ':'.implode(', :', array_keys($parameters))
     );
 
             try {

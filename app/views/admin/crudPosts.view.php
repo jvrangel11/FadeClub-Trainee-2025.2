@@ -87,21 +87,23 @@
                             <p2>Preencha as informações do post nos campos a seguir</p2>
                         </div>
                     </div>
-                    <div class="form-right">
+                    <form method="POST" action="crudPosts/create" class="form-right">
+                        <label>Titulo*</label>
+                        <input required type="text" name="title">
                         <label>Origem*</label>
-                        <input type="text">
+                        <input required type="text" name="origin">
                         <label>História*</label>
-                        <input type="text">
+                        <input required type="text" name="story">
                         <label>Curiosidades*</label>
-                        <input type="text">
+                        <input required type="text" name="curiosity">
                         <label>Dicas do Barbeiro*</label>
-                        <input type="text">
+                        <input required type="text" name="tips">
                         <label>Produtos recomendados*</label>
-                        <input type="text">
+                        <input required type="text" name="products">
                         <div class="save-cancel-btn">
                             <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
-                            <button class="submit-btn-all">Salvar</button>
-                        </div>
+                            <button type="submit" class="submit-btn-all">Salvar</button>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -129,7 +131,7 @@
                     </div>
                     <div class="form-right">
                         <label>Origem</label>
-                        <input type="text">
+                        <input readonly type="text">
                         <label>História</label>
                         <input type="text">
                         <label>Curiosidades</label>
