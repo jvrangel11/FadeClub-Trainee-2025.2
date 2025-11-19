@@ -71,6 +71,8 @@ body {
     width: 50%;
     height: 100%;  
     padding: 2rem;
+    color: black;
+    text-align: left;
 }
 
 .form-left {

@@ -133,13 +133,13 @@
                         <label>Origem</label>
                         <input readonly type="text">
                         <label>História</label>
-                        <input type="text">
+                        <input readonly type="text">
                         <label>Curiosidades</label>
-                        <input type="text">
+                        <input readonly type="text">
                         <label>Dicas do Barbeiro</label>
-                        <input type="text">
+                        <input readonly type="text">
                         <label>Produtos recomendados</label>
-                        <input type="text">
+                        <input readonly type="text">
                         <div class="save-cancel-btn">
                             <button class="cancel-btn" onclick="fecharModal('Visualizar')">Cancelar</button>
                         </div>
