@@ -55,6 +55,11 @@ header h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+}
+.criarButton{
+    fill: #ffffff;
+    transform: scale(1.7);
 }
 /*estilo do texto do botão*/
 .criar{
