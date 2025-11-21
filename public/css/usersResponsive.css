@@ -35,7 +35,7 @@
     }
 }
 
-/*! Mobile M --------------------------------------------------------------------------------- */
+/*! Ajustes para outros mobiles -------------------------------------------------------------- */
 @Media ( max-width: 430px) {
     header h1{
         font-size: 27px;
@@ -87,5 +87,22 @@
     .scroll-lateral::-webkit-scrollbar,
     .scroll-lateral::-webkit-scrollbar {
         display: none;
+    }
+}
+/*! Laptop ----------------------------------------------------------------------------------- */
+
+@media (min-width: 770px) and (max-width: 1024px)
+{
+    .containerGeral{
+        border: 1px solid orangered;
+        
+    }
+    header{
+        border: 1px solid orangered;
+    }
+    table{
+        border: 1px solid orangered;
+        width: 800px;
+        max-width: none;
     }
 }
