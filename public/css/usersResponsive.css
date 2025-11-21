@@ -28,11 +28,11 @@
     }
     .criar{
         font-size: 20px;
-}
+    }
     .scroll-lateral::-webkit-scrollbar,
     .scroll-lateral::-webkit-scrollbar {
         display: none;
-}
+    }
 }
 
 /*! Mobile M --------------------------------------------------------------------------------- */
@@ -51,5 +51,41 @@
     }
     .scroll-lateral{
         padding-left: 2rem;
+    }
+}
+/*! Tablet ----------------------------------------------------------------------------------- */
+@media (min-width: 430px) and (max-width: 770px){
+    header{
+        height: 7%;
+        width: 100%;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+    header h1{
+        font-size: 40px;
+    }
+    .scroll-lateral{
+        width: 100%;
+        overflow-x: auto;
+        padding-left: 3rem;
+    }
+    table{
+        width: 800px;
+        max-width: none;
+    }
+    .criar{
+        height: 4rem;
+        width: 7rem;
+        border-radius: 10px;
+    }
+    .criarButton{
+        transform: scale(1.4);
+    }
+    .criar{
+        font-size: 24px;
+    }
+    .scroll-lateral::-webkit-scrollbar,
+    .scroll-lateral::-webkit-scrollbar {
+        display: none;
     }
 }
