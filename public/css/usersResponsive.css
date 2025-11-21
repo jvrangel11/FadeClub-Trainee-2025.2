@@ -1,4 +1,26 @@
 /*! Smartphones ------------------------------------------------------------------------------ */
 @Media ( max-width: 430px){
-    
+    header{
+        height: 7%;
+        width: 100%;
+    }
+    header h1{
+        font-size: 30px;
+    }
+    .scroll-lateral{
+        border: 1px solid orangered;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .criar{
+        height: 3rem;
+        width: 6rem;
+        border-radius: 10px;
+    }
+    .criarButton{
+        transform: scale(1.2);
+    }
+    .criar{
+        font-size: 20px;
+}
 }
