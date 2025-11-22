@@ -1,8 +1,19 @@
 function abrirModal(idModal)
 {
-    document.getElementById(idModal).style.display = "flex";
+      const modal = document.getElementById(idModal);
+
+    if (!modal) {
+        console.error("Modal não encontrado:", id);
+        return;
+    }
+
+    modal.style.display = "flex";
 }
 function fecharModal(idModal)
 {
-    document.getElementById(idModal).style.display = "none";
+    const modal = document.getElementById(idModal);
+
+    if (!modal) return;
+
+    modal.style.display = "none";
 }

@@ -28,4 +28,64 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+  //  INSERT INTO `users` (`id`, `name`, `email`, `img_path`, `passwordint`, `role`) VALUES ('002', 'joao', 'email2@email2', 'none', 'pass', '');
+    public function insert($table, $parameters){
+        $sql = sprintf(' INSERT INTO %s (%s) VALUES (:%s)',
+        $table,
+        implode(', ', array_keys($parameters)),
+        implode(', :', array_keys($parameters)),
+        );  
+    
+    try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+    //UPDATE `users` SET `id`='[value-1]',`name`='[value-2]',`email`='[value-3]',`img_path`='[value-4]',`passwordint`='[value-5]',`role`='[value-6]' WHERE 1
+    public function update($table, $id, $parameters){
+        $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
+        $table,
+        implode(',', array_map(function($param) {
+            return $param . ' = :' .$param;
+        }, array_keys($parameters))),
+        $id
+    );
+     try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        
+    }
+
+    //DELETE FROM `users` WHERE 0
+    public function delete($table, $id)
+    {
+        $sql = sprintf('DELETE FROM %s WHERE %s',
+        $table,
+        'id = :id'
+    );
+
+    try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(compact('id'));
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

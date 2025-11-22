@@ -1,120 +1,117 @@
-/*Tira o CSS padrão do navegador*/
-*{
+/*! Reset do CSS -------------------------------------------------------------------------- */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-/*Container onde fica o background*/
-.containerGeral{
-    /*Adiciona background, centraliza e define tamanho*/
+/*! Adiciona fundo da página -------------------------------------------------------------- */
+body{
     background-image: url(../assets/backgrounds/cover4.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-
-     overflow-x: hidden;
-
+}
+/*! Cria disposição dos elementos --------------------------------------------------------- */
+.containerGeral{
     height: 100vh;
     width: 100%;
-}
-.blocoPrincipal{
-    /*Cria uma div para "segurar" a tabela*/
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
-    height: 100vh;
-    width: 100%;
-    position: relative;
 }
-.topo{
-    /*Aqui é a parte do titulo da tabala*/
-    /*Dimensiona e organiza como os elementos ficam alinhados*/
-    height: 10rem;
-    width: 85rem;
+/*! Cria header da tabela ----------------------------------------------------------------- */
+/*disposição dos elementos*/
+header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*Estiliza o titulo*/
-    h1{
-        color: #ffff;
-        font-family: "Anton", sans-serif;
-        font-weight: 100;
-        font-size: 80px;
-    }
-    /*Dimensiona e organiza o botão de adicionar*/
-    .criar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 6rem;
-        width: 6rem;
-        border-radius: 50%;
-        background-color: #1B2A41;
-        /*Dimensiona a imagem dentro*/
-        img{
-            height: 3rem;
-            width: 3rem;
-        }
-    }
 }
-/*Css da caixa da tabela*/
-.tabela{
-    /*Dimensiona*/
-    height: 40rem;
-    width: 85rem;
-    /*Organiza os itens*/
-   
-    align-items: center;
-    justify-items: center;
+/*reset do button*/
+button{
+    all:unset;
 }
-
-
-
-
-.tabela, 
-.tabela th, 
-.tabela td {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
+/*dimensionamneto da seção*/
+header{
+    height: 10%;
+    width: 64%;
 }
-
-
-.tabela tr{
-    display: flex;
-    flex-direction: row;
+/*estilo do título*/
+header h1{
+    color: #ffff;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-size: 60px;
 }
-
-
-
-/*Css para todos os "Quadrados" do grid*/
-.filho{
-    height: 6rem;
-    width: 17rem;
-    background-color: #1B2A41;
+/*estilo do botão*/
+.criar{
+    background-color: #1b2a41;
+    height: 5rem;
+    width: 9rem;
+    border-radius: 20px;
+}
+/*disposição do conteudo interno do botão*/
+.criar{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    color: #ffff;
 }
-/*Css da imagem do primeiro quadrado de cada linha*/
-.imagemTabela {
-    height: 4rem;;
-    width: 4rem;
+/*estilo do texto do botão*/
+.criar{
+    color: #f3f3f3;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+/*! Cria tabela --------------------------------------------------------------------------- */
+/*forma da tabela*/
+.scroll-lateral{
+    width: 64%;
+}
+table{
+    width: 100%;
+}
+thead, tr{
+    height: 6.7rem;
+}
+/*estilo da tabela*/
+table{
+    background-color: #1b2a41e3;
+}
+/*dimensão dos elementos*/
+td{
+    width: 10%;
+}
+/*disposição dos elementos*/
+tr{
+    text-align: center;
+}
+/*estilo do texto*/
+table th{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: #ffffff;
+}
+table td {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #E5E5E5;
+}
+/*! Detalha elementos da tabela ----------------------------------------------------------- */
+.imagemTabela{
+    height: 6vh;
     border-radius: 50%;
 }
-/*Organiza disposição dos elementos nessa div onde ficam os botões*/
-.acoes{
-    display: flex;
-    align-items: center;
-    gap:1rem;
+/*! botoes de acao ------------------------------------------------------------------------------ */
+.caixaAcoes {
+    text-align: center;
+}
+.bot {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.4rem;
 }
 /*Dimensiona icone de ver*/
 .iver{
@@ -133,8 +130,8 @@
     cursor: pointer;
 }
 .bot.ver:hover .iver {
-    fill: #77d6f3; 
-    filter: drop-shadow(0 0 6px #0156d4);   
+    fill: #10d33a; 
+    filter: drop-shadow(0 0 6px #66ffb2);
     transform: scale(1.1);
 }
 /*Aparencia do icone de editar e hover*/
@@ -159,13 +156,6 @@
     filter: drop-shadow(0 0 6px #d41616);
     transform: scale(1.1);
 }
-.criar:hover 
-{
-    transform: scale(1.1);
-    background-color: #1f314d;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.192);
-    cursor: pointer;
-}
 /*! Modais ------------------------------------------------------------------------------------------- */
 .modais{
     background-color: rgba(255, 255, 255, 0);
@@ -180,6 +170,8 @@
 .modalCriar{
     z-index: 0;
 }
+
+
 .modalEditar
 {
     z-index: 11;
@@ -191,7 +183,6 @@
     z-index: 15;
 }
 
-/*! Posicionamento e dimensão dos modais ------------------------------------------------------------- */
 .modalc{
     position: absolute;
     z-index: 10;
@@ -212,7 +203,6 @@
     display: flex;
 }
 
-/*! Modais vizualizar e excluir ------------------------------------------------------------------------ */
 .modaisP{
     background-color: rgba(255, 255, 255, 0);
     height: 100vh;
@@ -234,8 +224,8 @@
     z-index: 14;
 }
 .modalex{
-    height: 50rem;
-    width: 55rem;
+    height: 45rem;
+    width: 40rem;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -244,96 +234,57 @@
     z-index: 16; 
 }
 
-@media only screen and (max-width: 500px) {
-    .modalc, .modaled {
-        width: 90%;
-        height: auto;
-        flex-direction: column;
-    }
-    .modalvi, .modalex {
-        width: 90%;
-        height: auto;
-    }
-
-    .containerGeral
-    {
-     
-
-        .topo
-        {
-            width: 30%;
-        }
-    }
-
-    
-
-    
-}
-
-
-@media only screen and (max-width: 1200px) {
-    .modalc, .modaled {
-        width: 80%;
-        height: auto;
-    
-    }
-    .modalvi, .modalex {
-        width: 80%;
-        height: auto;
-    }
-
-    .containerGeral {
-        width: 100%;
-        height: auto;
+/*! SCroll lateral ----------------------------------------------------------------------------------- */
+/*
+@media (max-width: 600px) {
+    .scroll-lateral {
         overflow-x: auto;
-        font-size: 0.5em;
-
-        .topo{
-            width: 70%;
-            h1{
-                font-size: 3rem;
-            }
-
-            .criar{
-                height: 4rem;
-                width: 4rem;
-                img{
-                    height: 2rem;
-                    width: 2rem;
-                }
-            }
-        }
+        width: 98%;
     }
-
-  .tabela{
-        width: 80%;
-    }
-
-    .blocoPrincipal{
-        width: 80%
-    }
-
-    .tabela th, .tabela td{
-      
-        width: 90%;
-        font-size: 2em;
-      
-
-    }
-    
-
-    .acoes{
-        gap: 0.5rem;
-       .bot {
-       display: hidden;
-       }
-    }
-    
-    .topo{
-        width: 100%;
-    }
-
-
 }
-
-
+*/
+/*! hover do botão criar ------------------------------------------------------------------------------ */
+.criar{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.criar:hover{
+    background-color: #283d5e;
+    transform: scale(1.1);
+}
+/*! paginação ------------------------------------------------------------------------------------------ */
+.paginacao{
+    display: flex;
+    color: #e5e5e5;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+.botoesPaginacao{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.botaoPaginacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E5E5E5;
+    height: 2rem;
+    width: 2.3rem;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+.botaoPaginacao:hover{
+    transform: scale(1.1);
+    background-color: #E5E5E5;
+    color: #1b2a41;
+}
+.botaoEsquerda:hover , .botaoDireita:hover{
+    transform: scale(1.3);
+}
