@@ -47,11 +47,7 @@
     padding-left: 1rem;
     color: rgb(75, 75, 75);
 }
-.caixaSenha{
-    p{
-        font-size: 30px;
-    }
-}
+
 .botoesVizu{
     display: flex;
     gap: 10px;  
