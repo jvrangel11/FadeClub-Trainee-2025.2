@@ -38,7 +38,7 @@ class QueryBuilder
         ':'.implode(', :', array_keys($parameters))
     );
 
-            try {
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
 
@@ -62,6 +62,26 @@ class QueryBuilder
             $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
+    catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function verificaLogin($email, $senha): mixed
+    {
+        $sql = sprintf(format: 'SELECT * FROM users WHERE email * :email AND password * :password');
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $email,
+                'password' => $senha
+            ]);
+
+            $user = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+            return $user;
 
         } catch (Exception $e) {
             die($e->getMessage());
@@ -82,3 +102,4 @@ class QueryBuilder
         }
     }
 }
+
