@@ -13,3 +13,8 @@ $router->post('crudPosts/create', 'PostsController@store');
 
 $router->get('crudPosts/view', 'PostsController@store');
 
+$router->post('crudPosts/edit', 'PostsController@edit');
+
+$router->post('crudPosts/delete', 'PostsController@delete');
+
+

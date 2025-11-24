@@ -33,4 +33,33 @@ echo implode(', ', $parameters);
 
         header('Location: /crudPosts');
     }
+
+    public function edit(){
+
+                $parameters = [
+            'title'=> $_POST['title'],
+            'origin'=> $_POST['origin'],
+            'story'=> $_POST['story'],
+            'curiosity'=> $_POST['curiosity'],
+            'tips'=> $_POST['tips'],
+            'products'=> $_POST['products'],
+            'user_id'=> 1
+        ];
+
+        $id = $_POST['id'];
+
+        App::get('database')->update ('posts', $id, $parameters);
+
+        header('Location: /crudPosts');
+    }
+
+    public function delete(){
+        $id = $_POST['id'];
+
+        App::get('database')->delete ('posts', $id);
+
+        header('Location: /crudPosts');
+    }
+
 }
+
