@@ -17,6 +17,13 @@ class PostsController
     }
 
     public function store(){
+
+        $temporario = $_FILES['img_path']['tmp_name'];
+        $nomeimagem = sha1(uniqid($_FILES['img_path']['name'],true)) . "." . pathinfo($_FILES['img_path']['name'], PATHINFO_EXTENSION);
+        $destinoimagem ="/assets/";
+        $caminhodaimagem = $destinoimagem . $nomeimagem;
+        move_uploaded_file($temporario, $caminhodaimagem);
+
         $parameters = [
             'title'=> $_POST['title'],
             'origin'=> $_POST['origin'],
@@ -24,6 +31,7 @@ class PostsController
             'curiosity'=> $_POST['curiosity'],
             'tips'=> $_POST['tips'],
             'products'=> $_POST['products'],
+            'img_path'=> $caminhodaimagem,
             'user_id'=> 1
         ];
 

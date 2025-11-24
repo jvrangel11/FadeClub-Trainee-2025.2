@@ -35,7 +35,7 @@
                     <tr>
                         <td><?= $post->id ?></td>
                         <td><?= $post->title ?></td>
-                        <td class="img-cell"></td>
+                        <td class="img-cell"><?=  $post->img_path ?></td>
                         <td class="acoes">
                             <button><i class="bi bi-eye" onclick="abrirModal('Visualizar<?= $post->id ?>')"></i></button> 
                             <button><i class="bi bi-pencil" onclick="abrirModal('editar<?= $post->id ?>')" ></i></button> 
@@ -73,13 +73,15 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <img id="previewCriar" src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                <form method="POST" action="crudPosts/create" enctype="multipart/form-data" >
 
-                                <!-- Input escondido -->
-                                <input type="file" id="inputCriarImg" accept="image/*" style="display: none;">
-
-                                <!-- Botão visível -->
-                                <button class="image-btn" id="btnCriarImg">Selecionar imagem</button>
+                                    <img id="previewCriar" src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                    
+                                    <!-- Input escondido -->
+                                    <input type="file" name="img_path" id="inputCriarImg" accept="image/*" style="display: none;">
+                                    
+                                    <!-- Botão visível -->
+                                    <button class="image-btn" id="btnCriarImg">Selecionar imagem</button>
                             </div>
                         </div>
                         <div class="info-text">
@@ -87,24 +89,25 @@
                             <p2>Preencha as informações do post nos campos a seguir</p2>
                         </div>
                     </div>
-                    <form method="POST" action="crudPosts/create" class="form-right">
-                        <label>Titulo*</label>
-                        <input required type="text" name="title">
-                        <label>Origem*</label>
-                        <input required type="text" name="origin">
-                        <label>História*</label>
-                        <input required type="text" name="story">
-                        <label>Curiosidades*</label>
-                        <input required type="text" name="curiosity">
-                        <label>Dicas do Barbeiro*</label>
-                        <input required type="text" name="tips">
-                        <label>Produtos recomendados*</label>
-                        <input required type="text" name="products">
-                        <div class="save-cancel-btn">
-                            <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
-                            <button type="submit" class="submit-btn-all">Salvar</button>
+                        <div class="form-right">
+                            <label>Titulo*</label>
+                            <input required type="text" name="title">
+                            <label>Origem*</label>
+                            <input required type="text" name="origin">
+                            <label>História*</label>
+                            <input required type="text" name="story">
+                            <label>Curiosidades*</label>
+                            <input required type="text" name="curiosity">
+                            <label>Dicas do Barbeiro*</label>
+                            <input required type="text" name="tips">
+                            <label>Produtos recomendados*</label>
+                            <input required type="text" name="products">
+                            <div class="save-cancel-btn">
+                                <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
+                                <button type="submit" class="submit-btn-all">Salvar</button>
+                            </div>
+                        </div>
                     </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -118,12 +121,13 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <img src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                <img src="<?= $post->img_path ?>" alt="Prévia imagem">
                                 <button class="image-btn">Visualizar imagem</button>
                             </div>
                             <div id="modalVerImagem" class="modal-ver-imagem">
                                 <span class="fechar-img" id="fecharVerImg">&times;</span>
-                                <img id="imgVisualizar" class="conteudo-img">
+                                <img id="imgVisualizar" name="img_path" class="conteudo-img">
+                                <input type="file" name="img_path">
                             </div>
                         </div>
                         <div class="info-text">
@@ -160,10 +164,10 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <img id="previewEditar" src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                <img id="previewEditar" src="<?= $post->img_path?>" alt="Prévia imagem">
 
                                 <!-- Input escondido -->
-                                <input type="file" id="inputEditarImg" accept="image/*" style="display: none;">
+                                <input type="file" name="img_path" id="inputEditarImg" accept="image/*" style="display: none;">
 
                                 <!-- Botão visível -->
                                 <button class="image-btn" id="btnEditarImg">Alterar imagem</button>
