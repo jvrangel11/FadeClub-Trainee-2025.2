@@ -37,9 +37,9 @@
                         <td><?= $post->title ?></td>
                         <td class="img-cell"><?=  $post->img_path ?></td>
                         <td class="acoes">
-                            <button><i class="bi bi-eye" onclick="abrirModal('Visualizar<?= $post->id ?>')"></i></button> 
-                            <button><i class="bi bi-pencil" onclick="abrirModal('editar<?= $post->id ?>')" ></i></button> 
-                            <button><i class="bi bi-trash" onclick="abrirModal('excluir<?= $post->id ?>')" ></i></button> 
+                            <button><i class="fa-solid fa-eye" onclick="abrirModal('Visualizar<?= $post->id ?>')"></i></button> 
+                            <button><i class="fa-solid fa-pencil" onclick="abrirModal('editar<?= $post->id ?>')" ></i></button> 
+                            <button><i class="fa-solid fa-trash" onclick="abrirModal('excluir<?= $post->id ?>')" ></i></button> 
                         </td>
                     </tr>
                     <?php endforeach ?>

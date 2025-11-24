@@ -15,7 +15,7 @@ body {
     align-items: center;
     margin-bottom: 1%;
     margin-top: 2%;
-    width: 70%;;
+    width: 65%;
 }
 
 .scroll-lateral {
@@ -82,7 +82,7 @@ body {
 }
 
 .tabela {
-    width: 70vw;
+    width: 65vw;
     margin-top:0px;
     border-collapse: collapse;
     background-color: #1B2A41;
@@ -118,25 +118,31 @@ body {
     border-radius: 0px;
 }
 
+.acoes td {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 5px;
+}
+
 .acoes i {
     margin: 0 0px;
     cursor: pointer;
     transition: 0.3s;
-    padding: 2px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-.acoes .bi-eye:hover {
+.acoes .fa-eye:hover {
     transform: scale(1.1);
     color: #0099ff;
 }
 
-.acoes .bi-pencil:hover {
+.acoes .fa-pencil:hover {
     transform: scale(1.1);
     color: #FF7F00;
 }
 
-.acoes .bi-trash:hover {
+.acoes .fa-trash:hover {
     transform: scale(1.1);
     color: #e90707;
 }
