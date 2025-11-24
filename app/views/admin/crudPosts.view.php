@@ -17,7 +17,7 @@
     <div class="tabela-container">
         <div class="table-header">
             <h1 class="titulo">Tabela de Posts</h1>
-            <button class="btn-add" onclick="abrirModal('Criar')">+ Criar Post<i class="fa-solid fa-plus"></i></button>
+            <button class="btn-add" onclick="abrirModal('Criar')">Criar Post<i class="fa-solid fa-plus"></i></button>
         </div>
         <div class="scroll-lateral">
             <table class="tabela">
@@ -38,7 +38,7 @@
                         <td class="img-cell"></td>
                         <td class="acoes">
                             <button><i class="bi bi-eye" onclick="abrirModal('Visualizar<?= $post->id ?>')"></i></button> 
-                            <button><i class="bi bi-pencil" onclick="abrirModal('editar')" <?= $post->id ?>></i></button> 
+                            <button><i class="bi bi-pencil" onclick="abrirModal('editar<?= $post->id ?>')" ></i></button> 
                             <button><i class="bi bi-trash" onclick="abrirModal('excluir')" <?= $post->id ?>></i></button> 
                         </td>
                     </tr>
@@ -153,7 +153,7 @@
         </div>
     </div>
 
-    <div class="editar-container" id="editar">
+    <div class="editar-container" id="editar<?= $post->id ?>">
         <div class="container-all">
             <div class="form-box">
                 <div class="form-view">
@@ -174,22 +174,25 @@
                             <p2>Apague ou altere as informações sobre este post</p2>
                         </div>
                     </div>
-                    <div class="form-right">
+                    <form class="form-right" method="POST" action="crudPosts/edit"> 
+                        <input type="hidden" name="id" value="<?= $post->id ?>">                       
+                        <label>Titulo</label>
+                        <input type="text" name="title" value="<?= $post->title ?>">
                         <label>Origem</label>
-                        <input type="text">
+                        <input type="text" name="origin" value="<?= $post->origin ?>">
                         <label>História</label>
-                        <input type="text">
+                        <input type="text" name="story" value="<?= $post->story ?>">
                         <label>Curiosidades</label>
-                        <input type="text">
+                        <input type="text" name="curiosity" value="<?= $post->curiosity ?>">
                         <label>Dicas do Barbeiro</label>
-                        <input type="text">
+                        <input type="text" name="tips" value="<?= $post->tips ?>">
                         <label>Produtos recomendados</label>
-                        <input type="text">
+                        <input type="text" name="products" value="<?= $post->products ?>">
                         <div class="save-cancel-btn">
-                            <button class="cancel-btn" onclick="fecharModal('editar')">Cancelar</button>
-                            <button class="submit-btn-all">Salvar</button>
+                            <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
+                            <button type="submit" class="submit-btn-all">Salvar</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -201,14 +204,17 @@
             <div class="form-excluir">
                 <h3>Você tem certeza que deseja excluir essa publicação?</h3>
                 <div class="image-section-excluir">
-                    <h4>Título da publicação</h4>
+                    <h4><?= $post->title ?></h4>
                     <img src="../../../public/assets/arranjo-de-ferramentas-para-barbearia.jpg" alt="Prévia imagem">
                 </div class="comentario-excluir">
                 <p>Essa ação não poderá ser desfeita</p>
             </div>
             <div class="save-cancel-btn">
                 <button class="cancel-btn" onclick="fecharModal('excluir')">Cancelar</button>
-                <button class="submit-btn">Excluir</button>
+                <form method="POST" action="/crudPosts/delete">
+                    <input type="hidden" name="id" value="<?= $post->id ?>">
+                    <button class="submit-btn">Excluir</button>
+                </form>
             </div>
         </div>
     </div>
