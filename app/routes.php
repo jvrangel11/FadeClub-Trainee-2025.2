@@ -25,10 +25,5 @@ $router->post('crudPosts/delete', 'PostsController@delete');
 
     $router->post('login', 'LoginController@efetuaLogin');
 
-<<<<<<< HEAD
     $router->get('logout', 'LoginController@logout');
 ?>
-=======
-    $router->post('logout', 'LoginController@logout');
-?>
->>>>>>> e1507bf77b2eee1a0cad87ca0bf19ebd9a0cfae6

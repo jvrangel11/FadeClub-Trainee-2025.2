@@ -39,7 +39,7 @@
                         <td class="acoes">
                             <button><i class="bi bi-eye" onclick="abrirModal('Visualizar<?= $post->id ?>')"></i></button> 
                             <button><i class="bi bi-pencil" onclick="abrirModal('editar<?= $post->id ?>')" ></i></button> 
-                            <button><i class="bi bi-trash" onclick="abrirModal('excluir')" <?= $post->id ?>></i></button> 
+                            <button><i class="bi bi-trash" onclick="abrirModal('excluir<?= $post->id ?>')" ></i></button> 
                         </td>
                     </tr>
                     <?php endforeach ?>
@@ -198,7 +198,7 @@
         </div>
     </div>
 
-    <div class="excluir-container" id="excluir">
+    <div class="excluir-container" id="excluir<?= $post->id ?>">
         <div class="form-box-excluir">
             <h2>Deseja excluir a publicação?</h2>
             <div class="form-excluir">

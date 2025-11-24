@@ -147,8 +147,8 @@ body {
     color: white;
 }
 
-.paginacao {
-    margin-top: 20px;
+.pagination {
+    padding-top: 2rem;
 }
 
 @media (max-width: 860px) {
