@@ -172,19 +172,6 @@
     }
 }
 
-.logout{
-    /*estilo do texto*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: #E5E5E5;
-    /* disposição de conteúdo */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
 .caixaLogout {
     /* dimensões */
     height: 7vh;
@@ -200,6 +187,22 @@
     img {
         width: 2.3rem;
     }
+}
+
+.logout a{
+    color: #E5E5E5;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /*estilo do texto*/
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #E5E5E5;
+    /* disposição de conteúdo */
+    align-items: center;
+    gap: 0.5rem;
 }
 /* * ------------------- */
 /* * -------------------------------------------- */
@@ -288,7 +291,7 @@
         }
     }
 
-    .logout{
+    .logout a{
     
         font-size: 12px;
     

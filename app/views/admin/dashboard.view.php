@@ -41,12 +41,12 @@
                 </div>
 
                 <div class="logout">
-                    <form action="/logout" method="POST">
+                    <a href="/logout">
                         <div class="caixaLogout">
                             <img src="../../../public/assets/SVG/logout.svg" alt="">
                         </div>
                         <p>LOG-OUT</p>
-                    </form>
+                    </a>
                 </div>
 
             </div>

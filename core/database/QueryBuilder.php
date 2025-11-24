@@ -51,7 +51,7 @@ class QueryBuilder
 
     public function verificaLogin($email, $senha): mixed
     {
-        $sql = sprintf(format: 'SELECT * FROM users WHERE email * :email AND password * :password');
+        $sql = sprintf(format: 'SELECT * FROM users WHERE email = :email AND password = :password limit 1');
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -60,7 +60,7 @@ class QueryBuilder
                 'password' => $senha
             ]);
 
-            $user = $stmt->fetchAll(PDO::FETCH_OBJ);
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
 
             return $user;
 

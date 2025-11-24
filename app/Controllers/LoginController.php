@@ -7,14 +7,12 @@ class LoginController
 {
     public function exibirLogin(): mixed
     {
-        
-    session_start();
     
     if(isset($_SESSION['id'])){
         header(header: 'Location: /dashboard');
     }
 
-        return view(name: 'admin/login');
+        return view(name: 'site/login');
     }
 
     public function exibirDashboard(): mixed
@@ -24,19 +22,20 @@ class LoginController
     
     public function efetuaLogin(): void
     {
+        session_start();
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
         if($user != false){
-            session_start();
             $_SESSION['id'] = $user->id;
             header(header: 'Location: /dashboard');
         }
         else{
-            session_start();
+            /*session_start();*/
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
+            var_dump($user);
             header(header: 'Location: /login');
         }
     }

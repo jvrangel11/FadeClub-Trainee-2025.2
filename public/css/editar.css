@@ -191,8 +191,9 @@ textarea {
         width: 100%;
         height: 100%;
         margin: 0px;
+        margin-top: 20px;
         background-color: #E6E7EB;
-        padding: 20px 10px;
+        padding: 10px 10px;
     }
 
 
@@ -217,12 +218,12 @@ textarea {
 .image-btn {
     height: 5vh;
     width: 11vW;
-    /*
-    background-color: #3b4f6636;
+    background-color: #d2d3d8;
     color: #3B4F66;
-    */
+    /*
     background-color: #8a853c41;
     color: #8a853c;
+    */
     border-radius: 30px;
     border: none;
     display: flex;
@@ -264,12 +265,12 @@ textarea {
 }
 
 .submit-btn-all {
-    /*
+    
     background-color: #164d2f;
     color: #ffffff;
-    */
+    /*
     background-color: #164d2f31;
-    color: #164d2f;
+    color: #164d2f;*/
     grid-column: span 2;
     display: flex;
     align-items: center;

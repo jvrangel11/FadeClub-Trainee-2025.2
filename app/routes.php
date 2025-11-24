@@ -20,5 +20,5 @@ use App\Core\Router;
 
     $router->post('login', 'LoginController@efetuaLogin');
 
-    $router->post('logout', 'LoginController@logout');
+    $router->get('logout', 'LoginController@logout');
 ?>
