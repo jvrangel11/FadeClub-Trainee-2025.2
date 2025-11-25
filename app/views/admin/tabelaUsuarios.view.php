@@ -23,7 +23,7 @@
     <div class="containerGeral">
         <header>
             <h1>Tabela de Usuários</h1>
-            <button class="criar" onclick="abrirModal('criar')">Criar</button>
+            <button class="criar" onclick="abrirModal('criar')">Criar+</button>
         </header>
         <div class="scroll-lateral">
             <table>
@@ -100,9 +100,16 @@
             <div class="modalc">
                 
 
+                        
                     <div class="containerRight">
+                          <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
                         <div class="imgPerfilB"><img src="../../../public/assets/Imagens/usuario.png" alt=""></div>
-                        <div class="botaoAddFoto"><p class="textoBotao">Adicionar foto</p></div>
+                        <button class="botaoAddFoto">
+                            <p class="textoBotao">Adicionar foto</p>
+
+                    
+                    </button>
+                    </form>
                         <div class="tituloA">
                             <h1 class="tituloAdd">Vamos adicionar um</h1>
                             <h1 class="tituloAdd">novo usuário!</h1>
@@ -113,7 +120,7 @@
                         </div>
 
                     </div>
-                <form  method="POST" action="/tabelaUsuarios/create" >
+                  <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
                     <div class="containerLeft">
                         <div class="inputs">
                             <div class="nomeB">
@@ -269,7 +276,7 @@
                 <div class="modalex">
                     <div class="containerExcluir">
                         <div class="sombraExcluir">
-                            <img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt="">
+                            <img src="<?= $user->id ?>" alt="">
                         </div>
                         <div class="conteudoExcluir">
                             <div class="textoExcluir parte01">Tem certeza que deseja</div>

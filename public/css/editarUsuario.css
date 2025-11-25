@@ -139,7 +139,179 @@
         color: #3B4F66;
     }
     .save{
-        background-color: #E4A11B;
-        color: #895000;
+        background-color: #3fc379;
+        color: #ffffff;
+    }
+}
+
+
+/* --------------------------------------------------------------------- */
+/* RESPONSIVIDADE PARA TABLETS (Telas até 768px) */
+/* --------------------------------------------------------------------- */
+@media only screen and (max-width: 768px){
+    
+    /* MODAL GERAL: Para ocupar a tela */
+    .modalc, .modaled { 
+        width: 98vw;
+        height: 98vh;
+    }
+    
+    /* Containers Internos: Ajuste de proporção para Tablets */
+    .containerRight {
+        width: 40%; 
+        height: 100%; 
+    }
+    
+    .containerLeft {
+        width: 60%;
+        height: 100%;
+        padding: 1rem;
+    }
+    
+    /* Imagem e Botão da Direita */
+    .imgPerfilB {
+        height: 15vh;
+        width: auto;
+    }
+    .imgPerfilB img {
+        height: 15vh;
+        width: 15vh;
+    }
+    .botaoAddFoto {
+        width: 18vw;
+        font-size: 1rem;
+    }
+
+    /* Inputs da Esquerda */
+    .nomeB, .emailB, .senhaB {
+        width: 100%; /* Ocupa 100% da largura do containerLeft */
+        height: auto;
+        p {
+            font-size: 1rem;
+        }
+    }
+    
+    .nomeB input, .emailB input, .senhaB input {
+        width: 100%; /* Ocupa 100% da largura do elemento pai */
+        font-size: 1rem;
+        height: 5vh;
+    }
+    
+    /* Botões de Ação */
+    .caixaBotoes {
+        width: 100%;
+        justify-content: space-around;
+        font-size: 1.1rem;
+    }
+    
+    .caixaBotoes .cancel, .caixaBotoes .save {
+        width: 30%; 
+        height: 5vh;
+    }
+    
+    .barraHorizontal {
+        width: 100%; /* Garante que a barra preencha o containerLeft */
+    }
+}
+
+
+/* --------------------------------------------------------------------- */
+/* RESPONSIVIDADE PARA CELULARES (Telas até 480px) */
+/* --------------------------------------------------------------------- */
+@media only screen and (max-width: 480px){
+    
+    /* MODAL GERAL: Para ocupar a tela */
+    .modalc, .modaled { 
+        width: 98vw;
+        height: 98vh;
+        flex-direction: column; /* Força empilhamento vertical */
+    }
+
+    /* Containers Internos: Empilhamento vertical em 100% */
+    .containerRight, .containerLeft {
+        width: 100%; 
+        height: auto; 
+        padding: 1rem 0.5rem;
+    }
+    
+    /* Container da Direita (Foto/Guia) */
+    .containerRight {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 10px;
+    }
+    
+    .imgPerfilB {
+        height: 12vh;
+        width: auto;
+    }
+    .imgPerfilB img {
+        height: 12vh;
+        width: 12vh; 
+    }
+    
+    .botaoAddFoto {
+        width: 60%;
+        height: 4vh;
+        font-size: 0.8rem;
+    }
+    
+    .tituloAdd {
+        font-size: 1.2rem;
+    }
+    .guiaAdd {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+    
+    /* Container da Esquerda (Inputs) */
+    .containerLeft {
+        overflow-y: auto;
+        padding-bottom: 1rem;
+        gap: 20px;
+    }
+    
+    .inputs {
+        gap: 20px;
+        width: 95%; /* Centraliza o bloco de inputs */
+        margin: 0 auto;
+    }
+    
+    /* Inputs */
+    .nomeB, .emailB, .senhaB {
+        width: 100%; 
+        height: auto; 
+        p {
+            font-size: 0.9rem;
+        }
+    }
+    
+    .nomeB input, .emailB input, .senhaB input {
+        width: 100%; 
+        font-size: 0.9rem;
+        height: 4vh;
+    }
+    
+    .iconeEdit {
+        right: 0.5rem;
+        bottom: 0.5rem;
+        height: 1rem;
+    }
+
+    .barraHorizontal {
+        width: 95%; 
+    }
+
+    /* Botões */
+    .caixaBotoes {
+        width: 95%;
+        justify-content: space-between;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+    
+    .caixaBotoes .cancel, .caixaBotoes .save {
+        width: 45%; 
+        height: 5vh;
     }
 }
