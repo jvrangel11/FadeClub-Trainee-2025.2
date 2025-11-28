@@ -17,7 +17,7 @@
     <div class="tabela-container">
         <div class="table-header">
             <h1 class="titulo">Tabela de Posts</h1>
-            <button class="btn-add" onclick="abrirModal('Criar')">Criar Post<i class="fa-solid fa-plus"></i></button>
+            <button class="btn-add" onclick="abrirModal('Criar')"><i class="fa-solid fa-plus"></i>Criar Post</button>
         </div>
         <div class="scroll-lateral">
             <table class="tabela">
