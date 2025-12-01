@@ -38,7 +38,7 @@ body {
     justify-content: center;
 
     height: fit-content;
-    width: 50vw;
+    width: 70%;
     padding-bottom: 1rem;
   
 
@@ -50,15 +50,22 @@ body {
 }
 
 
-.titulo h1{
+.title h1{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: bold;
     margin-top: 2rem;
     margin-bottom: 0;
     padding-top: 2rem;
     
+}
+
+.autor{
+    padding-top: 1rem;
+       border-top: 1px solid black;
+       padding-right: 0.5rem;
+       
 }
 
 .perfil {
@@ -68,13 +75,16 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 2rem;
+    
+    
 
 }
 
     .fotoPerfil img{
         border-radius: 512px;
-        height: 4vh;
+        height: 5vh;
         width: 3vw;
+      
     }
 
     .nomePerfil{
@@ -83,8 +93,6 @@ body {
         font-weight:lighter;
         margin-left: 1rem;
     }
-
-
 
 
 
@@ -101,7 +109,7 @@ body {
         margin: 0;
 
      h2,h5{
-        font-size:1rem;
+        font-size:1.2rem;
      }
      
       
@@ -110,7 +118,7 @@ body {
 .conteudo{
     display: flex;
     flex-direction: column;
-      padding: 2rem;
+      padding: 2rem 2rem 0 2rem;
     
 
 }
@@ -127,16 +135,20 @@ h2{
         }
 
 
- .foto{
+ .img_path{
             justify-content: center;
             align-items: center;
             display: flex;
             padding: 0;
+
+            
         }
 
-.foto img{
-    height:auto;
-    width:50% ;
+.img_path img{
+    height:100%;
+    width:80%;
+    margin: 0;
+
 
     border-radius: 16px;
 
@@ -145,7 +157,7 @@ h2{
 }
 
 
-.origem,.historia,.dicasDoBarbeiro,.produtosRecomendados,.curiosidades{
+.origin,.story,.tips,.products,.curiosity{
   
    
     margin:0 ;
@@ -158,122 +170,81 @@ h2{
 
 }
 
+@media only screen and (max-width: 1024px){
 
-@media only screen and (max-width: 1440px){
-    
-    .foto img{
-    height: 60%;
-    width:fit-content;
+    .post{
+        width: 80%;
+    }
 
+    .origin,.story,.tips,.products,.curiosity{
+        h5{
+            font-size: 2rem;
+        }
 
-    border-radius: 16px;
+        h2{
+            font-size: 1rem;
+        }
+    }
 
-}
+    .autor img{
+        height: 2rem;
+    }
 
-.conteudoPost{
-    
-    height: fit-content;
-    width: fit-content;
-   gap: 0;
+    .autor span{
+        font-size: small;
+    }
 
-}
-
-.perfil{
-
-    display: flex;
-    flex-direction: row-reverse;
-
-    
-        width:50%;
+    .img_path{
         height: auto;
+        width: auto;
+    }
 
-       
-        
-    
+    .img_path img{
+        width: 100%;
+        height: 100%;
+    }
+
 }
 
+@media only screen and (max-width: 768px){
 
+    .conteudoPost{
+        display: flex;
+        flex-direction: column;
+    }
 
-.origem,.historia,.dicasDoBarbeiro,.produtosRecomendados,.curiosidades{
-  
-   
-    margin:0 ;
-    padding: 0;
-    width: 50%;
+    .post h2{
+        font-size: large;
+    }
 
-    h5{
-        margin: 0;
+    .fotoPerfil img{
+        width: 2rem;
+    }
+
+    .nomePerfil span{
         font-size: 1.5rem;
     }
 
-}
-
-
-
-h2{
-    font-size: 1.1rem;
-}
-
-
-}
-
-
-@media screen and (max-width: 1025px){
-    .post{
-        width: 90vw;
+    .img_path img{
+        width: 80%;
     }
+
+    .title h1{
+        font-size: 2.5rem
+    }
+
     
-    .cabecalho{
-        width: 90vw;
-    }
-    
-}
-
-
-@media screen and (max-width: 900px){
-    .post{
-        width: 90vw;
-    }
-    
-    .cabecalho{
-        width: 90vw;
-    }
-    
-    .post{
-        padding-bottom: 10rem;
-        padding-top: 10rem;
-    }
-    h2{
-        font-size: 1rem;
-    }
-   
 
 }
 
-
-@media only screen and (max-width: 768px){
-    h2{
-        font-size: 1.2rem;
-    }
-
-
-    .titulo h1{
-        font-size: 2rem;
-    }
-
-    .origem,.historia,.dicasDoBarbeiro,.produtosRecomendados,.curiosidades{
-            h5{
-            margin: 0;
-            padding: 0;
-            font-size: 1.3rem;
-        }
-
-
-}
-}
 
 @media only screen and (max-width: 480px){
+
+
+   
     .conteudo{
+
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -282,19 +253,24 @@ h2{
         gap: 1rem;
         padding: 1rem;
 
-        img{
-            height: 40vh;
-            width: 40vh;
+        img_path{
+            height: 20vh;
+            width: 20vh;
         }
     }
 
 
     .post{
-        padding-top: 30rem;
-        padding-bottom: 30rem;
+        padding-top: 1rem;
+            width: 90%;
+     
     }
 
-    .origem,.historia,.dicasDoBarbeiro,.produtosRecomendados,.curiosidades{
+    .autor{
+        width: 100%;
+    }
+
+   .origin,.story,.tips,.products,.curiosity{
 
             h5{
             margin: 0;
