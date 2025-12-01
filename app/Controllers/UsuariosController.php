@@ -11,9 +11,28 @@ class UsuariosController
 
     public function index()
     {
-         $users = App::get('database')->selectAll('users');
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
 
-        return view('admin/tabelaUsuarios', compact('users'));
+            if($page <=0){
+                return redirect('admin/index');
+            }
+        }
+
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('users');
+
+        if($inicio > $rows_count){
+            return redirect('admin/index');
+        }
+
+        $users = App::get('database')->selectAll('users' , $inicio , $itensPage);
+
+        $total_pages = ceil($rows_count / $itensPage);
+
+        return view('admin/tabelaUsuarios', compact('users' , 'page' , 'total_pages'));
     }
 
     public function store()
