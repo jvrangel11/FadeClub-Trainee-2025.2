@@ -55,6 +55,7 @@ header h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 /*estilo do texto do botão*/
 .criar{
@@ -62,6 +63,9 @@ header h1{
     font-family: "Anton", sans-serif;
     font-weight: 100;
     font-size: 30px;
+}
+.criarButton{
+    transform: scale(1.7);
 }
 /*! Cria tabela --------------------------------------------------------------------------- */
 /*forma da tabela*/
