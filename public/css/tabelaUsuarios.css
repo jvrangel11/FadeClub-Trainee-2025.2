@@ -420,6 +420,7 @@ table td {
 }
 
 .botoesPaginacao button a.botaoPaginacao.active {
+    background-color: #E5E5E5;
     color: #1b2a41; 
 }
 
