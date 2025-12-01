@@ -578,6 +578,117 @@ width: 1rem;
     transition: 0.2s;
 }
 
+
+@media screen and (min-width:1550px){
+
+    .title p{
+    font-size: 300%;
+    }
+
+    #busca {
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .filter-close-buttons button{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #search-button {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #search-button ion-icon{
+        font-size: 200%;
+    }
+
+    .filter-close-buttons ion-icon{
+        font-size: 200%;
+    }
+
+    #filter-options{
+        height: 6vh;
+        padding-top: 5rem;
+        padding-bottom: 2.2rem;
+    }
+
+    .filter-button1, .filter-button2, .filter-button3, .filter-button4{
+        width: 15vw;
+        height: 3.2vh;
+        font-size: 1.6rem;
+    }
+
+    .posts-list{
+        width: 80%;
+        gap: 3rem;
+        padding: 4rem;
+    }
+
+    .post-item{
+        height: 25rem;
+    }
+
+    .post-item-reverse{
+        height: 25rem;
+    }
+
+    .post-info h5{
+        width: 8rem;
+        height: 2.2rem;
+        font-size: 1.5rem;
+    }
+
+    .post-footer{
+        gap: 2rem;
+    }
+
+    .tag-btn{
+        padding-left: 4.5rem;
+    }
+
+    .post-footer span{
+        font-size: 1.8rem;
+        width: 20rem;
+    }
+
+    .post-info p{
+        font-size: 2rem;
+    }
+
+    .post-title h2{
+        font-size: 2.5rem;
+    }
+
+    .verMais {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+
+    .verMais img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .pagination-button button{
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .pagination-button-left {
+        font-size: 2.5rem;
+        margin-right: -1rem;
+    }
+
+    .pagination-button-right {
+        font-size: 2.5rem;
+        margin-left: -1rem;
+    }
+}
+
+
 @media screen and (max-width:1025px){
     
     .title p{
