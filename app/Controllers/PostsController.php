@@ -20,7 +20,7 @@ class PostsController
 
         $temporario = $_FILES['img_path']['tmp_name'];
         $nomeimagem = sha1(uniqid($_FILES['img_path']['name'],true)) . "." . pathinfo($_FILES['img_path']['name'], PATHINFO_EXTENSION);
-        $destinoimagem ="/assets/";
+        $destinoimagem ="public/assets/";
         $caminhodaimagem = $destinoimagem . $nomeimagem;
         move_uploaded_file($temporario, $caminhodaimagem);
 
