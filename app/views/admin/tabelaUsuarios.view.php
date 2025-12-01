@@ -23,13 +23,13 @@
     <div class="containerGeral">
         <header>
             <h1>Tabela de Usuários</h1>
-            <button class="criar" onclick="abrirModal('criar')">Criar+</button>
+            <button class="criar" onclick="abrirModal('criar')">Criar Usuário+</button>
         </header>
         <div class="scroll-lateral">
             <table>
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>ID</th>
                         <th>Foto</th>
                         <th>Nome</th>
                         <th>Email</th>
