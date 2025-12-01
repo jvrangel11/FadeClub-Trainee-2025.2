@@ -8,6 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FadeClub - Login</title>
     <link rel="stylesheet" href="../../../public/css/login.css">
+    <script src="https://kit.fontawesome.com/bf586e4b37.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="login-container">
@@ -21,8 +22,11 @@ session_start();
                     <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
                     
                     <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="************">
-                    <button type="submit">Login</button>
+                    <div class="input-container">
+                        <input type="password" id="senha" placeholder="Digite sua senha">
+                        <button><i class="fa-regular fa-eye-slash"></i></button>
+                    </div>
+                    <button class="submit-btn" type="submit">Login</button>
                 
                     <div class="mensagem-erro">
                         <p>

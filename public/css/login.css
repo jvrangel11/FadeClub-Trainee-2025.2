@@ -67,7 +67,7 @@ input {
     font-weight: 600;
 }
 
-button {
+.submit-btn {
     background-color: #1B2A41;        
     color: white;                
     border: 3px solid #6B221D;      
@@ -84,9 +84,42 @@ button {
     font-weight: 600;
 }
 
-button:hover {
+.submit-btn:hover {
     background-color: #0d192b;
     color: white;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.input-container {
+    position: relative;
+    width: 250px; /* ajuste se quiser */
+}
+
+.input-container input {
+    width: 100%;
+    padding-right: 40px; /* espaço pro ícone */
+    padding-left: 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.fa-eye-slash {
+    position: absolute;
+    right: 12px;     /* posição do olho */
+    top: 40%;
+    transform: translateY(-100%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    user-select: none;
+    width: 20px;
+    height: 20px;
 }
 
 @media (max-width: 425px) {
