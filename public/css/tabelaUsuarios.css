@@ -405,19 +405,6 @@ table td {
 
 
 /*! Ajuste da paginação ------------------------------------------------------------------- */
-.active{
-    background-color: #E5E5E5;
-    color: #1b2a41;
-}
-.botoesPaginacao {
-    
-    button{
-        a{
-            text-decoration: none; 
-            color: #e5e5e5; 
-        }
-    }
-}
 
 .botoesPaginacao button a.botaoPaginacao {
     text-decoration: none;
@@ -434,4 +421,12 @@ table td {
 
 .botoesPaginacao button:hover a.botaoPaginacao {
     color: #1b2a41;
+}
+
+.botaoEsquerda a, .botaoDireita a {
+    text-decoration: none;
+    color: #E5E5E5;
+}
+.botaoEsquerda a:visited, .botaoDireita a:visited {
+    color: #E5E5E5;
 }
