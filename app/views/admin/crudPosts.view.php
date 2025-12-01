@@ -73,9 +73,9 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <form method="POST" action="crudPosts/create" enctype="multipart/form-data" >
+                                <form class="card-img" method="POST" action="crudPosts/create" enctype="multipart/form-data" >
 
-                                    <img id="previewCriar" src="../../../public/assets/imagem-exemplo.jpg" alt="Prévia imagem">
+                                    <img id="previewCriar" src="../../../public/assets/homem-na-barbearia-barbeando-barba.jpg" alt="Prévia imagem">
                                     
                                     <!-- Input escondido -->
                                     <input type="file" name="img_path" id="inputCriarImg" accept="image/*" style="display: none;">
@@ -91,7 +91,7 @@
                     </div>
                         <div class="form-right">
                             <label>Titulo*</label>
-                            <input required type="text" name="title">
+                            <input required type="textarea" name="title">
                             <label>Origem*</label>
                             <input required type="text" name="origin">
                             <label>História*</label>
@@ -102,6 +102,11 @@
                             <input required type="text" name="tips">
                             <label>Produtos recomendados*</label>
                             <input required type="text" name="products">
+
+                            <div class="caixaBarraHorizontal">
+                                <div class="barraHorizontal"></div>
+                            </div>
+
                             <div class="save-cancel-btn">
                                 <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
                                 <button type="submit" class="submit-btn-all">Salvar</button>
@@ -148,6 +153,11 @@
                         <input readonly type="text" value="<?= $post->tips ?>">
                         <label>Produtos recomendados</label>
                         <input readonly type="text" value="<?= $post->products ?>">
+
+                        <div class="caixaBarraHorizontal">
+                                <div class="barraHorizontal"></div>
+                            </div>
+
                         <div class="save-cancel-btn">
                             <button class="cancel-btn" onclick="fecharModal('Visualizar')">Cancelar</button>
                         </div>
@@ -181,17 +191,22 @@
                     <form class="form-right" method="POST" action="crudPosts/edit"> 
                         <input type="hidden" name="id" value="<?= $post->id ?>">                       
                         <label>Titulo</label>
-                        <input type="text" name="title" value="<?= $post->title ?>">
+                        <input required type="text" name="title" value="<?= $post->title ?>">
                         <label>Origem</label>
-                        <input type="text" name="origin" value="<?= $post->origin ?>">
+                        <input required type="text" name="origin" value="<?= $post->origin ?>">
                         <label>História</label>
-                        <input type="text" name="story" value="<?= $post->story ?>">
+                        <input required type="text" name="story" value="<?= $post->story ?>">
                         <label>Curiosidades</label>
-                        <input type="text" name="curiosity" value="<?= $post->curiosity ?>">
+                        <input required type="text" name="curiosity" value="<?= $post->curiosity ?>">
                         <label>Dicas do Barbeiro</label>
-                        <input type="text" name="tips" value="<?= $post->tips ?>">
+                        <input required type="text" name="tips" value="<?= $post->tips ?>">
                         <label>Produtos recomendados</label>
-                        <input type="text" name="products" value="<?= $post->products ?>">
+                        <input required type="text" name="products" value="<?= $post->products ?>">
+
+                        <div class="caixaBarraHorizontal">
+                                <div class="barraHorizontal"></div>
+                            </div>
+
                         <div class="save-cancel-btn">
                             <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
                             <button type="submit" class="submit-btn-all">Salvar</button>
@@ -213,7 +228,7 @@
                 </div class="comentario-excluir">
                 <p>Essa ação não poderá ser desfeita</p>
             </div>
-            <div class="save-cancel-btn">
+            <div class="save-cancel-btn-excluir">
                 <button class="cancel-btn" onclick="fecharModal('excluir')">Cancelar</button>
                 <form method="POST" action="/crudPosts/delete">
                     <input type="hidden" name="id" value="<?= $post->id ?>">

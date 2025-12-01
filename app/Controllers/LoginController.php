@@ -27,6 +27,7 @@ class LoginController
         $senha = $_POST['senha'];
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
+        //var_dump($_SESSION);
 
         if($user != false){
             $_SESSION['id'] = $user->id;
@@ -35,7 +36,7 @@ class LoginController
         else{
             /*session_start();*/
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
-            var_dump($user);
+            //var_dump($user);
             header(header: 'Location: /login');
         }
     }

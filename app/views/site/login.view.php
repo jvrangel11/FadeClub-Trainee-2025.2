@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,22 +17,24 @@
             </div>
             <form action="/login" method="POST"> 
                 <div class="form-area">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
+                    
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="************">
+                    <button type="submit">Login</button>
+                
                     <div class="mensagem-erro">
                         <p>
                             <?php
-                            if(isset($_SESSION['mensagem-erro']))
+                            if(isset($_SESSION['mensagem-erro'])){
                                 echo $_SESSION['mensagem-erro'];
                                 unset($_SESSION['mensagem-erro']);
+                            }
                             ?>
                         </p>
                     </div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
-
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="************">
-
-                    <button type="submit">Login</button>
+                    
                 </div>
             </form>    
         </div>
