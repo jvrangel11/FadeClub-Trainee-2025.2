@@ -10,10 +10,28 @@ class PostsController
 
     public function index()
     {
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
+        $page = intval($_GET['paginacaoNumero']);
 
-        $posts = App::get('database')->selectAll('posts');
+        if($page <= 0) {
+            return redirect ('admin/crudPosts');
+        }
+    }
 
-        return view('admin/crudPosts', compact('posts'));
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('posts');
+
+        if($inicio >= $rows_count) {
+            return redirect ('admin/crudPosts');
+        }
+
+        $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
+
+        $total_pages = ceil($rows_count/$itensPage);
+
+        return view('admin/crudPosts', compact('posts', 'page', 'total_pages'));
     }
 
     public function store(){
