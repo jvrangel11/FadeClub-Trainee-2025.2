@@ -24,7 +24,7 @@ session_start();
                     <label for="senha">Senha:</label>
                     <div class="input-container">
                         <input type="password" id="senha" placeholder="Digite sua senha">
-                        <button><i class="fa-regular fa-eye-slash"></i></button>
+                        <button class="botao-ver" type="button" id="toggleSenha"><i class="fa-regular fa-eye-slash"></i></button>
                     </div>
                     <button class="submit-btn" type="submit">Login</button>
                 
@@ -43,5 +43,6 @@ session_start();
             </form>    
         </div>
     </div>
+    <script src="../../../public/js/login.js"></script>
 </body>
 </html>

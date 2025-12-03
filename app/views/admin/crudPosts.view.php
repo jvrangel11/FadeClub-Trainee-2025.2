@@ -85,7 +85,7 @@
                                     <input type="file" name="img_path" id="inputCriarImg" accept="image/*" style="display: none;">
                                     
                                     <!-- Botão visível -->
-                                    <button class="image-btn" id="btnCriarImg">Selecionar imagem</button>
+                                    <button type="button" class="image-btn" id="btnCriarImg">Selecionar imagem</button>
                             </div>
                         </div>
                         <div class="info-text">
