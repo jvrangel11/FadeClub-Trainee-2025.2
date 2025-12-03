@@ -45,22 +45,24 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
-        </div>   
+        </div> 
+
     <div class="pagination">
         <div>
-          <button class="pagination-button-left"> <ion-icon name="caret-forward-outline"></ion-icon> </button>
+          <button class="pagination-button-left"> <ion-icon name="caret-forward-outline"><a class="page-link" href="?paginacaoNumero=<? $page - 1 ?>"></a> </ion-icon></button>
         </div>
 
         <div class="pagination-button">
-          <button class="pagination-button">1</button>
-          <button class="pagination-button">2</button>    
-          <button class="pagination-button">3</button>
-          <button class="pagination-button">4</button>
-          <button class="pagination-button">5</button>
+
+        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+          <button class="pagination-button"><a class="page-link <?= $page_number == $page ? "active" 
+          : "" ?>" href="?paginacaoNumero=<?= $page_number ?>"><?= $page_number ?></a></button>
+
+        <?php endfor; ?>
         </div>
 
         <div>
-          <button class="pagination-button-right"><ion-icon name="caret-forward-outline"></ion-icon></button>
+          <button class="pagination-button-right"><ion-icon name="caret-forward-outline"><a class="page-link" href="?paginacaoNumero=<? $page + 1 ?>"></a></ion-icon></button>
         </div>
 
       </div>
