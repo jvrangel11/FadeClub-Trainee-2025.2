@@ -161,25 +161,73 @@ body {
     color: white;
 }
 
-.pagination {
-    padding-top: 2rem;
-    color: white;
+.paginacao{
+    display: flex;
+    color: #e5e5e5;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.botoesPaginacao{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.botaoPaginacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E5E5E5;
+    height: 2rem;
+    width: 2.3rem;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+.botaoPaginacao:hover{
+    transform: scale(1.1);
+    background-color: #E5E5E5;
+    color: #1b2a41;
 }
 
-
-.pagination a:hover{
-    color: #1B2A41;
-}
-
-.pagination ion-icon {
-    color: white;
-}
-
-.page-link {
-    color: white;
+.botaoEsquerda , .botaoDireita {
     text-decoration: none;
+    color: #E5E5E5;
 }
 
+.botoesPaginacao button a.botaoPaginacao {
+    text-decoration: none;
+    color: #E5E5E5;
+
+}
+
+.botoesPaginacao button a.botaoPaginacao:visited {
+    color: #E5E5E5; 
+}
+
+.botoesPaginacao button {
+    background:none;
+    border: none;
+    color: #1b2a41;
+}
+
+.botaoPaginacao.active {
+    background-color: #E5E5E5;
+    color: #1b2a41; 
+}
+
+.botoesPaginacao button a.botaoPaginacao.active {
+    background-color: #E5E5E5;
+    color: #1b2a41; 
+}
+
+.botoesPaginacao button:hover a.botaoPaginacao {
+    color: #1b2a41;
+}
 
 @media (min-width: 2560px) {
     .tabela-container {
