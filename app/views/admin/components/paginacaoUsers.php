@@ -1,8 +1,8 @@
 <div class="paginacao">
     <div>
-        <button class="botaoEsquerda <?= $page <= 1 ? "disabled" : "" ?>">
-            <a href="?paginacaoNumero=<? $page - 1 ?>">&#9664</a>
-        </button>
+        <a class="botaoEsquerda " href="?paginacaoNumero=<?= $page - 1?>">
+            &#9664
+        </a>
     </div>
     <div class="botoesPaginacao">
         <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
@@ -14,8 +14,8 @@
         <?php endfor ?>
     </div>
     <div>
-        <button  class="botaoDireita <?= $page <= $total_pages ? "disabled" : "" ?>">
-            <a href="?paginacaoNumero=<? $page + 1 ?>">&#9654</a>
-        </button>
+        <a class="botaoDireita" href="?paginacaoNumero=<?= $page + 1?>">
+            &#9654
+        </a>
     </div>
 </div>
