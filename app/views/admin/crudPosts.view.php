@@ -175,16 +175,17 @@
         <div class="container-all">
             <div class="form-box">
                 <div class="form-view">
+                    <form class="form" method="POST" action="crudPosts/edit" enctype="multipart/form-data"> 
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
                                 <img id="previewEditar" src="<?= $post->img_path?>" alt="Prévia imagem">
-
+                                
                                 <!-- Input escondido -->
-                                <input type="file" name="img_path" id="inputEditarImg" accept="image/*" style="display: none;">
-
+                                <input class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*">
+                                
                                 <!-- Botão visível -->
-                                <button class="image-btn" id="btnEditarImg">Alterar imagem</button>
+                        
                             </div>
                         </div>
                         <div class="info-text">
@@ -192,7 +193,7 @@
                             <p2>Apague ou altere as informações sobre este post</p2>
                         </div>
                     </div>
-                    <form class="form-right" method="POST" action="crudPosts/edit"> 
+                    <div class="form-right">
                         <input type="hidden" name="id" value="<?= $post->id ?>">                       
                         <label>Titulo</label>
                         <input required type="text" name="title" value="<?= $post->title ?>">
@@ -212,9 +213,10 @@
                             </div>
 
                         <div class="save-cancel-btn">
-                            <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
+                            <button class="cancel-btn" onclick="fecharModal('editar<?= $post->id ?>')">Cancelar</button>
                             <button type="submit" class="submit-btn-all">Salvar</button>
                         </div>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -233,7 +235,7 @@
                 <p>Essa ação não poderá ser desfeita</p>
             </div>
             <div class="save-cancel-btn-excluir">
-                <button class="cancel-btn" onclick="fecharModal('excluir')">Cancelar</button>
+                <button class="cancel-btn" onclick="fecharModal('excluir<?= $post->id ?>')">Cancelar</button>
                 <form method="POST" action="/crudPosts/delete">
                     <input type="hidden" name="id" value="<?= $post->id ?>">
                     <button class="submit-btn">Excluir</button>
