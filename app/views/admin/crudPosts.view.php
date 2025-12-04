@@ -47,27 +47,27 @@
             </table>
         </div> 
 
-    <div class="pagination">
-        <div>
-          <button class="pagination-button <?= $page <= 1 ? "disabled" : ""  ?>"> <a class="page-link" href="?paginacaoNumero=<? $page - 1 ?>" >
-            <ion-icon name="caret-back-outline"></ion-icon></a></button>
+        <div class="paginacao">
+            <div>
+                <a class="botaoEsquerda " href="?paginacaoNumero=<?= $page - 1?>">
+                    &#9664
+                </a>
+            </div>
+            <div class="botoesPaginacao">
+                <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                    <button>
+                        <a class="botaoPaginacao <?= $page_number == $page ? "active" : "" ?> " href="?paginacaoNumero=<?= $page_number?>">
+                            <?= $page_number ?>
+                        </a>
+                    </button>
+                <?php endfor ?>
+            </div>
+            <div>
+                <a class="botaoDireita" href="?paginacaoNumero=<?= $page + 1?>">
+                    &#9654
+                </a>
+            </div>
         </div>
-
-        <div class="pagination-button">
-
-        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-          <button class="pagination-button"><a class="page-link <?= $page_number == $page ? "active" 
-          : "" ?>" href="?paginacaoNumero=<?= $page_number ?>"><?= $page_number ?></a></button>
-
-        <?php endfor; ?>
-        </div>
-
-        <div>
-          <button class="pagination-button <?= $page >= $total_pages ? "disabled" : ""  ?>"><a class="page-link" href="?paginacaoNumero=<? $page + 1 ?>">
-            <ion-icon name="caret-forward-outline"></ion-icon></a></button>
-        </div>
-
-      </div>
     </div>
 
     <div class="modal-container" id="Criar">
