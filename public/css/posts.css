@@ -162,7 +162,23 @@ body {
 
 .pagination {
     padding-top: 2rem;
+    color: white;
 }
+
+
+.pagination a:hover{
+    color: #1B2A41;
+}
+
+.pagination ion-icon {
+    color: white;
+}
+
+.page-link {
+    color: white;
+    text-decoration: none;
+}
+
 
 @media (min-width: 2560px) {
     .tabela-container {
