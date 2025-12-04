@@ -15,7 +15,7 @@ class PostsController
         $page = intval($_GET['paginacaoNumero']);
 
         if($page <= 0) {
-            return redirect ('admin/crudPosts');
+            return redirect ('crudPosts');
         }
     }
 
@@ -24,7 +24,7 @@ class PostsController
         $rows_count = App::get('database')->countAll('posts');
 
         if($inicio >= $rows_count) {
-            return redirect ('admin/crudPosts');
+            return redirect ('crudPosts');
         }
 
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);

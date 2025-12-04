@@ -49,8 +49,8 @@
 
     <div class="pagination">
         <div>
-          <button class="pagination-button-left <?= $page <= 1 ? "disabled" : ""  ?>"> <a class="page-link" href="?paginacaoNumero=<? $page - 1 ?>" >
-            <ion-icon name="caret-forward-outline"></ion-icon></a></button>
+          <button class="pagination-button <?= $page <= 1 ? "disabled" : ""  ?>"> <a class="page-link" href="?paginacaoNumero=<? $page - 1 ?>" >
+            <ion-icon name="caret-back-outline"></ion-icon></a></button>
         </div>
 
         <div class="pagination-button">
@@ -63,7 +63,7 @@
         </div>
 
         <div>
-          <button class="pagination-button-right <?= $page>= $total_pages ? "disabled" : ""  ?>"><a class="page-link" href="?paginacaoNumero=<? $page + 1 ?>">
+          <button class="pagination-button <?= $page >= $total_pages ? "disabled" : ""  ?>"><a class="page-link" href="?paginacaoNumero=<? $page + 1 ?>">
             <ion-icon name="caret-forward-outline"></ion-icon></a></button>
         </div>
 

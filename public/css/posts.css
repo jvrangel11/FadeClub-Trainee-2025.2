@@ -120,8 +120,8 @@ body {
 }
 
 .img-cell img {
-    width: 10rem;
-    height: 7rem;
+    width: 7rem;
+    height: 5rem;
     border-radius: 1rem;
     border: 0.2rem solid #283d5e;
 }
