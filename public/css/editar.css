@@ -29,7 +29,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: absolute fixed;
     backdrop-filter: blur(6px);
     font-family: "Montserrat", sans-serif;
     font-weight: 600;

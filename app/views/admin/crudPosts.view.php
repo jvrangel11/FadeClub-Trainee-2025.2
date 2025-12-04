@@ -228,7 +228,7 @@
                 <h3>Você tem certeza que deseja excluir essa publicação?</h3>
                 <div class="image-section-excluir">
                     <h4><?= $post->title ?></h4>
-                    <img src="../../../public/assets/arranjo-de-ferramentas-para-barbearia.jpg" alt="Prévia imagem">
+                    <img src="<?= $post->img_path?>" alt="Prévia imagem">
                 </div class="comentario-excluir">
                 <p>Essa ação não poderá ser desfeita</p>
             </div>
