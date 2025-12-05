@@ -31,7 +31,7 @@ class ListaPostsController
 
         $total_pages = ceil($rows_count/$itensPage);
 
-        return view('site\listaPosts', compact('posts', 'page', 'total_pages'));
+        return view('site/listaPosts', compact('posts', 'page', 'total_pages'));
     }
 
     public function store(){
