@@ -82,7 +82,7 @@
                                     <img id="previewCriar" src="../../../public/assets/homem-na-barbearia-barbeando-barba.jpg" alt="Prévia imagem">
                                     
                                     <!-- Input escondido -->
-                                    <input type="file" name="img_path" id="inputCriarImg" accept="image/*" style="display: none;">
+                                    <input required type="file" name="img_path" id="inputCriarImg" accept="image/*" style="display: none;">
                                     
                                     <!-- Botão visível -->
                                     <button type="button" class="image-btn" id="btnCriarImg">Selecionar imagem</button>
@@ -132,43 +132,46 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
+                    <form class="card-img">
                                 <img src="<?= $post->img_path ?>" alt="Prévia imagem">
                                 <button class="image-btn">Visualizar imagem</button>
                             </div>
                             <div id="modalVerImagem" class="modal-ver-imagem">
                                 <span class="fechar-img" id="fecharVerImg">&times;</span>
-                                <img id="imgVisualizar" name="img_path" class="conteudo-img">
-                                <input type="file" name="img_path">
+                                    <img id="imgVisualizar" name="img_path" class="conteudo-img">
+                                    <input type="file" name="img_path">
+                                </div>
+                            </div>
+                            <div class="info-text">
+                                <p1>Ver informações deste post</p1>
+                                <p2>Apenas visualize quais são as informações sobre este post</p2>
                             </div>
                         </div>
-                        <div class="info-text">
-                            <p1>Ver informações deste post</p1>
-                            <p2>Apenas visualize quais são as informações sobre este post</p2>
+                        <div class="form-right">
+                            <div class="formulario">                        
+                                <label>Titulo</label>
+                                <input readonly type="text" value="<?= $post->title ?>">
+                                <label>Origem</label>
+                                <input readonly type="text" value="<?= $post->origin ?>">
+                                <label>História</label>
+                                <textarea readonly type="text"><?= $post->story ?></textarea>
+                                <label>Curiosidades</label>
+                                <textarea readonly type="text"><?= $post->curiosity ?></textarea>
+                                <label>Dicas do Barbeiro</label>
+                                <textarea readonly type="text"><?= $post->tips ?></textarea>
+                                <label>Produtos recomendados</label>
+                                <textarea readonly type="text"><?= $post->products ?></textarea>
+                            </div>
+                            <div class="caixaBarraHorizontal">
+                                    <div class="barraHorizontal"></div>
+                                </div>
+
+                            <div class="save-cancel-btn">
+                                <button class="cancel-btn" onclick="fecharModal('Visualizar')">Cancelar</button>
+                            </div>
                         </div>
                     </div>
-                    <form class="form-right">                        
-                        <label>Titulo</label>
-                        <input readonly type="text" value="<?= $post->title ?>">
-                        <label>Origem</label>
-                        <input readonly type="text" value="<?= $post->origin ?>">
-                        <label>História</label>
-                        <input readonly type="text" value="<?= $post->story ?>">
-                        <label>Curiosidades</label>
-                        <input readonly type="text" value="<?= $post->curiosity ?>">
-                        <label>Dicas do Barbeiro</label>
-                        <input readonly type="text" value="<?= $post->tips ?>">
-                        <label>Produtos recomendados</label>
-                        <input readonly type="text" value="<?= $post->products ?>">
-
-                        <div class="caixaBarraHorizontal">
-                                <div class="barraHorizontal"></div>
-                            </div>
-
-                        <div class="save-cancel-btn">
-                            <button class="cancel-btn" onclick="fecharModal('Visualizar')">Cancelar</button>
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -177,14 +180,14 @@
         <div class="container-all">
             <div class="form-box">
                 <div class="form-view">
-                <form class="form" method="POST" action="crudPosts/edit" enctype="multipart/form-data"> 
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
+                                <form class="card-img" method="POST" action="crudPosts/edit" enctype="multipart/form-data"> 
                                 <img id="previewEditar" src="<?= $post->img_path?>" alt="Prévia imagem">
                                 
                                 <!-- Input escondido -->
-                                <input class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*">
+                                <input required class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*">
                                 
                                 <!-- Botão visível -->
                         
@@ -196,19 +199,21 @@
                         </div>
                     </div>
                     <div class="form-right">
-                        <input type="hidden" name="id" value="<?= $post->id ?>">                       
-                        <label>Titulo</label>
-                        <input required type="text" name="title" value="<?= $post->title ?>">
-                        <label>Origem</label>
-                        <input required type="text" name="origin" value="<?= $post->origin ?>">
-                        <label>História</label>
-                        <input required type="text" name="story" value="<?= $post->story ?>">
-                        <label>Curiosidades</label>
-                        <input required type="text" name="curiosity" value="<?= $post->curiosity ?>">
-                        <label>Dicas do Barbeiro</label>
-                        <input required type="text" name="tips" value="<?= $post->tips ?>">
-                        <label>Produtos recomendados</label>
-                        <input required type="text" name="products" value="<?= $post->products ?>">
+                        <div class="formulario">
+                            <input type="hidden" name="id" value="<?= $post->id ?>">                       
+                            <label>Titulo</label>
+                            <input required type="text" name="title" value="<?= $post->title ?>">
+                            <label>Origem</label>
+                            <input required type="text" name="origin" value="<?= $post->origin ?>">
+                            <label>História</label>
+                            <textarea required type="text" name="story"><?= $post->story ?></textarea>
+                            <label>Curiosidades</label>
+                            <textarea required type="text" name="curiosity"><?= $post->curiosity ?></textarea>
+                            <label>Dicas do Barbeiro</label>
+                            <textarea required type="text" name="tips"><?= $post->tips ?></textarea>
+                            <label>Produtos recomendados</label>
+                            <textarea required type="text" name="products"><?= $post->products ?></textarea>
+                        </div>
 
                         <div class="caixaBarraHorizontal">
                                 <div class="barraHorizontal"></div>
