@@ -107,7 +107,14 @@
                                 <textarea required type="text" name="tips"></textarea>
                                 <label>Produtos recomendados*</label>
                                 <textarea required type="text" name="products"></textarea>
-                                
+                                <label>Tag*</label>
+                                <select name="tags" required>
+                                    <option value="" disabled selected>Selecione uma tag</option>
+                                    <option value="nenhum">Dicas</option>
+                                    <option value="primary_asc">Tendências</option>
+                                    <option value="primary_desc">Inspirações</option>
+                                    <option value="user_id_asc">Técnicas</option>
+                                </select>
                             </div>
                                 <div class="caixaBarraHorizontal">
                                     <div class="barraHorizontal"></div>
@@ -161,6 +168,8 @@
                                 <textarea readonly type="text"><?= $post->tips ?></textarea>
                                 <label>Produtos recomendados</label>
                                 <textarea readonly type="text"><?= $post->products ?></textarea>
+                                <label>Tag</label>
+                                <selects name="tags" disabled>
                             </div>
                             <div class="caixaBarraHorizontal">
                                     <div class="barraHorizontal"></div>
@@ -187,7 +196,7 @@
                                 <img id="previewEditar" src="<?= $post->img_path?>" alt="Prévia imagem">
                                 
                                 <!-- Input escondido -->
-                                <input required class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*">
+                                <input  class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*">
                                 
                                 <!-- Botão visível -->
                         
