@@ -111,24 +111,27 @@
     </div>
         
 
-      <div class="pagination">
-        <div>
-          <button class="pagination-button-left"> <ion-icon name="caret-forward-outline"></ion-icon> </button>
+        <div class="paginacao">
+            <div>
+                <a class="botaoEsquerda " href="?paginacaoNumero=<?= $page - 1?>">
+                    &#9664
+                </a>
+            </div>
+            <div class="botoesPaginacao">
+                <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                    <button>
+                        <a class="botaoPaginacao <?= $page_number == $page ? "active" : "" ?> " href="?paginacaoNumero=<?= $page_number?>">
+                            <?= $page_number ?>
+                        </a>
+                    </button>
+                <?php endfor ?>
+            </div>
+            <div>
+                <a class="botaoDireita" href="?paginacaoNumero=<?= $page + 1?>">
+                    &#9654
+                </a>
+            </div>
         </div>
-
-        <div class="pagination-button">
-          <button class="pagination-button">1</button>
-          <button class="pagination-button">2</button>    
-          <button class="pagination-button">3</button>
-          <button class="pagination-button">4</button>
-          <button class="pagination-button">5</button>
-        </div>
-
-        <div>
-          <button class="pagination-button-right"><ion-icon name="caret-forward-outline"></ion-icon></button>
-        </div>
-
-      </div>
 
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
