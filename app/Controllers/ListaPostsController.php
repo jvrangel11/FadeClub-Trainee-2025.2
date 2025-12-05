@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class PostsController
+class ListaPostsController
 {
 
     public function index()
@@ -15,7 +15,7 @@ class PostsController
         $page = intval($_GET['paginacaoNumero']);
 
         if($page <= 0) {
-            return redirect ('crudPosts');
+            return redirect ('listaPosts');
         }
     }
 
@@ -24,14 +24,14 @@ class PostsController
         $rows_count = App::get('database')->countAll('posts');
 
         if($inicio >= $rows_count) {
-            return redirect ('crudPosts');
+            return redirect ('listaPosts');
         }
 
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
 
         $total_pages = ceil($rows_count/$itensPage);
 
-        return view('admin/crudPosts', compact('posts', 'page', 'total_pages'));
+        return view('site\listaPosts', compact('posts', 'page', 'total_pages'));
     }
 
     public function store(){
@@ -57,35 +57,7 @@ echo implode(', ', $parameters);
 
         App::get('database')->insert ('posts', $parameters);
 
-        header('Location: /crudPosts');
+        header('Location: /listaPosts');
     }
-
-    public function edit(){
-
-                $parameters = [
-            'title'=> $_POST['title'],
-            'origin'=> $_POST['origin'],
-            'story'=> $_POST['story'],
-            'curiosity'=> $_POST['curiosity'],
-            'tips'=> $_POST['tips'],
-            'products'=> $_POST['products'],
-            'user_id'=> 1
-        ];
-
-        $id = $_POST['id'];
-
-        App::get('database')->update ('posts', $id, $parameters);
-
-        header('Location: /crudPosts');
-    }
-
-    public function delete(){
-        $id = $_POST['id'];
-
-        App::get('database')->delete ('posts', $id);
-
-        header('Location: /crudPosts');
-    }
-
 }
 
