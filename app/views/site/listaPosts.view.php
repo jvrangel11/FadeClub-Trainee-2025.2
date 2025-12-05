@@ -59,16 +59,16 @@
     </div>
     
     <div class="posts-list"> 
-
+      <?php foreach($posts as $post): ?>
       <div class="post-item">
         <div class="post-info">
           <div class="post-title">
-            <h2>Exemplo de Postagem 1</h2>
-            <p>Conteúdo da postagem 1.</p>
+            <h2><?= $post->title ?></h2>
+            <p><?= $post->story ?></p>
           </div>
           <div class="post-footer">
             <div class="autor">
-            <span>Autor: Maria Oliveira</span>
+            <span>autor</span>
             </div>
             <div class="tag-btn">
 
@@ -78,14 +78,16 @@
           </div>
         </div>
           <div class="post-image">
-            <img src="./../../../public/assets/arranjo-de-ferramentas-para-barbearia.jpg" alt="Imagem de um homem com cabelo estiloso">
+            <img src="<?= $post->img_path ?>" alt="Imagem do post">
           </div>
       </div>
 
+
+<!--
       <div class="post-item-reverse">
         <div class="post-info">
           <div class="post-title">
-            <h2>Exemplo de Postagem 2</h2>
+            <h2><?= $post->title ?></h2>
             <p>Conteúdo da postagem 2.</p>
           </div>
           <div class="post-footer">
@@ -103,72 +105,9 @@
             <img src="./../../../public/assets/mesa-de-cafe-de-luxo-dentro-bar-barista-gerada-por-ia.jpg" alt="Imagem de um homem com cabelo estiloso">
           </div>
       </div>
+      -->
+            <?php endforeach; ?>
 
-            <div class="post-item">
-        <div class="post-info">
-          <div class="post-title">
-            <h2>Exemplo de Postagem 3</h2>
-            <p>Conteúdo da postagem 3.</p>
-          </div>
-          <div class="post-footer">
-            <div class="autor">
-            <span>Autor: Maria Oliveira</span>
-            </div>
-            <div class="tag-btn">
-
-              <h5>Tendências</h5>
-              <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-            </div>
-          </div>
-        </div>
-          <div class="post-image">
-            <img src="./../../../public/assets/ferramentas-de-salao-de-beleza-de-moldura-vintage-em-uma-mesa-de-madeira-em-empregos-e-conceito-de-carreira.jpg" alt="Imagem de um homem com cabelo estiloso">
-          </div>
-      </div>
-
-            <div class="post-item-reverse">
-        <div class="post-info">
-          <div class="post-title">
-            <h2>Exemplo de Postagem 4Exemplo de Postagem 4Exemplo de Postagem 4Exemplo de Postagem 4</h2>
-            <p>Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.Conteúdo da postagem 4.</p>
-          </div>
-          <div class="post-footer">
-            <div class="autor">
-            <span>Autor: Maria Oliveira Silva Almeida</span>
-            </div>
-            <div class="tag-btn">
-
-              <h5>Tendências</h5>
-              <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-            </div>
-          </div>
-        </div>
-          <div class="post-image-reverse">
-            <img src="./../../../public/assets/homem-bonito-na-barbearia-barbeando-barba.jpg" alt="Imagem de um homem com cabelo estiloso">
-          </div>
-      </div>
-
-            <div class="post-item">
-        <div class="post-info">
-          <div class="post-title">
-            <h2>Exemplo de Postagem 5</h2>
-            <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo</p>
-          </div>
-          <div class="post-footer">
-            <div class="autor">
-            <span>Autor: Maria Oliveira Silva Almeida</span>
-            </div>
-            <div class="tag-btn">
-
-              <h5>Tendências</h5>
-              <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-            </div>
-          </div>
-        </div>
-          <div class="post-image">
-            <img src="./../../../public/assets/jovem-na-barbearia-aparando-cabelo.jpg" alt="Imagem de um homem com cabelo estiloso">
-          </div>
-      </div>
     </div>
         
 
