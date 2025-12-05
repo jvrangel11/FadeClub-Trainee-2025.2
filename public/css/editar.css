@@ -159,19 +159,16 @@ label {
     margin-top: 10px;
 }
 
-input {
-    overflow-y: scroll;
-}
-
-input {
+textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 2px solid #D9D9D9;
-    height: 50px;
+    height: 100px;
+    overflow-y: auto;
+    resize: none;
 }
-
 
 
 .form-left, .form-right {

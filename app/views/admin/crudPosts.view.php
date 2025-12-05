@@ -95,17 +95,17 @@
                     </div>
                         <div class="form-right">
                             <label>Titulo*</label>
-                            <input required type="textarea" name="title">
+                            <textarea required type="textarea" name="title"></textarea>
                             <label>Origem*</label>
-                            <input required type="text" name="origin">
+                            <textarea required type="text" name="origin"></textarea>
                             <label>História*</label>
-                            <input required type="text" name="story">
+                            <textarea required type="text" name="story"></textarea>
                             <label>Curiosidades*</label>
-                            <input required type="text" name="curiosity">
+                            <textarea required type="text" name="curiosity"></textarea>
                             <label>Dicas do Barbeiro*</label>
-                            <input required type="text" name="tips">
+                            <textarea required type="text" name="tips"></textarea>
                             <label>Produtos recomendados*</label>
-                            <input required type="text" name="products">
+                            <textarea required type="text" name="products"></textarea>
 
                             <div class="caixaBarraHorizontal">
                                 <div class="barraHorizontal"></div>

@@ -103,12 +103,9 @@ body {
 }
 
 .tabela tbody td {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+
     font-size: 18px;
-    border-bottom: 20px solid #1B2A41;
+    border-bottom: solid #1B2A41;
     cursor:pointer;
 }
 

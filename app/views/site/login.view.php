@@ -23,7 +23,7 @@ session_start();
                     
                     <label for="senha">Senha:</label>
                     <div class="input-container">
-                        <input type="password" id="senha" placeholder="Digite sua senha">
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
                         <button class="botao-ver" type="button" id="toggleSenha"><i class="fa-regular fa-eye-slash"></i></button>
                     </div>
                     <button class="submit-btn" type="submit">Login</button>
