@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 use App\Controllers\ExampleController;
+use App\Controllers\ListaPostsController;
 use App\Core\Router;
 
-$router->get('', 'ExampleController@index');
+    $router->get('', 'ExampleController@index');
+
+    $router->get('listaPosts', 'ListaPostsController@index');
