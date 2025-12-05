@@ -78,6 +78,8 @@
           </div>
         </div>
           <div class="post-image">
+            <?php var_dump($post->img_path); ?>
+
             <img src="<?= $post->img_path ?>" alt="Imagem do post">
           </div>
       </div>
