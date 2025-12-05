@@ -34,30 +34,5 @@ class ListaPostsController
         return view('site/listaPosts', compact('posts', 'page', 'total_pages'));
     }
 
-    public function store(){
-
-        $temporario = $_FILES['img_path']['tmp_name'];
-        $nomeimagem = sha1(uniqid($_FILES['img_path']['name'],true)) . "." . pathinfo($_FILES['img_path']['name'], PATHINFO_EXTENSION);
-        $destinoimagem ="public/assets/";
-        $caminhodaimagem = $destinoimagem . $nomeimagem;
-        move_uploaded_file($temporario, $caminhodaimagem);
-
-        $parameters = [
-            'title'=> $_POST['title'],
-            'origin'=> $_POST['origin'],
-            'story'=> $_POST['story'],
-            'curiosity'=> $_POST['curiosity'],
-            'tips'=> $_POST['tips'],
-            'products'=> $_POST['products'],
-            'img_path'=> $caminhodaimagem,
-            'user_id'=> 1
-        ];
-
-echo implode(', ', $parameters);
-
-        App::get('database')->insert ('posts', $parameters);
-
-        header('Location: /listaPosts');
-    }
 }
 
