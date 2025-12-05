@@ -159,6 +159,14 @@ label {
     margin-top: 10px;
 }
 
+input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #D9D9D9;
+}
+
 textarea {
     width: 100%;
     padding: 8px;
@@ -592,6 +600,11 @@ textarea {
     height: 100%;
 }
 
+.formulario{
+    overflow: auto;
+    width: 100%;
+}
+
 @media (min-width: 2560px) {
     .container-all{
         width: 60%;
@@ -621,7 +634,6 @@ textarea {
         padding: 2rem 2rem 1rem 2rem;
         color: black;
         text-align: left;
-        overflow-y: scroll;
     }
 }
     

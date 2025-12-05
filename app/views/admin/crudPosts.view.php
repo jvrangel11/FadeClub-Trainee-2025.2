@@ -77,7 +77,7 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <form class="card-img" method="POST" action="crudPosts/create" enctype="multipart/form-data" >
+                    <form class="card-img" method="POST" action="crudPosts/create" enctype="multipart/form-data" >
 
                                     <img id="previewCriar" src="../../../public/assets/homem-na-barbearia-barbeando-barba.jpg" alt="Prévia imagem">
                                     
@@ -92,24 +92,26 @@
                             <p1>Vamos adicionar um novo post!</p1>
                             <p2>Preencha as informações do post nos campos a seguir</p2>
                         </div>
-                    </div>
+                        </div>
                         <div class="form-right">
-                            <label>Titulo*</label>
-                            <textarea required type="textarea" name="title"></textarea>
-                            <label>Origem*</label>
-                            <textarea required type="text" name="origin"></textarea>
-                            <label>História*</label>
-                            <textarea required type="text" name="story"></textarea>
-                            <label>Curiosidades*</label>
-                            <textarea required type="text" name="curiosity"></textarea>
-                            <label>Dicas do Barbeiro*</label>
-                            <textarea required type="text" name="tips"></textarea>
-                            <label>Produtos recomendados*</label>
-                            <textarea required type="text" name="products"></textarea>
-
-                            <div class="caixaBarraHorizontal">
-                                <div class="barraHorizontal"></div>
+                            <div class="formulario">
+                                <label>Titulo*</label>
+                                <input required type="textarea" name="title">
+                                <label>Origem*</label>
+                                <input required type="text" name="origin">
+                                <label>História*</label>
+                                <textarea required type="text" name="story"></textarea>
+                                <label>Curiosidades*</label>
+                                <textarea required type="text" name="curiosity"></textarea>
+                                <label>Dicas do Barbeiro*</label>
+                                <textarea required type="text" name="tips"></textarea>
+                                <label>Produtos recomendados*</label>
+                                <textarea required type="text" name="products"></textarea>
+                                
                             </div>
+                                <div class="caixaBarraHorizontal">
+                                    <div class="barraHorizontal"></div>
+                                </div>
 
                             <div class="save-cancel-btn">
                                 <button class="cancel-btn" onclick="fecharModal('Criar')">Cancelar</button>
@@ -175,7 +177,7 @@
         <div class="container-all">
             <div class="form-box">
                 <div class="form-view">
-                    <form class="form" method="POST" action="crudPosts/edit" enctype="multipart/form-data"> 
+                <form class="form" method="POST" action="crudPosts/edit" enctype="multipart/form-data"> 
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
@@ -217,7 +219,7 @@
                             <button type="submit" class="submit-btn-all">Salvar</button>
                         </div>
                     </div>
-                    </form>
+                </form>
                 </div>
             </div>
         </div>
