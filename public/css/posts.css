@@ -30,6 +30,7 @@ body {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+    table-layout: fixed;
 }
 
 .tabela-container {
@@ -227,6 +228,14 @@ body {
 
 .botoesPaginacao button:hover a.botaoPaginacao {
     color: #1b2a41;
+}
+
+
+.title {
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden;    /* Esconde o texto que excede os limites */
+    text-overflow: ellipsis; /* Exibe as reticências */
+    max-width: 1.5rem;
 }
 
 @media (min-width: 2560px) {

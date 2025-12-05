@@ -34,7 +34,7 @@
 
                     <tr>
                         <td><?= $post->id ?></td>
-                        <td><?= $post->title ?></td>
+                        <td class="title"><?= $post->title ?></td>
                         <td class="img-cell"><img src="<?=  $post->img_path ?>" alt=""></td>
                         <td class="acoes">
                             <button><i class="fa-solid fa-eye" onclick="abrirModal('Visualizar<?= $post->id ?>')"></i></button> 
