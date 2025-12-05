@@ -34,5 +34,7 @@ class ListaPostsController
         return view('site/listaPosts', compact('posts', 'page', 'total_pages'));
     }
 
+    
+
 }
 
