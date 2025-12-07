@@ -78,7 +78,7 @@
           </div>
         </div>
           <div class="post-image" enctype="multipart/form-data">
-            <img src="public\assets\bg-2.png" alt="Imagem do post">
+            <img src="<?= $post->img_path ?>" alt="Imagem do post">
           </div>
       </div>
 

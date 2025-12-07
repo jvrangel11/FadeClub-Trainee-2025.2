@@ -15,6 +15,7 @@ body *{
 }
 
 .title {
+    padding-top: 4.1rem ;
     backdrop-filter:  blur(5px);
 }
 .title p {
@@ -1128,6 +1129,11 @@ input {
 
  /*Responsividade do Mobile L*/
 @media screen and (max-width:426px){
+
+.title{
+    padding-top: 3rem;
+}
+
     .title p{
     font-size: 110%;
     padding-top: 3.5vh;
@@ -1386,26 +1392,6 @@ input {
 
 }
 
-.pagination-button button{
-    border: 0.12rem solid white;
-    border-radius: 0.5rem;
-    width: 1.5rem;
-    height: 1.6rem;
-    font-size: 0.7rem;
-    margin-bottom: 1.5rem;
-}
-
-.pagination-button-left {
-    font-size: 1.6rem;
-    margin-right: -0.8rem;
-    margin-bottom: 1.4rem;
-}
-
-.pagination-button-right {
-    font-size: 1.6rem;
-    margin-left: -0.8rem;
-    margin-bottom: 1.4rem;
-}
 }
 
  /*Responsividade do Mobile M*/
@@ -1465,6 +1451,10 @@ input {
 }
  /*Responsividade do Mobile M*/
 @media screen and (max-width:321px){
+
+    .title{
+        padding-top: 1.5rem;
+    }
 
     .title p{
         font-size: 0.8rem;
