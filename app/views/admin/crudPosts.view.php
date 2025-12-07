@@ -141,7 +141,7 @@
                             <div class="image-section">
                     <form class="card-img">
                                 <img src="<?= $post->img_path ?>" alt="Prévia imagem">
-                                <button class="image-btn">Visualizar imagem</button>
+                                <button type="button" class="image-btn">Visualizar imagem</button>
                             </div>
                             <div id="modalVerImagem" class="modal-ver-imagem">
                                 <span class="fechar-img" id="fecharVerImg">&times;</span>
@@ -198,8 +198,7 @@
                                 <!-- Input escondido -->
                                 <input  class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*">
                                 
-                                <!-- Botão visível -->
-                        
+                                
                             </div>
                         </div>
                         <div class="info-text">
@@ -229,7 +228,7 @@
                             </div>
 
                         <div class="save-cancel-btn">
-                            <button class="cancel-btn" onclick="fecharModal('editar<?= $post->id ?>')">Cancelar</button>
+                            <button type="button" class="cancel-btn" onclick="fecharModal('editar<?= $post->id ?>')">Cancelar</button>
                             <button type="submit" class="submit-btn-all">Salvar</button>
                         </div>
                     </div>

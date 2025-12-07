@@ -61,18 +61,33 @@ echo implode(', ', $parameters);
     }
 
     public function edit(){
+        
+        $id = $_POST['id'];
+        $posts = App::get('database')->selectOne ('posts', $id);
+        $caminhodaimagem = $posts->img_path;
 
-                $parameters = [
+        if(isset($_FILES['img_path']) && $_FILES['img_path']['error'] === UPLOAD_ERR_OK){
+            $temporario = $_FILES['img_path']['tmp_name'];
+            $nomeimagem = sha1(uniqid($_FILES['img_path']['name'],true)) . "." . pathinfo($_FILES['img_path']['name'], PATHINFO_EXTENSION);
+            $destinoimagem ="public/assets/";
+            $caminhodaimagem = $destinoimagem . $nomeimagem;
+            move_uploaded_file($temporario, $caminhodaimagem);
+
+            if($posts && empty($posts->img_path) === false && file_exists($posts->img_path)){
+                unlink($posts->img_path);
+            }
+        }
+
+        $parameters = [
             'title'=> $_POST['title'],
             'origin'=> $_POST['origin'],
             'story'=> $_POST['story'],
             'curiosity'=> $_POST['curiosity'],
             'tips'=> $_POST['tips'],
             'products'=> $_POST['products'],
+            'img_path'=> $caminhodaimagem,
             'user_id'=> 1
         ];
-
-        $id = $_POST['id'];
 
         App::get('database')->update ('posts', $id, $parameters);
 
