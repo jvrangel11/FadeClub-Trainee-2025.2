@@ -38,7 +38,7 @@ body {
     justify-content: center;
 
     height: fit-content;
-    width: 70%;
+    width: 60%;
     padding-bottom: 1rem;
   
 
@@ -75,6 +75,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 2rem;
+    padding-top: 1rem ;
     
     
 
@@ -89,8 +90,8 @@ body {
 
     .nomePerfil{
         font-family: 'Anton', sans-serif;
-        font-size: 1rem;
-        font-weight:lighter;
+        font-size: 3rem;
+        font-weight:normal;
         margin-left: 1rem;
     }
 
@@ -108,7 +109,13 @@ body {
       
         margin: 0;
 
-     h2,h5{
+     h2{
+          font-size:1.2rem;
+
+     }
+     
+     
+     h5{
         font-size:1.2rem;
      }
      

@@ -47,7 +47,7 @@
 
                       <tr>                        
                         <td><?= $user->id ?></td>
-                        <td><?= $user->img_path ?></td>
+                        <td> <img src="<?= $user->img_path ?>" width="60" height="60" style="object-fit: cover;"></td>
                         <td><?= $user->name ?>    </td>
                         <td><?= $user->email ?>   </td>
 
@@ -89,21 +89,19 @@
 
         <!--Modais ----------------------------------------------------------------------------------------------------------------------->
  
+
         <div class="modais modalCriar" id="criar">
    
             <div class="modalc">
                 
 
                         
-                    <div class="containerRight">
-                          <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
-                        <div class="imgPerfilB"><img src="../../../public/assets/Imagens/usuario.png" alt=""></div>
-                        <button class="botaoAddFoto">
-                            <p class="textoBotao">Adicionar foto</p>
-
-                    
-                    </button>
-                    </form>
+              <div class="containerRight">
+                <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
+                        <div class="imgPerfilB"><img src="/<?= $user->img_path ?>" width="60" height="60" style="object-fit: cover;"></div>
+                        <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto">
+                        
+               
                         <div class="tituloA">
                             <h1 class="tituloAdd">Vamos adicionar um</h1>
                             <h1 class="tituloAdd">novo usuário!</h1>
@@ -114,7 +112,7 @@
                         </div>
 
                     </div>
-                  <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
+                 
                     <div class="containerLeft">
                         <div class="inputs">
                             <div class="nomeB">
@@ -136,7 +134,7 @@
                                     <p>Senha</p>
                                     <p class="asterisco">*</p>
                                 </div>
-                                <input type="password" class="form-control" id="password" name="passwordint" required>
+                                <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         </div>
                         <div class="caixaBarraHorizontal">
@@ -161,8 +159,11 @@
             <div class="modais modalEditar" id="editar<?= $user->id ?>">
                 <div class="modaled">
                     <div class="containerRight">
+                        <form method="POST" action="/tabelaUsuarios/edit" enctype="multipart/form-data" >
                         <div class="imgPerfilB"><img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt=""></div>
-                        <div class="botaoAddFoto"><p class="textoBotao">Adicionar foto</p></div>
+                        <input type="file" name="img_path" accept="image/*" id="uploadFoto">
+                         <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto">
+                        </form>
                         <div class="tituloA">
                             <h1 class="tituloAdd">Edição de usuário</h1>
                         </div>
@@ -197,7 +198,7 @@
                                 <div class="inputTitulo">
                                     <p>Senha</p>
                                 </div>
-                                <input type="password" id="password" name="passwordint" value="<?= $user->passwordint ?>" required>
+                                <input type="password" id="password" name="password" value="<?= $user->password ?>" required>
                                 <img class="iconeEdit" src="../../../public/assets/editar.svg" alt="">
                             </div>
                         </div>
@@ -249,7 +250,7 @@
                             </div>
                             <div class="senhaVizu">
                                 <p class="caixaTitulo">Senha</p>
-                                <div class="caixaSenha"><p><?= $user->passwordint ?></p></div> 
+                                <div class="caixaSenha"><p><?= $user->password ?></p></div> 
                             </div>
                         </div>
                         <div class="botoesVizu">

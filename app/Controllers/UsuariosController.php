@@ -35,16 +35,53 @@ class UsuariosController
         return view('admin/tabelaUsuarios', compact('users' , 'page' , 'total_pages'));
     }
 
+
+
+    private function uploadFile($file){
+        if(!isset($file) || $file['error'] !== UPLOAD_ERR_OK){
+            return null;
+        }
+
+        if(!file_exists(self::UPLOAD_DIR)){
+            mkdir(self::UPLOAD_DIR, 0777, true);
+        }
+
+        $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+
+        $fileName = time() . "_" . uniqid() . "." . $ext;
+
+        $uploadPath = self::UPLOAD_DIR . $fileName;
+
+        $dbPath = 'public/upload/' . $fileName;
+
+        if(move_uploaded_file($file['tmp_name'], $uploadPath)){
+            return $dbPath;
+        }
+
+        throw new Exception("Erro ao fazer upload do arquivo.");
+
+
+
+
+
+    }
+
+
+
+
     public function store()
     {
+        $imgPath = $this->uploadFile($_FILES['img_path'] ?? null);
 
 
         $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
-            'passwordint' => $_POST['passwordint'],    
+            'password' => $_POST['password'],  
+            'img_path' => $imgPath  
              
         ];
+
              App::get('database')->insert('users', $parameters);    
 
              header('Location: /tabelaUsuarios');
@@ -56,15 +93,23 @@ class UsuariosController
 
 
     public function edit(){
+    
+   $id = $_POST['id'];
+
+   $user = App::get('database')->selectById('users', $id);
+
+   $newImgPath = $this->uploadFile($_FILES['img_path'] ?? null);
+
 
       $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
-            'passwordint' => $_POST['passwordint'],    
+            'password' => $_POST['password'],  
+            'img_path' => $newImgPath
              
         ];
 
-        $id = $_POST['id'];
+     
 
          App::get('database')->update('users', $id, $parameters);
 
