@@ -66,6 +66,14 @@ input:focus{
     outline: none;
 }
 
+form {
+display: flex;
+position: relative;
+justify-content: end;    
+align-items: center;
+
+}
+
 #search-button{
     transition: transform 0.5s ease;
 }

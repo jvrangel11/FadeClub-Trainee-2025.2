@@ -8,3 +8,7 @@ use App\Core\Router;
     $router->get('', 'ExampleController@index');
 
     $router->get('listaPosts', 'ListaPostsController@index');
+    
+    $router->get('listaPosts/search', 'ListaPostsController@index');
+
+

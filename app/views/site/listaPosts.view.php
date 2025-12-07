@@ -28,23 +28,28 @@
     
       <div id="searching-camp">
         <div class="search">
-          <label for="busca"></label>
-          <input type="text" id="busca" name="busca" placeholder="O que você procura?">
-          
-          
-          <div class="filter-close-buttons">
-            
-            <button id="search-button">
+          <form class="search" method="GET" action="listaPosts/search">
+
+            <label for="busca"></label>
+            <input type="text" id="busca" type="search" placeholder="O que você procura?" name="search">
+
+            <div class="filter-close-buttons">
+            <button id="search-button" type="submit">
               <ion-icon name="search-outline"></ion-icon>
             </button>  
-            <button id="filter-button">  
-              <ion-icon name="filter-outline"></ion-icon>
-            </button>
             
-            <button id="close-button">
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-          </div>
+            
+              
+              
+              <button id="filter-button">  
+                <ion-icon name="filter-outline"></ion-icon>
+              </button>
+              
+              <button id="close-button">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+          </form>
           </div>
           
           
