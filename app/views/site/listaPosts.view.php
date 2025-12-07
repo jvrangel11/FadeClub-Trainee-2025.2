@@ -72,13 +72,13 @@
             </div>
             <div class="tag-btn">
 
-              <h5>Tendências</h5>
+              <h5><?= $post->tag ?></h5>
               <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
             </div>
           </div>
         </div>
-          <div class="post-image">
-            <img src="<?= $post->img_path ?>" alt="Imagem do post">
+          <div class="post-image" enctype="multipart/form-data">
+            <img src="public\assets\bg-2.png" alt="Imagem do post">
           </div>
       </div>
 
