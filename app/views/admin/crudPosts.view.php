@@ -108,12 +108,12 @@
                                 <label>Produtos recomendados*</label>
                                 <textarea required type="text" name="products"></textarea>
                                 <label>Tag*</label>
-                                <select name="tags" required>
+                                <select name="tag" required>
                                     <option value="" disabled selected>Selecione uma tag</option>
-                                    <option value="nenhum">Dicas</option>
-                                    <option value="primary_asc">Tendências</option>
-                                    <option value="primary_desc">Inspirações</option>
-                                    <option value="user_id_asc">Técnicas</option>
+                                    <option value="tips">Dicas</option>
+                                    <option value="tendences">Tendências</option>
+                                    <option value="inspirations">Inspirações</option>
+                                    <option value="techniques">Técnicas</option>
                                 </select>
                             </div>
                                 <div class="caixaBarraHorizontal">
@@ -169,7 +169,7 @@
                                 <label>Produtos recomendados</label>
                                 <textarea readonly type="text"><?= $post->products ?></textarea>
                                 <label>Tag</label>
-                                <selects name="tags" disabled>
+                                <input name="tags" value="<?= $post->tag ?>" disabled>
                             </div>
                             <div class="caixaBarraHorizontal">
                                     <div class="barraHorizontal"></div>
