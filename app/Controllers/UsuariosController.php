@@ -93,12 +93,31 @@ class UsuariosController
 
 
     public function edit(){
-    
+
    $id = $_POST['id'];
 
-   $user = App::get('database')->selectById('users', $id);
+   $user = App::get('database')->selectOne('users', $id);
 
-   $newImgPath = $this->uploadFile($_FILES['img_path'] ?? null);
+   $newImgPath = $user->img_path;
+   
+
+ if (isset($_FILES['img_path']) && $_FILES['img_path']['error'] === UPLOAD_ERR_OK) {
+
+      
+        $uploadResult = $this->uploadFile($_FILES['img_path']);
+
+       
+        if ($uploadResult) {
+            
+          
+            if (!empty($user->img_path) && file_exists($user->img_path)) {
+                unlink($user->img_path);
+            }
+
+         
+            $newImgPath = $uploadResult;
+        }
+    }
 
 
       $parameters = [
@@ -119,6 +138,15 @@ class UsuariosController
 
     public function delete(){
         $id = $_POST['id'];
+
+        $user = App::get('database')->selectOne('users', $id);
+
+        if($user && !empty($user->img_path) && file_exists($user->img_path)){
+            unlink($user->img_path);
+        }
+
+
+
 
                  App::get('database')->delete('users', $id);   
                            header('Location: /tabelaUsuarios');

@@ -48,6 +48,23 @@ class QueryBuilder
         }
     }
 
+    public function selectOne($table, $id)
+    {
+    $sql = sprintf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table );
+
+    try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        
+
+    }
+
+
 
   //  INSERT INTO `users` (`id`, `name`, `email`, `img_path`, `passwordint`, `role`) VALUES ('002', 'joao', 'email2@email2', 'none', 'pass', '');
     public function insert($table, $parameters){

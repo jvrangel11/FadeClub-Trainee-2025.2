@@ -155,15 +155,21 @@
 
          <?php foreach($users as $user): ?>
 
+            
+
 
             <div class="modais modalEditar" id="editar<?= $user->id ?>">
+
+            
                 <div class="modaled">
+                    
                     <div class="containerRight">
-                        <form method="POST" action="/tabelaUsuarios/edit" enctype="multipart/form-data" >
-                        <div class="imgPerfilB"><img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt=""></div>
-                        <input type="file" name="img_path" accept="image/*" id="uploadFoto">
-                         <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto">
-                        </form>
+                          <form method="POST" action="/tabelaUsuarios/edit" enctype="multipart/form-data" >
+                      
+                        <div class="imgPerfilB"><img src="<?= $user->img_path ?>" alt=""></div>
+                    
+                         <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_<?= $user->id ?>" onchange="previewImagem(event, '<?= $user->id ?>')">
+                    
                         <div class="tituloA">
                             <h1 class="tituloAdd">Edição de usuário</h1>
                         </div>
@@ -174,7 +180,7 @@
                     </div>
 
 
-                    <form method="POST" action="/tabelaUsuarios/edit">
+                 
                    
                      <div class="containerLeft">
                         
@@ -214,12 +220,14 @@
                                 </div>
                      
                        </div>
-                    </form> 
+            
                    
 
                  
                 </div>
             </div>
+
+            </form>
 
             <?php endforeach ?>
 
@@ -231,7 +239,7 @@
                 <div class="modalvi">
                     <div class="coverVizu">
                         <div class="sombravizu">
-                            <img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt="">
+                            <img src="<?= $user->img_path ?>" alt="">
                         </div>
                     </div>
                     <div class="conteudoVizu">
