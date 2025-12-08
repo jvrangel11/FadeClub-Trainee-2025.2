@@ -28,7 +28,7 @@
     
       <div id="searching-camp">
         <div class="search">
-          <form class="search" method="GET" action="listaPosts/search">
+          <form class="search" method="GET" action="/listaPosts/search">
 
             <label for="busca"></label>
             <input type="text" id="busca" type="search" placeholder="O que você procura?" name="search">
@@ -41,7 +41,7 @@
             
               
               
-              <button id="filter-button">  
+              <button id="filter-button" type="button">  
                 <ion-icon name="filter-outline"></ion-icon>
               </button>
               
@@ -117,8 +117,9 @@
         
 
         <div class="paginacao">
+          <?php $temp_search = isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : ''; ?>
             <div>
-                <a class="botaoEsquerda " href="?paginacaoNumero=<?= $page - 1?>">
+                <a class="botaoEsquerda " href="?paginacaoNumero=<?= $page - 1?><?= $temp_search ?>">
                     &#9664
                 </a>
             </div>
@@ -132,7 +133,7 @@
                 <?php endfor ?>
             </div>
             <div>
-                <a class="botaoDireita" href="?paginacaoNumero=<?= $page + 1?>">
+                <a class="botaoDireita" href="?paginacaoNumero=<?= $page + 1?><?= $temp_search ?>">
                     &#9654
                 </a>
             </div>
