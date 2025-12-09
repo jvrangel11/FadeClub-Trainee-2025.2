@@ -77,7 +77,7 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                    <form class="card-img" method="POST" action="crudPosts/create" enctype="multipart/form-data" >
+                    <form class="card-img" method="POST" action="crud-posts/create" enctype="multipart/form-data" >
 
                                     <img id="previewCriar" src="../../../public/assets/homem-na-barbearia-barbeando-barba.jpg" alt="Prévia imagem">
                                     
@@ -192,7 +192,7 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <form class="card-img" method="POST" action="crudPosts/edit" enctype="multipart/form-data"> 
+                                <form class="card-img" method="POST" action="crud-posts/edit" enctype="multipart/form-data"> 
                                 <img id="previewEditar" src="<?= $post->img_path?>" alt="Prévia imagem">
                                 
                                 <!-- Input escondido -->
@@ -250,7 +250,7 @@
             </div>
             <div class="save-cancel-btn-excluir">
                 <button class="cancel-btn" onclick="fecharModal('excluir<?= $post->id ?>')">Cancelar</button>
-                <form method="POST" action="/crudPosts/delete">
+                <form method="POST" action="/crud-posts/delete">
                     <input type="hidden" name="id" value="<?= $post->id ?>">
                     <button class="submit-btn">Excluir</button>
                 </form>
