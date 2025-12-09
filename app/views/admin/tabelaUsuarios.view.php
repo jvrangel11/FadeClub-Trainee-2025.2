@@ -47,7 +47,7 @@
                     <?php foreach($users as $user): ?>
                     <tr>
                         <td><?= $user->id ?></td>
-                        <td><img src="<?= $user->img_path ?>" width="60" height="60" style="object-fit: cover;"></td>
+                        <td><img src="<?= $user->img_path ?>"  width="60" height="60"></td>
                         <td><?= $user->name ?></td>
                         <td><?= $user->email ?></td>
                         <td class="caixaAcoes">
@@ -143,10 +143,11 @@
                 <div class="modaled">
                     <div class="containerRight">
                         <form method="POST" action="/tabelaUsuarios/edit" enctype="multipart/form-data" >
-                        <label for="uploadFoto_<?= $user->id ?>" class="imgPerfilB" style="cursor: pointer;">
+                        <label for="uploadFoto<?= $user->id ?>" class="imgPerfilB" style="cursor: pointer;">
                             <img id="preview-<?= $user->id ?>" src="<?= $user->img_path ?>" alt="Foto de Perfil">
                             <div class="botaoAddFoto"><span>Trocar</span></div>
                         </label>
+                        
                         <input class="botaoAddFoto"  type="file"  name="imgpath" accept="image/*"  id="uploadFoto<?= $user->id ?>"  style="display: none;"  onchange="previewImagem(event, '<?= $user->id ?>')">
                         <div class="tituloA">
                             <h1 class="tituloAdd">Edição de usuário</h1>

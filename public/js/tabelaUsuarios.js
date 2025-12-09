@@ -27,13 +27,8 @@ function fecharModal(idModal)
     modal.style.display = "none";
 }
 
-function previewImagem(event, userId) {
-    const input = event.target;
-    const reader = new FileReader();
 
-    reader.onload = function(){
-        const imgElement = document.querySelector('#editar${userId} .imgPerfilB img');
-        imgElement.src = reader.result;
-    };
-    reader.readAsDataURL(input.files[0]);
+function previewImagem(event, id) {
+    const img = document.getElementById('preview-' + id);
+    img.src = URL.createObjectURL(event.target.files[0]);
 }
