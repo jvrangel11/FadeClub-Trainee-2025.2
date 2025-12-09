@@ -8,15 +8,15 @@ use App\Core\Router;
 
     $router->get('', 'ExampleController@index');
 
-    $router->get('crudPosts', 'PostsController@index');
+    $router->get('crud-posts', 'PostsController@index');
 
-    $router->post('crudPosts/create', 'PostsController@store');
+    $router->post('crud-posts/create', 'PostsController@store');
 
-    $router->get('crudPosts/view', 'PostsController@store');
+    $router->get('crud-posts/view', 'PostsController@store');
 
-$router->post('crudPosts/edit', 'PostsController@edit');
+    $router->post('crud-posts/edit', 'PostsController@edit');
 
-$router->post('crudPosts/delete', 'PostsController@delete');
+    $router->post('crud-posts/delete', 'PostsController@delete');
 
 
     $router->get('login', 'LoginController@exibirLogin');

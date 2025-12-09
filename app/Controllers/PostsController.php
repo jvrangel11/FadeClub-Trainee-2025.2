@@ -15,7 +15,7 @@ class PostsController
         $page = intval($_GET['paginacaoNumero']);
 
         if($page <= 0) {
-            return redirect ('crudPosts');
+            return redirect ('crud-posts');
         }
     }
 
@@ -24,14 +24,14 @@ class PostsController
         $rows_count = App::get('database')->countAll('posts');
 
         if($inicio >= $rows_count) {
-            return redirect ('crudPosts');
+            return redirect ('crud-posts');
         }
 
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
 
         $total_pages = ceil($rows_count/$itensPage);
 
-        return view('admin/crudPosts', compact('posts', 'page', 'total_pages'));
+        return view('admin/crud-posts', compact('posts', 'page', 'total_pages'));
     }
 
     public function store(){
@@ -57,7 +57,7 @@ echo implode(', ', $parameters);
 
         App::get('database')->insert ('posts', $parameters);
 
-        header('Location: /crudPosts');
+        header('Location: /crud-posts');
     }
 
     public function edit(){
@@ -91,7 +91,7 @@ echo implode(', ', $parameters);
 
         App::get('database')->update ('posts', $id, $parameters);
 
-        header('Location: /crudPosts');
+        header('Location: /crud-posts');
     }
 
     public function delete(){
@@ -99,7 +99,7 @@ echo implode(', ', $parameters);
 
         App::get('database')->delete ('posts', $id);
 
-        header('Location: /crudPosts');
+        header('Location: /crud-posts');
     }
 
 }

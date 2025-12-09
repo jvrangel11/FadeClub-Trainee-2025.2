@@ -196,8 +196,7 @@
                                 <img id="previewEditar" src="<?= $post->img_path?>" alt="Prévia imagem">
                                 
                                 <!-- Input escondido -->
-                                <input  class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*">
-                                
+                                <input  class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*" >
                                 
                             </div>
                         </div>
