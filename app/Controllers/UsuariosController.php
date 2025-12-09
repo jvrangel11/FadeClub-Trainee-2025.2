@@ -110,8 +110,8 @@ class UsuariosController
         if ($uploadResult) {
             
           
-            if (!empty($user->img_path) && file_exists($user->img_path)) {
-                unlink($user->img_path);
+            if (!empty($user['img_path']) && file_exists($user['img_path'])) {
+                unlink($user['img_path']);
             }
 
          
