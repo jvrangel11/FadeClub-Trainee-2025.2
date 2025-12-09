@@ -208,58 +208,64 @@
             </form>
             <?php endforeach ?>
 
-
-            <div class="modaisP modalVizualizar" id="visualizar">
+            <?php foreach($users as $user): ?>
+            <div class="modaisP modalVizualizar" id="visualizar<?= $user->id ?>">
                 <div class="modalvi">
                     <div class="coverVizu">
                         <div class="sombravizu">
-                            <img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt="">
+                            <img src="<?= $user->img_path ?>" alt="">
                         </div>
                     </div>
                     <div class="conteudoVizu">
                         <div class="dadosVizu">
                             <div class="idUsuario">
                                 <p class="caixaTitulo">ID</p>
-                                <div class="caixaUsuario"><p>5656</p></div> 
+                                <div class="caixaUsuario"> <p><?= $user->id ?> </p></div>
                             </div>
                             <div class="nomeVizu">
                                 <p class="caixaTitulo">Nome</p>
-                                <div class="caixaNome"><p>Rangelo</p></div>
+                                <div class="caixaNome"><p><?= $user->name ?></p></div>
                             </div>
                             <div class="emailVizu">
                                 <p class="caixaTitulo">Email</p>
-                                <div class="caixaEmail"><p>rangelouco.56@gmail.com</p></div>
+                                <div class="caixaEmail"><p><?= $user->email ?></p></div>
                             </div>
                             <div class="senhaVizu">
                                 <p class="caixaTitulo">Senha</p>
-                                <div class="caixaSenha"><p>••••••••••••</p></div> 
+                                <div class="caixaSenha"><p><?= $user->password ?></p></div>
                             </div>
                         </div>
                         <div class="botoesVizu">
-                            <div class="save" onclick="fecharModal('visualizar')">Ok</div>
+                            <div class="save" onclick="fecharModal('visualizar<?= $user->id ?>')">Ok</div>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php endforeach ?>
 
-            <div class="modaisP modalExcluir" id="excluir">
+            <?php foreach($users as $user): ?>
+            <div class="modaisP modalExcluir" id="excluir<?= $user->id ?>">
                 <div class="modalex">
                     <div class="containerExcluir">
                         <div class="sombraExcluir">
-                            <img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt="">
+                            <img src="<?= $user->img_path ?>" alt="">
                         </div>
                         <div class="conteudoExcluir">
                             <div class="textoExcluir parte01">Tem certeza que deseja</div>
-                            <div class="textoExcluir parte02">excluir o usuário<p>Rangelo</p>?</div>
+                            <div class="textoExcluir parte02">excluir o usuário<p><?= $user->name ?></p>?</div>
                             <div class="textoExcluir parte03">Essa ação não poderá ser desfeita.</div>
                         </div>
                         <div class="botoesExcluir">
-                            <div class="cancel" onclick="fecharModal('excluir')">Cancelar</div>
-                            <div class="excluirM" onclick="fecharModal('excluir')">Excluir</div>
+                            <div class="cancel" onclick="fecharModal('excluir<?= $user->id ?>')">Cancelar</div>
+                            <form method="POST" action="/tabelaUsuarios/delete">
+                            <input type="hidden" name="id" value=" <?= $user->id ?>" >
+                            <button type="submit" class="excluirM" onclick="fecharModal('excluir<?= $user->id ?>')">Excluir</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php endforeach ?>
 
     </div>
 
