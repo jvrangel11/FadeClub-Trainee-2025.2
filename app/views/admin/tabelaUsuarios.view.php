@@ -95,11 +95,17 @@
 
         <!--Modais ----------------------------------------------------------------------------------------------------------------------->
         
+        
             <div class="modais modalCriar" id="criar">
                 <div class="modalc">
                     <div class="containerRight">
-                        <div class="imgPerfilB"><img src="../../../public/assets/Imagens/usuario.png" alt=""></div>
-                        <div class="botaoAddFoto"><p class="textoBotao">Adicionar foto</p></div>
+                    <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
+                    <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
+                        <img id="preview-new" src="../../../public/assets/Imagens/usuario.png" width="60" height="60" style="object-fit: cover;">
+
+                        <div class="botaoAddFoto"><span>Add Foto</span></div>
+                    </label>
+                    <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_new" style="display: none;" onchange="previewImagem(event, 'new')">
                         <div class="tituloA">
                             <h1 class="tituloAdd">Vamos adicionar um</h1>
                             <h1 class="tituloAdd">novo usuário!</h1>
@@ -108,7 +114,6 @@
                             <p class="guiaAdd">Preencha as informações do usuário</p>
                             <p class="guiaAdd">nos campos a seguir</p>
                         </div>
-
                     </div>
                     <div class="containerLeft">
                         <div class="inputs">
@@ -117,33 +122,36 @@
                                     <p>Nome</p>
                                     <p class="asterisco">*</p>
                                 </div>
-                                <input type="text" name="nome" required>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="emailB">
                                 <div class="inputTitulo">
                                     <p>Email</p>
                                     <p class="asterisco">*</p>
                                 </div>
-                                <input type="text" name="nome" required>
+                                <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                             <div class="senhaB">
                                 <div class="inputTitulo">
                                     <p>Senha</p>
                                     <p class="asterisco">*</p>
                                 </div>
-                                <input type="password" name="nome" required>
+                                <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         </div>
                         <div class="caixaBarraHorizontal">
                             <div class="barraHorizontal"></div>
                         </div>
                         <div class="caixaBotoes">
-                            <div class="cancel" onclick="fecharModal('criar')">Cancelar</div>
-                            <div class="save"  onclick="fecharModal('criar')"">Salvar</div>
+                            <button type="button" class="cancel" onclick="fecharModal('criar')">Cancelar</button>
+                            <button type="submit" class="save" >Salvar</button>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
+
+
 
             <div class="modais modalEditar" id="editar">
                 <div class="modaled">
