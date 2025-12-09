@@ -44,146 +44,36 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($users as $user): ?>
                     <tr>
-                        <td>0000</td>
-                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
+                        <td><?= $user->id ?></td>
+                        <td><img src="<?= $user->img_path ?>" width="60" height="60" style="object-fit: cover;"></td>
+                        <td><?= $user->name ?></td>
+                        <td><?= $user->email ?></td>
                         <td class="caixaAcoes">
-                                <div class="bot ver" onclick="abrirModal('visualizar')">
+                                <button type="button" class="bot ver"  onclick="abrirModal('visualizar<?= $user->id ?>')">
                                     <!--icone-->
                                     <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
                                     </svg>
-                                </div>
+                                </button>
                                 <!--botao editar-->
-                                <div class="bot editar" onclick="abrirModal('editar')">
+                                <button class="bot editar"  onclick="abrirModal('editar<?= $user->id ?>')">
                                     <!--icone-->
                                     <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
                                     </svg>
-                                </div>
+                                </button>
                                 <!--botao excluir-->
-                                <div class="bot excluir" onclick="abrirModal('excluir')">
+                                <button class="bot excluir"  onclick="abrirModal('excluir<?= $user->id ?>')">
                                     <!--icone-->
                                     <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
                                     </svg>
-                                </div>
+                                </button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>0000</td>
-                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="caixaAcoes">
-                                <div class="bot ver" onclick="abrirModal('visualizar')">
-                                    <!--icone-->
-                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao editar-->
-                                <div class="bot editar" onclick="abrirModal('editar')">
-                                    <!--icone-->
-                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao excluir-->
-                                <div class="bot excluir" onclick="abrirModal('excluir')">
-                                    <!--icone-->
-                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
-                                    </svg>
-                                </div>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>0000</td>
-                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="caixaAcoes">
-                                <div class="bot ver" onclick="abrirModal('visualizar')">
-                                    <!--icone-->
-                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao editar-->
-                                <div class="bot editar" onclick="abrirModal('editar')">
-                                    <!--icone-->
-                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao excluir-->
-                                <div class="bot excluir" onclick="abrirModal('excluir')">
-                                    <!--icone-->
-                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
-                                    </svg>
-                                </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>0000</td>
-                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="caixaAcoes">
-                                <div class="bot ver" onclick="abrirModal('visualizar')">
-                                    <!--icone-->
-                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao editar-->
-                                <div class="bot editar" onclick="abrirModal('editar')">
-                                    <!--icone-->
-                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao excluir-->
-                                <div class="bot excluir" onclick="abrirModal('excluir')">
-                                    <!--icone-->
-                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
-                                    </svg>
-                                </div>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>0000</td>
-                        <td><img src="../../../public/assets/FotosTabelas/usuario.png" alt="" class="imagemTabela"></td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td class="caixaAcoes">
-                                <div class="bot ver" onclick="abrirModal('visualizar')">
-                                    <!--icone-->
-                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao editar-->
-                                <div class="bot editar" onclick="abrirModal('editar')">
-                                    <!--icone-->
-                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
-                                    </svg>
-                                </div>
-                                <!--botao excluir-->
-                                <div class="bot excluir" onclick="abrirModal('excluir')">
-                                    <!--icone-->
-                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
-                                    </svg>
-                                </div>
-                        </td>
-                    </tr>
+                    <?php endforeach ?>
                 </tbody>
             </table>
         </div>
