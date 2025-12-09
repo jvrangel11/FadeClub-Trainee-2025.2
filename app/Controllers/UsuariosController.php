@@ -16,7 +16,7 @@ class UsuariosController
             $page = intval($_GET['paginacaoNumero']);
 
             if($page <=0){
-                return redirect('admin/index');
+                return redirect('tabelaUsuarios');
             }
         }
 
@@ -24,13 +24,13 @@ class UsuariosController
         $inicio = $itensPage * $page - $itensPage;
         $rows_count = App::get('database')->countAll('users');
 
-        if($inicio > $rows_count){
-            return redirect('admin/index');
-        }
+        $total_pages = ceil($rows_count / $itensPage);
 
+        if($inicio >= $rows_count){
+            return redirect('tabelaUsuarios?paginacaoNumero='.$total_pages );
+        }
         $users = App::get('database')->selectAll('users' , $inicio , $itensPage);
 
-        $total_pages = ceil($rows_count / $itensPage);
 
         return view('admin/tabelaUsuarios', compact('users' , 'page' , 'total_pages'));
     }
