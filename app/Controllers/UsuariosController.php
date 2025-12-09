@@ -98,11 +98,11 @@ class UsuariosController
 
    $user = App::get('database')->selectOne('users', $id);
 
-   $newImgPath = $user->img_path;
+   $newImgPath = $_POST['old_img_path'] ?? $user->img_path;
    
 
- if (isset($_FILES['img_path']) && $_FILES['img_path']['error'] === UPLOAD_ERR_OK) {
-
+   if(!empty($_FILES['img_path']['name']) && $_FILES['img_path']['error'] === UPLOAD_ERR_OK) {
+    
       
         $uploadResult = $this->uploadFile($_FILES['img_path']);
 

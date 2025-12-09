@@ -88,7 +88,7 @@
                     <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
                     
                         <img class="imgPerfilB"   id="preview-new" src="../../../public/assets/Imagens/usuario.png" value=" <?= $user->img_path ?>" width="60" height="60" alt="Foto de Perfil">
-                        
+
                     <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
                         <div class="botaoAddFoto"><span>Add Foto</span></div>
                     </label>
@@ -151,6 +151,7 @@
                     
                     <div class="botaoAddFoto"><span>Trocar</span></div>
                 </label>
+                        <input type="hidden" type="file" name="old_img_path" value="<?= $user->img_path ?>">
                          <input class="botaoAddFoto"  type="file"  name="img_path" accept="image/*"  id="uploadFoto_<?= $user->id ?>"  style="display: none;"  onchange="previewImagem(event, '<?= $user->id ?>')">
 
                         <div class="tituloA">
