@@ -99,7 +99,8 @@
               <div class="containerRight">
                 <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
                         <div class="imgPerfilB"><img src="/<?= $user->img_path ?>" width="60" height="60" style="object-fit: cover;"></div>
-                        <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto">
+                        <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto<?= $user->id ?>" onchange="previewImagem(event, '<?= $user->id ?>')">
+                    
                         
                
                         <div class="tituloA">
@@ -168,7 +169,7 @@
                       
                         <div class="imgPerfilB"><img src="<?= $user->img_path ?>" alt=""></div>
                     
-                         <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_<?= $user->id ?>" onchange="previewImagem(event, '<?= $user->id ?>')">
+                         <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto<?= $user->id ?>" onchange="previewImagem(event, '<?= $user->id ?>')">
                     
                         <div class="tituloA">
                             <h1 class="tituloAdd">Edição de usuário</h1>
