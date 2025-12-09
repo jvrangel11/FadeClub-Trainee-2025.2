@@ -98,10 +98,13 @@
                         
               <div class="containerRight">
                 <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
-                        <div class="imgPerfilB"><img src="/<?= $user->img_path ?>" width="60" height="60" style="object-fit: cover;"></div>
-                        <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto<?= $user->id ?>" onchange="previewImagem(event, '<?= $user->id ?>')">
+                      <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
                     
-                        
+                    <img id="preview-new" src="../../../public/assets/Imagens/usuario.png" width="60" height="60" style="object-fit: cover;">
+                    
+                    <div class="botaoAddFoto"><span>Add Foto</span></div>
+                </label>
+                    <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_new" style="display: none;" onchange="previewImagem(event, 'new')">
                
                         <div class="tituloA">
                             <h1 class="tituloAdd">Vamos adicionar um</h1>
@@ -167,10 +170,14 @@
                     <div class="containerRight">
                           <form method="POST" action="/tabelaUsuarios/edit" enctype="multipart/form-data" >
                       
-                        <div class="imgPerfilB"><img src="<?= $user->img_path ?>" alt=""></div>
+                      <label for="uploadFoto_<?= $user->id ?>" class="imgPerfilB" style="cursor: pointer;">
                     
-                         <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto<?= $user->id ?>" onchange="previewImagem(event, '<?= $user->id ?>')">
+                    <img id="preview-<?= $user->id ?>" src="<?= $user->img_path ?>" alt="Foto de Perfil">
                     
+                    <div class="botaoAddFoto"><span>Trocar</span></div>
+                </label>
+                         <input class="botaoAddFoto"  type="file"  name="img_path" accept="image/*"  id="uploadFoto_<?= $user->id ?>"  style="display: none;"  onchange="previewImagem(event, '<?= $user->id ?>')">
+
                         <div class="tituloA">
                             <h1 class="tituloAdd">Edição de usuário</h1>
                         </div>
@@ -280,7 +287,7 @@
                 <div class="modalex">
                     <div class="containerExcluir">
                         <div class="sombraExcluir">
-                            <img src="<?= $user->id ?>" alt="">
+                            <img src="<?= $user->img_path ?>" alt="">
                         </div>
                         <div class="conteudoExcluir">
                             <div class="textoExcluir parte01">Tem certeza que deseja</div>
