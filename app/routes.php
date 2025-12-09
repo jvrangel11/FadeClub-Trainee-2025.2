@@ -11,4 +11,6 @@ use App\Core\Router;
     
     $router->get('listaPosts/search', 'ListaPostsController@index');
 
+    $router->get('sidebar', 'SidebarController@index');
+
 
