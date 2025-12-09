@@ -152,12 +152,16 @@
             </div>
 
 
-
-            <div class="modais modalEditar" id="editar">
+            <?php foreach($users as $user): ?>
+            <div class="modais modalEditar" id="editar<?= $user->id ?>">
                 <div class="modaled">
                     <div class="containerRight">
-                        <div class="imgPerfilB"><img src="../../../public/assets/FotosTabelas/usuariopadrao.jpeg" alt=""></div>
-                        <div class="botaoAddFoto"><p class="textoBotao">Adicionar foto</p></div>
+                        <form method="POST" action="/tabelaUsuarios/edit" enctype="multipart/form-data" >
+                        <label for="uploadFoto_<?= $user->id ?>" class="imgPerfilB" style="cursor: pointer;">
+                            <img id="preview-<?= $user->id ?>" src="<?= $user->img_path ?>" alt="Foto de Perfil">
+                            <div class="botaoAddFoto"><span>Trocar</span></div>
+                        </label>
+                        <input class="botaoAddFoto"  type="file"  name="imgpath" accept="image/*"  id="uploadFoto<?= $user->id ?>"  style="display: none;"  onchange="previewImagem(event, '<?= $user->id ?>')">
                         <div class="tituloA">
                             <h1 class="tituloAdd">Edição de usuário</h1>
                         </div>
@@ -172,21 +176,21 @@
                                 <div class="inputTitulo">
                                     <p>Nome</p>
                                 </div>
-                                <input type="text" name="nome" value="Rangelo" required>
+                                <input type="text" id="name" name="name" value="<?= $user->name ?>" required>
                                 <img src="../../../public/assets/editar.svg" alt="" class="iconeEdit" >
                             </div>
                             <div class="emailB">
                                 <div class="inputTitulo">
                                     <p>Email</p>
                                 </div>
-                                <input type="text" name="nome" value="rangelouco.56@gmail.com" required>
+                                <input type="email" id="email" name="email" value="<?= $user->email ?>" required>
                                 <img class="iconeEdit" src="../../../public/assets/editar.svg" alt="">
                             </div>
                             <div class="senhaB">
                                 <div class="inputTitulo">
                                     <p>Senha</p>
                                 </div>
-                                <input type="password" name="nome" value="••••••••••••" required>
+                                <input type="password" id="password" name="password" value="<?= $user->password ?>" required>
                                 <img class="iconeEdit" src="../../../public/assets/editar.svg" alt="">
                             </div>
                         </div>
@@ -194,12 +198,16 @@
                             <div class="barraHorizontal"></div>
                         </div>
                         <div class="caixaBotoes">
-                            <div class="cancel" onclick="fecharModal('editar')">Cancelar</div>
-                            <div class="save" onclick="fecharModal('editar')">Salvar</div>
+                            <div class="cancel" onclick="fecharModal('editar<?= $user->id ?>')">Cancelar</div>
+                            <input type="hidden" name="id" value="<?= $user->id ?>">
+                            <button type="submit" class="save" >Salvar</button>
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
+            <?php endforeach ?>
+
 
             <div class="modaisP modalVizualizar" id="visualizar">
                 <div class="modalvi">
