@@ -48,11 +48,12 @@ class PostsController
             'story'=> $_POST['story'],
             'curiosity'=> $_POST['curiosity'],
             'tips'=> $_POST['tips'],
+            'tag'=> $_POST['tag'],
             'products'=> $_POST['products'],
             'img_path'=> $caminhodaimagem,
             'user_id'=> 1
         ];
-
+var_dump($_POST);
 echo implode(', ', $parameters);
 
         App::get('database')->insert ('posts', $parameters);
