@@ -15,7 +15,7 @@ class ListaPostsController
         $page = intval($_GET['paginacaoNumero']);
 
         if($page <= 0) {
-            return redirect ('listaPosts');
+            return redirect ('lista-Posts');
         }
     }
 
@@ -24,7 +24,7 @@ class ListaPostsController
         $rows_count = App::get('database')->countAll('posts');
 
         if($inicio >= $rows_count) {
-            return redirect ('listaPosts');
+            return redirect ('lista-Posts');
         }
 
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
@@ -36,7 +36,7 @@ class ListaPostsController
 
         $total_pages = ceil($rows_count/$itensPage);
 
-        return view('site/listaPosts', compact('posts', 'page', 'total_pages'));
+        return view('site/lista-Posts', compact('posts', 'page', 'total_pages'));
     }
 
     
