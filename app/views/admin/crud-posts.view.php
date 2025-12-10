@@ -111,7 +111,7 @@
                                 <select name="tag" required>
                                     <option value="" disabled selected>Selecione uma tag</option>
                                     <option value="tips">Dicas</option>
-                                    <option value="tendences">Tendências</option>
+                                    <option value="tendencies">Tendências</option>
                                     <option value="inspirations">Inspirações</option>
                                     <option value="techniques">Técnicas</option>
                                 </select>
