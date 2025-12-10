@@ -21,7 +21,7 @@ main {
 /* ! Adicionando elemento central ---------------------------------------------------- */
 .postContainer{
     height: 90%;
-    width: 70%;
+    width: 55%;
 
     background-color: #e5e5e5;
     border-radius: 10px;
@@ -35,19 +35,67 @@ nav {
 }
 /* ! Organizando disposição do conteúdo ---------------------------------------------- */
 .conteudo{
-    border: 1px solid rgb(27, 207, 57);
     height: 90%;
     width: 100%;
 
     display: flex;
 }
 .containerEsquerdo{
-    border: 1px solid rgb(31, 145, 50);
     height: 100%;
-    width: 50%;
+    width: 48%;
 }
 .containerDireito{
     border: 1px solid rgb(18, 40, 136);
     height: 100%;
-    width: 50%;
+    width: 53%;
 }
+/* ! Organizando conteúdo da esquerda ------------------------------------------------ */
+/*geral*/
+.containerEsquerdo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*imagem*/
+.containerImagem{
+    margin-top: 2rem;
+
+    height: 58%;
+    width: 87%;
+    border-radius: 30px;
+
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.829);
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+/*caixa do título e da tag*/
+.containerInformacoes{
+    margin-top: 0.5rem;
+    height: 37%;
+    width: 87%;
+}
+/*título*/
+.titulo{
+    font-family: "Anton", sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #3e3e3e;
+}
+/*tag*/
+.tag{
+    height: 12%;
+    width: 26%;
+    border-radius: 10px;
+    background-color: #116797;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Anton", sans-serif;
+    font-size: 20px;
+    color:#EDDFB2;
+    margin-top: 0.5rem;
+}
+/* ! Organizando conteúdo da direita ------------------------------------------------- */
