@@ -17,7 +17,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto FadeClub</title>
-    <link rel="stylesheet" href="../../../public/css/listaPosts.css" />
+    <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
   </head>
 
    <body>
@@ -29,7 +29,7 @@
     
       <div id="searching-camp">
         <div class="search">
-          <form class="search" method="GET" action="/listaPosts/search">
+          <form class="search" method="GET" action="/lista-posts/search">
 
             <label for="busca"></label>
             <input type="text" id="busca" type="search" placeholder="O que você procura?" name="search">
@@ -143,5 +143,5 @@
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-      <script src="../../../public/js/listaPosts.js"></script>
+      <script src="../../../public/js/lista-posts.js"></script>
   </body>

@@ -7,9 +7,9 @@ use App\Core\Router;
 
     $router->get('', 'ExampleController@index');
 
-    $router->get('lista-Posts', 'ListaPostsController@index');
+    $router->get('lista-posts', 'ListaPostsController@index');
     
-    $router->get('lista-Posts/search', 'ListaPostsController@index');
+    $router->get('lista-posts/search', 'ListaPostsController@index');
 
     $router->get('sidebar', 'SidebarController@index');
 
