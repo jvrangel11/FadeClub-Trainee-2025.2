@@ -24,43 +24,30 @@ function fecharModal(idModal) {
 
     // --- MODAL VISUALIZAR ---
     // ELEMENTOS
-    const btnVerImg = document.querySelector("#Visualizar .image-btn");
-    const imgPreviewVer = document.querySelector("#Visualizar .image-section img");
+    function abrirModalImagem(postId) {
+    const modal = document.getElementById('modalVerImagem' + postId);
+    const imgPrevia = document.getElementById('imgPrevia' + postId);
+    const imgVisualizar = document.getElementById('imgVisualizar' + postId);
+    
+    // Copia o src da imagem prévia para o modal
+    imgVisualizar.src = imgPrevia.src;
+    
+    // Exibe o modal
+    modal.style.display = 'block';
+}
 
-    const modalVerImagem = document.getElementById("modalVerImagem");
-    const imagemNoModal = document.getElementById("imgVisualizar");
-    const fecharModalImg = document.getElementById("fecharVerImg");
+// Função para fechar o modal da imagem
+function fecharModalImagem(postId) {
+    const modal = document.getElementById('modalVerImagem' + postId);
+    modal.style.display = 'none';
+}
 
-    // Ao clicar em "Visualizar imagem"
-    btnVerImg.addEventListener("click", () => {
-        imagemNoModal.src = imgPreviewVer.src; // copia a imagem atual
-        modalVerImagem.style.display = "block";
-    });
-
-    // Fechar botão X
-    fecharModalImg.addEventListener("click", () => {
-        modalVerImagem.style.display = "none";
-    });
-
-    // Fechar clicando fora da imagem
-    window.addEventListener("click", (e) => {
-        if (e.target === modalVerImagem) {
-            modalVerImagem.style.display = "none";
-        }
-    });
+// Fechar modal clicando fora da imagem
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal-ver-imagem')) {
+        event.target.style.display = 'none';
+    }
+}
 
     // --- MODAL EDITAR ---
-    const fileInputEditar = document.getElementById("inputEditarImg");
-    const btnEditarImg = document.getElementById("btnEditarImg");
-    const previewEditar = document.getElementById("previewEditar");
-
-    btnEditarImg.addEventListener("click", () => {
-        fileInputEditar.click();
-    });
-
-    fileInputEditar.addEventListener("change", () => {
-        const file = fileInputEditar.files[0];
-        if (file) {
-            previewEditar.src = URL.createObjectURL(file);
-        }
-    });
+    

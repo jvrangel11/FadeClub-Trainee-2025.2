@@ -140,14 +140,13 @@
                         <div class="card">
                             <div class="image-section">
                     <form class="card-img">
-                                <img src="<?= $post->img_path ?>" alt="Prévia imagem">
-                                <button type="button" class="image-btn">Visualizar imagem</button>
+                                <img src="<?= $post->img_path ?>" alt="Prévia imagem" id="imgPrevia<?= $post->id ?>">
+                                <button type="button" class="image-btn" onclick="abrirModalImagem(<?= $post->id ?>)">Visualizar imagem</button>
                             </div>
-                            <div id="modalVerImagem" class="modal-ver-imagem">
-                                <span class="fechar-img" id="fecharVerImg">&times;</span>
-                                    <img id="imgVisualizar" name="img_path" class="conteudo-img">
-                                    <input type="file" name="img_path">
-                                </div>
+                             <div id="modalVerImagem<?= $post->id ?>" class="modal-ver-imagem">
+                                <span class="fechar-img" onclick="fecharModalImagem(<?= $post->id ?>)">&times;</span>
+                                <img id="imgVisualizar<?= $post->id ?>" class="conteudo-img" src="<?= $post->img_path ?>" alt="Imagem ampliada">
+                            </div>
                             </div>
                             <div class="info-text">
                                 <p1>Ver informações deste post</p1>
@@ -192,12 +191,28 @@
                     <div class="form-left">
                         <div class="card">
                             <div class="image-section">
-                                <form class="card-img" method="POST" action="crud-posts/edit" enctype="multipart/form-data"> 
+                    <form class="card-img" method="POST" action="crud-posts/edit" enctype="multipart/form-data"> 
                                 <img id="previewEditar" src="<?= $post->img_path?>" alt="Prévia imagem">
                                 
-                                <!-- Input escondido -->
-                                <input  class="image-btn" type="file" name="img_path" id="inputEditarImg" accept="image/*" >
+                                <!-- Input escondido - NÃO USE display: none -->
+                                <input 
+                                    required 
+                                    class="image-btn" 
+                                    type="file" 
+                                    name="img_path" 
+                                    id="inputEditarImg<?= $post->id ?>" 
+                                    accept="image/*"
+                                    style="position: absolute; opacity: 0; width: 1px; height: 1px;"
+                                    onchange="previewImage<?= $post->id ?>(event)"
+                                >
                                 
+                                <!-- Botão personalizado -->
+                                <button 
+                                    type="button" 
+                                    class="escolher-arquivo-btn" 
+                                    onclick="document.getElementById('inputEditarImg<?= $post->id ?>').click()">
+                                    Escolher arquivo
+                                </button>
                             </div>
                         </div>
                         <div class="info-text">
@@ -220,6 +235,14 @@
                             <textarea required type="text" name="tips"><?= $post->tips ?></textarea>
                             <label>Produtos recomendados</label>
                             <textarea required type="text" name="products"><?= $post->products ?></textarea>
+                            <label>Tag*</label>
+                                <select name="tag" required>
+                                    <option value="" disabled selected><?= $post->tag ?></option>
+                                    <option value="tips">Dicas</option>
+                                    <option value="tendencies">Tendências</option>
+                                    <option value="inspirations">Inspirações</option>
+                                    <option value="techniques">Técnicas</option>
+                                </select>
                         </div>
 
                         <div class="caixaBarraHorizontal">
@@ -262,5 +285,17 @@
           <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../../../public/js/adicionar.js"></script>
+    <script>
+    function previewImage<?= $post->id ?>(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('previewEditar<?= $post->id ?>').src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+    </script>
 </body>
 </html>

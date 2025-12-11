@@ -85,6 +85,7 @@ echo implode(', ', $parameters);
             'story'=> $_POST['story'],
             'curiosity'=> $_POST['curiosity'],
             'tips'=> $_POST['tips'],
+            'tag'=> $_POST['tag'],
             'products'=> $_POST['products'],
             'img_path'=> $caminhodaimagem,
             'user_id'=> 1
