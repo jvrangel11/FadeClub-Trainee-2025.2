@@ -6,7 +6,7 @@
 }
 /* ! Adicionando background ---------------------------------------------------------- */
 main {
-    background-image: url(../assets/backgrounds/cover5.png);
+    background-image: url(../assets/backgrounds/backgroundFade.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -28,8 +28,6 @@ main {
 }
 /* ! Adicionando navegação do card --------------------------------------------------- */
 nav {
-    border: 1px solid orangered;
-
     height: 10%;
     width: 100%;
 }
@@ -58,7 +56,7 @@ nav {
 }
 /*imagem*/
 .containerImagem{
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     height: 58%;
     width: 87%;
@@ -99,3 +97,52 @@ nav {
     margin-top: 0.5rem;
 }
 /* ! Organizando conteúdo da direita ------------------------------------------------- */
+/*geral*/
+.containerDireito{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ! Organizando informações do usuário  --------------------------------------------- */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.voltar{
+    background-color: #0A3A55;
+    height: 55%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 1.7rem;
+    .arrow{
+        height: 50%;
+        width: 50%;
+        color:#e5e5e5;
+    }
+}
+.usuario{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+    padding-right: 1rem;
+    img{
+        height: 70%;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+    }
+    p{
+        font-family: "Anton", sans-serif;
+        font-size: 30px;
+        font-weight: lighter;
+        color: #3e3e3e;
+    }
+}
