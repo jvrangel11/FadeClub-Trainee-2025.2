@@ -1,14 +1,16 @@
-//! Transformar os elementos HTML em variáveis
-const slider1 = document.querySelector('.slider1');
-const slider2 = document.querySelector('.slider1');
-const slider1Content = document.querySelector('.conteudo1');
-const slider2Content = document.querySelector('.conteudo2');
+//! Cria variáveis a partir dos elementos html 
+const slider1 = document.querySelector('.carrossel-destaques');
+const slider2 = document.querySelector('.carrossel-ultimas');
+
+const slider1Content = document.querySelector('.conteudo01');
+const slider2Content = document.querySelector('.conteudo02');
+
 const leftArrow1 = document.getElementById("seta-esquerda1")
 const leftArrow2 = document.getElementById("seta-esquerda2")
 const rightArrow1 = document.getElementById("seta-direita1")
 const rightArrow2 = document.getElementById("seta-direita2")
 
-//! Declarar variáveis globais
+//! Declara variáveis globais
 
 let currentPage = 0;
 let itemsPerView = 1;

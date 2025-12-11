@@ -32,6 +32,7 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
     public function countAll($table)
     {
         $sql = "select COUNT(*) from {$table}";
@@ -47,16 +48,33 @@ class QueryBuilder
         }
     }
 
+    public function selectOne($table, $id)
+    {
+    $sql = sprintf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table );
 
-//INSERT INTO `posts`(`id`, `title`, `origin`, `story`, `curiosity`, `tips`, `products`, `is_in_carousel`, `img_path`, `user_id`, `created_at`, `updated_at`, `tag`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]')
+    try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        
+
+    }
+
+
+
+  //  INSERT INTO `users` (`id`, `name`, `email`, `img_path`, `passwordint`, `role`) VALUES ('002', 'joao', 'email2@email2', 'none', 'pass', '');
     public function insert($table, $parameters){
-        $sql = sprintf('INSERT INTO %s (%s) VALUES (%s)',
+        $sql = sprintf(' INSERT INTO %s (%s) VALUES (:%s)',
         $table,
-        implode(',', array_keys($parameters)),
-        ':'.implode(', :', array_keys($parameters))
-    );
-
-        try {
+        implode(', ', array_keys($parameters)),
+        implode(', :', array_keys($parameters)),
+        );  
+    
+    try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
 
@@ -67,32 +85,39 @@ class QueryBuilder
         }
     }
 
+
+    //UPDATE `users` SET `id`='[value-1]',`name`='[value-2]',`email`='[value-3]',`img_path`='[value-4]',`passwordint`='[value-5]',`role`='[value-6]' WHERE 1
     public function update($table, $id, $parameters){
         $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
-        $table, 
-        implode(', ', array_map(function($param) {
-            return $param . ' = :' . $param;
+        $table,
+        implode(',', array_map(function($param) {
+            return $param . ' = :' .$param;
         }, array_keys($parameters))),
         $id
-        );
-        try {
+    );
+     try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-        }
-    catch (Exception $e) {
+
+        } catch (Exception $e) {
             die($e->getMessage());
         }
+        
     }
 
-    public function selectOne($table, $id)
+    //DELETE FROM `users` WHERE 0
+    public function delete($table, $id)
     {
-        $sql = sprintf('SELECT * FROM %s WHERE id = :id LIMIT 1', $table);
+        $sql = sprintf('DELETE FROM %s WHERE %s',
+        $table,
+        'id = :id'
+    );
 
-        try {
+    try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(['id' => $id]);
+            $stmt->execute(compact('id'));
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
 
@@ -115,20 +140,6 @@ class QueryBuilder
             $user = $stmt->fetch(PDO::FETCH_OBJ);
 
             return $user;
-
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function delete($table, $id){
-        $sql = sprintf('DELETE FROM %s WHERE %s',
-        $table, 
-        'id = :id'
-        );
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(compact('id'));
 
         } catch (Exception $e) {
             die($e->getMessage());
