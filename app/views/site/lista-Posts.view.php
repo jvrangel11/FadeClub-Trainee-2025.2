@@ -17,7 +17,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto FadeClub</title>
-    <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
+    <link rel="stylesheet" href="../../../public/css/listaPosts.css" />
   </head>
 
    <body>
@@ -143,5 +143,5 @@
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-      <script src="../../../public/js/lista-posts.js"></script>
+      <script src="../../../public/js/listaPosts.js"></script>
   </body>
