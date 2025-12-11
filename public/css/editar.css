@@ -268,7 +268,7 @@ textarea {
     cursor: pointer;
 }
 
-.escolher-arquivo-btn {
+.escolher-arquivo-btn:hover {
     opacity: 0.9;
 }
 
