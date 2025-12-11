@@ -1,6 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(../assets/Gemini_Generated_Image_1mpasb1mpasb1mpa.png);
     background-size:cover ;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    width: 65%;
+}
+
+.scroll-lateral {
+    width: fit-content;
+
 }
 
 .tabela, 
@@ -10,43 +30,60 @@ body {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+    table-layout: fixed;
 }
 
 .tabela-container {
-    width: 80%;
-    margin: 30px auto;
+    width: 100vw;
+
+    margin: 0px;
     text-align: center;
-    position: relative;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulo {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: left;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-left: 50px;
+    margin-left: 0px;
+    width: fit-content;
 }
 
 .btn-add {
     background-color: #1B2A41;
     color: white;
     border: none;
-    width: 55px;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 132.55px;
     height: 55px;
-    border-radius: 50%;
+    border-radius: 15%;
     cursor: pointer;
     float: right;
-    margin-top: -110px;
-    font-size: 40px;
+    font-size: 20px;
     opacity: 0.9;
-    margin-right: 63px;
+    transition: all 0.3s ease;
+}
+
+.btn-add:hover{
+    transform: scale(1.15);
+    background-color: #283d5e;
 }
 
 .tabela {
-    width: 90%;
+    width: 65vw;
     margin-top:0px;
     border-collapse: collapse;
     background-color: #1B2A41;
@@ -54,7 +91,7 @@ body {
     overflow: hidden;
     opacity: 0.9;
     position: center;
-    margin-left: 50px;
+    margin-left: 0px;
 }
 
 .tabela thead th {
@@ -66,45 +103,235 @@ body {
 }
 
 .tabela tbody td {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+
     font-size: 18px;
-    border-bottom: 20px solid #1B2A41;
+    border-bottom: solid #1B2A41;
     cursor:pointer;
 }
 
 .img-cell {
-    width: 20px;
+    width: 1rem;
     height: 20px;
-    background-image: url(../assets/Header\ Nome.png);
-    border-radius: 0px;
+    border-radius: 0.5rem;
+    padding: 0px;
+    
+}
+
+.img-cell img {
+    width: 7rem;
+    height: 5rem;
+    border-radius: 1rem;
+    border: 0.2rem solid #283d5e;
+}
+
+.acoes td {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 5px;
 }
 
 .acoes i {
     margin: 0 0px;
     cursor: pointer;
     transition: 0.3s;
-    padding: 2px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-.acoes .bi-eye:hover {
+.acoes .fa-eye:hover {
     transform: scale(1.1);
-    color: #0099ff;
+    color: #10d33a;
 }
 
-.acoes .bi-pencil:hover {
+.acoes .fa-pencil:hover {
     transform: scale(1.1);
-    color: #eeff00;
+    color: #FF7F00;
 }
 
-.acoes .bi-trash:hover {
+.acoes .fa-trash:hover {
     transform: scale(1.1);
     color: #e90707;
 }
 
-.paginacao {
-    margin-top: 20px;
+.acoes button{
+    background: none;
+    border: none;
+    color: white;
+}
+
+.paginacao{
+    display: flex;
+    color: #e5e5e5;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.botoesPaginacao{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.botaoPaginacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E5E5E5;
+    height: 2rem;
+    width: 2.3rem;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+.botaoPaginacao:hover{
+    transform: scale(1.1);
+    background-color: #E5E5E5;
+    color: #1b2a41;
+}
+
+.botaoEsquerda , .botaoDireita {
+    text-decoration: none;
+    color: #E5E5E5;
+}
+
+.botoesPaginacao button a.botaoPaginacao {
+    text-decoration: none;
+    color: #E5E5E5;
+
+}
+
+.botoesPaginacao button a.botaoPaginacao:visited {
+    color: #E5E5E5; 
+}
+
+.botoesPaginacao button {
+    background:none;
+    border: none;
+    color: #1b2a41;
+}
+
+.botaoPaginacao.active {
+    background-color: #E5E5E5;
+    color: #1b2a41; 
+}
+
+.botoesPaginacao button a.botaoPaginacao.active {
+    background-color: #E5E5E5;
+    color: #1b2a41; 
+}
+
+.botoesPaginacao button:hover a.botaoPaginacao {
+    color: #1b2a41;
+}
+
+
+.title {
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden;    /* Esconde o texto que excede os limites */
+    text-overflow: ellipsis; /* Exibe as reticências */
+    max-width: 1.5rem;
+}
+
+
+@media (min-width: 2560px) {
+    .tabela-container {
+        width: 100%;
+        align-items: center;
+        justify-self: center;
+        justify-content: center;
+        align-self: center;
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 860px) {
+    .tabela {
+        width: 100%;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-header {
+        width: 90%;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 2rem;
+    }
+    .tabela {
+        width: 90vw;
+        max-height: 70vh;
+    }
+    .btn-add{
+        align-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-lateral {
+        overflow-x: auto;
+        width: 98%;
+    }
+    .titulo {
+        font-size: 2.5rem;
+    }
+    .tabela {
+        min-width: 600px;
+        width: 80vw;
+        max-height: 60vh;
+        flex-direction: column;
+    }
+    .tabela-container {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 425px) {
+    .table-header {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .tabela-container {
+        margin: 15px;
+    }
+    .titulo {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .btn-add {
+        width: 130px;
+        align-self: center;
+        height: 40px;
+        font-size: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .table-header {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .tabela-container {
+        margin: 15px;
+    }
+    .titulo {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .btn-add {
+        width: 100px;
+        height: 40px;
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }

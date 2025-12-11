@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6a94f2c3d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../../public/css/footerStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script defer src="../../../public/js/footerScript.js"></script>
+</head>
+
+<body>
+
+
+    <div class="footer">
+
+
+
+        <div class="conteiner">
+
+
+            <div class="motivacao">
+
+                <span>
+                    <h5 id="m" onmouseover="mostrarTexto('texto-missao')" onmouseout="mostrarLogo()">Missão</h5>
+
+                    <h5 id="v" onmouseover="mostrarTexto('texto-visao')" onmouseout="mostrarLogo()">Visão</h5>
+
+                    <h5 id="val" onmouseover="mostrarTexto('texto-valores')" onmouseout="mostrarLogo()">Valores</h5>
+                </span>
+
+
+            </div>
+
+            <div class="footerLogo">
+                <img src="../../../public/assets/Imagens/FadeClub-logo2.png" alt="Logo Fade Club" id="fadeLogo" class="ativo">
+
+                <div id="txt">
+                    <p id="texto-missao">Proporcionar uma experiência única de cuidado e<br />
+                        estilo, unindo técnica, arte e cultura em cada corte. <br />
+                </div>
+
+                <div id="txt">
+
+                    <p id="texto-visao">Ser reconhecida como referência em estilo e excelência<br />
+                         no universo da barbearia.
+                    </p>
+                </div>
+
+                <div id="txt">
+
+                    <p id="texto-valores">No FadeClub, valorizamos autenticidade, <br />
+                        respeito, excelência e a união entre tradição,<br />
+                         inovação e comunidade.
+                    </p>
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="contatos">
+
+                <div class="contatoTexto">
+                
+                <h3>Contatos</h3>
+                </div>
+                
+
+                <div id="redes">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://web.whatsapp.com" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+
+
+                </div>
+
+                <div class="empresa">
+
+                <h4>© 2025 Code Júnior</h4>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

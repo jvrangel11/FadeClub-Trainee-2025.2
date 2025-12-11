@@ -1,129 +1,93 @@
 
+
 body {
-   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #011650;
+}
 
-    
- 
-    display: flex;
-    flex-direction: column-reverse;
-    
-    font-family: "Anton", sans-serif;
-    background-color: #1B2A41;
+.footer {
+  font-family: "Anton", sans-serif;
+  background-color: #6B231E;
+  color: #FAFAFA;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 22vh;
+  display: flex;
+  align-items: center;
+}
+
+.conteiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+.motivacao h5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: transform .3s ease-in-out;
+}
+
+.motivacao h5:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- CONTATOS ---------- */
+
+.contatos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1rem;
+  color: #FAFAFA;
+
+  h3,h4{
     font-weight: lighter;
-
-    background-image: url(./backgroundFade.jpg);
-    background-size: cover;
-    
-   
+  }
 }
 
-
-footer {
-    padding: 2em;
-    
-
-    font-family: "Anton", sans-serif;
-    background-color: #6B231E;
-    color: #FAFAFA;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-  
-
+#txt {
+  font-family: system-ui, sans-serif;
+  width: 25vw;
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
 }
 
-.conteiner{
+/* ---------- LOGO e TEXTOS ---------- */
+
+.footerLogo {
+
  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90vw;
-    margin: auto;
-      font-weight: lighter;
-  
+  position: relative;
+  display: inline-block;
+  transition: transform .3s ease-in-out;
 }
 
 
 
-
-.motivacao span h5{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    
-
+.footerLogo:hover {
+  transform: scale(1.05);
 }
 
-
-
-
-
-
-.contatos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    color: #FAFAFA;
-
+.footerLogo img {
+  width: 18vw;
+  height: 25vh;
+  object-fit: contain;
+  content: url(../assets/Imagens/FadeClub-logo2.png);
 }
 
-
-#txt{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#redes {
-    display: flex;
-    color: white;
-    
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-#redes i {
-    color: #FAFAFA;
-}
-
-.motivacao h5{
-    margin: 3em;
-    transition: transform .3s ease-in-out;
-   
-}
-
-.motivacao h5:hover{
-    transform: scale(1.5);
-   
-}
-
-
-.footerLogo p{
-  
-    padding: 0;
-    margin: 0 auto;
-    
-
-
-}
-
-
-.footerLogo img{
-  
-    width: 20vw;   
-    height: 20vh;
-    object-fit: cover;
-    object-position: center;
-
-
-
-}
-
+/* textos fade */
 #fadeLogo,
 #texto-missao,
 #texto-visao,
@@ -134,96 +98,181 @@ footer {
   transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity .6s ease;
+  text-align: center;
+}
+
+.ativo {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* redes sociais */
+
+#redes {
+  display: flex;
+  gap: .5rem;
+}
+
+#redes i {
+  font-size: 1.8em;
+  color: #FAFAFA;
+  transition: transform .3s ease;
+}
+
+#redes i:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+/* 1440px */
+@media (max-width: 1440px) {
+ 
+  .motivacao{
+
+    justify-content: space-between;
+    gap: 16px;
+    padding-right: 6rem;
+    
+  }
+
+  #txt {
+    width: 35vw;
+    font-size: 1rem;
+  }
+
+
+
+.footerLogo img,#fadeLogo,
+#texto-missao,
+#texto-visao,
+#texto-valores{
+   height: auto;
+   width: 80%;
+  object-fit: contain;
+  padding-right: 6rem;
   
+}
+
+.ativo {
+  opacity: 1 !important;
+  visibility: visible !important;
+  
+}
+
+}
+
+/* 768px */
+@media (max-width: 769px) { 
+
+
+
+  .footer {
+    height: 28vh;
+    
+  }
+
+  .motivacao h5{
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  
+  .contatos h3,h4{
+    font-weight: lighter;
+  }
+
+  .footerLogo img{
+     clip-path: inset(20px 0px 40px 0px);
+  }
+
 
 
 
 }
 
+/* 480px */
+@media (max-width: 480px) {
+
+  .footer {
+    height: 30vh;
+    padding: .5rem;
+  }
+
+  .conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+  }
+
+  .motivacao span{
+    display: flex;
+    flex-direction:row;
+    gap: 2rem;
+    padding-left: 5rem;
+    
+  }
+
+  .motivacao h5 {
+    font-size: .7rem;
+    display: flex;
+    flex-direction:row;
+    
+  }
+
+  .footerLogo {
+    width: 50vw;
+
+  
+  }
 
 
-#fadeLogo.ativo,
-#texto-missao.ativo,
-#texto-visao.ativo,     
-#texto-valores.ativo {
-  opacity: 1;
-  visibility: visible;
-  position: absolute;
+
+ #fadeLogo,
+#texto-missao,
+#texto-visao,
+#texto-valores{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle; 
+    padding-left: 5rem;
+    
+
+
+   }
+   
+
+
+
+  
+.ativo {
+  opacity: 1 !important;
+  visibility: visible !important; 
+
 }
 
 
 
-.footerLogo{
-    position: relative;
+  #txt {
+    width: 80vw;
+    font-size: .7rem;
+  }
+
+  .contatos {
+  
+    font-size: .6rem;
+    gap: .3rem;
+    padding-right: 1rem;
+
+  }
+
+  #redes i {
+    font-size: 1.8em;
+  }
+
 }
-
-.footerLogo:hover{
-    transform: scale(1.05);
-    transition: transform .3s ease-in-out;
-}
-
-
-#redes i{
-    font-size: 2em;
-
-
-}
-
-#redes :hover{
-    transform: scale(1.1);
-    transition: transform .3s ease-in-out;
-}
-
-
-
-
-@media only screen and (max-width: 768px) {
-    body {
-       
-        flex-direction: column; 
-    }
-
-    .conteiner {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 0.3em;
-        padding: 1em;
-        text-align: center;
-    }
-
-    .footerLogo img {
-        width: 0.5em;
-        height: 0.5em;
-        margin-bottom: 1em;
-    }
-
-    .motivacao {
-        gap: 0.5rem;
-    }
-
-    .motivacao h5 {
-        font-size: 1em;
-    }
-
-    .contatos {
-        gap: 1em;
-        font-size: 0.9em;
-    }
-
-    #redes {
-        flex-wrap: wrap;
-        gap: 0.1em;
-    }
-
-    #redes i {
-        font-size: 1.5em;
-    }
-
-    footer {
-        position: relative;
-        text-align: center;
-        padding: 1.5em 0;
-    }
-}    

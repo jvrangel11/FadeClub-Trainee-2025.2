@@ -8,9 +8,6 @@
 body {
     display: flex;
     min-width: 100vh;
-    background-image: url("./../assets/Fundo.png");
-    background-attachment: fixed;
-    background-size:cover;
 }
 
 main{

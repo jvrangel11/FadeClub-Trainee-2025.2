@@ -15,10 +15,11 @@ body *{
 }
 
 .title {
+    padding-top: 4.1rem ;
     backdrop-filter:  blur(5px);
 }
 .title p {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     line-height: 2vw;
     padding-top: 2.5%;
     padding-left: 2%;
@@ -33,23 +34,25 @@ body *{
     margin-right: auto;
     width: 60%;
     height: 5.5vh;
-    background-color: white;
     border-radius:  50vw;
-    display: flex;
+    display: absolute;
+    flex-direction: column;
     align-items: center;
 
-    position: relative;
 
 }
 
 .search{
-    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    width: 100%;
 }
 
 #busca {
     border: none;
     color: black;
-    width: 48vw;
+    width: 65vw;
     height: 5.5vh;
     border-radius: 50vw;
 }
@@ -57,24 +60,30 @@ body *{
 input {
     font-size: 1rem;
     padding: 0.8rem;
+    width: 100vw;
 }
 input:focus{
     outline: none;
 }
 
+form {
+display: flex;
+position: relative;
+justify-content: end;    
+align-items: center;
+
+}
+
 #search-button{
-    position: absolute;
-    right: 2.5rem;
-    top: 13%;
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
 }
 
 .movido {
-    transform: translateX(-1.7rem);
+    transform: translateX(-1%);
 }
 
 
-#search-button button{
+#search-button {
     background-color: #061326;
     border: 0.15rem solid #243754;
     width: 1.7rem;
@@ -90,10 +99,10 @@ input:focus{
 
 #search-button ion-icon{
     color: white;
-    font-size: 1.1rem;
+    font-size: 110%;
 }
 
-#search-button button:hover{
+#search-button:hover{
     background-color: #243754;
     scale: calc(1.1);
     transition: 0.2s;
@@ -101,13 +110,14 @@ input:focus{
 
 .filter-close-buttons{
     position: absolute;
-    right: 0.65rem;
-    top: 13%;
     border-radius: 40rem;
 
-    display: flex;
-    background-color: #061326;
+    display:flex;
+    padding: 1%;
+    gap: 2%;
 
+    transition: all 0.5s ease;
+    
 }
 .filter-close-buttons button{
     background-color: #061326;
@@ -117,12 +127,13 @@ input:focus{
     border-radius: 40rem;
     padding: auto;
     margin: auto;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .filter-close-buttons ion-icon{
@@ -142,7 +153,7 @@ input:focus{
 }
 
 #filter-button.move{
-    transform: translateX(1.9rem);
+    transform: translateX(1rem);
     transition: transform 0.3s ease;
 }
 
@@ -157,27 +168,32 @@ input:focus{
 
 #filter-options{
     background-color: rgba(0, 0, 0, 0.404);
-    border-radius: 0.7rem;
-
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    height: 6.8rem;
-    padding-left: 0.65rem;
-    padding-right: 0.65rem;
-    padding-top: 1rem;
-    padding-bottom: 0.65rem ;
+    width: 100%;
+    height: 4.3rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 2.1rem;
+    padding-bottom: 0.75rem;
+    gap: 1%;
+    display: none;
+    margin-top: -3vh;
 
     justify-content:space-between;
-    display: flex;
     max-height: 0;
     opacity: 0;
+    z-index: -1;
 
     transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 #filter-options.show{
     max-height: 6.8rem;
+    align-items: center;
+    display: flex;
     opacity: 1;
     transition: all 0.3s ease;
 }
@@ -185,12 +201,13 @@ input:focus{
 .filter-button1{
     background-color: #8B26C5;
     border: 0.1vw solid #4D0E72;
-    border-radius: 50rem;
+    border-radius: 0.5rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    color: #EDDFB2;
     font-size: 1rem;
 
     cursor: pointer;
@@ -206,12 +223,13 @@ input:focus{
 .filter-button2{
     background-color: #116797;
     border: 0.1vw solid #0b3d55;
-    border-radius: 50rem;
+    border-radius: 0.5rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    color: #EDDFB2;
     font-size: 1rem;
 
     cursor: pointer;
@@ -226,12 +244,13 @@ input:focus{
 .filter-button3{
     background-color: #2C8E23;
     border: 0.1vw solid #134b13;
-    border-radius: 50rem;
+    border-radius: 0.5rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    color: #EDDFB2;
     font-size: 1rem;
 
     cursor: pointer;
@@ -246,12 +265,13 @@ input:focus{
 .filter-button4{
     background-color: #A4161A;
     border: 0.1vw solid #5e080a;
-    border-radius: 50rem;
+    border-radius: 0.5rem;
     width: 24vw;
-    height: 5vh;
+    height: 4vh;
 
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    color: #EDDFB2;
     font-size: 1rem;
 
     cursor: pointer;
@@ -263,23 +283,10 @@ input:focus{
     transition: 0.3s;
 }
 
-.direction1{
-    align-items: center;
-    margin-left: 5%;
-    display: grid;
-    gap: 10%;
-
-}
-.direction2{
-    align-items: center;
-    margin-right: 5%;
-    display: grid;
-    gap: 10%;
-}
 
 .posts-list{
     background-color: rgba(0, 0, 0, 0.459);
-    margin-top: 2%;
+    margin-top: 4%;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -287,16 +294,18 @@ input:focus{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 3rem;
     align-items: center;
     justify-content: center;
     border-radius: 1.5%;
+   /* padding-top: 3%;
+    padding-bottom: 3%;*/
 }
 
 .post-item{
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
-    width: 95%;
+    width: 100%;
     height: 13rem;
     border-radius: 1rem;
 }
@@ -330,11 +339,11 @@ input:focus{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .post-image{
     width:45%;
-
 }
 
 .post-image img{
@@ -345,13 +354,13 @@ input:focus{
 
 .post-info h5{
     background-color: #8B26C5;
-    border: 0.065rem solid #4D0E72;
-    border-radius: 3rem;
+    border-radius: 0.3rem;
     width: 5rem;
     height: 1.3rem;
 
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    color: #EDDFB2;
     font-size: 0.8rem;
 
     display: flex;
@@ -382,19 +391,41 @@ input:focus{
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
-.post-item span{
+.autor span{
     color: black;
     display: inline-block;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
+    width: 14rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+.tag-btn{
+    display: flex;
+    gap: 15%;
+    width: 30%;
+    align-items: center;
 }
 
 .post-item-reverse{
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
-    width: 95%;
+    width: 100%;
     height: 13rem;
     border-radius: 1rem;
     flex-direction: row-reverse;
@@ -417,6 +448,12 @@ input:focus{
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .post-item-reverse span{
@@ -424,6 +461,13 @@ input:focus{
     display: inline-block;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
+
+        overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .post-item-reverse p{
@@ -434,134 +478,1145 @@ input:focus{
     -webkit-box-orient: vertical;
 }
 
-.see-more {
-    background-color: #E4A11B;
-    border: none;
-    border-radius: 100%;
-    width: 1.3rem;
-    height: 1.3rem;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.verMais{
+/*Dimensionando caixa*/
+height: 1.5rem;
+width: 1.5rem;
+border-radius: 50%;
+/*Estilizando caixa*/
+background-color: #E4A11B;
+/*Alinhando conteúdo*/
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.see-more ion-icon{
-    color: black;
-    transform: scaleY(-1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.verMais img {
+height: 1rem;
+width: 1rem;
 }
 
-.see-more button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.see-more button:hover{
-    transform: scale(1.2);
+.verMais:hover{
+    background-color: #e2b55d ;
     transition: 0.2s;
 }
 
 
-.pagination {
-    margin-top: 1.25rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 40%;
-
+.paginacao{
     display: flex;
-    justify-content: center;
+    color: #e5e5e5;
     align-items: center;
-    gap: 0.4rem;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
-
-.pagination-button{
+.botoesPaginacao{
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 0.17rem;
+    gap: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
 }
-
-.pagination-button button{
-    
-    background-color: transparent;
-    border: 0.13rem solid white;
-    border-radius: 0.5rem;
-    width: 2.18rem;
-    height: 2.18rem;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-
-    display:inline-block;
-    justify-content: center;
+.botaoPaginacao{
+    display: flex;
     align-items: center;
-
-    margin-bottom: 1.3rem;
+    justify-content: center;
+    border: 2px solid #E5E5E5;
+    height: 2rem;
+    width: 2.3rem;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+.botaoPaginacao:hover{
+    transform: scale(1.1);
+    background-color: #E5E5E5;
+    color: #1b2a41;
 }
 
-.pagination-button button:hover {
-    background-color: white;
-    color: #061326;
-    transition: 0.2s;
+.botaoEsquerda , .botaoDireita {
+    text-decoration: none;
+    color: #E5E5E5;
 }
 
+.botoesPaginacao button a.botaoPaginacao {
+    text-decoration: none;
+    color: #E5E5E5;
 
-.pagination-button-left {
-    background-color: transparent;
+}
+
+.botoesPaginacao button a.botaoPaginacao:visited {
+    color: #E5E5E5; 
+}
+
+.botoesPaginacao button {
+    background:none;
     border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    rotate: 180deg;
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: center;
-    margin-right: -0.5rem;
-
-    margin-bottom: 1.3rem;
+    color: #1b2a41;
 }
 
-.pagination-button-left:hover {
-    scale: calc(1.2);
-    transition: 0.2s;
+.botaoPaginacao.active {
+    background-color: #E5E5E5;
+    color: #1b2a41; 
 }
 
-.pagination-button-right {
-    background-color: transparent;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: center;
-    margin-left: -0.5rem;
-
-    margin-bottom: 1.3rem;
+.botoesPaginacao button a.botaoPaginacao.active {
+    background-color: #E5E5E5;
+    color: #1b2a41; 
 }
 
-.pagination-button-right:hover {
-    scale: calc(1.2);
-    transition: 0.2s;
+.botoesPaginacao button:hover a.botaoPaginacao {
+    color: #1b2a41;
 }
 
-@media only screen and (max-width:768px){
-    .searching-camp{
-        padding-bottom: 10px;
+
+@media screen and (min-width:1550px){
+
+    .title p{
+    font-size: 300%;
+    }
+
+    #busca {
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .filter-close-buttons button{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #search-button {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #search-button ion-icon{
+        font-size: 200%;
+    }
+
+    .filter-close-buttons ion-icon{
+        font-size: 200%;
+    }
+
+    #filter-options{
+        height: 6vh;
+        padding-top: 5rem;
+        padding-bottom: 2.2rem;
+    }
+
+    .filter-button1, .filter-button2, .filter-button3, .filter-button4{
+        width: 15vw;
+        height: 3.2vh;
+        font-size: 1.6rem;
     }
 
     .posts-list{
-        width: 90%;
+        width: 80%;
+        gap: 3rem;
+        padding: 4rem;
+    }
+
+    .post-item{
+        height: 25rem;
+    }
+
+    .post-item-reverse{
+        height: 25rem;
+    }
+
+    .post-info h5{
+        width: 8rem;
+        height: 2.2rem;
+        font-size: 1.5rem;
+    }
+
+    .post-footer{
+        gap: 2rem;
+    }
+
+    .tag-btn{
+        padding-left: 4.5rem;
+    }
+
+    .post-footer span{
+        font-size: 1.8rem;
+        width: 20rem;
+    }
+
+    .post-info p{
+        font-size: 2rem;
+    }
+
+    .post-title h2{
+        font-size: 2.5rem;
+    }
+
+    .verMais {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+
+    .verMais img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .pagination-button button{
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .pagination-button-left {
+        font-size: 2.5rem;
+        margin-right: -1rem;
+    }
+
+    .pagination-button-right {
+        font-size: 2.5rem;
+        margin-left: -1rem;
     }
 }
 
-@media only screen and (max-width:420px){
+
+@media screen and (max-width:1025px){
     
+    .title p{
+    font-size: 150%;
+    padding-top: 3.5vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;
+    }
+
+#searching-camp {
+    height: 2rem;
 }
+
+#busca {
+    align-items: center;
+    width: 100vw;
+    height: 1.8rem;
+}
+
+ .search{
+    width: 60vw;
+    height: 2rem;
+ }
+
+input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+}
+
+
+.movido {
+    transform: translateX(-1%);
+}
+
+
+#search-button {
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+#search-button ion-icon{
+    font-size: 100%;
+}
+
+.filter-close-buttons button{
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.filter-close-buttons ion-icon{
+    font-size: 100%;
+}
+
+#filter-options{
+    border-radius: 0.5rem;
+    width: 60vw;
+    height: 9vh;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 2rem;
+    padding-bottom: 0.65rem ;
+}
+
+.filter-button1{
+    border: 0.1vw solid #4D0E72;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.posts-list{
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-top: 6%;
+    width: 90%;
+    gap: 1.4rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.post-item{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.8rem;
+}
+
+.post-info{
+    width: 55%;
+    padding: 3%;
+}
+
+.post-image{
+    width:45%;
+}
+
+.post-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.post-footer span{
+    font-size: 0.85rem;
+}
+
+.post-footer{
+    align-items:end;
+}
+
+
+.post-info p{
+    padding-top: 0.6rem;
+    font-size: 1rem;
+}
+
+.post-item span{
+    font-weight: 300;
+}
+
+.post-title h2{
+    font-size: 1.5rem;
+}
+
+.post-item-reverse{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.8rem;
+}
+
+.post-image-reverse {
+    width:45%;
+}
+
+.post-image-reverse img{
+        width: 100%;
+    height: 100%;
+    border-radius: 0.8rem 0 0 0.8rem ;
+}
+
+
+.post-item-reverse p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 0.4rem;
+}
+
+.verMais {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.verMais img{
+    color: black;
+    height: 0.9rem;
+    width: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pagination-button button{
+    border: 0.15rem solid white;
+    border-radius: 0.5rem;
+    width: 1.9rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pagination-button-left {
+    font-size: 1.9rem;
+    margin-right: -0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.pagination-button-right {
+    font-size: 1.9rem;
+    margin-left: -0.7rem;
+    margin-bottom: 1.4rem;
+}
+}
+
+ /*Responsividade do Mobile L*/
+@media screen and (max-width:768px){
+    .title p{
+    font-size: 150%;
+    padding-top: 3.5vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;
+    }
+
+#searching-camp {
+    height: 2rem;
+}
+
+#busca {
+    align-items: center;
+    width: 70vw;
+    height: 1.8rem;
+}
+
+ .search{
+    width: 65vw;
+    height: 2rem;
+ }
+
+input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+}
+
+
+.movido {
+    transform: translateX(-1%);
+}
+
+
+#search-button {
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+#search-button ion-icon{
+    font-size: 100%;
+}
+
+.filter-close-buttons button{
+    border: 0.1rem solid #243754;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.filter-close-buttons ion-icon{
+    font-size: 100%;
+}
+
+#filter-options{
+    border-radius: 0.5rem;
+    width: 65vw;
+    height: 9vh;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 1.6rem;
+    padding-bottom: 0.65rem ;
+}
+
+.filter-button1{
+    border: 0.1vw solid #4D0E72;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 28vw;
+    height: 3.5vh;
+
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.posts-list{
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-top: 7%;
+    width: 90%;
+    gap: 1.4rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.post-item{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.8rem;
+}
+
+.post-info{
+    width: 55%;
+    padding: 3%;
+}
+
+.post-image{
+    width:45%;
+}
+
+.post-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.post-info h5{
+    width: 50%;
+    height: 80%;
+    font-size: 0.7rem;
+    border-radius: 0.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-footer span{
+    font-size: 0.8rem;
+    width:100%;
+}
+
+.autor{
+    width: 50%;
+}
+
+.post-footer{
+    align-items:end;
+}
+
+.tag-btn{
+    width: 42%;
+}
+
+.post-info p{
+    padding-top: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.post-item span{
+    font-weight: 300;
+}
+
+.post-title h2{
+    font-size: 1.2rem;
+}
+
+.post-item-reverse{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.8rem;
+}
+
+.post-image-reverse {
+    width:45%;
+}
+
+.post-image-reverse img{
+        width: 100%;
+    height: 100%;
+    border-radius: 0.8rem 0 0 0.8rem ;
+}
+
+
+.post-item-reverse p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 0.4rem;
+}
+
+.verMais {
+    width: 1.rem;
+    height: 1.1rem;
+}
+
+.verMais img{
+    color: black;
+    height: 0.7rem;
+    width: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pagination-button button{
+    border: 0.15rem solid white;
+    border-radius: 0.5rem;
+    width: 1.9rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pagination-button-left {
+    font-size: 1.9rem;
+    margin-right: -0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.pagination-button-right {
+    font-size: 1.9rem;
+    margin-left: -0.7rem;
+    margin-bottom: 1.4rem;
+}
+}
+
+
+ /*Responsividade do Mobile L*/
+@media screen and (max-width:426px){
+
+.title{
+    padding-top: 3rem;
+}
+
+    .title p{
+    font-size: 110%;
+    padding-top: 3.5vh;
+    padding-left: 2vh;
+    padding-bottom: 1.5vh;
+    }
+
+#searching-camp {
+    height: 1.4rem;
+    margin-top: 5%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
+
+}
+
+#busca {
+    align-items: center;
+    border: none;
+    color: black;
+    width: 66vw;
+    height: 0;
+    border-radius: 50vw;
+}
+
+ .search{
+    width: 65vw;
+    height: 0;
+ }
+
+input {
+    font-size: 0.7rem;
+    padding: 0.7rem;
+}
+
+
+.movido {
+    transform: translateX(-1%);
+}
+
+
+#search-button {
+    border: 0.05rem solid #243754;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 40rem;
+}
+
+#search-button ion-icon{
+    font-size: 85%;
+}
+
+.filter-close-buttons button{
+    background-color: #061326;
+    border: 0.05rem solid #243754;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 40rem;
+}
+
+.filter-close-buttons ion-icon{
+    color: white;
+    font-size: 85%;
+}
+
+#filter-options{
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 65vw;
+    height: 2.2rem;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.5rem ;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+.filter-button1{
+    border: 0.01vw solid #4D0E72;
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 0.2rem;
+
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 0.2rem;
+
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 0.2rem;
+
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 0.2rem;
+
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+
+.posts-list{
+    background-color: rgba(0, 0, 0, 0.301);
+    margin-top: 5%;
+    width: 90%;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.post-item{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 7rem;
+    border-radius: 0.8rem;
+}
+
+.post-info{
+    width: 55%;
+    padding: 3%;
+}
+
+.post-image{
+    width:45%;
+}
+
+.post-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.post-info h5{
+    width: 3.5rem;
+    height: 0.68rem;
+    font-size: 0.4rem;
+    border-radius: 0.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-footer span{
+    font-size: 0.5rem;
+    width:100%;
+    gap: 100px;
+}
+
+.post-footer{
+    align-items:end ;
+}
+
+.autor {
+    width: 50%;
+}
+
+.tag-btn{
+    width: 35%;
+}
+
+
+.post-info p{
+    padding-top: 0.4rem;
+    font-size: 0.5rem;
+}
+
+.post-item h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.post-item span{
+    font-weight: 300;
+}
+
+.post-title h2{
+    font-size: 0.7rem;
+}
+
+.post-item-reverse{
+    background-color: rgba(255, 255, 255, 0.729);
+    width: 100%;
+    height: 7rem;
+    border-radius: 0.8rem;
+}
+
+.post-image-reverse {
+    width:45%;
+}
+
+.post-image-reverse img{
+        width: 100%;
+    height: 100%;
+    border-radius: 0.8rem 0 0 0.8rem ;
+}
+
+
+.post-item-reverse p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    padding-top: 0.4rem;
+}
+
+.post-item-reverse h2{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.verMais{
+    width: 1rem;
+    height: 0.7rem;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verMais img{
+    color: black;
+    height: 0.4rem;
+    width: 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+}
+
+ /*Responsividade do Mobile M*/
+@media screen and (max-width:376px){
+
+    .filter-close-buttons{
+        gap: 0.15rem;
+    }
+.post-item{
+    height: 6.5rem;
+}
+
+.post-info{
+    width: 50%;
+    padding: 3%;
+}
+
+.post-image{
+    width:50%;
+}
+
+.post-info h5{
+    font-size: 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.post-footer span{
+    font-size: 0.4rem;
+}
+
+.post-info p{
+    padding-top: 0.35rem;
+    font-size: 0.4rem;
+}
+
+.post-title h2{
+    font-size: 0.6rem;
+}
+
+.post-item-reverse{
+    height: 6.5rem;
+}
+
+.post-image-reverse {
+    width:50%;
+}
+
+.see-more {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.see-more ion-icon{
+    height: 0.5rem;
+    width: 0.5rem;
+}
+}
+ /*Responsividade do Mobile M*/
+@media screen and (max-width:321px){
+
+    .title{
+        padding-top: 1.5rem;
+    }
+
+    .title p{
+        font-size: 0.8rem;
+    }
+
+#searching-camp {
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
+    height: 0.5rem;
+
+}
+
+#busca {
+    align-items: center;
+    border: none;
+    color: black;
+    width: 66vw;
+    height: 0.1rem;
+    border-radius: 50vw;
+    font-size: 0.5rem;
+    padding-left: 0.4rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+}
+
+ .search{
+    width: 65vw;
+    height: 0.1rem;
+ }
+
+  #search-button {
+     height: 0.8rem;
+     width: 0.8rem;
+    }
+    #search-button ion-icon{
+        width: 0.55rem;
+    }
+
+ .filter-close-buttons button{
+     height: 0.8rem;
+     width: 0.8rem;
+    }
+    .filter-close-buttons ion-icon{
+        width: 0.55rem;
+    }
+
+ .filter-close-buttons{
+    gap: 0.1rem;
+ }
+
+.posts-list{
+    margin-top: 1.5rem;
+}
+
+.post-item{
+    height: 5rem;
+}
+
+.post-info{
+    width: 50%;
+    padding: 2.8%;
+}
+
+.post-image{
+    width:50%;
+}
+
+.post-info h5{
+    width: 2.3rem;
+    height: 0.55rem;
+    font-size: 0.3rem;
+}
+
+.post-footer span{
+    font-size: 0.3rem;
+    font-weight: 400;
+}
+
+.post-info p{
+    padding-top: 0.35rem;
+    font-size: 0.4rem;
+}
+
+.post-title h2{
+    font-size: 0.5rem;
+}
+
+.post-item-reverse{
+    height: 5rem;
+}
+
+.post-image-reverse {
+    width:50%;
+}
+
+.verMais {
+    width: 0.7rem;
+    height: 0.55rem;
+    margin-right: 0.1rem;
+}
+
+.verMais img{
+    height: 0.45rem;
+    width: 0.35rem;
+}
+
+.posts-list{
+    padding: 0.6rem;
+}
+
+#filter-options{
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
+
+    width: 65vw;
+    height: 3.5vh;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem ;
+}
+
+.filter-button1{
+    border: 0.01vw solid #4D0E72;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.4rem;
+}
+
+.filter-button2{
+    border: 0.1vw solid #0b3d55;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.4rem;
+}
+
+.filter-button3{
+    border: 0.1vw solid #134b13;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.4rem;
+}
+
+.filter-button4{
+    border: 0.1vw solid #5e080a;
+    width: 23vw;
+    height: 2vh;
+    font-size: 0.4rem;
+}
+
+.pagination {
+    margin-top: 0.3rem;
+}
+
+}
+

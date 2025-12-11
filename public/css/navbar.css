@@ -1,17 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url(../assets/fundonavbar2.png);
+    background-image: url(../assets/bg-oficial.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+    width: 100vw;
     color: #fff;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
     overflow: hidden;
+
 }
 
-.navbar {
+.top-bar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,11 +31,15 @@ body {
     height: 40px;
 }
 
+.logo-area {
+    width: 2rem;
+}
+
 .menu {
     display: flex;
-    gap: 40px;
+    gap: 25px;
     background: #1e2d44;
-    padding: 10px 25px;
+    padding: 7px 15px;
     border-radius: 25px;
 }
 
@@ -34,23 +47,30 @@ body {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
+    padding: 3px 15px;
+    border-radius: 25px;
 }
 
 .menu a.active {
     background-color: #f0f0f0;
-    padding: 0px 10px;
     color: #000000;
-    border-radius: 25px;
+}
+
+.menu a.active:hover {
+    background-color: #fafafa;
+    opacity: 0.8;
 }
 
 .menu a:hover {
-    color: #334d74;
+    background-color: #30415c;
 }
 
 .icones-area {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    justify-content: center;
+    width: 2rem;
 }
 
 .icone {
@@ -64,6 +84,95 @@ body {
     opacity: 1;
 }
 
+.logo:hover {
+    opacity: 1;
+    scale: 1.1;
+    transition: 0.5s;
+}
+
 .perfil {
     width: 40px;
+    border-radius: 100%;
+}
+
+.linha-horizontal {
+    width: 100%;
+    height: 3rem;
+    background-color: #1A2B45;
+    margin: 0 auto;
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .icones-area {
+    width: auto;
+    }
+    .logo-area {
+    padding-top: 0.5rem;
+    width: auto;
+    }
+    .logo {
+    height: 30px;
+    }
+
+    .top-bar{
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .menu{
+        gap: 3px;
+    }
+    .menu a{
+        padding: 2px 12px;
+    }
+}
+
+@media (max-width: 555px) {
+    .menu {
+    display: none;
+    }
+    .top-bar{
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+    .linha-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    opacity: 1;
+    }
+
+    .linha-horizontal a{
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+        padding: 3px 15px;
+        border-radius: 25px;
+    }
+    .linha-horizontal a.active {
+    background-color: #f0f0f0;
+    color: #000000;
+    }
+
+    .linha-horizontal a.active:hover {
+    background-color: #fafafa;
+    opacity: 0.8;
+    }
+
+    
+    .logo-area {
+    padding-top: 0.2rem;
+    }
+}
+
+@media (max-width: 425px){
+    .top-bar{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
 }
