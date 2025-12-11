@@ -103,16 +103,13 @@ nav {
     flex-direction: column;
 }
 
-
-
-/* ! Organizando informações do usuário  --------------------------------------------- */
+/* ! Organizando topo ---------------------------------------------------------------- */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .voltar{
-    background-color: #0A3A55;
     height: 55%;
     width: 5%;
     display: flex;
@@ -121,9 +118,8 @@ nav {
     border-radius: 50%;
     margin-left: 1.7rem;
     .arrow{
-        height: 50%;
-        width: 50%;
-        color:#e5e5e5;
+        height: 80%;
+        width: 80%;
     }
 }
 .usuario{
@@ -146,3 +142,5 @@ nav {
         color: #3e3e3e;
     }
 }
+/* ! Organizando informações do usuário  --------------------------------------------- */
+/* ! Organizando informações do usuário  --------------------------------------------- */
