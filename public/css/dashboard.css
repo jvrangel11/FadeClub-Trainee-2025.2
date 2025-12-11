@@ -141,6 +141,18 @@ a{
 
     cursor: pointer;
 }
+
+.logout a{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.logout p{
+    font-size: 15px;
+    text-align: center;
+}
+
 /*estiliza texto*/
 .home , .logout{
     color: #E5E5E5;
