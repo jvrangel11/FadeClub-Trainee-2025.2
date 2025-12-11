@@ -16,7 +16,7 @@ class UsuariosController
             $page = intval($_GET['paginacaoNumero']);
 
             if($page <=0){
-                return redirect('tabelaUsuarios');
+                return redirect('tabela-usuarios');
             }
         }
 
@@ -27,12 +27,12 @@ class UsuariosController
         $total_pages = ceil($rows_count / $itensPage);
 
         if($inicio >= $rows_count){
-            return redirect('tabelaUsuarios?paginacaoNumero='.$total_pages );
+            return redirect('tabela-usuarios?paginacaoNumero='.$total_pages );
         }
         $users = App::get('database')->selectAll('users' , $inicio , $itensPage);
 
 
-        return view('admin/tabelaUsuarios', compact('users' , 'page' , 'total_pages'));
+        return view('admin/tabela-usuarios', compact('users' , 'page' , 'total_pages'));
     }
 
 
@@ -84,7 +84,7 @@ class UsuariosController
 
              App::get('database')->insert('users', $parameters);    
 
-             header('Location: /tabelaUsuarios');
+             header('Location: /tabela-usuarios');
 
              
         
@@ -132,7 +132,7 @@ class UsuariosController
 
          App::get('database')->update('users', $id, $parameters);
 
-          header('Location: /tabelaUsuarios');
+          header('Location: /tabela-usuarios');
    
     }
 
@@ -149,7 +149,7 @@ class UsuariosController
 
 
                  App::get('database')->delete('users', $id);   
-                           header('Location: /tabelaUsuarios');
+                           header('Location: /tabela-usuarios');
  
 
     }

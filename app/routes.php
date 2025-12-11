@@ -6,7 +6,7 @@ use App\Controllers\PostsController;
 use App\Controllers\LoginController;
 use App\Core\Router;
 
-    $router->get('tabelaUsuarios', 'UsuariosController@index');
+    $router->get('tabela-usuarios', 'UsuariosController@index');
 
     $router->get('crud-posts', 'PostsController@index');
 
@@ -27,7 +27,7 @@ use App\Core\Router;
 
     $router->get('logout', 'LoginController@logout');
     
-    $router->post('tabelaUsuarios/create', 'UsuariosController@store');
-    $router->post('tabelaUsuarios/edit', 'UsuariosController@edit');
-    $router->post('tabelaUsuarios/delete', 'UsuariosController@delete');
+    $router->post('tabela-usuarios/create', 'UsuariosController@store');
+    $router->post('tabela-usuarios/edit', 'UsuariosController@edit');
+    $router->post('tabela-usuarios/delete', 'UsuariosController@delete');
 ?>
