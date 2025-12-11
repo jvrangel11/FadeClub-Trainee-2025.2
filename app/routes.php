@@ -26,8 +26,8 @@ use App\Core\Router;
     $router->post('login', 'LoginController@efetuaLogin');
 
     $router->get('logout', 'LoginController@logout');
+    
+    $router->post('tabelaUsuarios/create', 'UsuariosController@store');
+    $router->post('tabelaUsuarios/edit', 'UsuariosController@edit');
+    $router->post('tabelaUsuarios/delete', 'UsuariosController@delete');
 ?>
-
-$router->post('tabelaUsuarios/create', 'UsuariosController@store');
-$router->post('tabelaUsuarios/edit', 'UsuariosController@edit');
-$router->post('tabelaUsuarios/delete', 'UsuariosController@delete');

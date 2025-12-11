@@ -35,7 +35,7 @@ class PostsController
     }
 
     public function store(){
-
+        session_start();
         $temporario = $_FILES['img_path']['tmp_name'];
         $nomeimagem = sha1(uniqid($_FILES['img_path']['name'],true)) . "." . pathinfo($_FILES['img_path']['name'], PATHINFO_EXTENSION);
         $destinoimagem ="public/assets/";
@@ -51,9 +51,9 @@ class PostsController
             'tag'=> $_POST['tag'],
             'products'=> $_POST['products'],
             'img_path'=> $caminhodaimagem,
-            'user_id'=> 1
+            'user_id'=> $_SESSION['id'],
         ];
-var_dump($_POST);
+var_dump($_SESSION);
 echo implode(', ', $parameters);
 
         App::get('database')->insert ('posts', $parameters);
