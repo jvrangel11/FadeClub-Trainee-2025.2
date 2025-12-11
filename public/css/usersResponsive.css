@@ -1,0 +1,108 @@
+/*! Smartphones ------------------------------------------------------------------------------ */
+@Media ( max-width: 430px){
+    header{
+        height: 7%;
+        width: 100%;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+    header h1{
+        font-size: 34px;
+    }
+    .scroll-lateral{
+        width: 100%;
+        overflow-x: auto;
+        padding-left: 3rem;
+    }
+    table{
+        width: 800px;
+        max-width: none;
+    }
+    .criar{
+        height: 3rem;
+        width: 6rem;
+        border-radius: 10px;
+    }
+    .criarButton{
+        transform: scale(1.2);
+    }
+    .criar{
+        font-size: 20px;
+    }
+    .scroll-lateral::-webkit-scrollbar,
+    .scroll-lateral::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/*! Ajustes para outros mobiles -------------------------------------------------------------- */
+@Media ( max-width: 430px) {
+    header h1{
+        font-size: 27px;
+    }
+}
+@media ( max-width: 320px) {
+    header{
+        padding-left: 2rem;
+        padding-right: 0.5rem;
+    }
+    header h1{
+        font-size: 23px;
+    }
+    .scroll-lateral{
+        padding-left: 2rem;
+    }
+}
+/*! Tablet ----------------------------------------------------------------------------------- */
+@media (min-width: 430px) and (max-width: 770px){
+    header{
+        height: 7%;
+        width: 100%;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+    header h1{
+        font-size: 40px;
+    }
+    .scroll-lateral{
+        width: 100%;
+        overflow-x: auto;
+        padding-left: 3rem;
+    }
+    table{
+        width: 800px;
+        max-width: none;
+    }
+    .criar{
+        height: 4rem;
+        width: 7rem;
+        border-radius: 10px;
+    }
+    .criarButton{
+        transform: scale(1.4);
+    }
+    .criar{
+        font-size: 24px;
+    }
+    .scroll-lateral::-webkit-scrollbar,
+    .scroll-lateral::-webkit-scrollbar {
+        display: none;
+    }
+}
+/*! Laptop ----------------------------------------------------------------------------------- */
+
+@media (min-width: 770px) and (max-width: 1024px)
+{
+    .containerGeral{
+        border: 1px solid orangered;
+        
+    }
+    header{
+        border: 1px solid orangered;
+    }
+    table{
+        border: 1px solid orangered;
+        width: 800px;
+        max-width: none;
+    }
+}
