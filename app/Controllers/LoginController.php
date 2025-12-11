@@ -31,6 +31,9 @@ class LoginController
 
         if($user != false){
             $_SESSION['id'] = $user->id;
+            $_SESSION['img_path'] = $user->img_path;
+            $_SESSION['name'] = $user->name;
+            
             header(header: 'Location: /dashboard');
         }
         else{
@@ -50,3 +53,6 @@ class LoginController
     }
 }
 ?>
+
+
+/*Warning: Undefined global variable $_SESSION in C:\Users\PESSOAL\Documents\fadeclub\FadeClub-Trainee-2025.2\app\views\admin\sidebar.view.php on line 23

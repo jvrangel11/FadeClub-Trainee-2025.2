@@ -74,7 +74,7 @@
           </div>
           <div class="post-footer">
             <div class="autor">
-            <span>autor</span>
+            <span><?= $user->name ?></span>
             </div>
             <div class="tag-btn">
 

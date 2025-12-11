@@ -10,6 +10,9 @@ class SidebarController
 
     public function index()
     {
-        return view('admin/sidebar');
+
+        $users = App::get('database') -> selectAll('users');
+
+        return view('admin/sidebar', compact('users'));
     }
 }
