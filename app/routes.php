@@ -27,7 +27,6 @@ use App\Controllers\PostsController;
 
     $router->post('crud-posts/delete', 'PostsController@delete');
 
-
     $router->get('login', 'LoginController@exibirLogin');
 
     $router->get('dashboard', 'LoginController@exibirDashboard');

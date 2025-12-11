@@ -84,34 +84,10 @@
           </div>
         </div>
           <div class="post-image" enctype="multipart/form-data">
-            <img src="<?= $post->img_path ?>" alt="Imagem do post">
+            <img src="/<?= $post->img_path ?>" alt="Imagem do post">
           </div>
       </div>
 
-
-<!--
-      <div class="post-item-reverse">
-        <div class="post-info">
-          <div class="post-title">
-            <h2><?= $post->title ?></h2>
-            <p>Conteúdo da postagem 2.</p>
-          </div>
-          <div class="post-footer">
-            <div class="autor">
-            <span>Autor: Maria Oliveira</span>
-            </div>
-            <div class="tag-btn">
-
-              <h5>Tendências</h5>
-              <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-            </div>
-          </div>
-        </div>
-          <div class="post-image-reverse">
-            <img src="./../../../public/assets/mesa-de-cafe-de-luxo-dentro-bar-barista-gerada-por-ia.jpg" alt="Imagem de um homem com cabelo estiloso">
-          </div>
-      </div>
-      -->
             <?php endforeach; ?>
 
     </div>
