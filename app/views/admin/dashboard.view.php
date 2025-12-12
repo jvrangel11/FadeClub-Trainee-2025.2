@@ -42,9 +42,9 @@
                 </nav>
                 <div class="botoes">
                     <div class="home">
-                        <div class="iconeHome">
+                        <a href="/landing-page" class="iconeHome">
                             <img src="../../../public/assets/SVG/home.svg" alt=""> 
-                        </div>
+                        </a>
                         <p>HOME</p>
                     </div>
                     <div class="logout">
