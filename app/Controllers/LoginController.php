@@ -31,8 +31,7 @@ class LoginController
 
         if($user != false){
             $_SESSION['id'] = $user->id;
-            $_SESSION['img_path'] = $user->img_path;
-            $_SESSION['name'] = $user->name;
+
             
             header(header: 'Location: /dashboard');
         }

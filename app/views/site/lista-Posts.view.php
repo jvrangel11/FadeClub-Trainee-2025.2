@@ -50,17 +50,20 @@
                 <ion-icon name="close-outline"></ion-icon>
               </button>
             </div>
-          </form>
           </div>
+        </form>
           
           
           <div id="filter-options">
-            <button class="filter-button1">Tendências</button>
-              <button class="filter-button4">Inspirações</button>
-              <button class="filter-button2">Dicas</button>
-              <button class="filter-button3">Técnicas</button>
-            </div>
+            <form id="formTag" class="search" method="GET" action="/lista-posts/search">
+              <button onclick="searchTag('tendencies')" class="filter-button1">Tendências</button>
+              <button onclick="searchTag('inspirations')" class="filter-button4">Inspirações</button>
+              <button onclick="searchTag('tips')" class="filter-button2">Dicas</button>
+              <button onclick="searchTag('techniques')" class="filter-button3">Técnicas</button>
+              <input id="inputTag" name="search_tags" type="hidden">
+            </form>
           </div>
+        </div>
       </div>
     </div>
     

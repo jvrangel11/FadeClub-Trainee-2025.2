@@ -34,7 +34,12 @@ class ListaPostsController
             $posts = App::get('database')->selectAllWithSearch('posts', 'title', $_GET['search'], $inicio, $itensPage);
             $rows_count = App::get('database')->countAllWithSearch('posts', 'title', $_GET['search']);
         }
-        
+
+        if(!empty($_GET['search_tags']) && isset($_GET['search_tags'])) {
+        $tags = App::get('database')->selectAllWithSearch('posts', 'tags', $_GET['search_tags'], $inicio, $itensPage);
+        $rows_count = App::get('database')->countAllWithSearch('posts', 'tags', $_GET['search_tags']);
+    }
+
         $total_pages = ceil($rows_count/$itensPage);
 
         return view('site/lista-posts', compact('posts', 'page', 'total_pages'));

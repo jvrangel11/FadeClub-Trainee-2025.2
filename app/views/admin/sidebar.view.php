@@ -17,11 +17,11 @@
 
         <div id="sidebar_content">
             <div id="user">
-                <img src="/<?= $_SESSION['img_path'] ?>" alt="user_avatar" id="avatar">
+                <img src="public\assets\profile-picture.jpg" alt="user_avatar" id="avatar">
     
                 <p id="user_infos">
                     <span class="user_description">
-                        Olá, <?= $_SESSION['name'] ?>
+                        Olá, Pedro
                     </span>
                 </p>
             </div>

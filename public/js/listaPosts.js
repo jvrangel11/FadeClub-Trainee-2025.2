@@ -17,3 +17,12 @@ filterButton.addEventListener('click', () => {
 filterButton.addEventListener('click', () => {
     searchButton.classList.toggle('movido');
 });
+
+function searchTag(tag){
+    
+    let form = getElementById('formTag');
+    let input = getElementById('inputTag');
+    input.value = tag;
+    form.submit();
+
+}
