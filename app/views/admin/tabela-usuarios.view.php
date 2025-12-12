@@ -80,17 +80,13 @@
         <!--Paginação -------------------------------------------------------------------------------------------------------------------->
             <?php require(__DIR__ . '/../admin/components/paginacaoUsers.php') ?>
 
-        <!--Footer ----------------------------------------------------------------------------------------------------------------------->
-            
-           <?php include __DIR__ . '/../site/footer.view.php'; ?>   
-
         <!--Modais ----------------------------------------------------------------------------------------------------------------------->
         
         
             <div class="modais modalCriar" id="criar">
                 <div class="modalc">
                     <div class="containerRight">
-                    <form  method="POST" action="/tabelaUsuarios/create" enctype="multipart/form-data" >
+                    <form  method="POST" action="/tabela-usuarios/create" enctype="multipart/form-data" >
                     
                         <img class="imgPerfilB"   id="preview-new" src="../../../public/assets/Imagens/usuario.png" value=" <?= $user->img_path ?>" width="60" height="60" alt="Foto de Perfil">
 
@@ -148,7 +144,7 @@
             <div class="modais modalEditar" id="editar<?= $user->id ?>">
                 <div class="modaled">
                     <div class="containerRight">
-                        <form method="POST" action="/tabelaUsuarios/edit" enctype="multipart/form-data" >
+                        <form method="POST" action="/tabela-usuarios/edit" enctype="multipart/form-data" >
                       
                              <label for="uploadFoto_<?= $user->id ?>" class="imgPerfilB" style="cursor: pointer;">
                     
@@ -254,7 +250,7 @@
                         </div>
                         <div class="botoesExcluir">
                             <div class="cancel" onclick="fecharModal('excluir<?= $user->id ?>')">Cancelar</div>
-                            <form method="POST" action="/tabelaUsuarios/delete">
+                            <form method="POST" action="/tabela-usuarios/delete">
                             <input type="hidden" name="id" value=" <?= $user->id ?>" >
                             <button type="submit" class="excluirM" onclick="fecharModal('excluir<?= $user->id ?>')">Excluir</button>
                             </form>
