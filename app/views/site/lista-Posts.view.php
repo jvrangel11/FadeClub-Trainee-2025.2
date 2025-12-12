@@ -21,7 +21,7 @@
   </head>
 
    <body>
-
+<?php include 'navbar.view.php'; ?>
     <div class="title">
       <p>Últimas Postagens</p>
     </div>
@@ -144,4 +144,5 @@
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
       <script src="../../../public/js/listaPosts.js"></script>
+      <?php include 'footer.view.php'; ?>
   </body>

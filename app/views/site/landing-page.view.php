@@ -18,9 +18,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php include 'navbar.view.php'; ?>
     <!-- Header guardava a navbar e  hero section, mas vai guaradar apenas a hero section -->
     <header class="cover">
-        <nav><!-- Meramente ilustrativa --></nav>
+
         <section class="heroSection">
             <img src="../../../public/assets/Imagens/logo.png" alt="">
             <div class="slogan">
@@ -247,5 +248,6 @@
     <footer></footer>
 
     <script src="../../../public/js/landingPage.js"></script>
+    <?php include 'footer.view.php'; ?>
 </body>
 </html>

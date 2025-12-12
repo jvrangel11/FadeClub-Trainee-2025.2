@@ -20,7 +20,7 @@ main {
 }
 /* ! Adicionando elemento central ---------------------------------------------------- */
 .postContainer{
-    height: 90%;
+    height: 80%;
     width: 55%;
 
     background-color: #e5e5e5;
@@ -159,9 +159,9 @@ nav {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clajustify;
         -webkit-line-clamp: 8;
         -webkit-box-orient: vertical;
+        color: #3e3e3e;
     }
     span{
         font-weight: 700;

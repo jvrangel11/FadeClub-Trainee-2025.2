@@ -5,18 +5,15 @@
     box-sizing: border-box;
 }
 /*!--------------------------------------------------------------------------------------- */
-
+body {
+    overflow-y: scroll;
+}
 /*! Dimensionamento do header + adicionando background ----------------------------------- */
 header {
     height: 93vh;
     width: 100%;
 
-    background-image: url(../../public/assets/Covers/cover1.png);
-
-    nav{
-        height: 10vh;
-        background-color: #1B2A41;
-    }
+    
     section {
         height: 83vh;
     }
@@ -29,6 +26,9 @@ header {
 
 /*! Organização da Hero Section ---------------------------------------------------------- */
 .heroSection {
+    background-image: url(../../public/assets/Covers/cover1.png);
+    background-size: cover;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,10 +113,7 @@ main{
     z-index: 9;
 }
 /*! Adiciona um footer referencial ------------------------------------------------------ */
-footer {
-    background-color: #6B231E;
-    height: 30vh;
-}
+
 /*! Ajusta dimensão do container dos carrosseis ----------------------------------------- */
 .carrossel-container{
     height: 50vh;
@@ -249,7 +246,6 @@ footer {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clajustify;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
         }

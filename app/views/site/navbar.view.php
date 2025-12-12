@@ -16,13 +16,13 @@
                 <img src="../../../public/assets/FadeClub-_letreiro2 1.png" alt="Logo FadeClub" class="logo">
             </div>
                 <nav class="menu">
-                    <a href="#">Publicações</a>
-                    <a href="#" class="active">Home</a>
-                    <a href="#">Comunidade</a>
+                    <a href="/lista-posts">Publicações</a>
+                    <a href="/landing-page" class="active">Home</a>
+                    <a href="#">Sobre nós</a>
                 </nav>
-            <div class="icones-area">
+            <a href="/login" class="icones-area">
                 <img src="../../../public/assets/usuario.png" alt="Perfil" class="icone perfil">
-            </div>
+            </a>
         </div>
         <div class="linha-horizontal">
             <a href="#">Publicações</a>

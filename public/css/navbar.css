@@ -4,19 +4,24 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url(../assets/bg-oficial.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
+body { 
     color: #fff;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
-    overflow: hidden;
 
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+   
+    margin-top: auto;
 }
 
 .top-bar {
@@ -37,10 +42,12 @@ body {
 
 .menu {
     display: flex;
+    width: auto;
     gap: 25px;
     background: #1e2d44;
     padding: 7px 15px;
     border-radius: 25px;
+    
 }
 
 .menu a {
@@ -49,6 +56,10 @@ body {
     transition: 0.3s;
     padding: 3px 15px;
     border-radius: 25px;
+    color: #fff;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .menu a.active {
