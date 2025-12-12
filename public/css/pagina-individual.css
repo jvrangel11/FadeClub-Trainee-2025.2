@@ -1,0 +1,178 @@
+/* ! Zerando o CSS-------------------------------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ! Adicionando background ---------------------------------------------------------- */
+main {
+    background-image: url(../assets/backgrounds/cover5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ! Adicionando elemento central ---------------------------------------------------- */
+.postContainer{
+    height: 90%;
+    width: 55%;
+
+    background-color: #e5e5e5;
+    border-radius: 10px;
+}
+/* ! Adicionando navegação do card --------------------------------------------------- */
+nav {
+    height: 10%;
+    width: 100%;
+}
+/* ! Organizando disposição do conteúdo ---------------------------------------------- */
+.conteudo{
+    height: 90%;
+    width: 100%;
+
+    display: flex;
+}
+.containerEsquerdo{
+    height: 100%;
+    width: 48%;
+}
+.containerDireito{
+    height: 100%;
+    width: 53%;
+}
+/* ! Organizando conteúdo da esquerda ------------------------------------------------ */
+/*geral*/
+.containerEsquerdo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*imagem*/
+.containerImagem{
+    margin-top: 1rem;
+
+    height: 58%;
+    width: 87%;
+    border-radius: 30px;
+
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.829);
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+/*caixa do título e da tag*/
+.containerInformacoes{
+    margin-top: 0.5rem;
+    height: 37%;
+    width: 87%;
+}
+/*título*/
+.titulo{
+    font-family: "Anton", sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #3e3e3e;
+}
+/*tag*/
+.tag{
+    height: 12%;
+    width: 26%;
+    border-radius: 10px;
+    background-color: #116797;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Anton", sans-serif;
+    font-size: 20px;
+    color:#EDDFB2;
+    margin-top: 0.5rem;
+}
+/* ! Organizando conteúdo da direita ------------------------------------------------- */
+/*geral*/
+.containerDireito{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ! Organizando topo ---------------------------------------------------------------- */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.voltar{
+    height: 55%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 1.7rem;
+    .arrow{
+        height: 80%;
+        width: 80%;
+        transition: transform 0.4s ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+}
+.usuario{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+    padding-right: 2rem;
+    img{
+        height: 60%;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+    }
+    p{
+        font-family: "Anton", sans-serif;
+        font-size: 30px;
+        font-weight: lighter;
+        color: #3e3e3e;
+    }
+}
+/* ! Organizando texto  -------------------------------------------------------------- */
+.containerDireito{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-top: 0.7rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 0.2rem;
+    text-align: justify;
+    p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clajustify;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+    }
+    span{
+        font-weight: 700;
+    }
+}
+/*
+.curiosidades{
+    display: none;
+}
+*/
+
+/* ! Hovers -------------------------------------------------------------------------- */
+.arrow:hover{
+    transform: scale(1.2);
+}
