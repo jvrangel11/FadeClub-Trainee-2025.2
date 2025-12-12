@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../../public/css/posts.css">
     <link rel="stylesheet" href="../../../public/css/editar.css" />
     <script src="https://kit.fontawesome.com/bf586e4b37.js" crossorigin="anonymous"></script>
+     <link rel="icon" type="image/png" href="../../../public/assets/Imagens/logo.png"/>
 </head>
 <body>
 
