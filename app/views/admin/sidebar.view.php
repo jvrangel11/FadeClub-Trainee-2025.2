@@ -25,8 +25,8 @@
                 </p>
             </div>
             <ul id="side_items">
-                <li class="side_item active">
-                    <a href="#">
+                <li class="side_item">
+                    <a href="dashboard">
                         <ion-icon name="apps-outline"></ion-icon>
                         <span class="item_description">
                             Dashboard
@@ -35,7 +35,7 @@
                 </li>
     
                  <li class="side_item">
-                    <a href="#">
+                    <a href="crud-posts">
                         <ion-icon name="grid-outline"></ion-icon>
                         <span class="item_description">
                             Postagens
@@ -44,7 +44,7 @@
                 </li>
     
                 <li class="side_item">
-                    <a href="#">
+                    <a href="tabela-usuarios">
                         <ion-icon name="people-outline"></ion-icon>
                         <span class="item_description">
                             Usuários

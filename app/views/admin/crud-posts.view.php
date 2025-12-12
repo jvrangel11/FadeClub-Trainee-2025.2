@@ -14,6 +14,8 @@
     <script src="https://kit.fontawesome.com/bf586e4b37.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<?php include 'sidebar.view.php'; ?>
     <div class="tabela-container">
         <div class="table-header">
             <h1 class="titulo">Tabela de Posts</h1>
