@@ -15,13 +15,13 @@ body *{
 }
 
 .title {
-    padding-top: 4.1rem ;
-    backdrop-filter:  blur(5px);
+    padding-top: 3rem ;
+    backdrop-filter:  blur(2px);
 }
 .title p {
     font-size: 2.2rem;
     line-height: 2vw;
-    padding-top: 2.5%;
+
     padding-left: 2%;
     padding-bottom: 1.5%;
     font-weight: bold;

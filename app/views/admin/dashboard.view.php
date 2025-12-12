@@ -26,13 +26,13 @@
                     <img src="../../../public/assets/Imagens/logo.png" alt="" class="logoImg">
                 </div>
                 <nav class="links">
-                    <a href="" class="postagens">
+                    <a href="crud-posts" class="postagens">
                         <div class="linkIcone iconePostagens">
                             <img src="../../../public/assets/SVG/posts.svg" alt="">
                         </div>
                         <p>Postagens</p>
                     </a>
-                    <a href="" class="usuarios">
+                    <a href="tabela-usuarios" class="usuarios">
                         <div class="linkIcone iconeUsuarios">
                             <img src="../../../public/assets/SVG/usuarios.svg" alt="">
                         </div>
