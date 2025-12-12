@@ -11,8 +11,9 @@ session_start();
     <script src="https://kit.fontawesome.com/bf586e4b37.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php include 'navbar.view.php'; ?>
     <div class="login-container">
-        <div class="login-box">
+        <div class="caixa-info">
             <div class="logo-area">
                 <img src="../../../public/assets/fadeclub-logo.png" alt="Logo FadeClub">
             </div>

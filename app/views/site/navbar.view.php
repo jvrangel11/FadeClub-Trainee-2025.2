@@ -12,7 +12,7 @@
 <body>
     <header class="navbar">
         <div class ="top-bar">
-            <div class="logo-area">
+            <div class="logo-part">
                 <img src="../../../public/assets/FadeClub-_letreiro2 1.png" alt="Logo FadeClub" class="logo">
             </div>
                 <nav class="menu">

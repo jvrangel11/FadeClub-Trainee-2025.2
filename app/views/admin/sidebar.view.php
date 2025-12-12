@@ -60,10 +60,12 @@
 
         <div id="logout">
             <button id="logout_btn">
-                <ion-icon name="log-out-outline"></ion-icon>
-                <span class="item_description">
-                    Logout
-                </span>
+                <a href="/logout">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    <span class="item_description">
+                        Logout
+                    </span>
+                </a>
             </button>
         </div>
     </nav>

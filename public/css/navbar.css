@@ -36,7 +36,7 @@ body {
     height: 40px;
 }
 
-.logo-area {
+.logo-part {
     width: 2rem;
 }
 
@@ -118,7 +118,7 @@ body {
     .icones-area {
     width: auto;
     }
-    .logo-area {
+    .logo-part {
     padding-top: 0.5rem;
     width: auto;
     }
@@ -175,7 +175,7 @@ body {
     }
 
     
-    .logo-area {
+    .logo-part {
     padding-top: 0.2rem;
     }
 }
