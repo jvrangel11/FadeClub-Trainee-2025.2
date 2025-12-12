@@ -7,6 +7,7 @@ use App\Core\Router;
 use App\Controllers\LoginController;
 use App\Controllers\PostsController;
 use App\Controllers\LandingPageController;
+use App\Controllers\PaginaIndividualController;
 
     $router->get('', 'ExampleController@index');
 
@@ -42,4 +43,5 @@ use App\Controllers\LandingPageController;
     $router->post('tabela-usuarios/delete', 'UsuariosController@delete');
 
     $router->get('landing-page', 'LandingPageController@index');
+    $router->get('pagina-individual', 'PaginaIndividualController@index');
 ?>
