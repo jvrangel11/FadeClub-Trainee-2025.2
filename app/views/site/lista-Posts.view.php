@@ -79,7 +79,10 @@
             <div class="tag-btn">
 
               <h5><?= $post->tag ?></h5>
-              <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
+              <div class="verMais">
+              <a href="pagina-individual">
+                <img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
+              </a>  
             </div>
           </div>
         </div>
