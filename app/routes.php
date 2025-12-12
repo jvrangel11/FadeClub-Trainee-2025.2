@@ -6,6 +6,7 @@ use App\Controllers\ListaPostsController;
 use App\Core\Router;
 use App\Controllers\LoginController;
 use App\Controllers\PostsController;
+use App\Controllers\LandingPageController;
 
     $router->get('', 'ExampleController@index');
 
@@ -39,4 +40,6 @@ use App\Controllers\PostsController;
     $router->post('tabela-usuarios/create', 'UsuariosController@store');
     $router->post('tabela-usuarios/edit', 'UsuariosController@edit');
     $router->post('tabela-usuarios/delete', 'UsuariosController@delete');
+
+    $router->get('landing-page', 'LandingPageController@index');
 ?>
