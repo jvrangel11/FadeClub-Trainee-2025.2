@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../../public/css/sobre-nos.css">
 </head>
 <body>
+    <?php include 'navbar.view.php'; ?>
     <div class="total-container">
         <div class="top-container">
             <div class="titulo">

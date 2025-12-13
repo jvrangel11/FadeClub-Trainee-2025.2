@@ -18,7 +18,7 @@
                 <nav class="menu">
                     <a href="/lista-posts">Publicações</a>
                     <a href="/landing-page" class="active">Home</a>
-                    <a href="#">Sobre nós</a>
+                    <a href="/sobre-nos">Sobre nós</a>
                 </nav>
             <a href="/login" class="icones-area">
                 <img src="../../../public/assets/usuario.png" alt="Perfil" class="icone perfil">

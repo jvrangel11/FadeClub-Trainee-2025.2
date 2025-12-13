@@ -8,6 +8,7 @@ use App\Controllers\LoginController;
 use App\Controllers\PostsController;
 use App\Controllers\LandingPageController;
 use App\Controllers\PaginaIndividualController;
+use App\Controllers\SobreNosController;
 
     $router->get('', 'ExampleController@index');
 
@@ -44,4 +45,5 @@ use App\Controllers\PaginaIndividualController;
 
     $router->get('landing-page', 'LandingPageController@index');
     $router->get('pagina-individual', 'PaginaIndividualController@index');
+    $router->get('sobre-nos', 'SobreNosController@index');
 ?>
