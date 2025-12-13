@@ -16,9 +16,11 @@
                 <img src="../../../public/assets/FadeClub-_letreiro2 1.png" alt="Logo FadeClub" class="logo">
             </div>
                 <nav class="menu">
+                    <span class="menu-indicator"></span>
+
                     <a href="/lista-posts">Publicações</a>
                     <a href="/landing-page" class="active">Home</a>
-                    <a href="/sobre-nos">Sobre nós</a>
+                    <a href="/sobre-nos" class="teste">Quem Somos</a>
                 </nav>
             <a href="/login" class="icones-area">
                 <img src="../../../public/assets/usuario.png" alt="Perfil" class="icone perfil">
@@ -30,5 +32,6 @@
             <a href="#">Comunidade</a>
         </div>
     </header>
+    <script src="../../../public/js/navbar.js"></script>
 </body>
 </html>

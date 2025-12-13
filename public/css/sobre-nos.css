@@ -42,8 +42,12 @@
     }
 }
 
+.foto-area img {
+    height: 14rem;
+}
+
 .card-container{
-    width: 40%;
+    width: 50%;
     height: 50%;
     opacity: 0.9;
     background-color: #172438;
@@ -138,4 +142,57 @@
 .card-excelencia:hover, .card-tradicao:hover, .card-inovacao:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+@media (max-width: 1024px){
+    .card-container {
+        width: 60%;
+        h2{
+            font-size: 20px;
+        }
+    }
+    .foto-area img {
+        height: 12rem;
+    }
+    .textao {
+        font-size: 15px;
+    }
+    .container-valores {
+        width: 60%;
+        height: 70%;
+        padding-bottom: 20px;
+    }
+    .caixaBarraHorizontal {
+        width: 60%;
+    }
+    .titulo-valores {
+        font-size: 20px
+    }
+    .card-excelencia, .card-tradicao, .card-inovacao {
+    font-size: 15px;
+    height: 65%;
+    }
+}
+
+@media (max-width: 426px) {
+    .top-container {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .foto-area img {
+        height: 10rem;
+    }
+    .card-container {
+        width: 80%;
+    }
+    .container-valores {
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card-excelencia, .card-tradicao, .card-inovacao {
+        width: 80%;
+    }
 }

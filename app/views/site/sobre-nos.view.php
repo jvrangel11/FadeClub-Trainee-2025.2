@@ -16,6 +16,9 @@
             </div>
         </div>
         <div class="card-container">
+            <div class="foto-area">
+                <img src="../../../public/assets/Imagens/logo.png" alt="">
+            </div>
             <h2>Propósito</h2>
             <div class="textao">
                 <p>O FadeClub é mais do que um simples blog; é um espaço para quem entende que a barbearia vai além de tesouras e navalhas. Nosso propósito é valorizar a cultura, o estilo e as histórias que nascem em cada corte, mostrando que o ritual de cuidar da aparência é também uma forma de identidade e expressão.
@@ -42,7 +45,7 @@
                 </div>
                 <div class="card-inovacao">
                     <h3>Inovação</h3>
-                    <p>Atualização constante com as tendências modeernas e novos produtos do mercado.</p>
+                    <p>Atualização constante com as novas tendências e produtos do mercado.</p>
                 </div>
             </div>
     </div>
