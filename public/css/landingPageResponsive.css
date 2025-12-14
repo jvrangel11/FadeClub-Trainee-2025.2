@@ -213,11 +213,11 @@ header {
     border-radius: 1.5rem;
     .imagem{
         height: 35vh;
-        width: 25vw;
+        width: 23vw;
     }
     .informacoes{
         height: 35vh;
-        width: 25vw;
+        width: 27vw;
         .texto{
             height: 75%;
         }
@@ -236,8 +236,20 @@ header {
     font-weight: 800;  
 }
 }
+
+.heroSection {
+    gap: 1rem;
+    img{
+        max-width: 100%; 
+        max-height: 100%;
+
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
 /*! Laptop L --------------------------------------------------------------------------------------- */
-@media (min-width: 1024px){
+@media (min-width: 1025px){
     .card{
     width: 30vw;
     border-radius: 1.5rem;
