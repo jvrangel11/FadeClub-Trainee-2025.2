@@ -1,4 +1,4 @@
-<?php
+<?php   
 
 if (!isset($post) || empty($post)) {
     echo "<p>Post não encontrado.</p>";
@@ -6,7 +6,8 @@ if (!isset($post) || empty($post)) {
 }
 
 if (is_array($post)) {
-    $post = $post[0];
+    $post = $post[0]; 
+
 }
 ?>
 
@@ -34,8 +35,9 @@ if (is_array($post)) {
                     </svg>
                 </a>
                 <div class="usuario">
-                    <p class="nome">Nome do autor</p>
-                    <img src="../../../public/assets/Imagens/usuario.png" alt="">
+                    <p class="nome"><?php  echo($author[0]->name) ?></p>
+                    
+                    <img src="<?php echo($author[0]->img_path) ?>" >
                 </div>
             </nav>
             <section class="conteudo">

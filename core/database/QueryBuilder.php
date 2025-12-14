@@ -67,14 +67,14 @@ class QueryBuilder
     {
     $sql = sprintf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table );
 
-    try {
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(['id' => $id]);
             return $stmt->fetchAll(PDO::FETCH_CLASS);
 
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
+            }catch (Exception $e) {
+                die($e->getMessage());
+            }
     }
 
     public function selectPosts()

@@ -105,11 +105,30 @@ echo implode(', ', $parameters);
 
     public function show()
     {
-        $id = $_GET['id'];
+        $database = App::get('database');
+        $id = $_GET['id'] ?? null;
 
-        $post = App::get('database')->selectOne('posts', $id);
+        if(!$id)
+        {
+            redirect('');
+        }
 
-        return view('site/pagina-individual', compact('post'));
+
+        $post = $database->selectOne('posts', $id) ;
+
+
+        if(!$post)
+        {
+            redirect('');
+        }
+
+        $author = $database-> selectOne('users', $post[0]->user_id);
+
+
+        return view('site/pagina-individual', [
+            'post'=> $post,
+            'author'=> $author,
+        ]);
     }
 }
 
