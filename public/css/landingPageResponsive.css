@@ -12,6 +12,7 @@ header {
 }
 /** Ajusta hero section **/
 .heroSection {
+    padding: 3rem;
     gap: 1rem;
     img{
         max-width: 100%; 
@@ -24,6 +25,11 @@ header {
         font-weight: 400;
         font-size: 23px;
     }
+}
+.logoFade{
+
+    width: 15rem;
+    height: 15rem;
 }
 /** Ajusta divisórias **/
 .genero{
@@ -154,7 +160,7 @@ header {
     }
     .slogan{
         font-weight: 400;
-        font-size: 30px;
+        font-size: 40px;
     }
 }
 /** Ajusta divisórias **/
@@ -167,15 +173,16 @@ header {
 }
 /** Ajustando os cards **/
 .card{
-    width: 50vw;
+    height: 30vh;
+    width: 55vw;
     border-radius: 1.5rem;
     .imagem{
-        height: 35vh;
+        height: 30vh;
         width: 25vw;
     }
     .informacoes{
-        height: 35vh;
-        width: 25vw;
+        height: 32vh;
+        width: 30vw;
         .texto{
             height: 75%;
         }
@@ -196,27 +203,31 @@ header {
     font-weight: 800;  
 }
 }
-
 /*! Laptop --------------------------------------------------------------------------------------- */
-@media (min-width: 768px) and (max-width: 1024px)
+@media (min-width: 769px) and (max-width: 1024px)
 {
 /** Ajusta hero section **/
 .heroSection {
     gap: 1rem;
+    img{
+        width: 30rem;
+        height: 30rem;
+    }
 }
 /** Ajustando os cards **/
 .conteudo01, .conteudo02{
     padding-left: 2.3rem;
 }
 .card{
-    width: 50vw;
+    width: 43vw;
+    height: 30vh;
     border-radius: 1.5rem;
     .imagem{
-        height: 35vh;
-        width: 23vw;
+        height: 30vh;
+        width: 20vw;
     }
     .informacoes{
-        height: 35vh;
+        height: 32vh;
         width: 27vw;
         .texto{
             height: 75%;
@@ -235,17 +246,6 @@ header {
     font-size: 30px;
     font-weight: 800;  
 }
-}
-
-.heroSection {
-    gap: 1rem;
-    img{
-        max-width: 100%; 
-        max-height: 100%;
-
-        width: 25rem;
-        height: 25rem;
-    }
 }
 
 /*! Laptop L --------------------------------------------------------------------------------------- */

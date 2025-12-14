@@ -25,7 +25,7 @@
     <header class="cover">
 
         <section class="heroSection">
-            <img src="../../../public/assets/Imagens/logo.png" alt="">
+            <img class="logoFade" src="../../../public/assets/Imagens/logo.png" alt="">
             <div class="slogan">
                 <p>Cortes que inspiram,</p>
                 <p>estilo que conecta.</p>
