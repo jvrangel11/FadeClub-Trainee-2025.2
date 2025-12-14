@@ -6,8 +6,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FadeClub - Login</title>
+    <title>FadeClub</title>
     <link rel="stylesheet" href="../../../public/css/login.css">
+    <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
     <script src="https://kit.fontawesome.com/bf586e4b37.js" crossorigin="anonymous"></script>
 </head>
 <body>
