@@ -90,13 +90,14 @@
                 <div class="modalc">
                     <div class="containerRight">
                     <form  method="POST" action="/tabela-usuarios/create" enctype="multipart/form-data" >
-                    
-                        <img class="imgPerfilB"   id="preview-new" src="../../../public/assets/Imagens/usuario.png" value=" <?= $user->img_path ?>" width="60" height="60" alt="Foto de Perfil">
+                        <div class="imagemBotao">
+                            <img class="imgPerfilB"   id="preview-new" src="../../../public/assets/Imagens/usuario.png" value=" <?= $user->img_path ?>" width="60" height="60" alt="Foto de Perfil">
+                            <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
+                                <div class="botaoAddFoto"><span>Add Foto</span></div>
+                            </label>
+                            <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_new" style="display: none;" onchange="previewImagem(event, 'new')">
+                        </div>
 
-                    <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
-                        <div class="botaoAddFoto"><span>Add Foto</span></div>
-                    </label>
-                    <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_new" style="display: none;" onchange="previewImagem(event, 'new')">
                         <div class="tituloA">
                             <h1 class="tituloAdd">Vamos adicionar um</h1>
                             <h1 class="tituloAdd">novo usuário!</h1>

@@ -11,7 +11,7 @@
     justify-content: center;
     gap: 15px
 }
-.imgPerfilB{
+.imgPerfilB {
     height: 20vh;
     width: 11.3vw;
     img{
@@ -142,4 +142,11 @@
 /*! Hovers --------------------------------------------------------------------------- */
 .cancel:hover , .save:hover{
     cursor: pointer;
+}
+
+
+/*! Ajustes Finais -------------------------------------------------------------------- */
+.imagemBotao{
+    display: flex;
+    flex-direction: column;
 }
