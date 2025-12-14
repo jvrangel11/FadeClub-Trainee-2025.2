@@ -10,9 +10,10 @@ class LandingPageController
 
     public function index()
     {
-        $posts = App::get('database')->selectAll('posts');
 
-        return view('site/landing-page' , compact('posts'));
+        $data = App::get('database')->selectPosts();
+
+        return view('site/landing-page' , compact('data'));
     }
 }
 

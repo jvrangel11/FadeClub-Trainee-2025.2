@@ -40,7 +40,7 @@
                 <!-- Seta esquerda -->
                 <div class="nav-arrow arrow-left1" id="seta-esquerda1">&#10094</div>
                     <div class="conteudo01">
-                        <?php $contador=0; $limite=6; foreach($posts as $post): if($contador >= $limite){ break; } $contador++;?>
+                        <?php $contador=0; $limite=9; foreach($data as $i=>$post): if($contador >= $limite){ break; } $contador++;?>
                         <div class="card card01">
                             <img src="<?=  $post->img_path ?>" class="imagem">
                             <div class="informacoes">
@@ -49,11 +49,11 @@
                                     <div class="caixaLegenda">
                                         <p class="legenda"><?= $post->story ?></p>
                                     </div>
-                                    <p class="autor"><?= $post->user_id->name ?></p>
+                                    <p class="autor"><?= $post->author_name ?></p>
                                 </div>
                                 <div class="especiais">
                                     <div class="tag tag01"><p><?= $post->tag ?></p></div>
-                                    <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
+                                    <a class="verMais" href="/post?id=<?= $post->id ?>"><img src="../../../public/assets/SVG/verMais.svg" alt=""></a>
                                 </div>
                             </div>
                         </div>

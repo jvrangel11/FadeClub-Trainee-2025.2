@@ -34,7 +34,7 @@ if (is_array($post)) {
                     </svg>
                 </a>
                 <div class="usuario">
-                    <p class="nome"><?= $user['name'] ?? 'Visitante' ?></p>
+                    <p class="nome">Nome do autor</p>
                     <img src="../../../public/assets/Imagens/usuario.png" alt="">
                 </div>
             </nav>

@@ -88,7 +88,6 @@ echo implode(', ', $parameters);
             'tag'=> $_POST['tag'],
             'products'=> $_POST['products'],
             'img_path'=> $caminhodaimagem,
-            'user_id'=> 1
         ];
 
         App::get('database')->update ('posts', $id, $parameters);
@@ -110,9 +109,7 @@ echo implode(', ', $parameters);
 
         $post = App::get('database')->selectOne('posts', $id);
 
-        return view('site/pagina-individual', [
-            'post' => $post
-        ]);
+        return view('site/pagina-individual', compact('post'));
     }
 }
 
