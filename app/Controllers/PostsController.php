@@ -104,5 +104,15 @@ echo implode(', ', $parameters);
         header('Location: /crud-posts');
     }
 
+    public function show()
+    {
+        $id = $_GET['id'];
+
+        $post = App::get('database')->selectOne('posts', $id);
+
+        return view('site/pagina-individual', [
+            'post' => $post
+        ]);
+    }
 }
 

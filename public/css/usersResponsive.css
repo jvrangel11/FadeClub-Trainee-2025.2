@@ -93,15 +93,7 @@
 
 @media (min-width: 770px) and (max-width: 1024px)
 {
-    .containerGeral{
-        border: 1px solid orangered;
-        
-    }
-    header{
-        border: 1px solid orangered;
-    }
-    table{
-        border: 1px solid orangered;
+    table{  
         width: 800px;
         max-width: none;
     }

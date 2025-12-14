@@ -46,4 +46,6 @@ use App\Controllers\SobreNosController;
     $router->get('landing-page', 'LandingPageController@index');
     $router->get('pagina-individual', 'PaginaIndividualController@index');
     $router->get('sobre-nos', 'SobreNosController@index');
+
+    $router->get('post', 'PostsController@show');
 ?>

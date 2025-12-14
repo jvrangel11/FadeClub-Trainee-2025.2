@@ -80,7 +80,7 @@
 
               <h5><?= $post->tag ?></h5>
               <div class="verMais">
-              <a href="pagina-individual">
+              <a href="/post?id=<?= $post->id ?>">
                 <img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
               </a>  
             </div>
