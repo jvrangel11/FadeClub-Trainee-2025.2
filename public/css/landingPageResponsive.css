@@ -236,3 +236,24 @@ header {
     font-weight: 800;  
 }
 }
+/*! Laptop L --------------------------------------------------------------------------------------- */
+@media (min-width: 1024px){
+    .card{
+    width: 30vw;
+    border-radius: 1.5rem;
+    .imagem{
+        height: 35vh;
+        width: 17vw;
+    }
+    .informacoes{
+        height: 35vh;
+        width: 25vw;
+        .texto{
+            height: 75%;
+        }
+        .especiais{
+            height: 22%;
+        }
+    }
+}
+}
