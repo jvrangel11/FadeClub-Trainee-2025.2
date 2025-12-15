@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela de Posts</title>
+    <title>FadeClub</title>
     <link rel="stylesheet" href="../../../public/css/posts.css">
     <link rel="stylesheet" href="../../../public/css/editar.css" />
     <script src="https://kit.fontawesome.com/bf586e4b37.js" crossorigin="anonymous"></script>
+    
+    <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
 </head>
 <body>
+
+<?php include 'sidebar.view.php'; ?>
     <div class="tabela-container">
         <div class="table-header">
             <h1 class="titulo">Tabela de Posts</h1>

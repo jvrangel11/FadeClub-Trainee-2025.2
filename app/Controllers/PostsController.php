@@ -88,7 +88,6 @@ echo implode(', ', $parameters);
             'tag'=> $_POST['tag'],
             'products'=> $_POST['products'],
             'img_path'=> $caminhodaimagem,
-            'user_id'=> 1
         ];
 
         App::get('database')->update ('posts', $id, $parameters);
@@ -104,5 +103,32 @@ echo implode(', ', $parameters);
         header('Location: /crud-posts');
     }
 
+    public function show()
+    {
+        $database = App::get('database');
+        $id = $_GET['id'] ?? null;
+
+        if(!$id)
+        {
+            redirect('');
+        }
+
+
+        $post = $database->selectOne('posts', $id) ;
+
+
+        if(!$post)
+        {
+            redirect('');
+        }
+
+        $author = $database-> selectOne('users', $post[0]->user_id);
+
+
+        return view('site/pagina-individual', [
+            'post'=> $post,
+            'author'=> $author,
+        ]);
+    }
 }
 

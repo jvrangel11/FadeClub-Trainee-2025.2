@@ -1,0 +1,83 @@
+<?php   
+
+if (!isset($post) || empty($post)) {
+    echo "<p>Post não encontrado.</p>";
+    return;
+}
+
+if (is_array($post)) {
+    $post = $post[0]; 
+
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $post->title ?></title>
+    <link rel="stylesheet" href="../../../public/css/pagina-individual.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
+</head>
+<body>
+   <?php include 'navbar.view.php'; ?>
+    <main>
+        <div class="postContainer">
+            <nav>
+                <a class="voltar" href="/landing-page">
+                    <svg class="arrow" width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41431 4.70711L0.7072 4L9.31025e-05 4.70711L0.7072 5.41421L1.41431 4.70711ZM13.4143 5.70711C13.9666 5.70711 14.4143 5.25939 14.4143 4.70711C14.4143 4.15482 13.9666 3.70711 13.4143 3.70711V5.70711ZM4.7072 7.7486e-07L0.7072 4L2.12141 5.41421L6.12141 1.41421L4.7072 7.7486e-07ZM0.7072 5.41421L4.7072 9.41421L6.12141 8L2.12141 4L0.7072 5.41421ZM1.41431 5.70711H13.4143V3.70711H1.41431V5.70711Z"/>
+                    </svg>
+                </a>
+                <div class="usuario">
+                    <p class="nome"><?php  echo($author[0]->name) ?></p>
+                    
+                    <img src="<?php echo($author[0]->img_path) ?>" >
+                </div>
+            </nav>
+            <section class="conteudo">
+                <div class="containerEsquerdo">
+                    <div class="containerImagem">
+                        <img src="<?= $post->img_path ?>" alt="<?= $post->title ?>">
+                    </div>
+                    <div class="containerInformacoes">
+                        <div class="titulo">
+                            <p><?= $post->title ?></p>
+                        </div>
+                        <div class="tag">
+                            <p><?= $post->tag ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerDireito">
+                    <p class="historia">
+                        <span>História: </span><?= $post->story ?>
+                    </p>
+
+                    <p class="curiosidades">
+                        <span>Curiosidades: </span><?= $post->curiosity ?>
+                    </p>
+
+                    <p class="dicas">
+                        <span>Dicas: </span> <p> <?= $post->tips ?> </p>
+                    </p>
+
+                    <p class="produtos">
+                        <span>Produtos: </span><?= $post->products ?>
+                    </p>
+
+                    <p class="origem">
+                        <span>Origem: </span><?= $post->origin ?>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <?php include 'footer.view.php'; ?>
+</body>
+</html>

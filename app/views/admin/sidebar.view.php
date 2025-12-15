@@ -16,17 +16,17 @@
 
         <div id="sidebar_content">
             <div id="user">
-                <img src="./../../../public/assets/profile-picture.jpg" alt="user_avatar" id="avatar">
+                <img src="<?= htmlspecialchars(explode(' ', $_SESSION['user']->img_path)[0] ) ?>" alt="user_avatar" id="avatar">
     
                 <p id="user_infos">
                     <span class="user_description">
-                        Olá, Pedro
+                        Olá, <?= htmlspecialchars(explode(' ', $_SESSION['user']->name)[0] ) ?>
                     </span>
                 </p>
             </div>
             <ul id="side_items">
-                <li class="side_item active">
-                    <a href="#">
+                <li class="side_item">
+                    <a href="dashboard">
                         <ion-icon name="apps-outline"></ion-icon>
                         <span class="item_description">
                             Dashboard
@@ -35,7 +35,7 @@
                 </li>
     
                  <li class="side_item">
-                    <a href="#">
+                    <a href="crud-posts">
                         <ion-icon name="grid-outline"></ion-icon>
                         <span class="item_description">
                             Postagens
@@ -44,7 +44,7 @@
                 </li>
     
                 <li class="side_item">
-                    <a href="#">
+                    <a href="tabela-usuarios">
                         <ion-icon name="people-outline"></ion-icon>
                         <span class="item_description">
                             Usuários
@@ -60,10 +60,12 @@
 
         <div id="logout">
             <button id="logout_btn">
-                <ion-icon name="log-out-outline"></ion-icon>
-                <span class="item_description">
-                    Logout
-                </span>
+                <a href="logout">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    <span class="item_description">
+                        Logout
+                    </span>
+                </a>
             </button>
         </div>
     </nav>

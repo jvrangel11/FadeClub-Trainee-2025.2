@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.total-container{
+    width: 100%;
+    min-height: 150vh;
+    background-image: url(../assets/fundonavbar.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-container{
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    width: 100%;
+    background-color: #6B231E;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    h1{
+        font-size: 35px;
+        font-weight: 100;
+        font-style: normal;
+    }
+}
+
+.foto-area img {
+    height: 14rem;
+}
+
+.card-container{
+    width: 50%;
+    height: 50%;
+    background-color: #172438d3;
+    border-left: #6B231E 10px solid;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+
+    transition: transform 0.3s ease-in-out;
+    transition-timing-function: ease-in-out;
+    h2{
+        font-weight: 100;
+        font-style: normal;
+    }
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+    background-color: #1b2a41e0;
+    cursor: pointer;
+}
+
+.textao {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    width: 80%;
+}
+
+.caixaBarraHorizontal{
+    display: flex;
+    align-items: center;
+    height: 2vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 50%;
+}
+.barraHorizontal {
+    border: 1px solid #DBDBDB;
+    width: 100%;
+}
+
+.container-valores{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6b231ed8;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.titulo-valores{
+    h2{
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-top: 20px;
+    }
+}
+
+.cards {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-excelencia, .card-tradicao, .card-inovacao {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    width: 30%;
+    height: 85%;
+    background-color: #501a17be;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+
+    transition: transform 0.3s ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.card-excelencia:hover, .card-tradicao:hover, .card-inovacao:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #501a17;
+}
+
+@media (max-width: 1024px){
+    .card-container {
+        width: 60%;
+        h2{
+            font-size: 20px;
+        }
+    }
+    .foto-area img {
+        height: 12rem;
+    }
+    .textao {
+        font-size: 15px;
+    }
+    .container-valores {
+        width: 60%;
+        height: 70%;
+        padding-bottom: 20px;
+    }
+    .caixaBarraHorizontal {
+        width: 60%;
+    }
+    .titulo-valores {
+        font-size: 20px
+    }
+    .card-excelencia, .card-tradicao, .card-inovacao {
+    font-size: 15px;
+    height: 65%;
+    }
+}
+
+@media (max-width: 426px) {
+    .top-container {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .foto-area img {
+        height: 10rem;
+    }
+    .card-container {
+        width: 80%;
+    }
+    .container-valores {
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card-excelencia, .card-tradicao, .card-inovacao {
+        width: 80%;
+    }
+} 

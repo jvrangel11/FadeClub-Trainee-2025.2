@@ -4,19 +4,25 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #011650;
+  background-color: #6B231E;
 }
 
 .footer {
-  font-family: "Anton", sans-serif;
+   font-family: "Anton", sans-serif;
   background-color: #6B231E;
   color: #FAFAFA;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 22vh;
+  height: 25vh;
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.footerLogo img {
+  width: 18vw;
+  height: 25vh;
+  object-fit: contain;
+  object-position: 20px 20px;
+  content: url(../assets/Imagens/FadeClub-logo2.png);
 }
 
 .conteiner {
@@ -80,12 +86,6 @@ body {
   transform: scale(1.05);
 }
 
-.footerLogo img {
-  width: 18vw;
-  height: 25vh;
-  object-fit: contain;
-  content: url(../assets/Imagens/FadeClub-logo2.png);
-}
 
 /* textos fade */
 #fadeLogo,

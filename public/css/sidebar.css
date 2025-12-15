@@ -7,7 +7,6 @@
 
 body {
     display: flex;
-    min-width: 100vh;
 }
 
 main{
@@ -30,6 +29,7 @@ main{
     transition: all 0.6s ease;
     min-width: 82px;
     z-index: 2;
+    position: fixed;
 }
 
 #sidebar_content {
@@ -138,6 +138,14 @@ main{
     padding-left: 8px;
     width: 30px;
     height: 30px;
+}
+
+a {
+color: #E5E5E5;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 #open_btn {

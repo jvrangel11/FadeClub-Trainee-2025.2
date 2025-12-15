@@ -12,17 +12,19 @@
 <body>
     <header class="navbar">
         <div class ="top-bar">
-            <div class="logo-area">
+            <div class="logo-part">
                 <img src="../../../public/assets/FadeClub-_letreiro2 1.png" alt="Logo FadeClub" class="logo">
             </div>
                 <nav class="menu">
-                    <a href="#">Publicações</a>
-                    <a href="#" class="active">Home</a>
-                    <a href="#">Comunidade</a>
+                    <span class="menu-indicator"></span>
+
+                    <a href="/lista-posts">Publicações</a>
+                    <a href="/landing-page" class="active">Home</a>
+                    <a href="/sobre-nos" class="teste">Quem Somos</a>
                 </nav>
-            <div class="icones-area">
+            <a href="/login" class="icones-area">
                 <img src="../../../public/assets/usuario.png" alt="Perfil" class="icone perfil">
-            </div>
+            </a>
         </div>
         <div class="linha-horizontal">
             <a href="#">Publicações</a>
@@ -30,5 +32,6 @@
             <a href="#">Comunidade</a>
         </div>
     </header>
+    <script src="../../../public/js/navbar.js"></script>
 </body>
 </html>

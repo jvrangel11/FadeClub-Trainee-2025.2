@@ -1,7 +1,6 @@
 <?php
-    session_start();
 
-    if(!isset($_SESSION['id'])){
+    if(!isset($_SESSION['user'])){
         header(header: 'Location: /login');
     }
 ?>
@@ -11,11 +10,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>FadeClub</title>
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
     <link rel="stylesheet" href="../../../public/css/dashboardResponsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
+
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,13 +28,13 @@
                     <img src="../../../public/assets/Imagens/logo.png" alt="" class="logoImg">
                 </div>
                 <nav class="links">
-                    <a href="" class="postagens">
+                    <a href="/crud-posts" class="postagens">
                         <div class="linkIcone iconePostagens">
                             <img src="../../../public/assets/SVG/posts.svg" alt="">
                         </div>
                         <p>Postagens</p>
                     </a>
-                    <a href="" class="usuarios">
+                    <a href="/tabela-usuarios" class="usuarios">
                         <div class="linkIcone iconeUsuarios">
                             <img src="../../../public/assets/SVG/usuarios.svg" alt="">
                         </div>
@@ -41,9 +43,9 @@
                 </nav>
                 <div class="botoes">
                     <div class="home">
-                        <div class="iconeHome">
+                        <a href="/landing-page" class="iconeHome">
                             <img src="../../../public/assets/SVG/home.svg" alt=""> 
-                        </div>
+                        </a>
                         <p>HOME</p>
                     </div>
                     <div class="logout">

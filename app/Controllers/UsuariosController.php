@@ -39,7 +39,7 @@ class UsuariosController
 
     private function uploadFile($file){
         if(!isset($file) || $file['error'] !== UPLOAD_ERR_OK){
-            return null;
+            return './public/assets/Imagens/usuario.png';
         }
 
         if(!file_exists(self::UPLOAD_DIR)){
@@ -71,14 +71,16 @@ class UsuariosController
 
     public function store()
     {
-        $imgPath = $this->uploadFile($_FILES['img_path'] ?? null);
+        $imgPath = $this->uploadFile($_FILES['img_path'] ?? './public/assets/Imagens/usuario.png' );
 
 
         $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],  
-            'img_path' => $imgPath  
+            'img_path' => $imgPath,
+            'isAdmin' => isset($_POST['isAdmin']) ? 1 : 0,
+
              
         ];
 
@@ -124,7 +126,8 @@ class UsuariosController
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],  
-            'img_path' => $newImgPath
+            'img_path' => $newImgPath,
+            'isAdmin' => isset($_POST['isAdmin']) ? 1 : 0,
              
         ];
 
