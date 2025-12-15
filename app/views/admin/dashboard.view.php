@@ -1,6 +1,6 @@
 <?php
 
-    if(!isset($_SESSION['id'])){
+    if(!isset($_SESSION['user'])){
         header(header: 'Location: /login');
     }
 ?>

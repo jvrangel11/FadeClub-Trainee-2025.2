@@ -78,7 +78,9 @@ class UsuariosController
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],  
-            'img_path' => $imgPath  
+            'img_path' => $imgPath,
+            'isAdmin' => isset($_POST['isAdmin']) ? 1 : 0,
+
              
         ];
 
@@ -124,7 +126,8 @@ class UsuariosController
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],  
-            'img_path' => $newImgPath
+            'img_path' => $newImgPath,
+            'isAdmin' => isset($_POST['isAdmin']) ? 1 : 0,
              
         ];
 

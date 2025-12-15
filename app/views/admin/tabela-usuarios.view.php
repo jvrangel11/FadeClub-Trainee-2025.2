@@ -1,3 +1,20 @@
+<?php
+
+
+$session_user_id = $_SESSION['user'] ?? null;
+
+
+
+if (!$session_user_id) {
+    header('Location: /login');
+    exit;
+}
+
+
+if (!isset($users) || !is_array($users)) {
+    $users = [];
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,6 +45,7 @@
     <div class="containerGeral">
         <header>
             <h1>Tabela de Usuários</h1>
+            <?php if($session_user_id->isAdmin): ?>
             <button class="criar botaoCriar" onclick="abrirModal('criar')">
                 <svg class="criarButton" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#ffffff"/>
@@ -35,6 +53,7 @@
 
                 <p>Criar Usuário</p>
             </button>
+            <?php endif; ?>
         </header>
         <div class="scroll-lateral">
             <table>
@@ -47,38 +66,48 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody>
+<tbody>
                     <?php foreach($users as $user): ?>
+                    <?php
+                        // Prepara o ID para uso seguro e verifica a permissão
+                        $user_id_linha = htmlspecialchars($user->id ?? '');
+                        $is_self = ($session_user_id->id == $user_id_linha);
+                        $can_interact = $session_user_id->isAdmin || $is_self; 
+                        $disabled_class = $can_interact ? '' : 'acao-desabilitada';
+                    ?>
                     <tr>
-                        <td><?= $user->id ?></td>
-                        <td><img class="userImagem" src="<?= $user->img_path ?>"  width="60" height="60"></td>
-                        <td><?= $user->name ?></td>
-                        <td><?= $user->email ?></td>
+                        <td><?= $user_id_linha ?></td>
+                        <td><img src="<?= htmlspecialchars($user->img_path ?? '../../../public/assets/Imagens/usuario.png') ?>" width="60" height="60" alt="Foto de perfil"></td>
+                        <td><?= htmlspecialchars($user->name ?? 'N/A') ?></td>
+                        <td><?= htmlspecialchars($user->email ?? 'N/A') ?></td>
                         <td class="caixaAcoes">
-                                <button type="button" class="bot ver"  onclick="abrirModal('visualizar<?= $user->id ?>')">
-                                    <!--icone-->
-                                    <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
-                                    </svg>
-                                </button>
-                                <!--botao editar-->
-                                <button class="bot editar"  onclick="abrirModal('editar<?= $user->id ?>')">
-                                    <!--icone-->
-                                    <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
-                                    </svg>
-                                </button>
-                                <!--botao excluir-->
-                                <button class="bot excluir"  onclick="abrirModal('excluir<?= $user->id ?>')">
-                                    <!--icone-->
-                                    <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
-                                    </svg>
-                                </button>
+                            
+                            <button type="button" class="bot ver <?= $disabled_class ?>" 
+                                <?= $can_interact ? "onclick=\"abrirModal('visualizar{$user_id_linha}')\"" : "disabled" ?>>
+                                <svg class="iver" width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+                                </svg>
+                            </button>
+                            
+                            <button class="bot editar <?= $disabled_class ?>" 
+                                <?= $can_interact ? "onclick=\"abrirModal('editar{$user_id_linha}')\"" : "disabled" ?>>
+                                <svg class="ieditar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14.2525V18.0025H3.75L14.81 6.9425L11.06 3.1925L0 14.2525ZM17.71 4.0425C18.1 3.6525 18.1 3.0225 17.71 2.6325L15.37 0.2925C14.98 -0.0975 14.35 -0.0975 13.96 0.2925L12.13 2.1225L15.88 5.8725L17.71 4.0425Z"/>
+                                </svg>
+                            </button>
+                            
+                            <button class="bot excluir <?= $disabled_class ?>" 
+                                <?= $can_interact ? "onclick=\"abrirModal('excluir{$user_id_linha}')\"" : "disabled" ?>>
+                                <svg class="iexcluir" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
+                                </svg>
+                            </button>
+                            
                         </td>
                     </tr>
                     <?php endforeach ?>
                 </tbody>
+
             </table>
         </div>
         <!--Paginação -------------------------------------------------------------------------------------------------------------------->
@@ -86,7 +115,7 @@
 
         <!--Modais ----------------------------------------------------------------------------------------------------------------------->
         
-        
+        <?php if($session_user_id->isAdmin): ?>
             <div class="modais modalCriar" id="criar">
                 <div class="modalc">
                     <div class="containerRight">
@@ -131,6 +160,11 @@
                                 </div>
                                 <input type="password" class="form-control" id="password" name="password" required>
                         </div>
+                        <div class="senhaB">
+                                <div class="inputTitulo"><p>É Admin?</p><p class="asterisco">*</p></div>
+                                <input type="checkbox" class="form-control" id="isAdmin" name="isAdmin" >
+                        </div>
+
                         </div>
                         <div class="caixaBarraHorizontal">
                             <div class="barraHorizontal"></div>
@@ -143,7 +177,7 @@
                     </form>
                 </div>
             </div>
-
+            <?php endif; ?>
 
             <?php foreach($users as $user): ?>
             <div class="modais modalEditar" id="editar<?= $user->id ?>">
@@ -191,6 +225,15 @@
                                 <input type="password" id="password" name="password" value="<?= $user->password ?>" required>
                                 <img class="iconeEdit" src="../../../public/assets/editar.svg" alt="">
                             </div>
+                            <?php 
+                                if($session_user_id->isAdmin):
+                            ?>
+                            <div class="senhaB">
+                                <div class="inputTitulo"><p>É Admin?</p><p class="asterisco">*</p></div>
+                                <input type="checkbox" class="form-control" id="isAdmin" name="isAdmin" value="<?= ($user->isAdmin) ?>" >
+                            </div>
+
+                            <?php endif; ?>
                         </div>
                         <div class="caixaBarraHorizontal">
                             <div class="barraHorizontal"></div>
@@ -240,8 +283,10 @@
                 </div>
             </div>
             <?php endforeach ?>
-
+            
             <?php foreach($users as $user): ?>
+            <?php if ($session_user_id->isAdmin): ?>
+
             <div class="modaisP modalExcluir" id="excluir<?= $user->id ?>">
                 <div class="modalex">
                     <div class="containerExcluir">
@@ -263,6 +308,8 @@
                     </div>
                 </div>
             </div>
+
+            <?php endif; ?>
             <?php endforeach ?>
 
     </div>
