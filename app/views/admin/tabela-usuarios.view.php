@@ -77,7 +77,7 @@ if (!isset($users) || !is_array($users)) {
                     ?>
                     <tr>
                         <td><?= $user_id_linha ?></td>
-                        <td><img src="<?= htmlspecialchars($user->img_path ?? '../../../public/assets/Imagens/usuario.png') ?>" width="60" height="60" alt="Foto de perfil"></td>
+                        <td><img class="userImagem" src="<?= htmlspecialchars($user->img_path ?? '../../../public/assets/Imagens/usuario.png') ?>" width="60" height="60" alt="Foto de perfil"></td>
                         <td><?= htmlspecialchars($user->name ?? 'N/A') ?></td>
                         <td><?= htmlspecialchars($user->email ?? 'N/A') ?></td>
                         <td class="caixaAcoes">
