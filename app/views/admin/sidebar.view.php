@@ -16,7 +16,7 @@
 
         <div id="sidebar_content">
             <div id="user">
-                <img src="./../../../public/assets/profile-picture.jpg" alt="user_avatar" id="avatar">
+                <img src="<?= htmlspecialchars(explode(' ', $_SESSION['user']->img_path)[0] ) ?>" alt="user_avatar" id="avatar">
     
                 <p id="user_infos">
                     <span class="user_description">
