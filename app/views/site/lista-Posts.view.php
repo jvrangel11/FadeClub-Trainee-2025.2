@@ -13,10 +13,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="../../../public/assets/Imagens/logo.png"/>
+  <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto FadeClub</title>
+    <title>FadeClub</title>
     <link rel="stylesheet" href="../../../public/css/listaPosts.css" />
   </head>
 
@@ -80,7 +80,7 @@
 
               <h5><?= $post->tag ?></h5>
               <div class="verMais">
-              <a href="pagina-individual">
+              <a href="/post?id=<?= $post->id ?>">
                 <img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
               </a>  
             </div>

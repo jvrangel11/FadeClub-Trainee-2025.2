@@ -6,6 +6,7 @@ body {
     
 }
 
+
 @media (max-width: 768px) {
     .caixa-info {
         width: 60%;
@@ -28,19 +29,43 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
+
+.botaoDeVoltar{
+    display: flex;
+    align-items: center;
+    width: 36%;
+    padding-bottom: 1.3rem;
+}
+
+.botaoVoltar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #e5e5e5;  
+    .arrow{
+        transform: scale(1.6);
+        fill: #161616;
+    }
+}
+
 
 .caixa-info {
     display: flex;
     align-items: center;
     background-color: #e6e6e6;
     border-radius: 20px;
-    padding: 40px 20px;
+    padding: 45px 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     max-width: 700px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    gap: 1rem;
 }
 
 .logo-area img {
@@ -53,7 +78,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
+
 }
 
 label {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela de usuários</title>
+    <title>FadeClub</title>
     <!-- Links para os CSS -->
         <link rel="stylesheet" href="../../../public/css/users.css">
         <link rel="stylesheet" href="../../../public/css/usersResponsive.css">
@@ -19,7 +19,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-         <link rel="icon" type="image/png" href="../../../public/assets/Imagens/logo.png"/>
+        
+        <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
 </head>
 <body>
 
@@ -27,7 +28,7 @@
     <div class="containerGeral">
         <header>
             <h1>Tabela de Usuários</h1>
-            <button class="criar" onclick="abrirModal('criar')">
+            <button class="criar botaoCriar" onclick="abrirModal('criar')">
                 <svg class="criarButton" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#ffffff"/>
                 </svg>
@@ -90,13 +91,14 @@
                 <div class="modalc">
                     <div class="containerRight">
                     <form  method="POST" action="/tabela-usuarios/create" enctype="multipart/form-data" >
-                    
-                        <img class="imgPerfilB"   id="preview-new" src="../../../public/assets/Imagens/usuario.png" value=" <?= $user->img_path ?>" width="60" height="60" alt="Foto de Perfil">
+                        <div class="imagemBotao">
+                            <img class="imgPerfilB"   id="preview-new" src="../../../public/assets/Imagens/usuario.png" value=" <?= $user->img_path ?>" width="60" height="60" alt="Foto de Perfil">
+                            <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
+                                <div class="botaoAddFoto"><span>Add Foto</span></div>
+                            </label>
+                            <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_new" style="display: none;" onchange="previewImagem(event, 'new')">
+                        </div>
 
-                    <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
-                        <div class="botaoAddFoto"><span>Add Foto</span></div>
-                    </label>
-                    <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_new" style="display: none;" onchange="previewImagem(event, 'new')">
                         <div class="tituloA">
                             <h1 class="tituloAdd">Vamos adicionar um</h1>
                             <h1 class="tituloAdd">novo usuário!</h1>

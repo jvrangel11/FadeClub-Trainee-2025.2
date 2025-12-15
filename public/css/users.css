@@ -351,3 +351,18 @@ table td {
 .botoesPaginacao button:hover a.botaoPaginacao {
     color: #1b2a41;
 }
+
+
+
+
+/*! Ajustes finais? --------------------------------------------------------------------------------- */
+.botaoCriar{
+    height: 5rem;
+    width: 16rem;
+    p{
+        color: #f3f3f3;
+        font-family: "Anton", sans-serif;
+        font-weight: 100;
+        font-size: 30px;
+    }
+}

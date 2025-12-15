@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LandingPage</title>
+    <title>FadeClub</title>
     <!-- * Importando CSS * -->
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
     <link rel="stylesheet" href="../../../public/css/landingPageResponsive.css">
@@ -16,7 +16,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-         <link rel="icon" type="image/png" href="../../../public/assets/Imagens/logo.png"/>
+    <!-- Icone da guia -->
+        <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
 </head>
 <body>
     <?php include 'navbar.view.php'; ?>
@@ -24,7 +25,7 @@
     <header class="cover">
 
         <section class="heroSection">
-            <img src="../../../public/assets/Imagens/logo.png" alt="">
+            <img class="logoFade" src="../../../public/assets/Imagens/logo.png" alt="">
             <div class="slogan">
                 <p>Cortes que inspiram,</p>
                 <p>estilo que conecta.</p>
@@ -39,102 +40,24 @@
                 <!-- Seta esquerda -->
                 <div class="nav-arrow arrow-left1" id="seta-esquerda1">&#10094</div>
                     <div class="conteudo01">
+                        <?php $contador=0; $limite=9; foreach($data as $i=>$post): if($contador >= $limite){ break; } $contador++;?>
                         <div class="card card01">
-                            <img src="../../../public/assets/Cards/card01.jpg" alt="" class="imagem">
+                            <img src="<?=  $post->img_path ?>" class="imagem">
                             <div class="informacoes">
                                 <div class="texto">
-                                    <h1>Kit básico de todo...</h1>
+                                    <h1><?= $post->title ?></h1>
                                     <div class="caixaLegenda">
-                                        <p class="legenda">Tesoura, navalha, máquina e escova: simples, mas indispensáveis. Conheça os itens que fazem toda a diferença no dia a dia.</p>
+                                        <p class="legenda"><?= $post->story ?></p>
                                     </div>
-                                    <p class="autor">De: Rafa Medeiros</p>
+                                    <p class="autor"><?= $post->author_name ?></p>
                                 </div>
                                 <div class="especiais">
-                                    <div class="tag tag01"><p>Dicas</p></div>
-                                    <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
+                                    <div class="tag tag01"><p><?= $post->tag ?></p></div>
+                                    <a class="verMais" href="/post?id=<?= $post->id ?>"><img src="../../../public/assets/SVG/verMais.svg" alt=""></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="card card02">
-                            <img src="../../../public/assets/Cards/card02.jpg" alt="" class="imagem">
-                            <div class="informacoes">
-                                <div class="texto">
-                                    <h1>O corte em camadas...</h1>
-                                    <div class="caixaLegenda">
-                                        <p class="legenda">Dominar a tesoura é mais do que cortar, é esculpir. Camadas bem distribuídas garantem movimento e naturalidade ao cabelo, com acabamento de mestre.</p>
-                                    </div>
-                                    <p class="autor">De: Mestre Ruan</p>
-                                </div>
-                                <div class="especiais">
-                                    <div class="tag tag02"><p>Técnicas</p></div>
-                                    <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card03">
-                            <img src="../../../public/assets/Cards/card03.jpg" alt="" class="imagem">
-                            <div class="informacoes">
-                                <div class="texto">
-                                    <h1>Tradição em cada...</h1>
-                                    <div class="caixaLegenda">
-                                        <p class="legenda">Antes da navalha, vem o preparo. O pincel, a espuma e o cuidado são parte do ritual que transforma o barbear em arte.</p>
-                                    </div>
-                                    <p class="autor">De: Caio Alves</p>
-                                </div>
-                                <div class="especiais">
-                                    <div class="tag tag03"><p>Tendências</p></div>
-                                    <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card04">
-                            <img src="../../../public/assets/Cards/card04.jpg" alt="" class="imagem">
-                            <div class="informacoes">
-                                <div class="texto">
-                                    <h1>O charme do clássico</h1>
-                                    <div class="caixaLegenda">
-                                        <p class="legenda">Entre madeira, couro e tradição, o ambiente certo transforma o corte em experiência. Um espaço que respira estilo e história.</p>
-                                    </div>
-                                    <p class="autor">De: Barbearia Old Town</p>
-                                </div>
-                                <div class="especiais">
-                                    <div class="tag tag04"><p>Inspirações</p></div>
-                                    <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card05">
-                            <img src="../../../public/assets/Cards/card05.jpg" alt="" class="imagem">
-                            <div class="informacoes">
-                                <div class="texto">
-                                    <h1>O retorno do corte te...</h1>
-                                    <div class="caixaLegenda">
-                                        <p class="legenda">A nova tendência mistura tesoura e máquina para criar camadas naturais e modernas. Um estilo que chegou para ficar.</p>
-                                    </div>
-                                    <p class="autor">De: Mestre Ivan</p>
-                                </div>
-                                <div class="especiais">
-                                    <div class="tag tag05"><p>Tendências</p></div>
-                                    <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card06">
-                            <img src="../../../public/assets/Cards/card06.jpg" alt="" class="imagem">
-                            <div class="informacoes">
-                                <div class="texto">
-                                    <h1>Ouse com a máquina.</h1>
-                                    <div class="caixaLegenda">
-                                        <p class="legenda">Cortes undercut e laterais raspadas estão em alta para elas. Combine a ousadia da técnica com cores vibrantes para um impacto total!</p>
-                                    </div>
-                                    <p class="autor">De: Rafaella Drummond</p>
-                                </div>
-                                <div class="especiais">
-                                    <div class="tag tag06"><p>Tendências</p></div>
-                                    <div class="verMais"><img src="../../../public/assets/SVG/verMais.svg" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach ?>
                     </div>
                 <!-- Seta direita -->
                 <div class="nav-arrow arrow-right1" id="seta-direita1">&#10095</div>

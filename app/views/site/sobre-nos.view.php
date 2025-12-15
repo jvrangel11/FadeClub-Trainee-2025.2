@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós</title>
+    <title>FadeClub</title>
     <link rel="stylesheet" href="../../../public/css/sobre-nos.css">
+    <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
 </head>
 <body>
     <?php include 'navbar.view.php'; ?>
@@ -49,6 +50,7 @@
                 </div>
             </div>
     </div>
+    
     <?php include 'footer.view.php'; ?>
 </body>
 </html>

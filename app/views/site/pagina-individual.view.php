@@ -1,14 +1,28 @@
+<?php   
+
+if (!isset($post) || empty($post)) {
+    echo "<p>Post não encontrado.</p>";
+    return;
+}
+
+if (is_array($post)) {
+    $post = $post[0]; 
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Individual</title>
+    <title><?= $post->title ?></title>
     <link rel="stylesheet" href="../../../public/css/pagina-individual.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-     <link rel="icon" type="image/png" href="../../../public/assets/Imagens/logo.png"/>
+    
+    <link rel="icon" type="image/png" href="../../../public/assets/Imagens/pageicon.png"/>
 </head>
 <body>
    <?php include 'navbar.view.php'; ?>
@@ -21,30 +35,45 @@
                     </svg>
                 </a>
                 <div class="usuario">
-                    <p class="nome">Rafael Amaral</p>
-                    <img src="../../../public/assets/Imagens/usuario.png" alt="">
+                    <p class="nome"><?php  echo($author[0]->name) ?></p>
+                    
+                    <img src="<?php echo($author[0]->img_path) ?>" >
                 </div>
             </nav>
             <section class="conteudo">
                 <div class="containerEsquerdo">
                     <div class="containerImagem">
-                        <img src="../../../public/assets/Cards/card01.jpg" alt="">
+                        <img src="<?= $post->img_path ?>" alt="<?= $post->title ?>">
                     </div>
                     <div class="containerInformacoes">
                         <div class="titulo">
-                            <p>Kit que todo barbeiro deveria possuir.</p>
+                            <p><?= $post->title ?></p>
                         </div>
                         <div class="tag">
-                            <p>Dicas</p>
+                            <p><?= $post->tag ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="containerDireito">
-                    <p class="historia"><span>Historia: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="curiosidades"><span>Curiosidades: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="dicas"><span>Dicas: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="produtos"><span>Produtos: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="origem"><span>Origem: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="historia">
+                        <span>História: </span><?= $post->story ?>
+                    </p>
+
+                    <p class="curiosidades">
+                        <span>Curiosidades: </span><?= $post->curiosity ?>
+                    </p>
+
+                    <p class="dicas">
+                        <span>Dicas: </span> <p> <?= $post->tips ?> </p>
+                    </p>
+
+                    <p class="produtos">
+                        <span>Produtos: </span><?= $post->products ?>
+                    </p>
+
+                    <p class="origem">
+                        <span>Origem: </span><?= $post->origin ?>
+                    </p>
                 </div>
             </section>
         </div>

@@ -44,6 +44,8 @@ use App\Controllers\SobreNosController;
     $router->post('tabela-usuarios/delete', 'UsuariosController@delete');
 
     $router->get('landing-page', 'LandingPageController@index');
-    $router->get('pagina-individual', 'PaginaIndividualController@index');
+    $router->get('pagina-individual/{id}', 'PaginaIndividualController@index');
     $router->get('sobre-nos', 'SobreNosController@index');
+
+    $router->get('post', 'PostsController@show');
 ?>
