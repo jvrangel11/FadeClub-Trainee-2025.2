@@ -20,7 +20,7 @@
     
                 <p id="user_infos">
                     <span class="user_description">
-                        Olá, Pedro
+                        Olá, <?= htmlspecialchars(explode(' ', $_SESSION['user']->name)[0] ) ?>
                     </span>
                 </p>
             </div>

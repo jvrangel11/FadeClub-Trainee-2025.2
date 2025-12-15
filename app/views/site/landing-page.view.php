@@ -40,7 +40,7 @@
                 <!-- Seta esquerda -->
                 <div class="nav-arrow arrow-left1" id="seta-esquerda1">&#10094</div>
                     <div class="conteudo01">
-                        <?php $contador=0; $limite=9; foreach($data as $i=>$post): if($contador >= $limite){ break; } $contador++;?>
+                        <?php $contador=0; $limite=6; foreach($data as $i=>$post): if($contador >= $limite){ break; } $contador++;?>
                         <div class="card card01">
                             <img src="<?=  $post->img_path ?>" class="imagem">
                             <div class="informacoes">

@@ -27,10 +27,11 @@ class LoginController
         $senha = $_POST['senha'];
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
-        //var_dump($_SESSION);
 
-        if($user != false){
+
+        if($user != null){
             $_SESSION['id'] = $user->id;
+            $_SESSION['user'] = $user;
             header(header: 'Location: /dashboard');
         }
         else{
@@ -39,6 +40,8 @@ class LoginController
             //var_dump($user);
             header(header: 'Location: /login');
         }
+
+        
     }
 
     public function logout(): void

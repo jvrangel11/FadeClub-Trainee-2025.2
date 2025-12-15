@@ -10,6 +10,16 @@ class SidebarController
 
     public function index()
     {
-        return view('admin/sidebar');
+
+        $user = App::get('database')->selectOne(
+            'usuarios',
+            ['id' => $_SESSION['id']]
+        );
+
+
+        return view('admin/sidebar', [
+            'name'     => $user->name,
+            'img_path' => $user->img_path,
+        ]);
     }
 }

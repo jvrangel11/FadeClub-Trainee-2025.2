@@ -51,7 +51,7 @@
                     <?php foreach($users as $user): ?>
                     <tr>
                         <td><?= $user->id ?></td>
-                        <td><img src="<?= $user->img_path ?>"  width="60" height="60"></td>
+                        <td><img class="userImagem" src="<?= $user->img_path ?>"  width="60" height="60"></td>
                         <td><?= $user->name ?></td>
                         <td><?= $user->email ?></td>
                         <td class="caixaAcoes">

@@ -87,6 +87,13 @@ table{
 td{
     width: 10%;
 }
+
+.userImagem{
+    border-radius: 50%;
+    transform: scale(1.4);
+}
+
+
 /*disposição dos elementos*/
 tr{
     text-align: center;
