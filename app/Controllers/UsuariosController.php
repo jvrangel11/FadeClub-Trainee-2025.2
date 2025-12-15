@@ -39,7 +39,7 @@ class UsuariosController
 
     private function uploadFile($file){
         if(!isset($file) || $file['error'] !== UPLOAD_ERR_OK){
-            return null;
+            return './public/assets/Imagens/usuario.png';
         }
 
         if(!file_exists(self::UPLOAD_DIR)){
@@ -71,7 +71,7 @@ class UsuariosController
 
     public function store()
     {
-        $imgPath = $this->uploadFile($_FILES['img_path'] ?? null);
+        $imgPath = $this->uploadFile($_FILES['img_path'] ?? './public/assets/Imagens/usuario.png' );
 
 
         $parameters = [
