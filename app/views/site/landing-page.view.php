@@ -40,34 +40,6 @@
                 <!-- Seta esquerda -->
                 <div class="nav-arrow arrow-left1" id="seta-esquerda1">&#10094</div>
                     <div class="conteudo01">
-                        <?php $contador=0; $limite=6; foreach($data as $i=>$post): if($contador >= $limite){ break; } $contador++;?>
-                        <div class="card card01">
-                            <img src="<?=  $post->img_path ?>" class="imagem">
-                            <div class="informacoes">
-                                <div class="texto">
-                                    <h1><?= $post->title ?></h1>
-                                    <div class="caixaLegenda">
-                                        <p class="legenda"><?= $post->story ?></p>
-                                    </div>
-                                    <p class="autor"><?= $post->author_name ?></p>
-                                </div>
-                                <div class="especiais">
-                                    <div class="tag tag01"><p><?= $post->tag ?></p></div>
-                                    <a class="verMais" href="/post?id=<?= $post->id ?>"><img src="../../../public/assets/SVG/verMais.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php endforeach ?>
-                    </div>
-                <!-- Seta direita -->
-                <div class="nav-arrow arrow-right1" id="seta-direita1">&#10095</div>
-            </section>
-            <!-- Segundo Carrossel -->
-        <div class="genero ultimasPublicacoes">Ultimas Publicacões</div>
-            <section class="carrossel-container carrossel-ultimas">
-                <!-- Seta esquerda -->
-                <div class="nav-arrow arrow-left2" id="seta-esquerda2">&#10094</div>
-                    <div class="conteudo02">
                         <div class="card card07">
                             <img src="../../../public/assets/Cards/card07.jpg" alt="" class="imagem">
                             <div class="informacoes">
@@ -164,6 +136,34 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                <!-- Seta direita -->
+                <div class="nav-arrow arrow-right1" id="seta-direita1">&#10095</div>
+            </section>
+            <!-- Segundo Carrossel -->
+        <div class="genero ultimasPublicacoes">Ultimas Publicacões</div>
+            <section class="carrossel-container carrossel-ultimas">
+                <!-- Seta esquerda -->
+                <div class="nav-arrow arrow-left2" id="seta-esquerda2">&#10094</div>
+                    <div class="conteudo02">
+                        <?php $contador=0; $limite=6; foreach($data as $i=>$post): if($contador >= $limite){ break; } $contador++;?>
+                        <div class="card card01">
+                            <img src="<?=  $post->img_path ?>" class="imagem">
+                            <div class="informacoes">
+                                <div class="texto">
+                                    <h1><?= $post->title ?></h1>
+                                    <div class="caixaLegenda">
+                                        <p class="legenda"><?= $post->story ?></p>
+                                    </div>
+                                    <p class="autor"><?= $post->author_name ?></p>
+                                </div>
+                                <div class="especiais">
+                                    <div class="tag tag01"><p><?= $post->tag ?></p></div>
+                                    <a class="verMais" href="/post?id=<?= $post->id ?>"><img src="../../../public/assets/SVG/verMais.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach ?>
                     </div>
                 <!-- Seta direita -->
                 <div class="nav-arrow arrow-right2" id="seta-direita2">&#10095</div>
