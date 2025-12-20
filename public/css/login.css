@@ -36,7 +36,7 @@ body {
 .botaoDeVoltar{
     display: flex;
     align-items: center;
-    width: 36%;
+    width: 60%;
     padding-bottom: 1.3rem;
 }
 

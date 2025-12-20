@@ -25,7 +25,6 @@ if (!isset($users) || !is_array($users)) {
         <link rel="stylesheet" href="../../../public/css/users.css">
         <link rel="stylesheet" href="../../../public/css/usersResponsive.css">
         <!-- Modais -->
-        <link rel="stylesheet" href="../../../public/css/criarUsuario.css">
         <link rel="stylesheet" href="../../../public/css/editarUsuario.css">
         <link rel="stylesheet" href="../../../public/css/vizualizarUsuario.css">
         <link rel="stylesheet" href="../../../public/css/excluirUsuario.css">
@@ -123,7 +122,7 @@ if (!isset($users) || !is_array($users)) {
                         <div class="imagemBotao">
                             <img class="imgPerfilB"   id="preview-new" src="../../../public/assets/Imagens/usuario.png" value=" <?= $user->img_path ?>" width="60" height="60" alt="Foto de Perfil">
                             <label for="uploadFoto_new" class="imgPerfilB" style="cursor: pointer;">
-                                <div class="botaoAddFoto"><span>Add Foto</span></div>
+                                <div class="botaoAddFoto"><span>Selecionar Foto</span></div>
                             </label>
                             <input class="botaoAddFoto" type="file" name="img_path" accept="image/*" id="uploadFoto_new" style="display: none;" onchange="previewImagem(event, 'new')">
                         </div>
@@ -133,8 +132,7 @@ if (!isset($users) || !is_array($users)) {
                             <h1 class="tituloAdd">novo usuário!</h1>
                         </div>
                         <div class="guiaA">
-                            <p class="guiaAdd">Preencha as informações do usuário</p>
-                            <p class="guiaAdd">nos campos a seguir</p>
+                            <p class="guiaAdd">Preencha as informações do usuário nos campos a seguir</p>
                         </div>
                     </div>
                     <div class="containerLeft">
@@ -229,7 +227,7 @@ if (!isset($users) || !is_array($users)) {
                                 if($session_user_id->isAdmin):
                             ?>
                             <div class="senhaB">
-                                <div class="inputTitulo"><p>É Admin?</p><p class="asterisco">*</p></div>
+                                <div class="inputTitulo"><p>É Admin?</p></div>
                                 <input type="checkbox" class="form-control" id="isAdmin" name="isAdmin" value="<?= ($user->isAdmin) ?>" >
                             </div>
 
