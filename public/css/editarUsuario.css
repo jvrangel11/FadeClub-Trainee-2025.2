@@ -30,6 +30,12 @@
     font-size: 18px;
     color: #3B4F66;
 }
+
+.botaoAddFoto:hover{
+    background-color: #e2be74;
+    transition: 0.5s;
+}
+
 .tituloA{
     display: flex;
     flex-direction: column;
@@ -65,6 +71,8 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    border-radius: 0 4% 4% 0;
+    padding-bottom: 2%;
 }
 
 .inputs{
@@ -72,13 +80,15 @@
     flex-direction: column;
     gap: 25px;
     margin-top: 4vh;
+    width: 100%;
+    padding: 0 10%;
 }
 
 .inputTitulo{
     display: flex;
 }
 .nomeB, .emailB, .senhaB{
-    width: 22vw;
+    width: 100%;
     height: 9vh;
     display: flex;
     flex-direction: column;
@@ -93,7 +103,7 @@
         border: 3px solid #D9D9D9;
         border-radius: 10px;
         height: 6vh;
-        width: 22vw;
+        width: 100%;
         font-size: 20px;
         padding-left: 1rem;
         color:rgb(71, 71, 71);
@@ -129,6 +139,7 @@
     font-family: "anton", sans-serif; 
     font-weight: 100;
     font-size: 23px;
+    padding-right: 3%;
     .cancel, .save{
         display: flex;
         align-items: center;
@@ -142,11 +153,24 @@
     .cancel {
         background-color: #E6E7EB;
         color: #3B4F66;
+        cursor: pointer;
     }
     .save{
         background-color: #3fc379;
         color: #ffffff;
+        cursor: pointer;
     }
+}
+
+.cancel:hover{
+    background-color: #810900;
+    color: #fafafa;
+    transition: 0.5s;
+}
+
+.save:hover{
+    background-color: #47df96;
+    transition: 0.5s;
 }
 
 .imagemBotao{

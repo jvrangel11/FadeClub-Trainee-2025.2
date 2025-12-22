@@ -52,15 +52,21 @@
         font-size: 30px;
     }
 }
-.botoesVizu{
-    display: flex;
-    gap: 10px;  
-    font-family: "anton", sans-serif; 
-    font-weight: 100;
-    font-size: 23px;
-}
 .idUsuario, .nomeVizu, .emailVizu, .senhaVizu{
     display: flex;
     flex-direction: column;
     gap:2px;
 }
+
+.save{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5.5vh;
+        width: 6vw;
+        border-radius: 13px;
+        background-color: #3fc379;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    
